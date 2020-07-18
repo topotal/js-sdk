@@ -17,7 +17,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/topotal/js-sdk.git"
+    "url": "git+ssh://git@github.com/topotal/js-sdk.git",
+    "directory": "packages/topotal-ui"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -30,5 +31,5 @@
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   },
-  "gitHead": "20772f5dae30657eafb5f8ecb30e51628495c102"
+  "gitHead": "470bd82c3e1d137e517e173302ec5bb71b1de438"
 }
