@@ -1,4 +1,4 @@
-# `@topotal/ui`
+# `@topotal/topotal-ui`
 
 > TODO: description
 
