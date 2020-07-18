@@ -6,6 +6,8 @@
   "homepage": "https://github.com/topotal/js-sdk#readme",
   "license": "MIT",
   "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
   "directories": {
     "lib": "lib"
   },
@@ -21,14 +23,24 @@
     "directory": "packages/topotal-ui"
   },
   "scripts": {
+    "build": "yarn clean && yarn build:lib && yarn build:esm",
+    "build:lib": "tsc -p tsconfig.build.json",
+    "build:esm": "tsc -p tsconfig.esm.build.json",
+    "clean": "rimraf lib esm",
+    "prepublishOnly": "yarn build",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/topotal/js-sdk/issues"
   },
   "devDependencies": {
+    "@types/react": "^16.9.43",
+    "@types/react-native": "^0.63.1",
     "eslint": "^7.4.0",
     "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-native-web": "^0.13.3",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
   },
   "gitHead": "470bd82c3e1d137e517e173302ec5bb71b1de438"
