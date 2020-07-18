@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "name": "js-sdk",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
+}
