@@ -1,6 +1,6 @@
 {
   "name": "@topotal/topotal-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "> TODO: description",
   "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "homepage": "https://github.com/topotal/js-sdk#readme",
@@ -13,7 +13,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,6 @@
     "eslint": "^7.4.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
-  }
+  },
+  "gitHead": "aa23ed7daf9df23fd95d0e0dde2d7b6565303c78"
 }
