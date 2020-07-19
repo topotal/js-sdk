@@ -43,5 +43,8 @@
     "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
   },
-  "gitHead": "470bd82c3e1d137e517e173302ec5bb71b1de438"
+  "gitHead": "6c3acb41ecc4db57441154fa03e6c13b9d051271",
+  "dependencies": {
+    "polished": "^3.6.5"
+  }
 }
