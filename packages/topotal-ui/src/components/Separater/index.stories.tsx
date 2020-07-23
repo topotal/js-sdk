@@ -1,7 +1,10 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import Separater from '.'
 
-storiesOf('components/Separater', module).add('default', () => (
-  <Separater text="テキスト" />
-))
+export default { title: 'components/Separater' }
+
+export const all = () => (
+  <>
+    <Separater text="テキスト" />
+  </>
+)
