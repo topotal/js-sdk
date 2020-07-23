@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.2.1...@topotal/topotal-ui@0.3.0) (2020-07-23)
+
+
+### Bug Fixes
+
+* patch stories ([700e164](https://github.com/topotal/js-sdk/commit/700e164b20544cc3dbd0cbf2ad524cfa48b7c9a1))
+
+
+### Features
+
+* add storybook ([8a2e7ea](https://github.com/topotal/js-sdk/commit/8a2e7eaf4e1864da5f56ee41f3b9663334be3918))
+
+
+
+
+
 ## [0.2.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.2.0...@topotal/topotal-ui@0.2.1) (2020-07-19)
 
 **Note:** Version bump only for package @topotal/topotal-ui
