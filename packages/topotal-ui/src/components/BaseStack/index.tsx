@@ -1,4 +1,5 @@
 import React from 'react'
+import { isFragment } from 'react-is'
 import { View, ViewStyle } from 'react-native'
 import { getCellStyle } from './utils'
 import { Direction, Align, Justify } from './types'
@@ -10,6 +11,24 @@ type Props = React.ComponentProps<typeof View> & {
   align?: Align
   justify?: Justify
   style?: ViewStyle
+}
+
+const createStyleInjectedChildren = (children: React.ReactNode, direction: Direction, gap: number): React.ReactNode => {
+  return React.Children.map(children, (child, index) => {
+    if (child === null) return child
+
+    const element = child as React.ReactElement
+
+    if (isFragment(child)) {
+      return React.cloneElement(element, {
+        children: createStyleInjectedChildren(element.props.children, direction, gap)
+      })
+    }
+
+    return React.cloneElement(element, {
+      style: [getCellStyle(direction, gap, index), element.props.style],
+    })
+  })
 }
 
 const BaseStack: React.FC<Props> = ({
@@ -29,13 +48,7 @@ const BaseStack: React.FC<Props> = ({
 
   return (
     <View style={[styles.wrapper, style]} {...rest}>
-      {React.Children.map(children, (child, index) => {
-        if (child === null) return child
-        const element = child as React.ReactElement
-        return React.cloneElement(element, {
-          style: [getCellStyle(direction, gap, index), element.props.style],
-        })
-      })}
+      {createStyleInjectedChildren(children, direction, gap)}
     </View>
   )
 }

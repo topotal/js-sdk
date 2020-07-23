@@ -28,23 +28,30 @@
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build",
+    "storybook": "start-storybook -p 6006",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/topotal/js-sdk/issues"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@storybook/react": "^5.3.19",
     "@types/react": "^16.9.43",
+    "@types/react-is": "^16.7.1",
     "@types/react-native": "^0.63.1",
+    "babel-loader": "^8.1.0",
     "eslint": "^7.4.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-native-web": "^0.13.3",
     "rimraf": "^3.0.2",
+    "ts-loader": "^8.0.1",
     "typescript": "^3.9.7"
   },
   "gitHead": "6c3acb41ecc4db57441154fa03e6c13b9d051271",
   "dependencies": {
-    "polished": "^3.6.5"
+    "polished": "^3.6.5",
+    "react-is": "^16.13.1"
   }
 }
