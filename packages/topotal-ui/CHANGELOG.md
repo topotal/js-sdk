@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.3.2...@topotal/topotal-ui@0.3.3) (2020-07-24)
+
+
+### Bug Fixes
+
+* **topotal-ui:** patch TextInput props ([7201698](https://github.com/topotal/js-sdk/commit/7201698a02622bb3da4c83326a7eb95b604019b6))
+
+
+
+
+
 ## [0.3.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.3.1...@topotal/topotal-ui@0.3.2) (2020-07-23)
 
 
