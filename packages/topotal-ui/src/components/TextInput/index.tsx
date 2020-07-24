@@ -1,13 +1,5 @@
 import React from 'react'
-import {
-  NativeSyntheticEvent,
-  TextInputChangeEventData,
-  ReturnKeyTypeOptions,
-  KeyboardTypeOptions,
-  TextInput as BaseInput,
-  ViewStyle,
-  StyleProp,
-} from 'react-native'
+import { TextInput as BaseInput } from 'react-native'
 import VStack from '../VStack'
 import Text from '../Text'
 import { useStyles } from './styles'
@@ -15,6 +7,7 @@ import { useTextInput } from './hooks'
 
 type BaseProps = {
   innerRef?: React.Ref<BaseInput>
+  error?: boolean
 } & React.ComponentProps<typeof BaseInput>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
@@ -22,15 +15,12 @@ type Props = BaseProps & React.RefAttributes<BaseInput>
 const TextInput: React.FC<Props> = ({
   defaultValue = '',
   placeholder = '入力してください',
-  editable = true,
-  secureTextEntry,
-  returnKeyType,
-  keyboardType,
+  autoCapitalize = 'none',
+  error = false,
   innerRef,
   style,
-  onChange,
   onChangeText,
-  onSubmitEditing,
+  ...rest
 }) => {
   const {
     isFocused,
@@ -38,25 +28,19 @@ const TextInput: React.FC<Props> = ({
     handleBlur,
     handleChangeText,
     handleFocus,
-  } = useTextInput({ defaultValue, onChangeText })
-  const { styles } = useStyles({ isFocused })
+  } = useTextInput({ value: defaultValue, onChangeText })
+  const { styles } = useStyles({ isFocused, error })
 
   return (
     <VStack style={[styles.wrapper, style]}>
       <BaseInput
-        editable={editable}
+        {...rest}
         defaultValue={defaultValue}
-        autoCapitalize="none"
-        onChange={onChange}
+        autoCapitalize={autoCapitalize}
         onChangeText={handleChangeText}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        onSubmitEditing={onSubmitEditing}
-        secureTextEntry={secureTextEntry}
-        returnKeyType={returnKeyType}
-        keyboardType={keyboardType}
         style={styles.input}
-        ref={innerRef}
       />
       {showPlaceholder ? (
         <VStack style={styles.placeholderWrapper} pointerEvents="none">

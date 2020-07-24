@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
-import { ThemeContext } from '~/theme'
+import { ThemeContext, Color } from '~/theme'
 
 type Styles = {
   wrapper: ViewStyle
@@ -11,10 +11,24 @@ type Styles = {
 
 type Props = {
   isFocused: boolean
+  error?: boolean
 }
 
-export const useStyles = ({ isFocused }: Props) => {
+const getBorderColor = (isFocused: boolean, error: boolean): keyof Color => {
+  if (isFocused) {
+    return 'primaryLite'
+  }
+
+  if (error) {
+    return 'negative'
+  }
+
+  return 'transparent'
+}
+
+export const useStyles = ({ isFocused, error = false }: Props) => {
   const theme = useContext(ThemeContext)
+  const borderColor = getBorderColor(isFocused, error)
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
@@ -43,7 +57,7 @@ export const useStyles = ({ isFocused }: Props) => {
       paddingHorizontal: 16,
       borderStyle: 'solid',
       borderWidth: 2,
-      borderColor: isFocused ? theme.color.primary : 'transparent',
+      borderColor: theme.color[borderColor],
       backgroundColor: theme.color.kasumi,
       borderRadius: theme.radius.level1,
       color: theme.color.sumi,

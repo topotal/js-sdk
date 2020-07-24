@@ -1,16 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type Props = {
-  defaultValue: string
+  value: string
   onChangeText?: (text: string) => void
 }
 
-export const useTextInput = ({ defaultValue, onChangeText }: Props) => {
-  const [value, setValue] = useState(defaultValue)
+export const useTextInput = ({ value, onChangeText }: Props) => {
+  const [innerValue, setInnerValue] = useState(value)
   const [isFocused, setIsFocused] = useState(false)
 
+  useEffect(() => {
+    setInnerValue(value)
+  }, [value])
+
   const handleChangeText = (newValue: string) => {
-    setValue(newValue)
+    setInnerValue(newValue)
     onChangeText && onChangeText(newValue)
   }
 
@@ -24,7 +28,7 @@ export const useTextInput = ({ defaultValue, onChangeText }: Props) => {
 
   return {
     isFocused,
-    showPlaceholder: !isFocused && !value,
+    showPlaceholder: !isFocused && !innerValue,
     handleChangeText,
     handleFocus,
     handleBlur,
