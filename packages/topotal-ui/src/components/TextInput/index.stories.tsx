@@ -6,5 +6,7 @@ export default { title: 'components/TextInput' }
 export const all = () => (
   <>
     <TextInput />
+    <TextInput placeholder="カスタムプレースホルダー" />
+    <TextInput secureTextEntry />
   </>
 )

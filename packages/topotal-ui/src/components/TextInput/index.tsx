@@ -14,20 +14,8 @@ import { useStyles } from './styles'
 import { useTextInput } from './hooks'
 
 type BaseProps = {
-  defaultValue?: string
-  placeholder?: string
-  required?: boolean
-  editable?: boolean
-  error?: boolean
-  secureTextEntry?: boolean
   innerRef?: React.Ref<BaseInput>
-  returnKeyType?: ReturnKeyTypeOptions
-  keyboardType?: KeyboardTypeOptions
-  style?: StyleProp<ViewStyle>
-  onChange?: (event: NativeSyntheticEvent<TextInputChangeEventData>) => void
-  onChangeText?: (text: string) => void
-  onSubmitEditing?: () => void
-}
+} & React.ComponentProps<typeof BaseInput>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
 
