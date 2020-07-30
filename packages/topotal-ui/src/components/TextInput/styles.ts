@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { StyleSheet, TextStyle, ViewStyle, Platform } from 'react-native'
 import { ThemeContext, Color } from '~/theme'
 
 type Styles = {
@@ -16,7 +16,7 @@ type Props = {
 
 const getBorderColor = (isFocused: boolean, error: boolean): keyof Color => {
   if (isFocused) {
-    return 'primaryLite'
+    return 'primary'
   }
 
   if (error) {
@@ -62,6 +62,7 @@ export const useStyles = ({ isFocused, error = false }: Props) => {
       borderRadius: theme.radius.level1,
       color: theme.color.sumi,
       ...theme.text.type.body,
+      ...(Platform.OS === 'web' ? { outlineWidth: 0 } : {}),
     },
   })
 

@@ -2,52 +2,30 @@ import React from 'react'
 import { tint } from 'polished'
 import { TextStyle } from 'react-native'
 
-export const textTypes = [
-  'display4',
-  'display3',
-  'display2',
-  'display1',
-  'caption',
-  'body',
-  'small_caption',
-  'small_body',
-  'x_small_body',
-  'x_small_caption',
-] as const
+export type TextType = 
+  'display4' |
+  'display3' |
+  'display2' |
+  'display1' |
+  'caption' |
+  'body' |
+  'small_caption' |
+  'small_body' |
+  'x_small_body' |
+  'x_small_caption'
 
-export type TextType = typeof textTypes[number]
 
-type TextStyleData = {
-  name: TextType
-  size: number
-  fontFamily: string
-}
-
-const textStyles: TextStyleData[] = [
-  { name: 'display4', size: 32, fontFamily: 'NotoSansJP-Bold' },
-  { name: 'display3', size: 24, fontFamily: 'NotoSansJP-Bold' },
-  { name: 'display2', size: 18, fontFamily: 'NotoSansJP-Bold' },
-  { name: 'display1', size: 16, fontFamily: 'NotoSansJP-Bold' },
-  { name: 'caption', size: 14, fontFamily: 'NotoSansJP-Bold' },
-  { name: 'body', size: 14, fontFamily: 'NotoSansJP-Regular' },
-  { name: 'small_caption', size: 12, fontFamily: 'NotoSansJP-Bold' },
-  { name: 'small_body', size: 12, fontFamily: 'NotoSansJP-Regular' },
-  { name: 'x_small_body', size: 10, fontFamily: 'NotoSansJP-Regular' },
-  { name: 'x_small_caption', size: 10, fontFamily: 'NotoSansJP-Bold' },
-]
-
-type TextStyleTheme = { [key: string]: TextStyle }
-
-const generateTextTypeTheme = () => {
-  const textTypeTheme: TextStyleTheme = {}
-  textStyles.forEach(data => {
-    textTypeTheme[data.name] = {
-      fontSize: data.size,
-      lineHeight: data.size + 4,
-      fontFamily: data.fontFamily,
-    }
-  })
-  return textTypeTheme
+const textStyles: { [key in TextType]: TextStyle }  = {
+  display4:         { fontSize: 32, lineHeight: 36, fontFamily: 'Noto Sans JP', fontWeight: '700' },
+  display3:         { fontSize: 24, lineHeight: 28, fontFamily: 'Noto Sans JP', fontWeight: '700' },
+  display2:         { fontSize: 18, lineHeight: 22, fontFamily: 'Noto Sans JP', fontWeight: '700' },
+  display1:         { fontSize: 16, lineHeight: 20, fontFamily: 'Noto Sans JP', fontWeight: '700' },
+  caption:          { fontSize: 14, lineHeight: 18, fontFamily: 'Noto Sans JP', fontWeight: '700' },
+  body:             { fontSize: 14, lineHeight: 18, fontFamily: 'Noto Sans JP', fontWeight: '400' },
+  small_caption:    { fontSize: 12, lineHeight: 16, fontFamily: 'Noto Sans JP', fontWeight: '700' },
+  small_body:       { fontSize: 12, lineHeight: 16, fontFamily: 'Noto Sans JP', fontWeight: '400' },
+  x_small_body:     { fontSize: 10, lineHeight: 14, fontFamily: 'Noto Sans JP', fontWeight: '400' },
+  x_small_caption:  { fontSize: 10, lineHeight: 14, fontFamily: 'Noto Sans JP', fontWeight: '700' },
 }
 
 const primary = '#00b894'
@@ -80,7 +58,7 @@ const theme = {
     level2: '0px 2px 8px 0px rgba(0, 0, 0, .5)',
   },
   text: {
-    type: generateTextTypeTheme(),
+    type: textStyles,
   },
   zIndex: {
     level0: 0,
