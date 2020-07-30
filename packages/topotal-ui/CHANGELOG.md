@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.3.4...@topotal/topotal-ui@0.3.5) (2020-07-30)
+
+
+### Bug Fixes
+
+* patch font-family ([6a05b1d](https://github.com/topotal/js-sdk/commit/6a05b1d0dd48fab482eb249c0f62ee8422a63b71))
+
+
+
+
+
 ## [0.3.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.3.3...@topotal/topotal-ui@0.3.4) (2020-07-24)
 
 
