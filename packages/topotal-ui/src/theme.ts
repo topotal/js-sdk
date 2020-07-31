@@ -2,7 +2,7 @@ import React from 'react'
 import { tint } from 'polished'
 import { TextStyle } from 'react-native'
 
-export type TextType = 
+export type TextType =
   'display4' |
   'display3' |
   'display2' |

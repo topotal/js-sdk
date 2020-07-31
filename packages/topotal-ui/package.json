@@ -29,8 +29,8 @@
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build",
-    "storybook": "start-storybook -p 6006",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "lint:ts": "eslint --ext .ts,.tsx src",
+    "storybook": "start-storybook -p 6006"
   },
   "bugs": {
     "url": "https://github.com/topotal/js-sdk/issues"
@@ -45,8 +45,15 @@
     "@types/react": "^16.9.43",
     "@types/react-is": "^16.7.1",
     "@types/react-native": "^0.63.1",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
     "babel-loader": "^8.1.0",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-native-web": "^0.13.3",
@@ -60,6 +67,17 @@
     "react-dom": "^16.8.3",
     "react-native": "*",
     "react-native-web": "*"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint:ts -- --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "gitHead": "6c3acb41ecc4db57441154fa03e6c13b9d051271"
 }
