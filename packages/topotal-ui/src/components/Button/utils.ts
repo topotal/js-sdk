@@ -1,4 +1,4 @@
-import { TextType, Color as ThemeColor } from '~/theme'
+import { TextType, Color as ThemeColor } from '../../theme'
 import { Size, Color, Variant, DynamicMaterial, DynamicGeometry } from './types'
 
 export const getTypeBySize = (size: Size): TextType => {

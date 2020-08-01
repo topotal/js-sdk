@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { StyleSheet, TextStyle, ViewStyle, Platform } from 'react-native'
-import { ThemeContext, Color } from '~/theme'
+import { ThemeContext, Color } from '../../theme'
 
 type Styles = {
   wrapper: ViewStyle

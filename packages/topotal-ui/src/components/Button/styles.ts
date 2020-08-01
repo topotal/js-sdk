@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
-import { Size, Color, Variant } from './types'
+import { ThemeContext } from '../../theme'
 import { getDynamicGeometry, getDynamicMaterial } from './utils'
-import { ThemeContext } from '~/theme'
+import { Size, Color, Variant } from './types'
 
 type Props = {
   size: Size

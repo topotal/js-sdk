@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { StyleSheet, TextStyle } from 'react-native'
-import { TextType, ThemeContext } from '~/theme'
+import { TextType, ThemeContext } from '../../theme'
 
 type Props = {
   type: TextType

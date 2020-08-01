@@ -1,4 +1,4 @@
-import { Color as ThemeColor, TextType } from '~/theme'
+import { Color as ThemeColor, TextType } from '../../theme'
 
 export type Size = 'small' | 'medium' | 'large'
 export type Color = 'primary' | 'secondary' | 'negative' | 'cancel' | 'light'

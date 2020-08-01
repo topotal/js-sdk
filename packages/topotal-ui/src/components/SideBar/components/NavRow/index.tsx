@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { TouchableHighlight } from 'react-native'
-import { Text } from '~/components'
+import { Text } from '../../..'
 import { NavItem } from '../..'
 import { useStyles } from './styles'
 

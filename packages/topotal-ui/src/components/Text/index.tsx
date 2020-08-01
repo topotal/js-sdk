@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text as BaseText, TextStyle } from 'react-native'
-import { TextType } from '~/theme'
+import { TextType } from '../../theme'
 import { useStyles } from './styles'
 
 type Props = {

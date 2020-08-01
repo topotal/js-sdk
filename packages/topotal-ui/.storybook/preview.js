@@ -1,7 +1,7 @@
 import React from 'react'
 import { addDecorator } from '@storybook/react'
-import { VStack } from '~/components'
-import theme, { ThemeContext } from '~/theme'
+import { VStack } from '../src/components'
+import theme, { ThemeContext } from '../src/theme'
 
 addDecorator(storyFn => (
   <ThemeContext.Provider value={theme}>

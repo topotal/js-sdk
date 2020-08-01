@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
-import { VStack } from '~/components'
+import { VStack } from '../../components'
 import NavRow from './components/NavRow'
 import { useStyles } from './styles'
 

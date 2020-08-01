@@ -1,5 +1,5 @@
 import { StyleSheet, ViewStyle } from 'react-native'
-import { useTheme } from '~/theme'
+import { useTheme } from '../../theme'
 
 type Styles = {
   wrapper: ViewStyle
