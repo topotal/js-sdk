@@ -4,7 +4,5 @@ import Separater from '.'
 export default { title: 'components/Separater' }
 
 export const all = () => (
-  <>
-    <Separater text="テキスト" />
-  </>
+  <Separater text="テキスト" />
 )

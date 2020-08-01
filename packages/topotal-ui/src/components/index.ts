@@ -1,5 +1,6 @@
 export { default as Button } from './Button'
 export { default as HStack } from './HStack'
+export { default as ScreenFrame } from './ScreenFrame'
 export { default as Separater } from './Separater'
 export { default as SideBar } from './SideBar'
 export { default as Text } from './Text'
