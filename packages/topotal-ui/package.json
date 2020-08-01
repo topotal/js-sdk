@@ -71,8 +71,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run lint:ts -- --fix",
-      "git add"
+      "npm run lint:ts -- --fix"
     ]
   },
   "husky": {
