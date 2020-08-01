@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.4.3...@topotal/topotal-ui@0.5.0) (2020-08-01)
+
+
+### Features
+
+* **topotal-ui:** add ScreenFrame ([ab8120b](https://github.com/topotal/js-sdk/commit/ab8120b9cb2315dea9820e89c7031bac883b089e))
+
+
+
+
+
 ## [0.4.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.4.2...@topotal/topotal-ui@0.4.3) (2020-08-01)
 
 
