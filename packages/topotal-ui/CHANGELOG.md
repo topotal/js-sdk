@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.4.1...@topotal/topotal-ui@0.4.2) (2020-08-01)
+
+
+### Bug Fixes
+
+* **topotal-ui:** remove path alias ([14634fb](https://github.com/topotal/js-sdk/commit/14634fb264396cd5492bbeadf14f0ba1167c2822))
+
+
+
+
+
 ## [0.4.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.4.0...@topotal/topotal-ui@0.4.1) (2020-08-01)
 
 
