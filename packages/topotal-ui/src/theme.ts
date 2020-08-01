@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { tint } from 'polished'
 import { TextStyle } from 'react-native'
 
@@ -73,5 +73,9 @@ export type Theme = typeof theme
 export type Color = typeof theme.color
 
 export const ThemeContext = React.createContext(theme)
+
+export const useTheme = () => {
+  return useContext(ThemeContext)
+}
 
 export default theme

@@ -1,11 +1,30 @@
-import React from 'react'
-import { HStack, Text } from '~/components'
+import React, { useCallback } from 'react'
+import { TouchableHighlight } from 'react-native'
+import { Text } from '~/components'
+import { NavItem } from '../..'
+import { useStyles } from './styles'
 
-const NavRow: React.FC = () => {
+type Props = {
+  item: NavItem
+  onPress?: (path: string) => void
+}
+
+const NavRow: React.FC<Props> = ({ item, onPress }) => {
+  const { styles } = useStyles()
+
+  const handlePress = useCallback(() => {
+    onPress && onPress(item.path)
+  }, [item.path, onPress])
+
   return (
-    <HStack>
-      <Text>item</Text>
-    </HStack>
+    <TouchableHighlight
+      style={styles.wrapper}
+      onPress={handlePress}
+    >
+      <Text style={styles.label}>
+        {item.label}
+      </Text>
+    </TouchableHighlight>
   )
 }
 
