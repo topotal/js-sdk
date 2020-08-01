@@ -10,6 +10,8 @@ export const useStyles = () => {
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
+      width: 230,
+      minWidth: 230,
       paddingTop: 80,
       paddingBottom: 24,
       backgroundColor: color.sumi,
