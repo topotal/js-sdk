@@ -1,7 +1,7 @@
 export const getCellStyle = (
   direction: 'row' | 'column',
   gap: number,
-  index: number
+  index: number,
 ) => {
   const key = direction === 'row' ? 'marginLeft' : 'marginTop'
   return {

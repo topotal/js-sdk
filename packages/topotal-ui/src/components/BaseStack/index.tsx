@@ -21,7 +21,7 @@ const createStyleInjectedChildren = (children: React.ReactNode, direction: Direc
 
     if (isFragment(child)) {
       return React.cloneElement(element, {
-        children: createStyleInjectedChildren(element.props.children, direction, gap)
+        children: createStyleInjectedChildren(element.props.children, direction, gap),
       })
     }
 

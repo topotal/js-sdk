@@ -29,7 +29,7 @@ export const getBaseColor = (color: Color): keyof ThemeColor => {
 
 export const getTitleColor = (
   color: Color,
-  variant: Variant
+  variant: Variant,
 ): keyof ThemeColor => {
   const isContain = variant === 'contain'
 
@@ -75,7 +75,7 @@ export const getDynamicMaterial = (
   color: Color,
   variant: Variant,
   disabled: boolean,
-  loading: boolean
+  loading: boolean,
 ): DynamicMaterial => {
   const baseColor = getBaseColor(color)
   const opacity = disabled || loading ? 0.5 : 1
