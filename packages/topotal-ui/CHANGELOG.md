@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.4.2...@topotal/topotal-ui@0.4.3) (2020-08-01)
+
+
+### Bug Fixes
+
+* **topotal-ui:** patch SideBar width ([e304a64](https://github.com/topotal/js-sdk/commit/e304a64fb12af767a0908594ebb3964956e37c92))
+
+
+
+
+
 ## [0.4.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.4.1...@topotal/topotal-ui@0.4.2) (2020-08-01)
 
 
