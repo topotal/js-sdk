@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.6.0...@topotal/topotal-ui@0.6.1) (2020-08-17)
+
+
+### Bug Fixes
+
+* **topotal-ui:** export Table ([4382638](https://github.com/topotal/js-sdk/commit/438263890c727cf7b1fb567b74f8515c20bae4be))
+
+
+
+
+
 # [0.6.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.5.0...@topotal/topotal-ui@0.6.0) (2020-08-17)
 
 
