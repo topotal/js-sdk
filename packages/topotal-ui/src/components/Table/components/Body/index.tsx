@@ -7,7 +7,7 @@ type RowElement = React.ReactElement<React.ComponentProps<typeof Row>>
 
 type Props = {
   style?: ViewStyle
-  children: RowElement[]
+  children: RowElement | RowElement[]
 }
 
 const Body: React.FC<Props> = ({ style, children }) => {

@@ -3,9 +3,11 @@ import { ViewStyle } from 'react-native'
 import { VStack } from '../../../..'
 import Row from '../Row'
 
+type RowElement = React.ReactElement<React.ComponentProps<typeof Row>>
+
 type Props = {
   style?: ViewStyle
-  children?: React.ReactElement<React.ComponentProps<typeof Row>>[]
+  children?: RowElement | RowElement[]
 }
 
 const Head: React.FC<Props> = ({ style, children }) => {
