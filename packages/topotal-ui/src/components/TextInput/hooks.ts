@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 type Props = {
   value: string
@@ -13,18 +13,18 @@ export const useTextInput = ({ value, onChangeText }: Props) => {
     setInnerValue(value)
   }, [value])
 
-  const handleChangeText = (newValue: string) => {
+  const handleChangeText = useCallback((newValue: string) => {
     setInnerValue(newValue)
     onChangeText && onChangeText(newValue)
-  }
+  }, [onChangeText])
 
-  const handleFocus = () => {
+  const handleFocus = useCallback(() => {
     setIsFocused(true)
-  }
+  }, [])
 
-  const handleBlur = () => {
+  const handleBlur = useCallback(() => {
     setIsFocused(false)
-  }
+  }, [])
 
   return {
     isFocused,

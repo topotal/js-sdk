@@ -14,7 +14,7 @@ type Props = BaseProps & React.RefAttributes<BaseInput>
 
 const TextInput: React.FC<Props> = ({
   defaultValue = '',
-  placeholder = '入力してください',
+  placeholder = '',
   autoCapitalize = 'none',
   error = false,
   innerRef,
