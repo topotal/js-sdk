@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.5.0...@topotal/topotal-ui@0.6.0) (2020-08-17)
+
+
+### Features
+
+* **topotal-ui:** Add Table component ([3109e33](https://github.com/topotal/js-sdk/commit/3109e339bc232605b83df3cc102755399732d278))
+
+
+
+
+
 # [0.5.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.4.3...@topotal/topotal-ui@0.5.0) (2020-08-01)
 
 
