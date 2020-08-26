@@ -14,8 +14,10 @@ type Props = React.ComponentProps<typeof View> & {
 }
 
 const createStyleInjectedChildren = (children: React.ReactNode, direction: Direction, gap: number): React.ReactNode => {
-  return React.Children.map(children, (child, index) => {
-    if (child === null) return child
+  let currentIndex = -1
+  return React.Children.map(children, (child) => {
+    if (child === null) return null
+    currentIndex++
 
     const element = child as React.ReactElement
 
@@ -26,7 +28,7 @@ const createStyleInjectedChildren = (children: React.ReactNode, direction: Direc
     }
 
     return React.cloneElement(element, {
-      style: [getCellStyle(direction, gap, index), element.props.style],
+      style: [getCellStyle(direction, gap, currentIndex), element.props.style],
     })
   })
 }

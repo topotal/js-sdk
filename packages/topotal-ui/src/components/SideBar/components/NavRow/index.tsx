@@ -1,20 +1,24 @@
 import React, { useCallback } from 'react'
 import { TouchableHighlight } from 'react-native'
-import { Text } from '../../..'
-import { NavItem } from '../..'
+import Text from '../../../Text'
 import { useStyles } from './styles'
 
 type Props = {
-  item: NavItem
+  label: string
+  path: string
   onPress?: (path: string) => void
 }
 
-const NavRow: React.FC<Props> = ({ item, onPress }) => {
+const NavRow: React.FC<Props> = ({
+  label,
+  path,
+  onPress,
+}) => {
   const { styles } = useStyles()
 
   const handlePress = useCallback(() => {
-    onPress && onPress(item.path)
-  }, [item.path, onPress])
+    onPress && onPress(path)
+  }, [path, onPress])
 
   return (
     <TouchableHighlight
@@ -22,7 +26,7 @@ const NavRow: React.FC<Props> = ({ item, onPress }) => {
       onPress={handlePress}
     >
       <Text style={styles.label}>
-        {item.label}
+        {label}
       </Text>
     </TouchableHighlight>
   )
