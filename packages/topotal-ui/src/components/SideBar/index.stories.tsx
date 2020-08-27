@@ -1,10 +1,10 @@
 import React from 'react'
-import SideBar from '.'
+import Sidebar from '.'
 
-export default { title: 'components/SideBar' }
+export default { title: 'components/Sidebar' }
 
 export const All = () => (
-  <SideBar
+  <Sidebar
     itemGroups={[
       {
         label: 'Group1',
