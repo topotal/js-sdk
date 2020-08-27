@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.7.1...@topotal/topotal-ui@0.7.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* rename SideBar to Sidebar ([69c35d8](https://github.com/topotal/js-sdk/commit/69c35d8eae1f77d3e2b58d7a9be34fc9896d4f29))
+
+
+
+
+
 ## [0.7.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.7.0...@topotal/topotal-ui@0.7.1) (2020-08-27)
 
 
