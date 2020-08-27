@@ -12,6 +12,7 @@ export const All = () => (
           {
             label: 'item1',
             path: 'path1',
+            as: 'as1',
           },
           {
             label: 'item2',
@@ -32,6 +33,6 @@ export const All = () => (
         ],
       },
     ]}
-    onPressNavRow={(path) => { console.info(path) }}
+    onPressNavRow={(path, as) => { console.info(path, as) }}
   />
 )

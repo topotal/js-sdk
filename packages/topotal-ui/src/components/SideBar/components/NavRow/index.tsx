@@ -6,19 +6,21 @@ import { useStyles } from './styles'
 type Props = {
   label: string
   path: string
-  onPress?: (path: string) => void
+  as?: string
+  onPress?: (path: string, as?: string) => void
 }
 
 const NavRow: React.FC<Props> = ({
   label,
   path,
+  as,
   onPress,
 }) => {
   const { styles } = useStyles()
 
   const handlePress = useCallback(() => {
-    onPress && onPress(path)
-  }, [path, onPress])
+    onPress && onPress(path, as)
+  }, [path, as, onPress])
 
   return (
     <TouchableHighlight

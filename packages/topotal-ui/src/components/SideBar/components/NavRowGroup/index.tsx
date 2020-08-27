@@ -11,7 +11,7 @@ type Props = {
   label?: string
   items: NavItem[]
   style?: ViewStyle
-  onPressRow: (path: string) => void
+  onPressRow: (path: string, as?: string) => void
 }
 
 const NavRowGroup: React.FC<Props> = ({
@@ -34,6 +34,7 @@ const NavRowGroup: React.FC<Props> = ({
             key={item.path}
             label={item.label}
             path={item.path}
+            as={item.as}
             onPress={onPressRow}
           />
         ))}
