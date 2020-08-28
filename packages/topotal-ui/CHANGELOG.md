@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.8.0...@topotal/topotal-ui@0.9.0) (2020-08-28)
+
+
+### Features
+
+* Add currentPath prop to SideBar ([e4a2fac](https://github.com/topotal/js-sdk/commit/e4a2fac8ceaafaf32916e89b0bdb4a49fb90a15c))
+
+
+
+
+
 # [0.8.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.7.2...@topotal/topotal-ui@0.8.0) (2020-08-28)
 
 
