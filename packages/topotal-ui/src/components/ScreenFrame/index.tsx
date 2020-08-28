@@ -1,15 +1,20 @@
 import React from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
-import { VStack, HStack, Text } from '../..'
+import Text from '../Text'
+import VStack from '../VStack'
+import HStack from '../HStack'
+import Spacer from '../Spacer'
 import { useStyles } from './styles'
 
 type Props = {
   title: string
+  header?: React.ReactNode
   style?: StyleProp<ViewStyle>
 }
 
 const ScreenFrame: React.FC<Props> = ({
   title,
+  header,
   style,
   children,
 }) => {
@@ -24,6 +29,8 @@ const ScreenFrame: React.FC<Props> = ({
         <Text type="display2">
           {title}
         </Text>
+        <Spacer />
+        {header}
       </HStack>
       <VStack gap={16}>
         {children}
