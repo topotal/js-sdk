@@ -6,7 +6,11 @@ type Styles = {
   label: TextStyle
 }
 
-export const useStyles = () => {
+type Props = {
+  selected: boolean
+}
+
+export const useStyles = ({ selected }: Props) => {
   const { color } = useTheme()
 
   const styles = StyleSheet.create<Styles>({
@@ -15,6 +19,7 @@ export const useStyles = () => {
       paddingHorizontal: 24,
       flexDirection: 'row',
       alignItems: 'center',
+      backgroundColor: selected ? color.katana : 'transparent',
     },
     label: {
       color: color.yuki,

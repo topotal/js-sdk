@@ -18,6 +18,7 @@ export const useStyles = ({ index }: Props) => {
     label: {
       color: color.yuki,
       paddingHorizontal: 24,
+      lineHeight: 32,
     },
   }), [color, index])
 

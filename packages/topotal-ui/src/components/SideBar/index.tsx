@@ -19,12 +19,14 @@ export type NavItemGroup = {
 
 type Props = {
   itemGroups: NavItemGroup[]
+  currentPath?: string
   style?: StyleProp<ViewStyle>
   onPressNavRow: (path: string, as?: string) => void
 }
 
 const SideBar: React.FC<Props> = ({
   itemGroups,
+  currentPath,
   style,
   onPressNavRow,
 }) => {
@@ -39,6 +41,7 @@ const SideBar: React.FC<Props> = ({
             index={index}
             label={itemGroup.label}
             items={itemGroup.items}
+            currentPath={currentPath}
             onPressRow={onPressNavRow}
           />
         ))}

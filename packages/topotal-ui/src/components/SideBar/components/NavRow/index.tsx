@@ -7,6 +7,7 @@ type Props = {
   label: string
   path: string
   as?: string
+  selected?: boolean
   onPress?: (path: string, as?: string) => void
 }
 
@@ -14,9 +15,10 @@ const NavRow: React.FC<Props> = ({
   label,
   path,
   as,
+  selected = false,
   onPress,
 }) => {
-  const { styles } = useStyles()
+  const { styles } = useStyles({ selected })
 
   const handlePress = useCallback(() => {
     onPress && onPress(path, as)
@@ -25,6 +27,7 @@ const NavRow: React.FC<Props> = ({
   return (
     <TouchableHighlight
       style={styles.wrapper}
+      disabled={selected}
       onPress={handlePress}
     >
       <Text style={styles.label}>

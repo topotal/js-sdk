@@ -10,6 +10,7 @@ type Props = {
   index: number
   label?: string
   items: NavItem[]
+  currentPath?: string
   style?: ViewStyle
   onPressRow: (path: string, as?: string) => void
 }
@@ -18,26 +19,34 @@ const NavRowGroup: React.FC<Props> = ({
   index,
   label,
   items,
+  currentPath,
   style,
   onPressRow,
 }) => {
   const { styles } = useStyles({ index })
 
   return (
-    <VStack style={[styles.wrapper, style]} gap={8}>
+    <VStack style={[styles.wrapper, style]} gap={4}>
       {label ? (
         <Text type="caption" style={styles.label}>{label}</Text>
       ) : null}
       <VStack>
-        {items.map(item => (
-          <NavRow
-            key={item.path}
-            label={item.label}
-            path={item.path}
-            as={item.as}
-            onPress={onPressRow}
-          />
-        ))}
+        {items.map(item => {
+          const selected = (
+            item.as === currentPath ||
+            item.path === currentPath
+          )
+          return (
+            <NavRow
+              key={item.path}
+              label={item.label}
+              path={item.path}
+              as={item.as}
+              selected={selected}
+              onPress={onPressRow}
+            />
+          )
+        })}
       </VStack>
     </VStack>
   )

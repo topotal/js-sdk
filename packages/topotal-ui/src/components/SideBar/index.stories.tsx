@@ -5,30 +5,39 @@ export default { title: 'components/Sidebar' }
 
 export const All = () => (
   <Sidebar
+    currentPath="as2_1"
     itemGroups={[
       {
-        label: 'Group1',
         items: [
           {
-            label: 'item1',
-            path: 'path1',
-            as: 'as1',
+            label: 'item1_1',
+            path: 'path1_1',
+          },
+        ],
+      },
+      {
+        label: 'Group2',
+        items: [
+          {
+            label: 'item2_1',
+            path: 'path2_1',
+            as: 'as2_1',
           },
           {
-            label: 'item2',
-            path: 'path2',
+            label: 'item2_2',
+            path: 'path2_2',
           },
           {
-            label: 'item3',
-            path: 'path3',
+            label: 'item2_3',
+            path: 'path2_3',
           },
         ],
       },
       {
         items: [
           {
-            label: 'item1',
-            path: 'path1',
+            label: 'item3_1',
+            path: 'path3_1',
           },
         ],
       },
