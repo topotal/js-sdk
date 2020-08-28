@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.7.2...@topotal/topotal-ui@0.8.0) (2020-08-28)
+
+
+### Features
+
+* Add header prop to ScreenFrame ([4b30600](https://github.com/topotal/js-sdk/commit/4b306007c3614a7332eb49badc3bc53047234b7d))
+
+
+
+
+
 ## [0.7.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.7.1...@topotal/topotal-ui@0.7.2) (2020-08-27)
 
 
