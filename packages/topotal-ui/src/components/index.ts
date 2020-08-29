@@ -1,5 +1,6 @@
 export { default as Button } from './Button'
 export { default as HStack } from './HStack'
+export { default as RightSideModal } from './RightSideModal'
 export { default as ScreenFrame } from './ScreenFrame'
 export { default as Separater } from './Separater'
 export { default as Sidebar } from './Sidebar'

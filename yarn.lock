@@ -9681,10 +9681,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-native-web@^0.13.3:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.13.3.tgz#fe6799a1a341b60a617194b51042c40f57bfb34c"
-  integrity sha512-szUf/qDMZileJKglUmMT5UdPYltmmF2ywZ0OFeW7/6XmYDJP+Bepo3eGaCwm1bMcopLBq+lNdbn854CHfU8yBw==
+react-native-web@^0.0.0-d6e83d84a:
+  version "0.0.0-d6e83d84a"
+  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.0.0-d6e83d84a.tgz#18784f5a7c3b94016e22afcef4e831cec773f253"
+  integrity sha512-6mRzpaND7DjxU+WtUhxDciModN5BxJZNOgXAp+dBey8hmExZxd5ViwlCKNQD3154SVJX9aQ8BQep1r3truABoA==
   dependencies:
     array-find-index "^1.0.2"
     create-react-class "^15.6.2"
@@ -11834,9 +11834,9 @@ websocket-extensions@>=0.1.1:
   integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 whatwg-fetch@>=0.10.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.2.0.tgz#8e134f701f0a4ab5fda82626f113e2b647fd16dc"
-  integrity sha512-SdGPoQMMnzVYThUbSrEvqTlkvC1Ux27NehaJ/GUHBfNrh5Mjg+1/uRyFMwVnxO2MrikMWvWAqUGgQOfVU4hT7w==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.4.0.tgz#e11de14f4878f773fbebcde8871b2c0699af8b30"
+  integrity sha512-rsum2ulz2iuZH08mJkT0Yi6JnKhwdw4oeyMjokgxd+mmqYSd9cPpOQf01TIWgjxG/U4+QR+AwKq6lSbXVxkyoQ==
 
 whatwg-url@^7.0.0:
   version "7.1.0"
