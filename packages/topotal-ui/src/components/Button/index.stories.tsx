@@ -12,17 +12,6 @@ export const all = () => (
     <Button title="送信" size="medium" variant="outline" />
     <Button title="送信" size="small" variant="text" />
     <Button title="送信" size="medium" variant="text" />
-    <Button title="送信" color="secondary" size="small" />
-    <Button title="送信" color="secondary" size="medium" />
-    <Button title="送信" color="secondary" size="small" variant="outline" />
-    <Button
-      title="送信"
-      color="secondary"
-      size="medium"
-      variant="outline"
-    />
-    <Button title="送信" color="secondary" size="small" variant="text" />
-    <Button title="送信" color="secondary" size="medium" variant="text" />
     <Button title="削除" color="negative" size="small" />
     <Button title="削除" color="negative" size="medium" />
     <Button title="削除" color="negative" size="small" variant="outline" />

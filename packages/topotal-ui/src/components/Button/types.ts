@@ -1,7 +1,7 @@
 import { Color as ThemeColor, TextType } from '../../theme'
 
 export type Size = 'small' | 'medium' | 'large'
-export type Color = 'primary' | 'secondary' | 'negative' | 'cancel' | 'light'
+export type Color = 'primary' | 'negative' | 'cancel' | 'light'
 export type Variant = 'contain' | 'outline' | 'text'
 
 export type DynamicGeometry = {

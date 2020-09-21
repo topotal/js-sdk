@@ -14,8 +14,6 @@ export const getTypeBySize = (size: Size): TextType => {
 
 export const getBaseColor = (color: Color): keyof ThemeColor => {
   switch (color) {
-    case 'secondary':
-      return 'secondary'
     case 'negative':
       return 'negative'
     case 'cancel':
@@ -34,8 +32,6 @@ export const getTitleColor = (
   const isContain = variant === 'contain'
 
   switch (color) {
-    case 'secondary':
-      return isContain ? 'yuki' : 'secondary'
     case 'negative':
       return isContain ? 'yuki' : 'negative'
     case 'cancel':

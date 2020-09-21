@@ -1,16 +1,17 @@
 import { useContext } from 'react'
 import { StyleSheet, TextStyle } from 'react-native'
-import { TextType, ThemeContext } from '../../theme'
+import { FontWeight, TextType, ThemeContext } from '../../theme'
 
 type Props = {
   type: TextType
+  weight: FontWeight
 }
 
 type Styles = {
   wrapper: TextStyle
 }
 
-export const useStyles = ({ type }: Props) => {
+export const useStyles = ({ type, weight }: Props) => {
   const theme = useContext(ThemeContext)
 
   const styles = StyleSheet.create<Styles>({
@@ -18,6 +19,7 @@ export const useStyles = ({ type }: Props) => {
       color: theme.color.sumi,
       margin: 0,
       ...theme.text.type[type],
+      fontWeight: weight,
     },
   })
 
