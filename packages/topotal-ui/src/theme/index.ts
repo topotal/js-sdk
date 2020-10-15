@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { tint } from 'polished'
 import { TextStyle } from 'react-native'
 
 export type FontWeight = 'normal' | 'bold'
@@ -10,7 +9,6 @@ export type TextType =
   'body' |
   'small_body'
 
-
 const textStyles: { [key in TextType]: TextStyle } = {
   display2:     { fontSize: 18, lineHeight: 26, fontFamily: 'Noto Sans JP' },
   display1:     { fontSize: 14, lineHeight: 20, fontFamily: 'Noto Sans JP' },
@@ -18,32 +16,45 @@ const textStyles: { [key in TextType]: TextStyle } = {
   small_body:   { fontSize: 10, lineHeight: 14, fontFamily: 'Noto Sans JP' },
 }
 
-const negative = '#d63031'
-const positive = '#00AC00'
+export const palette = {
+  yuki: '#FFFFFF',
+  kasumi: '#F8F8F8',
+  kemuri: '#DEDEDE',
+  katana: '#999999',
+  sumi: '#061D37',
+  yami: '#030C17',
+}
+
 const theme = {
   color: {
-    yuki: '#FFFFFF',
-    kasumi: '#F4F7FA',
-    kemuri: '#b2bec3',
-    katana: '#636e72',
-    sumi: '#2d3436',
-    positive: positive,
-    positiveLite: tint(0.7, positive),
-    positiveVeryLite: tint(0.95, positive),
-    negative: negative,
-    negativeLite: tint(0.7, negative),
-    negativeVeryLite: tint(0.95, negative),
+    background: palette.kasumi,
+    backgroundDark: palette.yami,
+    surface: palette.yuki,
+    surfaceDark: palette.sumi,
+    borderLight: palette.kemuri,
+    borderDark: palette.sumi,
+    cancel: palette.katana,
+    primaryTextDark: palette.sumi,
+    secandaryTextDark: palette.katana,
+    primaryTextLight: palette.yuki,
+    secandaryTextLight: palette.kasumi,
     primary: '#1765C1',
+    primaryLight: '#D7E9FF',
     primaryDark: '#124F97',
-    primaryLite: '#D7E9FF',
+    positive: '#42C115',
+    positiveLight: '#C7F7B6',
+    positiveDark: '#349711',
+    warning: '#F6CF00',
+    warningLight: '#FBEC9D',
+    warningDark: '#C6A600',
+    error: '#F64141',
+    errorLight: '#FDD6D3',
+    errorVeryDark: '#C80909',
     transparent: 'transparent',
   },
   radius: {
     level1: 4,
-  },
-  shadow: {
-    level1: '0px 1px 4px 0px rgba(0, 0, 0, .2)',
-    level2: '0px 2px 8px 0px rgba(0, 0, 0, .5)',
+    level2: 8,
   },
   text: {
     type: textStyles,
@@ -58,7 +69,8 @@ const theme = {
 } as const
 
 export type Theme = typeof theme
-export type Color = typeof theme.color
+export type ThemeColor = typeof theme.color
+export type PaletteColor = typeof palette
 
 export const ThemeContext = React.createContext(theme)
 

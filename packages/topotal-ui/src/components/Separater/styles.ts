@@ -14,10 +14,10 @@ export const useStyles = () => {
     border: {
       flex: 1,
       height: 1,
-      backgroundColor: theme.color.kemuri,
+      backgroundColor: theme.color.borderLight,
     },
     text: {
-      color: theme.color.katana,
+      color: theme.color.borderLight,
     },
   })
 

@@ -14,7 +14,7 @@ type Props = BaseProps & React.RefAttributes<BaseInput>
 
 const TextInput: React.FC<Props> = ({
   defaultValue = '',
-  placeholder = '',
+  placeholder = '入力してください',
   autoCapitalize = 'none',
   error = false,
   innerRef,
@@ -43,8 +43,16 @@ const TextInput: React.FC<Props> = ({
         style={styles.input}
       />
       {showPlaceholder ? (
-        <VStack style={styles.placeholderWrapper} pointerEvents="none">
-          <Text style={styles.placeholder}>{placeholder}</Text>
+        <VStack
+          style={styles.placeholderWrapper}
+          pointerEvents="none"
+        >
+          <Text
+            type="body"
+            style={styles.placeholder}
+          >
+            {placeholder}
+          </Text>
         </VStack>
       ) : null}
     </VStack>
