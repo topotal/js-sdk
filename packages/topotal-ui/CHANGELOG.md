@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.11.1...@topotal/topotal-ui@0.11.2) (2020-10-31)
+
+
+### Bug Fixes
+
+* patch color type errorw ([6ec2a2a](https://github.com/topotal/js-sdk/commit/6ec2a2ab21e8ccc60b26f6e924ca2f85fc079d4a))
+
+
+
+
+
 ## [0.11.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.11.0...@topotal/topotal-ui@0.11.1) (2020-10-31)
 
 **Note:** Version bump only for package @topotal/topotal-ui
