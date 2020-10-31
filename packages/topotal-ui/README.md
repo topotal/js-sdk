@@ -1,6 +1,6 @@
 # `@topotal/topotal-ui`
 
-> TODO: description
+This is the component county of the UI that we developed at topotal
 
 ## Usage
 
