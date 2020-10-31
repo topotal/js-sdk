@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
-import { TouchableHighlight } from 'react-native'
+import { View, TouchableHighlight, ViewStyle } from 'react-native'
+import { HStack } from '@topotal/topotal-ui'
 import Text from '../../../Text'
 import { useStyles } from './styles'
 
@@ -8,6 +9,8 @@ type Props = {
   path: string
   as?: string
   selected?: boolean
+  close?: boolean
+  style?: ViewStyle
   onPress?: (path: string, as?: string) => void
 }
 
@@ -16,9 +19,11 @@ const NavRow: React.FC<Props> = ({
   path,
   as,
   selected = false,
+  close = false,
+  style,
   onPress,
 }) => {
-  const { styles } = useStyles({ selected })
+  const { styles } = useStyles({ selected, close })
 
   const handlePress = useCallback(() => {
     onPress && onPress(path, as)
@@ -26,13 +31,22 @@ const NavRow: React.FC<Props> = ({
 
   return (
     <TouchableHighlight
-      style={styles.wrapper}
+      style={[styles.wrapper, style]}
       disabled={selected}
       onPress={handlePress}
     >
-      <Text style={styles.label}>
-        {label}
-      </Text>
+      <HStack
+        style={styles.content}
+        align="center"
+        gap={16}
+      >
+        <View style={styles.icon} />
+        {close ? null : (
+          <Text style={styles.label}>
+            {label}
+          </Text>
+        )}
+      </HStack>
     </TouchableHighlight>
   )
 }
