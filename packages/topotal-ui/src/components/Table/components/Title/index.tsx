@@ -13,7 +13,8 @@ const TableHeader: React.FC<Props> = ({ style, children }) => {
   return (
     <VStack style={[styles.wrapper, style]}>
       <Text
-        type="caption"
+        type="body"
+        weight="bold"
         style={styles.text}
       >
         {children}

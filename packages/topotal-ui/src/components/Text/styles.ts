@@ -16,7 +16,7 @@ export const useStyles = ({ type, weight }: Props) => {
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
-      color: theme.color.sumi,
+      color: theme.color.primaryTextDark,
       margin: 0,
       ...theme.text.type[type],
       fontWeight: weight,

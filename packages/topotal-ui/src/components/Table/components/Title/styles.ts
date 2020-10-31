@@ -16,7 +16,7 @@ export const useStyles = () => {
       justifyContent: 'center',
     },
     text: {
-      color: color.yuki,
+      color: color.primaryTextDark,
     },
   }
 

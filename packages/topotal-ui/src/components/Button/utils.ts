@@ -24,9 +24,9 @@ export const getTitleColor = (
   const isContain = variant === 'contain'
 
   switch (color) {
-    case 'negative': return isContain ? 'primaryTextLite' : 'error'
-    case 'cancel': return isContain ? 'primaryTextLite' : 'cancel'
-    case 'primary': return isContain ? 'primaryTextLite' : 'primary'
+    case 'negative': return isContain ? 'primaryTextLight' : 'error'
+    case 'cancel': return isContain ? 'primaryTextLight' : 'cancel'
+    case 'primary': return isContain ? 'primaryTextLight' : 'primary'
   }
 }
 
