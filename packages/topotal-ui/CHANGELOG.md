@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.10.0...@topotal/topotal-ui@0.11.0) (2020-10-31)
+
+
+### Bug Fixes
+
+* remove SideBar ([6ace2de](https://github.com/topotal/js-sdk/commit/6ace2de3dcd4e6a029d9b15698076a3bc3bd9e2b))
+
+
+### Features
+
+* Update theme color ([bd73753](https://github.com/topotal/js-sdk/commit/bd737539e6658eb29b24c90745758a437e6092ba))
+
+
+
+
+
 # [0.10.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.9.0...@topotal/topotal-ui@0.10.0) (2020-08-31)
 
 
