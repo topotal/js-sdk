@@ -9,5 +9,9 @@ export const all = () => (
     <TextInput placeholder="カスタムプレースホルダー" />
     <TextInput secureTextEntry />
     <TextInput error />
+    <TextInput
+      multiline
+      style={{ height: 300 }}
+    />
   </>
 )
