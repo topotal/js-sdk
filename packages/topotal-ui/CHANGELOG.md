@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.11.2...@topotal/topotal-ui@0.12.0) (2020-10-31)
+
+
+### Features
+
+* **Sidebar:** Add close prop ([6b56622](https://github.com/topotal/js-sdk/commit/6b566222a03f89431c6cb0e3bb63b68f9da38c16))
+* **TextInput:** Support multiline ([093f935](https://github.com/topotal/js-sdk/commit/093f935ef437bfed6f832b93825e140fe18c0cae))
+
+
+
+
+
 ## [0.11.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.11.1...@topotal/topotal-ui@0.11.2) (2020-10-31)
 
 
