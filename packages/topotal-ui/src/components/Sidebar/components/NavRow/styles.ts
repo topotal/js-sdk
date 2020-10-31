@@ -15,14 +15,15 @@ export const useStyles = ({ selected }: Props) => {
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
-      height: 40,
-      paddingHorizontal: 24,
+      height: 48,
+      paddingHorizontal: 16,
       flexDirection: 'row',
       alignItems: 'center',
-      backgroundColor: selected ? color.katana : 'transparent',
+      backgroundColor: selected ? 'rgba(255, 255, 255, 0.1)' : color.transparent,
+      borderRadius: 8,
     },
     label: {
-      color: color.yuki,
+      color: color.primaryTextLight,
     },
   })
 

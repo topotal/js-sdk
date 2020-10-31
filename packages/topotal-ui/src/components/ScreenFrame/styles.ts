@@ -3,6 +3,7 @@ import { useTheme } from '../../theme'
 
 type Styles = {
   wrapper: ViewStyle
+  header: ViewStyle
 }
 
 export const useStyles = () => {
@@ -10,8 +11,14 @@ export const useStyles = () => {
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
-      padding: 24,
-      backgroundColor: color.kasumi,
+      paddingHorizontal: 60,
+      paddingBottom: 60,
+      backgroundColor: color.background,
+    },
+    header: {
+      height: 64,
+      borderBottomWidth: 1,
+      borderColor: color.borderLight,
     },
   })
 

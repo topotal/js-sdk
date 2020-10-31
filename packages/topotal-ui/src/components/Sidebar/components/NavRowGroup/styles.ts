@@ -1,26 +1,19 @@
 import { useMemo } from 'react'
 import { useTheme } from '../../../../theme'
 
-type Props = {
-  index: number
-}
-
-export const useStyles = ({ index }: Props) => {
+export const useStyles = () => {
   const { color } = useTheme()
 
   const styles = useMemo(() => ({
     wrapper: {
       paddingVertical: 8,
-      borderTopWidth: index === 0 ? 1 : 0,
-      borderBottomWidth: 1,
-      borderColor: color.katana,
+      paddingHorizontal: 16,
     },
     label: {
-      color: color.yuki,
-      paddingHorizontal: 24,
+      color: color.primaryTextLight,
       lineHeight: 32,
     },
-  }), [color, index])
+  }), [color])
 
   return {
     styles,

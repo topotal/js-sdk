@@ -13,9 +13,18 @@ const Separater: React.FC<Props> = ({ text, style }) => {
   const { styles } = useStyles()
 
   return (
-    <HStack gap={16} align="center" justify="space-between" style={style}>
+    <HStack
+      gap={16}
+      align="center"
+      justify="space-between"
+      style={style}
+    >
       <View style={styles.border} />
-      <Text type="small_body" style={styles.text}>
+      <Text
+        type="small_body"
+        weight="bold"
+        style={styles.text}
+      >
         {text}
       </Text>
       <View style={styles.border} />

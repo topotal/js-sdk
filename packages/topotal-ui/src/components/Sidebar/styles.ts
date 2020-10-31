@@ -14,7 +14,7 @@ export const useStyles = () => {
       minWidth: 230,
       paddingTop: 80,
       paddingBottom: 24,
-      backgroundColor: color.sumi,
+      backgroundColor: color.surfaceDark,
     },
   })
 

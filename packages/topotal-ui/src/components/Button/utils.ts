@@ -1,27 +1,19 @@
-import { TextType, Color as ThemeColor } from '../../theme'
+import { TextType, ThemeColor as ThemeColor } from '../../theme'
 import { Size, Color, Variant, DynamicMaterial, DynamicGeometry } from './types'
 
 export const getTypeBySize = (size: Size): TextType => {
   switch (size) {
-    case 'large':
-      return 'display1'
-    case 'medium':
-      return 'body'
-    case 'small':
-      return 'small_body'
+    case 'large': return 'display1'
+    case 'medium': return 'body'
+    case 'small': return 'small_body'
   }
 }
 
 export const getBaseColor = (color: Color): keyof ThemeColor => {
   switch (color) {
-    case 'negative':
-      return 'negative'
-    case 'cancel':
-      return 'katana'
-    case 'light':
-      return 'yuki'
-    case 'primary':
-      return 'primary'
+    case 'negative': return 'error'
+    case 'cancel': return 'cancel'
+    case 'primary': return 'primary'
   }
 }
 
@@ -32,14 +24,9 @@ export const getTitleColor = (
   const isContain = variant === 'contain'
 
   switch (color) {
-    case 'negative':
-      return isContain ? 'yuki' : 'negative'
-    case 'cancel':
-      return isContain ? 'yuki' : 'katana'
-    case 'light':
-      return isContain ? 'primary' : 'yuki'
-    case 'primary':
-      return isContain ? 'yuki' : 'primary'
+    case 'negative': return isContain ? 'primaryTextLite' : 'error'
+    case 'cancel': return isContain ? 'primaryTextLite' : 'cancel'
+    case 'primary': return isContain ? 'primaryTextLite' : 'primary'
   }
 }
 

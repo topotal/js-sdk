@@ -36,7 +36,6 @@
     "url": "https://github.com/topotal/js-sdk/issues"
   },
   "dependencies": {
-    "polished": "^3.6.5",
     "react-is": "^16.13.1"
   },
   "devDependencies": {
