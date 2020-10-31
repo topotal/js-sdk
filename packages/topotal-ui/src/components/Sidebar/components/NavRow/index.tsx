@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { View, TouchableHighlight, ViewStyle } from 'react-native'
-import { HStack } from '@topotal/topotal-ui'
+import HStack from '../../../HStack'
 import Text from '../../../Text'
 import { useStyles } from './styles'
 
