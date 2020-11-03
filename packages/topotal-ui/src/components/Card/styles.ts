@@ -46,6 +46,7 @@ export const useStyles = ({
         borderRadius: dynamicStyle.borderRadius,
         borderWidth: 1,
         borderColor: color.borderLight,
+        backgroundColor: color.surface,
       },
       header: {
         height: dynamicStyle.headerHeight,
@@ -64,11 +65,7 @@ export const useStyles = ({
         borderColor: color.borderLight,
       },
     }
-  }, [
-    level,
-    color.background,
-    color.borderLight,
-  ])
+  }, [level, color.borderLight, color.surface, color.background])
 
   return {
     styles,
