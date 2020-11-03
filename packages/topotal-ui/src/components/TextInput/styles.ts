@@ -30,16 +30,16 @@ export const useStyles = ({ isFocused, error = false }: Props) => {
     wrapper: {
       position: 'relative',
       width: '100%',
-      height: 48,
+      height: 40,
     },
     placeholderWrapper: {
       position: 'absolute',
       top: 0,
       width: '100%',
-      height: 48,
+      height: 40,
     },
     placeholder: {
-      lineHeight: 48,
+      lineHeight: 40,
       paddingVertical: 0,
       paddingHorizontal: 16,
       color: theme.color.secandaryTextDark,

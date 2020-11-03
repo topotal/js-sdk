@@ -26,8 +26,8 @@ const getDynamicStyle = (level: Level) => {
     case 2:
       return {
         borderRadius: 4,
-        headerHeight: 48,
-        footerHeight: 48,
+        headerHeight: 40,
+        footerHeight: 40,
         padding: 16,
       }
   }
