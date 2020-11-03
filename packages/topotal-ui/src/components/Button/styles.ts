@@ -44,7 +44,6 @@ export const useStyles = ({
       opacity,
     },
     title: {
-      fontSize: 15,
       textAlign: 'center',
       lineHeight: height,
       width: '100%',

@@ -8,6 +8,7 @@ export const all = () => (
     <Button title="送信" size="small" />
     <Button title="送信" size="small" disabled />
     <Button title="送信" size="medium" />
+    <Button title="送信" size="large" />
     <Button title="送信" size="small" variant="outline" />
     <Button title="送信" size="medium" variant="outline" />
     <Button title="送信" size="small" variant="text" />

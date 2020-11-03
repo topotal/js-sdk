@@ -42,7 +42,11 @@ const Button: React.FC<Props> = ({
         {loading ? (
           <ActivityIndicator color={indicatorColor} />
         ) : (
-          <Text type={textType} style={styles.title}>
+          <Text
+            style={styles.title}
+            type={textType}
+            weight="bold"
+          >
             {title}
           </Text>
         )}

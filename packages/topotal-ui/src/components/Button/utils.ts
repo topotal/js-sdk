@@ -41,13 +41,13 @@ export const getDynamicGeometry = (size: Size): DynamicGeometry => {
       }
     case 'medium':
       return {
-        height: 40,
+        height: 32,
         sidePadding: 40,
         textType,
       }
     case 'large':
       return {
-        height: 48,
+        height: 40,
         sidePadding: 48,
         textType,
       }
