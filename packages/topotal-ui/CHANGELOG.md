@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.13.0...@topotal/topotal-ui@0.13.1) (2020-11-03)
+
+
+### Bug Fixes
+
+* Export Card ([8469ab6](https://github.com/topotal/js-sdk/commit/8469ab6d8d977945de5355a7c8ea5e9a9c83a106))
+
+
+
+
+
 # [0.13.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.12.1...@topotal/topotal-ui@0.13.0) (2020-11-03)
 
 
