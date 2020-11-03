@@ -1,4 +1,5 @@
 export { default as Button } from './Button'
+export { default as Card } from './Card'
 export { default as HStack } from './HStack'
 export { default as ScreenFrame } from './ScreenFrame'
 export { default as Separater } from './Separater'
