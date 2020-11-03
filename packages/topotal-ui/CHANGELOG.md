@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.13.2...@topotal/topotal-ui@0.13.3) (2020-11-03)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Patch header color in Card ([dd1ea0a](https://github.com/topotal/js-sdk/commit/dd1ea0ae5e8bf596d99b6bb2c10c3e73936582ff))
+
+
+
+
+
 ## [0.13.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.13.1...@topotal/topotal-ui@0.13.2) (2020-11-03)
 
 
