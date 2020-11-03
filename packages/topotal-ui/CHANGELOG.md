@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.12.1...@topotal/topotal-ui@0.13.0) (2020-11-03)
+
+
+### Features
+
+* **topotal-ui:** Add Card component ([9d6b62d](https://github.com/topotal/js-sdk/commit/9d6b62de643b62a535c905a6f7494b03cd275df5))
+
+
+
+
+
 ## [0.12.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.12.0...@topotal/topotal-ui@0.12.1) (2020-10-31)
 
 
