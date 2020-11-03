@@ -47,6 +47,7 @@ export const useStyles = ({
         borderWidth: 1,
         borderColor: color.borderLight,
         backgroundColor: color.surface,
+        overflow: 'hidden',
       },
       header: {
         height: dynamicStyle.headerHeight,
