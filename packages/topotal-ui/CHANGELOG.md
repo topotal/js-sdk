@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.13.5...@topotal/topotal-ui@0.14.0) (2020-11-09)
+
+
+### Bug Fixes
+
+* patch TextInput bug ([0221fab](https://github.com/topotal/js-sdk/commit/0221fab1456bfb19747a36cd31b75793ec13e90e))
+
+
+### Features
+
+* **topotal-ui:** Add UserIcon ([abd54d5](https://github.com/topotal/js-sdk/commit/abd54d53aeaa3ad6de99a687196bd376ceab5df4))
+
+
+
+
+
 ## [0.13.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.13.4...@topotal/topotal-ui@0.13.5) (2020-11-03)
 
 
