@@ -13,7 +13,7 @@ type BaseProps = {
 type Props = BaseProps & React.RefAttributes<BaseInput>
 
 const TextInput: React.FC<Props> = ({
-  defaultValue = '',
+  value = '',
   placeholder = '入力してください',
   autoCapitalize = 'none',
   error = false,
@@ -23,19 +23,20 @@ const TextInput: React.FC<Props> = ({
   ...rest
 }) => {
   const {
+    innerValue,
     isFocused,
     showPlaceholder,
     handleBlur,
     handleChangeText,
     handleFocus,
-  } = useTextInput({ value: defaultValue, onChangeText })
+  } = useTextInput({ value, onChangeText })
   const { styles } = useStyles({ isFocused, error })
 
   return (
     <VStack style={[styles.wrapper, style]}>
       <BaseInput
         {...rest}
-        defaultValue={defaultValue}
+        value={innerValue}
         autoCapitalize={autoCapitalize}
         onChangeText={handleChangeText}
         onFocus={handleFocus}

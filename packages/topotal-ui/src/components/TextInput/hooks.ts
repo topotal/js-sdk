@@ -27,6 +27,7 @@ export const useTextInput = ({ value, onChangeText }: Props) => {
   }, [])
 
   return {
+    innerValue,
     isFocused,
     showPlaceholder: !isFocused && !innerValue,
     handleChangeText,
