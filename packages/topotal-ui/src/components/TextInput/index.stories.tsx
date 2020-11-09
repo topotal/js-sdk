@@ -13,5 +13,6 @@ export const all = () => (
       multiline
       style={{ height: 300 }}
     />
+    <TextInput value="default value" onChangeText={value => console.info(value)}/>
   </>
 )
