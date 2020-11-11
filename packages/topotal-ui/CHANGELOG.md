@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.14.0...@topotal/topotal-ui@0.15.0) (2020-11-11)
+
+
+### Features
+
+* Add ThemeProvider ([b85c0d8](https://github.com/topotal/js-sdk/commit/b85c0d81698f635260f0b0a1b35631fd4f3c07e2))
+
+
+
+
+
 # [0.14.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.13.5...@topotal/topotal-ui@0.14.0) (2020-11-09)
 
 
