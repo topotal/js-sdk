@@ -25,7 +25,7 @@ export const palette = {
   yami: '#030C17',
 }
 
-const theme = {
+export const defaultTheme = {
   color: {
     background: palette.kasumi,
     backgroundDark: palette.yami,
@@ -68,14 +68,12 @@ const theme = {
   },
 } as const
 
-export type Theme = typeof theme
-export type ThemeColor = typeof theme.color
+export type Theme = typeof defaultTheme
+export type ThemeColor = typeof defaultTheme.color
 export type PaletteColor = typeof palette
 
-export const ThemeContext = React.createContext(theme)
+export const ThemeContext = React.createContext(defaultTheme)
 
 export const useTheme = () => {
   return useContext(ThemeContext)
 }
-
-export default theme

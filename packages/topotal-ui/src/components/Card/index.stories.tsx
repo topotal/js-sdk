@@ -1,5 +1,5 @@
 import React from 'react'
-import theme from '../../theme'
+import { defaultTheme } from '../../theme'
 import Text from '../Text'
 import VStack from '../VStack'
 import Card from '.'
@@ -10,7 +10,7 @@ export const List = () => (
   <VStack
     gap={16}
     style={{
-      backgroundColor: theme.color.background,
+      backgroundColor: defaultTheme.color.background,
       padding: 24,
     }}
   >

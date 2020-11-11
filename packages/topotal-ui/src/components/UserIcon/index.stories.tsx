@@ -1,5 +1,5 @@
 import React from 'react'
-import theme from '../../theme'
+import { defaultTheme } from '../../theme'
 import HStack from '../HStack'
 import UserIcon from '.'
 
@@ -10,7 +10,7 @@ export const List = () => (
     gap={16}
     style={{
       padding: 24,
-      backgroundColor: theme.color.background,
+      backgroundColor: defaultTheme.color.background,
     }}
   >
     <UserIcon
