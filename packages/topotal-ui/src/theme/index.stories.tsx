@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import { storiesOf } from '@storybook/react'
-import theme, { ThemeColor } from '.'
+import { ThemeColor, defaultTheme } from '.'
 
 type Props = {
   name: string
@@ -37,11 +37,11 @@ const ColorRow: React.FC<Props> = ({
 storiesOf('theme/color', module)
   .add('color', () => (
     <View style={{ padding: 24 }}>
-      {(Object.keys(theme.color) as (keyof ThemeColor)[]).map(key => (
+      {(Object.keys(defaultTheme.color) as (keyof ThemeColor)[]).map(key => (
         <ColorRow
           key={key}
           name={key}
-          color={theme.color[key]}
+          color={defaultTheme.color[key]}
         />
       ))}
     </View>
