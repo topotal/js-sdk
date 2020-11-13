@@ -30,7 +30,8 @@
     "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build",
     "lint:ts": "eslint --ext .ts,.tsx src",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll -o ../../docs/topotal-ui/"
   },
   "bugs": {
     "url": "https://github.com/topotal/js-sdk/issues"
@@ -39,7 +40,11 @@
     "react-is": "^16.13.1"
   },
   "devDependencies": {
-    "@storybook/react": "^6.0.21",
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/react": "^6.0.28",
     "@types/react": "^16.9.43",
     "@types/react-is": "^16.7.1",
     "@types/react-native": "^0.63.1",
@@ -55,6 +60,7 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
+    "react-is": "^17.0.1",
     "react-native-web": "^0.0.0-d6e83d84a",
     "react-table": "^7.5.0",
     "rimraf": "^3.0.2",
