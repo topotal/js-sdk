@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.15.0...@topotal/topotal-ui@0.16.0) (2020-11-14)
+
+
+### Features
+
+* **topotal-ui:** Support Text native props ([72639fb](https://github.com/topotal/js-sdk/commit/72639fb693429a71f8a38eee5f350f3a3ec308c5))
+* Add storybook doc ([d194815](https://github.com/topotal/js-sdk/commit/d1948158ef99783ddfc51dce6cb583dedce44d2d))
+
+
+
+
+
 # [0.15.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.14.0...@topotal/topotal-ui@0.15.0) (2020-11-11)
 
 
