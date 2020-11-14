@@ -3,7 +3,9 @@ import { Text as BaseText, TextStyle } from 'react-native'
 import { TextType, FontWeight } from '../../theme'
 import { useStyles } from './styles'
 
-type Props = {
+type BaseTextProps = React.ComponentProps<typeof BaseText>
+
+type Props = BaseTextProps & {
   type?: TextType
   weight?: FontWeight
   style?: TextStyle
@@ -14,10 +16,14 @@ const Text: React.FC<Props> = ({
   weight = 'normal',
   style,
   children,
+  ...rest
 }) => {
   const { styles } = useStyles({ type, weight })
   return (
-    <BaseText style={[styles.wrapper, style]}>
+    <BaseText
+      {...rest}
+      style={[styles.wrapper, style]}
+    >
       {children}
     </BaseText>
   )
