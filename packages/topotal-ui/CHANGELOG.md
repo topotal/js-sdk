@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.16.0...@topotal/topotal-ui@0.17.0) (2020-11-20)
+
+
+### Features
+
+* **topotal-ui:** Add MdRenderer ([81171ba](https://github.com/topotal/js-sdk/commit/81171baeceff194dd01d1b258b1373935bde6dc4))
+
+
+
+
+
 # [0.16.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.15.0...@topotal/topotal-ui@0.16.0) (2020-11-14)
 
 
