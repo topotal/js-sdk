@@ -14,8 +14,6 @@ text in [link](https://google.com).
 
 **Bold text**
 
-## h2
-
 ### h3
 
 #### h4
