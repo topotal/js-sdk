@@ -17,10 +17,12 @@
     "isolatedModules": true,
     "jsx": "react",
     "experimentalDecorators": true,
-    "declaration": true,
+    "declaration": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "esm",
+    "lib"
   ],
   "include": [
     "src/**/*.ts",

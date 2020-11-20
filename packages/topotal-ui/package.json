@@ -37,14 +37,16 @@
     "url": "https://github.com/topotal/js-sdk/issues"
   },
   "dependencies": {
-    "react-is": "^16.13.1"
+    "marked": "^1.2.5",
+    "react-is": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@storybook/addon-actions": "^6.0.28",
-    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-essentials": "^6.1.1",
     "@storybook/addon-links": "^6.0.28",
     "@storybook/react": "^6.0.28",
+    "@types/marked": "^1.2.0",
     "@types/react": "^16.9.43",
     "@types/react-is": "^16.7.1",
     "@types/react-native": "^0.63.1",
