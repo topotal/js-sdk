@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Image, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
 
-export type Size = 'medium' | 'large'
+export type Size = 'small' | 'medium' | 'large'
 
 type Props = {
   uri: string

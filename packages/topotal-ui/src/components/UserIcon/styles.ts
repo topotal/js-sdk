@@ -7,11 +7,17 @@ const getDynamicStyle = (size: Size) => {
   switch (size) {
     case 'large':
       return {
+        width: 48,
+        height: 48,
+        borderRadius: 24,
+      }
+    case 'medium':
+      return {
         width: 32,
         height: 32,
         borderRadius: 16,
       }
-    case 'medium':
+    case 'small':
       return {
         width: 24,
         height: 24,
