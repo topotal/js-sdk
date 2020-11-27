@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.17.1...@topotal/topotal-ui@0.17.2) (2020-11-27)
+
+
+### Bug Fixes
+
+* **topotal-ui:** patch UserIcon size ([774f975](https://github.com/topotal/js-sdk/commit/774f975c5bab9a8aadb5076760e0beaade53dd11))
+
+
+
+
+
 ## [0.17.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.17.0...@topotal/topotal-ui@0.17.1) (2020-11-20)
 
 
