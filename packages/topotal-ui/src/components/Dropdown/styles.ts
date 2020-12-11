@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { ViewStyle } from 'react-native'
-import { useTheme } from '@topotal/topotal-ui'
+import { useTheme } from '../../theme'
 import { CardPosition } from '.'
 
 type Styles = {
