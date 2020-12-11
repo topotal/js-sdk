@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Button, VStack, Text } from '@topotal/topotal-ui'
+import Button from '../Button'
+import VStack from '../VStack'
+import Text from '../Text'
 import Dropdown from '.'
 
 export default {
