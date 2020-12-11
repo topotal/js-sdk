@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.17.1...@topotal/topotal-ui@0.18.0) (2020-12-11)
+
+
+### Bug Fixes
+
+* **topotal-ui:** patch UserIcon size ([774f975](https://github.com/topotal/js-sdk/commit/774f975c5bab9a8aadb5076760e0beaade53dd11))
+
+
+### Features
+
+* Add Dropdown component ([d6db4a4](https://github.com/topotal/js-sdk/commit/d6db4a48cb3db3f873434c99df7d996aba605618))
+* Update all packages ([acf4e6f](https://github.com/topotal/js-sdk/commit/acf4e6fd9021c8eeb2b2176ab58637d32f441008))
+
+
+
+
+
 ## [0.17.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.17.0...@topotal/topotal-ui@0.17.1) (2020-11-20)
 
 
