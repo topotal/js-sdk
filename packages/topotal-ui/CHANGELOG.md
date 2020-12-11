@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.18.1...@topotal/topotal-ui@0.19.0) (2020-12-11)
+
+
+### Features
+
+* Support multiline text input ([a32703e](https://github.com/topotal/js-sdk/commit/a32703edc3ed6c60e7fc7aa93c53e9d46fb5dcd3))
+
+
+
+
+
 ## [0.18.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.18.0...@topotal/topotal-ui@0.18.1) (2020-12-11)
 
 
