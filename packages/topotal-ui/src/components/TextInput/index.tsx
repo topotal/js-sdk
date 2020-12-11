@@ -16,6 +16,7 @@ const TextInput: React.FC<Props> = ({
   value = '',
   placeholder = '入力してください',
   autoCapitalize = 'none',
+  multiline = false,
   error = false,
   innerRef,
   style,
@@ -30,14 +31,18 @@ const TextInput: React.FC<Props> = ({
     handleChangeText,
     handleFocus,
   } = useTextInput({ value, onChangeText })
-  const { styles } = useStyles({ isFocused, error })
+  const { styles } = useStyles({ isFocused, multiline, error })
 
   return (
     <VStack style={[styles.wrapper, style]}>
+      <Text style={styles.dummyText}>
+        {innerValue.replace(/\n$/g, '\n ')}
+      </Text>
       <BaseInput
         {...rest}
         value={innerValue}
         autoCapitalize={autoCapitalize}
+        multiline={multiline}
         onChangeText={handleChangeText}
         onFocus={handleFocus}
         onBlur={handleBlur}
