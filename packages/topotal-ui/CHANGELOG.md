@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.19.0...@topotal/topotal-ui@0.20.0) (2020-12-12)
+
+
+### Bug Fixes
+
+* Add gap to header and footer in Card ([ed08bf9](https://github.com/topotal/js-sdk/commit/ed08bf93b277d195ae907648c5412e30f3a2c0c6))
+* Patch maxWidth as ScreenFrame ([d55d670](https://github.com/topotal/js-sdk/commit/d55d67064ff8d63387745d9c40a8b5ee3dcb9bfd))
+
+
+### Features
+
+* Add positive color to Button ([5e795d3](https://github.com/topotal/js-sdk/commit/5e795d3da681244c786ecf28cdc41e6f718b08ce))
+
+
+
+
+
 # [0.19.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.18.1...@topotal/topotal-ui@0.19.0) (2020-12-11)
 
 
