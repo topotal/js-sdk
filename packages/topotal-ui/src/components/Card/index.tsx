@@ -28,6 +28,7 @@ const Card: React.FC<Props> = ({
         <HStack
           style={styles.header}
           align="center"
+          gap={8}
         >
           {header}
         </HStack>
@@ -39,6 +40,7 @@ const Card: React.FC<Props> = ({
         <HStack
           style={styles.footer}
           align="center"
+          gap={8}
         >
           {footer}
         </HStack>

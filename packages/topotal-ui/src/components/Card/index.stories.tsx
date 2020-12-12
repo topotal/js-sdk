@@ -2,6 +2,7 @@ import React from 'react'
 import { defaultTheme } from '../../theme'
 import Text from '../Text'
 import VStack from '../VStack'
+import Spacer from '../Spacer'
 import Card from '.'
 
 export default { title: 'components/Card' }
@@ -17,10 +18,14 @@ export const List = () => (
     <Card
       level={1}
       header={(
-        <Text weight="bold">header a</Text>
+        <Text weight="bold">header</Text>
       )}
       footer={(
-        <Text>footer</Text>
+        <>
+          <Text>left</Text>
+          <Spacer />
+          <Text>right</Text>
+        </>
       )}
     >
       <Text>test</Text>
