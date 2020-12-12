@@ -21,8 +21,11 @@ const ScreenFrame: React.FC<Props> = ({
   const { styles } = useStyles()
 
   return (
-    <VStack style={[styles.wrapper, style]}>
-      <VStack gap={24}>
+    <VStack
+      style={[styles.wrapper, style]}
+      align="center"
+    >
+      <VStack gap={24} style={styles.container}>
         <HStack
           align="center"
           style={styles.header}
@@ -33,7 +36,7 @@ const ScreenFrame: React.FC<Props> = ({
           <Spacer />
           {header}
         </HStack>
-        <VStack gap={16}>
+        <VStack gap={16} style={styles.content}>
           {children}
         </VStack>
       </VStack>
