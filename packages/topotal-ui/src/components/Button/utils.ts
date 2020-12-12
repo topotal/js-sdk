@@ -14,6 +14,7 @@ export const getBaseColor = (color: Color): keyof ThemeColor => {
     case 'negative': return 'error'
     case 'cancel': return 'cancel'
     case 'primary': return 'primary'
+    case 'positive': return 'positiveDark'
   }
 }
 
@@ -27,6 +28,7 @@ export const getTitleColor = (
     case 'negative': return isContain ? 'primaryTextLight' : 'error'
     case 'cancel': return isContain ? 'primaryTextLight' : 'cancel'
     case 'primary': return isContain ? 'primaryTextLight' : 'primary'
+    case 'positive': return isContain ? 'primaryTextLight' : 'positiveDark'
   }
 }
 
