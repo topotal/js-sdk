@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.21.1...@topotal/topotal-ui@0.21.2) (2020-12-15)
+
+
+### Bug Fixes
+
+* Patch default iconBasePath ([62be3b1](https://github.com/topotal/js-sdk/commit/62be3b13c078f469553f0406018deffe092acfc7))
+
+
+
+
+
 ## [0.21.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.21.0...@topotal/topotal-ui@0.21.1) (2020-12-15)
 
 
