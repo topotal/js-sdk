@@ -1,10 +1,10 @@
-import { ViewStyle, TextStyle } from 'react-native'
+import { ViewStyle, TextStyle, ImageStyle } from 'react-native'
 import { useTheme } from '../../../../theme'
 
 type Styles = {
   wrapper: ViewStyle
   content: ViewStyle
-  icon: ViewStyle
+  icon: ImageStyle
   label: TextStyle
 }
 
@@ -31,8 +31,7 @@ export const useStyles = ({ selected, close }: Props) => {
     icon: {
       width: 24,
       height: 24,
-      borderWidth: 1,
-      borderColor: color.primaryTextLight,
+      tintColor: color.primaryTextLight,
     },
     label: {
       color: color.primaryTextLight,

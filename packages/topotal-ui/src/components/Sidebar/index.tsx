@@ -1,10 +1,12 @@
 import React from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
+import { IconName } from '../Icon'
 import VStack from '../VStack'
 import NavRow from './components/NavRow'
 import { useStyles } from './styles'
 
 export type NavItem = {
+  iconName: IconName
   label: string
   path: string
   as?: string
@@ -38,9 +40,7 @@ const SideBar: React.FC<Props> = ({
           return (
             <NavRow
               key={item.path}
-              label={item.label}
-              path={item.path}
-              as={item.as}
+              item={item}
               selected={selected}
               close={close}
               onPress={onPressNavRow}

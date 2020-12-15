@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react'
-import { View, TouchableHighlight, ViewStyle } from 'react-native'
+import { TouchableHighlight, ViewStyle } from 'react-native'
+import Icon from '../../../Icon'
 import HStack from '../../../HStack'
 import Text from '../../../Text'
+import { NavItem } from '../..'
 import { useStyles } from './styles'
 
 type Props = {
-  label: string
-  path: string
-  as?: string
+  item: NavItem
   selected?: boolean
   close?: boolean
   style?: ViewStyle
@@ -15,9 +15,7 @@ type Props = {
 }
 
 const NavRow: React.FC<Props> = ({
-  label,
-  path,
-  as,
+  item,
   selected = false,
   close = false,
   style,
@@ -26,8 +24,8 @@ const NavRow: React.FC<Props> = ({
   const { styles } = useStyles({ selected, close })
 
   const handlePress = useCallback(() => {
-    onPress && onPress(path, as)
-  }, [path, as, onPress])
+    onPress && onPress(item.path, item.as)
+  }, [item.path, item.as, onPress])
 
   return (
     <TouchableHighlight
@@ -40,10 +38,13 @@ const NavRow: React.FC<Props> = ({
         align="center"
         gap={16}
       >
-        <View style={styles.icon} />
+        <Icon
+          style={styles.icon}
+          name={item.iconName}
+        />
         {close ? null : (
           <Text style={styles.label}>
-            {label}
+            {item.label}
           </Text>
         )}
       </HStack>
