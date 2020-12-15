@@ -66,7 +66,7 @@ export const defaultTheme = {
     level3: 300,
     level4: 400,
   },
-  iconBasePath: '/icons/',
+  iconBasePath: '/icons',
 } as const
 
 export type Theme = typeof defaultTheme
