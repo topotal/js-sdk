@@ -1,14 +1,20 @@
 import React from 'react'
-import { Image, ImageStyle, ViewStyle, View } from 'react-native'
+import { Image, ImageStyle } from 'react-native'
 import { useTheme } from '../../theme'
 
 export type IconName =
   'settings-black' |
-  'done-black'
+  'done' |
+  'whatshot' |
+  'group' |
+  'memory' |
+  'book' |
+  'credit_card' |
+  'notifications_none'
 
 type Props = {
   name: IconName
-  style?: ViewStyle
+  style?: ImageStyle
 }
 
 const Icon: React.FC<Props> = ({
@@ -16,33 +22,24 @@ const Icon: React.FC<Props> = ({
   style,
 }) => {
   const { iconBasePath } = useTheme()
-
   return (
-    <View style={[styles.wrapper, style]}>
-      <Image
-        style={styles.image}
-        source={{
-          uri: `${iconBasePath}/${name}.svg`,
-        }}
-      />
-    </View>
+    <Image
+      style={[styles.wrapper, style]}
+      source={{
+        uri: `${iconBasePath}/${name}.svg`,
+      }}
+    />
   )
 }
 
 type Styles = {
-  wrapper: ViewStyle
-  image: ImageStyle
+  wrapper: ImageStyle
 }
 
 const styles: Styles = {
   wrapper: {
-    width: 32,
-    minWidth: 16,
-    minHeight: 16,
-  },
-  image: {
-    width: '100%',
-    paddingTop: '100%',
+    width: 24,
+    height: 24,
   },
 }
 

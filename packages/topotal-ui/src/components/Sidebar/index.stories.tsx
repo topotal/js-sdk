@@ -1,20 +1,23 @@
 import React from 'react'
-import Sidebar from '.'
+import Sidebar, { NavItem } from '.'
 import HStack from '../HStack'
 
 export default { title: 'components/Sidebar' }
 
-const items = [
+const items: NavItem[] = [
   {
+    iconName: 'whatshot',
     label: 'item2_1',
     path: 'path2_1',
     as: 'as2_1',
   },
   {
+    iconName: 'done',
     label: 'item2_2',
     path: 'path2_2',
   },
   {
+    iconName: 'settings-black',
     label: 'item2_3',
     path: 'path2_3',
   },
