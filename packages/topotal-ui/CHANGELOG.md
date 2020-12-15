@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.20.0...@topotal/topotal-ui@0.21.0) (2020-12-15)
+
+
+### Features
+
+* Add Icon component ([be39823](https://github.com/topotal/js-sdk/commit/be398236bff13bdb3822cd1aa72b76aefefe19c3))
+* Support iconName in Sidebar ([3956649](https://github.com/topotal/js-sdk/commit/39566495581ae5a49821fb25d1b64b3dd205625b))
+
+
+
+
+
 # [0.20.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.19.0...@topotal/topotal-ui@0.20.0) (2020-12-12)
 
 
