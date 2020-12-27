@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.21.2...@topotal/topotal-ui@0.21.4) (2020-12-27)
+
+
+### Bug Fixes
+
+* patch Button props bug ([321e190](https://github.com/topotal/js-sdk/commit/321e190fb8cbf2791e9ba8f66cb73f3a929eef12))
+* Patch style props ([93d1363](https://github.com/topotal/js-sdk/commit/93d136334f049e784021af30dab56eb58cf5ed63))
+
+
+
+
+
 ## [0.21.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.21.2...@topotal/topotal-ui@0.21.3) (2020-12-27)
 
 
