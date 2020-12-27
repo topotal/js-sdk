@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { lexer } from 'marked'
 import VStack from '../VStack'
 import Paragraph from './components/Paragraph'
@@ -10,7 +10,7 @@ import { NormalizedToken } from './types'
 
 type Props = {
   markdown: string
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   tokenFilter?: (token: NormalizedToken) => boolean
 }
 

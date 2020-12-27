@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image, ViewStyle } from 'react-native'
+import { View, Image, ViewStyle, StyleProp } from 'react-native'
 import { useStyles } from './styles'
 
 export type Size = 'small' | 'medium' | 'large'
@@ -7,7 +7,7 @@ export type Size = 'small' | 'medium' | 'large'
 type Props = {
   uri: string
   size?: Size
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const UserIcon: React.FC<Props> = ({

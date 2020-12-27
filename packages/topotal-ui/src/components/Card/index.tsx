@@ -1,5 +1,5 @@
 import React from 'react'
-import { ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import VStack from '../VStack'
 import HStack from '../HStack'
 import { useStyles } from './styles'
@@ -10,7 +10,7 @@ type Props = {
   header?: React.ReactNode
   footer?: React.ReactNode
   level?: Level
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const Card: React.FC<Props> = ({

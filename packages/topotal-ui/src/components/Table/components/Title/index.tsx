@@ -1,10 +1,10 @@
 import React from 'react'
-import { ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { VStack, Text } from '../../../..'
 import { useStyles } from './styles'
 
 type Props = {
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const TableHeader: React.FC<Props> = ({ style, children }) => {

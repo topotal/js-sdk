@@ -1,12 +1,12 @@
 import React from 'react'
-import { ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { VStack } from '../../../..'
 import Row from '../Row'
 
 type RowElement = React.ReactElement<React.ComponentProps<typeof Row>>
 
 type Props = {
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   children: RowElement | RowElement[]
 }
 
@@ -16,10 +16,12 @@ const Body: React.FC<Props> = ({ style, children }) => {
       {React.Children.map(children, (child, index) => {
         const element = child as RowElement
         return React.cloneElement(element, {
-          style: {
-            borderTopWidth: index === 0 ? 0 : 1,
-            ...element.props.style,
-          },
+          style: [
+            {
+              borderTopWidth: index === 0 ? 0 : 1,
+            },
+            element.props.style,
+          ],
         })
       })}
     </VStack>

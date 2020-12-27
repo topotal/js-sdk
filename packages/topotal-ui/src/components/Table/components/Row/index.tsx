@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, ViewStyle, TouchableOpacity } from 'react-native'
+import { View, ViewStyle, TouchableOpacity, StyleProp } from 'react-native'
 import Cell from '../Cell'
 import TableHeader from '../Title'
 
 type Props = {
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   children?: (
     React.ReactElement<React.ComponentProps<typeof TableHeader>>[] |
     React.ReactElement<React.ComponentProps<typeof Cell>>[]

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { TouchableHighlight, ViewStyle } from 'react-native'
+import { StyleProp, TouchableHighlight, ViewStyle } from 'react-native'
 import Icon from '../../../Icon'
 import HStack from '../../../HStack'
 import Text from '../../../Text'
@@ -10,7 +10,7 @@ type Props = {
   item: NavItem
   selected?: boolean
   close?: boolean
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   onPress?: (path: string, as?: string) => void
 }
 
