@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, ViewStyle } from 'react-native'
+import { StyleProp, View, ViewStyle } from 'react-native'
 import HStack from '../HStack'
 import Text from '../Text'
 import { useStyles } from './styles'
 
 type Props = {
   text: string
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const Separater: React.FC<Props> = ({ text, style }) => {

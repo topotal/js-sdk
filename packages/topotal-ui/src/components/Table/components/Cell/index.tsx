@@ -1,9 +1,9 @@
 import React from 'react'
-import { ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { VStack, Text } from '../../../..'
 
 type Props = {
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const Cell: React.FC<Props> = ({ style, children }) => {

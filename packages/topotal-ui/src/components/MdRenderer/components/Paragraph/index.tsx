@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { TextStyle } from 'react-native'
+import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
 import { normalizeTokens } from '../../utils'
 import Text from '../../../Text'
@@ -8,7 +8,7 @@ import Link from '../Link'
 
 type Props = {
   token: Tokens.Paragraph
-  style?: TextStyle
+  style?: StyleProp<TextStyle>
 }
 
 const Paragraph: React.FC<Props> = ({

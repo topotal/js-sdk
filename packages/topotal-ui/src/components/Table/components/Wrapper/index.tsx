@@ -1,11 +1,11 @@
 import React from 'react'
-import { ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { VStack } from '../../../'
 import Head from '../Head'
 import Body from '../Body'
 
 type Props = {
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   children: [
     React.ReactElement<React.ComponentProps<typeof Head>>,
     React.ReactElement<React.ComponentProps<typeof Body>>,

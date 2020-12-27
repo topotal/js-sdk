@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react'
-import { Modal, Pressable, View, ViewStyle } from 'react-native'
+import { Modal, Pressable, StyleProp, View, ViewStyle } from 'react-native'
 import { useMeasure } from '../../hooks/useMeasure'
 import { useStyles } from './styles'
 
@@ -11,7 +11,7 @@ export type CardPosition = {
 
 type Props = {
   visible?: boolean
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   onPressBackground?: () => void
 }
 

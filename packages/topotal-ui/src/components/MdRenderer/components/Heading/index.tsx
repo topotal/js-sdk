@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react'
-import { TextStyle } from 'react-native'
+import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
 import Text from '../../../Text'
 
 type Props = {
   token: Tokens.Heading
-  style?: TextStyle
+  style?: StyleProp<TextStyle>
 }
 
 const Heading: React.FC<Props> = ({

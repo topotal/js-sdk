@@ -1,11 +1,11 @@
 import React from 'react'
-import { TextStyle } from 'react-native'
+import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
 import Text from '../../../Text'
 
 type Props = {
   token: Tokens.Strong
-  style?: TextStyle
+  style?: StyleProp<TextStyle>
 }
 
 const Strong: React.FC<Props> = ({

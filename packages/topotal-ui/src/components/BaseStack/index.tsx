@@ -1,6 +1,6 @@
 import React from 'react'
 import { isFragment } from 'react-is'
-import { View, ViewStyle } from 'react-native'
+import { StyleProp, View, ViewStyle } from 'react-native'
 import { getCellStyle } from './utils'
 import { Direction, Align, Justify } from './types'
 import { useStyles } from './styles'
@@ -10,7 +10,7 @@ type Props = React.ComponentProps<typeof View> & {
   gap?: number
   align?: Align
   justify?: Justify
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const createStyleInjectedChildren = (children: React.ReactNode, direction: Direction, gap: number): React.ReactNode => {

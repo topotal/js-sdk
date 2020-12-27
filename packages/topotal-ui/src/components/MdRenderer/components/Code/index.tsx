@@ -1,5 +1,5 @@
 import React from 'react'
-import { ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { Tokens } from 'marked'
 import VStack from '../../../VStack'
 import Text from '../../../Text'
@@ -7,7 +7,7 @@ import { useStyles } from './styles'
 
 type Props = {
   token: Tokens.Code
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const Code: React.FC<Props> = ({

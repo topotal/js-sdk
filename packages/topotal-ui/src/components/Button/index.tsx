@@ -1,5 +1,5 @@
 import React from 'react'
-import { TouchableOpacity, ActivityIndicator } from 'react-native'
+import { TouchableOpacity, ActivityIndicator, StyleProp, ViewStyle } from 'react-native'
 import Text from '../Text'
 import HStack from '../HStack'
 import { Size, Color, Variant } from './types'
@@ -12,6 +12,7 @@ type Props = {
   variant?: Variant
   disabled?: boolean
   loading?: boolean
+  style?: StyleProp<ViewStyle>
   onPress?: (e: React.BaseSyntheticEvent) => void
 }
 
@@ -22,7 +23,7 @@ const Button: React.FC<Props> = ({
   variant = 'contain',
   disabled = false,
   loading = false,
-  ...rest
+  style,
 }) => {
   const { styles, indicatorColor, textType } = useStyles({
     size,
@@ -36,7 +37,7 @@ const Button: React.FC<Props> = ({
     <TouchableOpacity
       disabled={disabled || loading}
       accessibilityRole="button"
-      {...rest}
+      style={style}
     >
       <HStack gap={24} align="center" justify="center" style={styles.wrapper}>
         {loading ? (
