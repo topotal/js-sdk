@@ -23,6 +23,7 @@ const Button: React.FC<Props> = ({
   variant = 'contain',
   disabled = false,
   loading = false,
+  onPress,
   style,
 }) => {
   const { styles, indicatorColor, textType } = useStyles({
@@ -38,6 +39,7 @@ const Button: React.FC<Props> = ({
       disabled={disabled || loading}
       accessibilityRole="button"
       style={style}
+      onPress={onPress}
     >
       <HStack gap={24} align="center" justify="center" style={styles.wrapper}>
         {loading ? (
