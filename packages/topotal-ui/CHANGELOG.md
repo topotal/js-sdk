@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.21.4...@topotal/topotal-ui@0.22.0) (2020-12-30)
+
+
+### Bug Fixes
+
+* Remove ScreenFrame and Sidebar ([f8b212c](https://github.com/topotal/js-sdk/commit/f8b212c1dbd14dc6d35ac3ed2bae864484695a6f))
+
+
+### Features
+
+* Add domain icon ([1da1a11](https://github.com/topotal/js-sdk/commit/1da1a11f0a36f899a07756560a279e2677bdf465))
+
+
+
+
+
 ## [0.21.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.21.2...@topotal/topotal-ui@0.21.4) (2020-12-27)
 
 
