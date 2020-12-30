@@ -17,7 +17,3 @@ export const all = () => (
     <Text type="small_body" weight="bold">Sample Text サンプルテキスト: small_body 10px  LineHeight 14px</Text>
   </>
 )
-
-export const Hoge = () => (
-  <Text accessibilityRole="link">Sample Text サンプルテキスト</Text>
-)

@@ -22,5 +22,6 @@ export const Default = () => (
     <Icon name="book" style={style} />
     <Icon name="credit_card" style={style} />
     <Icon name="notifications_none" style={style} />
+    <Icon name="domain" style={style} />
   </HStack>
 )
