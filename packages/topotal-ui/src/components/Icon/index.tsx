@@ -10,7 +10,8 @@ export type IconName =
   'memory' |
   'book' |
   'credit_card' |
-  'notifications_none'
+  'notifications_none' |
+  'domain'
 
 type Props = {
   name: IconName
