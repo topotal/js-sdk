@@ -41,7 +41,12 @@ const Button: React.FC<Props> = ({
       style={style}
       onPress={onPress}
     >
-      <HStack gap={24} align="center" justify="center" style={styles.wrapper}>
+      <HStack
+        gap={24}
+        align="center"
+        justify="center"
+        style={styles.wrapper}
+      >
         {loading ? (
           <ActivityIndicator color={indicatorColor} />
         ) : (

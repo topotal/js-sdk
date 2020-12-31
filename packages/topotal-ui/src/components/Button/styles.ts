@@ -41,6 +41,7 @@ export const useStyles = ({
       paddingHorizontal: sidePadding,
       backgroundColor: theme.color[backgroundColor],
       borderColor: theme.color[borderColor],
+      overflow: 'hidden',
       opacity,
     },
     title: {

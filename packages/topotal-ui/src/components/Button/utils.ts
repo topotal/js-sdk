@@ -70,7 +70,7 @@ export const getDynamicMaterial = (
     case 'outline':
       return {
         opacity,
-        backgroundColor: 'transparent',
+        backgroundColor: 'surface',
         borderColor: baseColor,
         fontColor,
       }
