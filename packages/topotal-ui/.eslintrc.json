@@ -43,7 +43,7 @@
     "eol-last": ["error", "always"],
     "quotes": ["error", "single"],
     "no-trailing-spaces": "error",
-    "indent": ["error", 2, {"SwitchCase": 1}],
+    "@typescript-eslint/indent": ["error", 2, {"SwitchCase": 1}],
     "react/self-closing-comp": ["error", {
       "component": true,
       "html": true
