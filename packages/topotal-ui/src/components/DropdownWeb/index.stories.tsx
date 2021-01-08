@@ -2,22 +2,22 @@ import React, { useState } from 'react'
 import Button from '../Button'
 import VStack from '../VStack'
 import Text from '../Text'
-import Dropdown from '.'
+import DropdownWeb from '.'
 
 export default {
-  title: 'components/Dropdown',
+  title: 'components/DropdownWeb',
 }
 
 export const Default = () => {
   const [visible, setVisible] = useState(false)
   return (
-    <VStack style={{ width: 300 }}>
+    <VStack style={{ width: 300, height: 2500, paddingTop: 200 }}>
       <Button title="Show Dropdown" onPress={() => { setVisible(true) }}/>
-      <Dropdown visible={visible} onPressBackground={() => { setVisible(false) }}>
+      <DropdownWeb visible={visible} onPressBackground={() => { setVisible(false) }}>
         <VStack style={{ padding: 24 }}>
           <Text>Dropdown Children</Text>
         </VStack>
-      </Dropdown>
+      </DropdownWeb>
     </VStack>
   )
 }

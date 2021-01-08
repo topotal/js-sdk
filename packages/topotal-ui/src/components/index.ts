@@ -1,6 +1,6 @@
 export { default as Button } from './Button'
 export { default as Card } from './Card'
-export { default as Dropdown } from './Dropdown'
+export { default as DropdownWeb } from './DropdownWeb'
 export { default as HStack } from './HStack'
 export { default as Icon } from './Icon'
 export { default as MdRenderer } from './MdRenderer'
