@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.22.1...@topotal/topotal-ui@0.22.2) (2021-01-08)
+
+
+### Bug Fixes
+
+* Patch dropdown bug ([386373f](https://github.com/topotal/js-sdk/commit/386373f313bafd3265f1058f2e255d4304b9135d))
+* **eslint:** Patch indent rule ([ab77591](https://github.com/topotal/js-sdk/commit/ab77591aa9b91e382ba3636ff3d009f1f1f82d3f))
+
+
+
+
+
 ## [0.22.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.22.0...@topotal/topotal-ui@0.22.1) (2020-12-31)
 
 
