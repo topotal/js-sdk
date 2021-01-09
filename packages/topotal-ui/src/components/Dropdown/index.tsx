@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Modal, Pressable, StyleProp, View, ViewStyle } from 'react-native'
+import { useScrollManipulater } from '../../theme'
 import { useMeasure } from '../../hooks/useMeasure'
 import { useStyles } from './styles'
 
@@ -22,6 +23,7 @@ const Dropdown: React.FC<Props> = ({
   onPressBackground,
 }) => {
   const { ref, measure, updateMeasure } = useMeasure<View>()
+  const { scrollY } = useScrollManipulater()
   const [cardPosition, setCardPosition] = useState<CardPosition>()
   const { styles } = useStyles({ cardPosition })
 
@@ -32,10 +34,10 @@ const Dropdown: React.FC<Props> = ({
   useEffect(() => {
     setCardPosition({
       x: measure?.pageX!,
-      y: measure?.pageY!,
+      y: measure?.pageY! - scrollY,
       width: measure?.width!,
     })
-  }, [measure])
+  }, [measure, scrollY])
 
   return (
     <View
