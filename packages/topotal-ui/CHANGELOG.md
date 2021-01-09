@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.0...@topotal/topotal-ui@0.23.1) (2021-01-09)
+
+
+### Bug Fixes
+
+* export ScrollView ([a14e483](https://github.com/topotal/js-sdk/commit/a14e4831d4b0d6cdbdf7924f6581452123943da1))
+
+
+
+
+
 # [0.23.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.22.2...@topotal/topotal-ui@0.23.0) (2021-01-09)
 
 
