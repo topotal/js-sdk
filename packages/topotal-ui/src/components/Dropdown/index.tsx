@@ -24,6 +24,8 @@ const Dropdown: React.FC<Props> = ({
 }) => {
   const { ref, measure, updateMeasure } = useMeasure<View>()
   const { scrollY } = useScrollManipulater()
+  console.info('--- render Dropdown ----')
+  console.info('scrollY', scrollY)
   const [cardPosition, setCardPosition] = useState<CardPosition>()
   const { styles } = useStyles({ cardPosition })
 
