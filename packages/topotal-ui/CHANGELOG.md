@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.23.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.22.2...@topotal/topotal-ui@0.23.0) (2021-01-09)
+
+
+### Features
+
+* Add ScrollView ([38fd7ed](https://github.com/topotal/js-sdk/commit/38fd7edbbbacb664ccbd905b0b2b9410ce29d2f1))
+
+
+### Reverts
+
+* Revert "fix: Patch dropdown bug" ([fa5e0c7](https://github.com/topotal/js-sdk/commit/fa5e0c736b05f263982c342946ad52162045ad2e))
+
+
+
+
+
 ## [0.22.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.22.1...@topotal/topotal-ui@0.22.2) (2021-01-08)
 
 
