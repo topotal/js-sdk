@@ -4,8 +4,20 @@ This is the component county of the UI that we developed at topotal
 
 ## Usage
 
-```
-const ui = require('@topotal/topota-ui');
+Use `ThemeProvider` in the root of your application
 
-// TODO: DEMONSTRATE API
+```
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { ThemeProvider } from '@topotal/topotal-ui'
+import App from '~/App'
+
+ReactROM.render(
+  (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  ),
+  document.getElementById('app'),
+)
 ```
