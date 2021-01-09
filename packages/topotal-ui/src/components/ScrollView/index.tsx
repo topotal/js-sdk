@@ -18,9 +18,13 @@ const ScrollView: React.FC<Props> = ({
     }
   }, [onScroll])
 
+  const getScrollY = useCallback(() => {
+    return scrollYRef.current
+  }, [])
+
   return (
     <ScrollManipulaterContext.Provider
-      value={{ scrollY: scrollYRef.current }}
+      value={{ getScrollY }}
     >
       <BaseScrollView
         {...rest}

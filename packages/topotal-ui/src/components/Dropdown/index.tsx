@@ -23,7 +23,8 @@ const Dropdown: React.FC<Props> = ({
   onPressBackground,
 }) => {
   const { ref, measure, updateMeasure } = useMeasure<View>()
-  const { scrollY } = useScrollManipulater()
+  const { getScrollY } = useScrollManipulater()
+  const scrollY = getScrollY()
   const [cardPosition, setCardPosition] = useState<CardPosition>()
   const { styles } = useStyles({ cardPosition })
 
