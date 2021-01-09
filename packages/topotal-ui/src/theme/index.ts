@@ -80,10 +80,10 @@ export const useTheme = () => {
 }
 
 export type ScrollManipulater = {
-  getScrollY: () => number
+  readonly scrollY: number
 }
 const defaultScrollManipulater: ScrollManipulater = {
-  getScrollY: () => { return 0 },
+  scrollY: 0,
 }
 export const ScrollManipulaterContext = React.createContext(defaultScrollManipulater)
 

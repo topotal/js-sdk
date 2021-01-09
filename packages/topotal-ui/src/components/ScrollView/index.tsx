@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react'
+import React, { useCallback, useState } from 'react'
 import { NativeScrollEvent, NativeSyntheticEvent, ScrollView as BaseScrollView } from 'react-native'
 import { ScrollManipulaterContext } from '../../theme'
 
@@ -9,23 +9,18 @@ const ScrollView: React.FC<Props> = ({
   onScroll,
   ...rest
 }) => {
-  const scrollYRef = useRef(0)
-  const currentScrollY = scrollYRef.current
+  const [scrollY, setScrollY] = useState(0)
 
   const handleScroll = useCallback((event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    scrollYRef.current = event.nativeEvent.contentOffset.y
+    setScrollY(event.nativeEvent.contentOffset.y)
     if (onScroll) {
       onScroll(event)
     }
   }, [onScroll])
 
-  const getScrollY = useCallback(() => {
-    return currentScrollY
-  }, [currentScrollY])
-
   return (
     <ScrollManipulaterContext.Provider
-      value={{ getScrollY }}
+      value={{ scrollY }}
     >
       <BaseScrollView
         {...rest}
