@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
 import Text from '../../../Text'
+import { unescapeHTML } from '../../utils'
 
 type Props = {
   token: Tokens.Strong
@@ -14,9 +15,9 @@ const Strong: React.FC<Props> = ({
 }) => {
   return (
     <Text style={style} weight="bold">
-      {token.text}
+      {unescapeHTML(token.text)}
     </Text>
   )
 }
 
-export default Strong
+export default React.memo(Strong)

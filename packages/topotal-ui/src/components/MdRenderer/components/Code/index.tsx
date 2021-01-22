@@ -25,4 +25,4 @@ const Code: React.FC<Props> = ({
   )
 }
 
-export default Code
+export default React.memo(Code)

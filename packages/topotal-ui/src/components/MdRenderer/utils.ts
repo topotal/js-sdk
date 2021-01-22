@@ -17,3 +17,8 @@ export const normalizeTokens = (tokens: Token[]): NormalizedToken[] => {
     return true
   }) as NormalizedToken[]
 }
+
+export const unescapeHTML = (escapedHtml: string) => {
+  const doc = new DOMParser().parseFromString(escapedHtml, 'text/html')
+  return doc.documentElement.textContent || ''
+}
