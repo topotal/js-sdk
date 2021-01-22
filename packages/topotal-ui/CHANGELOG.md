@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.2...@topotal/topotal-ui@0.23.3) (2021-01-22)
+
+
+### Bug Fixes
+
+* Patch UserIcon backgroundColor ([faf560c](https://github.com/topotal/js-sdk/commit/faf560c6a68cc3600c247227941daaa8320bf9b7))
+* unescape text in MdRenderer ([0a5d62f](https://github.com/topotal/js-sdk/commit/0a5d62f27b0e53d28cb5552bd5628ccf26b8449a))
+
+
+
+
+
 ## [0.23.2-alpha.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.2-alpha.3...@topotal/topotal-ui@0.23.2-alpha.4) (2021-01-09)
 
 **Note:** Version bump only for package @topotal/topotal-ui
