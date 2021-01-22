@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
-import { normalizeTokens } from '../../utils'
+import { normalizeTokens, unescapeHTML } from '../../utils'
 import Text from '../../../Text'
 import Strong from '../Strong'
 import Link from '../Link'
@@ -25,7 +25,7 @@ const Paragraph: React.FC<Props> = ({
       {tokens.map((token, index) => {
         switch (token.type) {
           case 'text':
-            return token.text
+            return unescapeHTML(token.text)
           case 'strong':
             return <Strong key={index} token={token} />
           case 'link':

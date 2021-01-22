@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tokens } from 'marked'
 import Text from '../../../Text'
+import { unescapeHTML } from '../../utils'
 import { useStyles } from './styles'
 
 type Props = {
@@ -23,9 +24,9 @@ const Link: React.FC<Props> = ({
       accessibilityRole="link"
       {...anchorAttributes}
     >
-      {token.text}
+      {unescapeHTML(token.text)}
     </Text>
   )
 }
 
-export default Link
+export default React.memo(Link)

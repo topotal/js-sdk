@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
 import Text from '../../../Text'
+import { unescapeHTML } from '../../utils'
 
 type Props = {
   token: Tokens.Heading
@@ -26,7 +27,7 @@ const Heading: React.FC<Props> = ({
       type={type}
       weight="bold"
     >
-      {token.text}
+      {unescapeHTML(token.text)}
     </Text>
   )
 }
