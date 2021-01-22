@@ -14,7 +14,7 @@ text in [link](https://google.com).
 
 let's
 
-**Bold text**
+text **Bold text** normal text
 
 ### h3
 
