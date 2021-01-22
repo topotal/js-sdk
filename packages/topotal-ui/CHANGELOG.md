@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.3...@topotal/topotal-ui@0.23.4) (2021-01-22)
+
+
+### Bug Fixes
+
+* Add head space to MdRenderer text ([87d41e0](https://github.com/topotal/js-sdk/commit/87d41e0b6176839a588d8a4a2232b557210e1ff9))
+
+
+
+
+
 ## [0.23.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.2...@topotal/topotal-ui@0.23.3) (2021-01-22)
 
 
