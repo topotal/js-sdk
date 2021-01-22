@@ -19,6 +19,7 @@ export const normalizeTokens = (tokens: Token[]): NormalizedToken[] => {
 }
 
 export const unescapeHTML = (escapedHtml: string) => {
+  const withHeadSpace = !!escapedHtml.match(/^\s/)
   const doc = new DOMParser().parseFromString(escapedHtml, 'text/html')
-  return doc.documentElement.textContent || ''
+  return `${withHeadSpace ? ' ' : ''}${doc.documentElement.textContent || ''}`
 }
