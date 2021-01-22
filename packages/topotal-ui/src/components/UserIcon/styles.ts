@@ -33,9 +33,10 @@ type Styles = {
 
 type Props = {
   size: Size
+  loaded: boolean
 }
 
-export const useStyles = ({ size }: Props) => {
+export const useStyles = ({ size, loaded }: Props) => {
   const { color } = useTheme()
 
   const styles: Styles = useMemo(() => {
@@ -46,7 +47,7 @@ export const useStyles = ({ size }: Props) => {
         width,
         height,
         borderRadius,
-        backgroundColor: color.borderLight,
+        backgroundColor: loaded ? color.surface : color.borderLight,
         borderColor: color.surface,
         borderWidth: 1,
         overflow: 'hidden',
@@ -57,7 +58,7 @@ export const useStyles = ({ size }: Props) => {
         padding: 1,
       },
     }
-  }, [color.borderLight, color.surface, size])
+  }, [color.borderLight, color.surface, size, loaded])
 
   return {
     styles,
