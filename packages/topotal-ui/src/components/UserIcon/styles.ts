@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
 import { ImageStyle, ViewStyle } from 'react-native'
 import { useTheme } from '../../theme'
-import { Size } from '.'
+import { UserIconSize } from '.'
 
-const getDynamicStyle = (size: Size) => {
+const getDynamicStyle = (size: UserIconSize) => {
   switch (size) {
     case 'large':
       return {
@@ -32,7 +32,7 @@ interface Styles {
 }
 
 interface Props {
-  size: Size
+  size: UserIconSize
   loaded: boolean
 }
 
