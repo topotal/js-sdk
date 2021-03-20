@@ -11,9 +11,18 @@ export interface Measure {
   pageY: number
 }
 
+const defaultMeasure: Measure = {
+  x: 0,
+  y: 0,
+  width: 0,
+  height: 0,
+  pageX: 0,
+  pageY: 0,
+}
+
 export const useMeasure = <T extends NativeMethods>() => {
   const ref = useRef<T>()
-  const [measure, setMeasure] = useState<Measure>()
+  const [measure, setMeasure] = useState<Measure>(defaultMeasure)
 
   const updateMeasure = useCallback(() => {
     if (!ref.current) return
