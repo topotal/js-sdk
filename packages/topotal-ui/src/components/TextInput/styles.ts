@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import { StyleSheet, TextStyle, ViewStyle, Platform } from 'react-native'
-import { ThemeContext, ThemeColor } from '../../theme'
+import { Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { ThemeColor, ThemeContext } from '../../theme'
 
-type Styles = {
+interface Styles {
   wrapper: ViewStyle
   dummyText: TextStyle
   placeholderWrapper: ViewStyle
@@ -10,7 +10,7 @@ type Styles = {
   input: TextStyle
 }
 
-type Props = {
+interface Props {
   isFocused: boolean
   multiline: boolean
   error: boolean

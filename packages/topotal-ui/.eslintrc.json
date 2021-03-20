@@ -24,7 +24,9 @@
   "plugins": [
     "@typescript-eslint",
     "react",
-    "react-hooks"
+    "react-hooks",
+    "simple-import-sort",
+    "import"
   ],
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
@@ -39,6 +41,7 @@
         "ignoreRestSiblings": true
       }
     ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "semi": ["error", "never"],
     "eol-last": ["error", "always"],
     "quotes": ["error", "single"],
@@ -47,6 +50,51 @@
     "react/self-closing-comp": ["error", {
       "component": true,
       "html": true
-    }]
-  }
+    }],
+    "react-hooks/exhaustive-deps": ["error", {
+      "additionalHooks": "(useAsync|useAsyncFn)"
+    }],
+    "react/display-name": "off",
+    "simple-import-sort/imports": ["error", {
+      "groups": [
+        [
+          // Packages. `react` related packages come first.
+          "^react",
+          "^next",
+          "^@?\\w",
+          // Internal packages.
+          "^~(/.*|$)",
+          // Side effect imports.
+          "^\\u0000",
+          // Parent imports. Put `..` last.
+          "^\\.\\.(?!/?$)", "^\\.\\./?$",
+          // Other relative imports. Put same-folder imports and `.` last.
+          "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"
+        ]
+      ]
+    }],
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/no-default-export": "error",
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "key-spacing": ["error", { 
+      "beforeColon": false,
+      "afterColon": true
+    }],
+    "comma-spacing": ["error", { "before": false, "after": true }]
+  },
+  "overrides": [
+    {
+      "files": [
+        "pages/**/*.tsx",
+        "src/**/*.stories.tsx"
+      ],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
 }

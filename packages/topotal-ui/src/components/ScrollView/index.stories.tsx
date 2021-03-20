@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import ScrollView from '.'
+import { ScrollView } from '.'
 
 export default {
   title: 'components/ScrollView',

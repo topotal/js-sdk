@@ -1,13 +1,13 @@
 import { StyleSheet, ViewStyle } from 'react-native'
-import { Direction, Align, Justify } from './types'
+import { Align, Direction, Justify } from './types'
 
-type Props = {
+interface Props {
   direction: Direction
   align: Align
   justify: Justify
 }
 
-type Style = {
+interface Style {
   wrapper: ViewStyle
 }
 

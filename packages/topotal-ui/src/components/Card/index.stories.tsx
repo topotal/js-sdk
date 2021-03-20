@@ -1,9 +1,9 @@
 import React from 'react'
 import { defaultTheme } from '../../theme'
-import Text from '../Text'
-import VStack from '../VStack'
-import Spacer from '../Spacer'
-import Card from '.'
+import { Spacer } from '../Spacer'
+import { Text } from '../Text'
+import { VStack } from '../VStack'
+import { Card } from '.'
 
 export default { title: 'components/Card' }
 

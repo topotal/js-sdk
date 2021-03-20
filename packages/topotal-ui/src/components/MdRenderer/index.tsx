@@ -1,20 +1,20 @@
 import React, { useMemo } from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
 import { lexer } from 'marked'
-import VStack from '../VStack'
-import Paragraph from './components/Paragraph'
-import Code from './components/Code'
-import Heading from './components/Heading'
-import { normalizeTokens } from './utils'
+import { VStack } from '../VStack'
+import { Code } from './components/Code'
+import { Heading } from './components/Heading'
+import { Paragraph } from './components/Paragraph'
 import { NormalizedToken } from './types'
+import { normalizeTokens } from './utils'
 
-type Props = {
+interface Props {
   markdown: string
   style?: StyleProp<ViewStyle>
   tokenFilter?: (token: NormalizedToken) => boolean
 }
 
-const MdRenderer: React.FC<Props> = ({
+export const MdRenderer = React.memo<Props>(({
   markdown,
   style,
   tokenFilter = () => true,
@@ -41,6 +41,4 @@ const MdRenderer: React.FC<Props> = ({
       })}
     </VStack>
   )
-}
-
-export default React.memo(MdRenderer)
+})

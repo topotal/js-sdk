@@ -1,17 +1,17 @@
 import React, { useMemo } from 'react'
 import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
+import { Text } from '../../../Text'
 import { normalizeTokens, unescapeHTML } from '../../utils'
-import Text from '../../../Text'
-import Strong from '../Strong'
-import Link from '../Link'
+import { Link } from '../Link'
+import { Strong } from '../Strong'
 
-type Props = {
+interface Props {
   token: Tokens.Paragraph
   style?: StyleProp<TextStyle>
 }
 
-const Paragraph: React.FC<Props> = ({
+export const Paragraph = React.memo<Props>(({
   token,
   style,
 }) => {
@@ -36,6 +36,4 @@ const Paragraph: React.FC<Props> = ({
       })}
     </Text>
   )
-}
-
-export default Paragraph
+})

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleProp, Text as BaseText, TextStyle } from 'react-native'
-import { TextType, FontWeight } from '../../theme'
+import { FontWeight, TextType } from '../../theme'
 import { useStyles } from './styles'
 
 type BaseTextProps = React.ComponentProps<typeof BaseText>
@@ -11,7 +11,7 @@ type Props = BaseTextProps & {
   style?: StyleProp<TextStyle>
 }
 
-const Text: React.FC<Props> = ({
+export const Text: React.FC<Props> = ({
   type = 'body',
   weight = 'normal',
   style,
@@ -28,5 +28,3 @@ const Text: React.FC<Props> = ({
     </BaseText>
   )
 }
-
-export default Text

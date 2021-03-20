@@ -1,11 +1,11 @@
 import React from 'react'
 import { defaultTheme, Theme, ThemeContext } from '../../theme'
 
-type Props = {
+interface Props {
   theme?: Theme
 }
 
-const ThemeProvider: React.FC<Props> = ({
+export const ThemeProvider: React.FC<Props> = ({
   theme = defaultTheme,
   children,
 }) => {
@@ -15,5 +15,3 @@ const ThemeProvider: React.FC<Props> = ({
     </ThemeContext.Provider>
   )
 }
-
-export default ThemeProvider

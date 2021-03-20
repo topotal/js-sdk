@@ -1,15 +1,15 @@
 import React from 'react'
 import { StyleProp, View, ViewStyle } from 'react-native'
-import HStack from '../HStack'
-import Text from '../Text'
+import { HStack } from '../HStack'
+import { Text } from '../Text'
 import { useStyles } from './styles'
 
-type Props = {
+interface Props {
   text: string
   style?: StyleProp<ViewStyle>
 }
 
-const Separater: React.FC<Props> = ({ text, style }) => {
+export const Separater = React.memo<Props>(({ text, style }) => {
   const { styles } = useStyles()
 
   return (
@@ -30,6 +30,4 @@ const Separater: React.FC<Props> = ({ text, style }) => {
       <View style={styles.border} />
     </HStack>
   )
-}
-
-export default Separater
+})

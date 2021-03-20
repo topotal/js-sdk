@@ -1,9 +1,9 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text, View } from 'react-native'
 import { storiesOf } from '@storybook/react'
-import { ThemeColor, defaultTheme } from '.'
+import { defaultTheme, ThemeColor } from '.'
 
-type Props = {
+interface Props {
   name: string
   color: string
 }
@@ -45,4 +45,4 @@ storiesOf('theme/color', module)
         />
       ))}
     </View>
-  ), { info: { disable: true }})
+  ), { info: { disable: true } })

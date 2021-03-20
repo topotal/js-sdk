@@ -1,5 +1,5 @@
 import { TextType, ThemeColor as ThemeColor } from '../../theme'
-import { Size, Color, Variant, DynamicMaterial, DynamicGeometry } from './types'
+import { Color, DynamicGeometry, DynamicMaterial, Size, Variant } from './types'
 
 export const getTypeBySize = (size: Size): TextType => {
   switch (size) {

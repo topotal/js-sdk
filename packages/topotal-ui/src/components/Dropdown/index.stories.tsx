@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Button from '../Button'
-import VStack from '../VStack'
-import Text from '../Text'
-import ScrollView from '../ScrollView'
-import Dropdown from '.'
+import { ScrollView } from '../ScrollView'
+import { Text } from '../Text'
+import { VStack } from '../VStack'
+import { Button } from '..'
+import { Dropdown } from '.'
 
 export default {
   title: 'components/Dropdown',

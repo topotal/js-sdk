@@ -1,14 +1,12 @@
 import React from 'react'
 import { StyleProp, View, ViewStyle } from 'react-native'
 
-type Props = {
+interface Props {
   style?: StyleProp<ViewStyle>
 }
 
-const Spacer: React.FC<Props> = ({ style }) => {
+export const Spacer = React.memo<Props>(({ style }) => {
   return (
     <View style={[{ flex: 1 }, style]} />
   )
-}
-
-export default Spacer
+})

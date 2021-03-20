@@ -3,13 +3,13 @@ import { ViewStyle } from 'react-native'
 import { useTheme } from '../../theme'
 import { CardPosition } from '.'
 
-type Styles = {
+interface Styles {
   wrapper: ViewStyle
   background: ViewStyle
   card: ViewStyle
 }
 
-type Props = {
+interface Props {
   cardPosition?: CardPosition
 }
 

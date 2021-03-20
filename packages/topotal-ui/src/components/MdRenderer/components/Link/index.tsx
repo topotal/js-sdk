@@ -1,14 +1,14 @@
 import React from 'react'
 import { Tokens } from 'marked'
-import Text from '../../../Text'
+import { Text } from '../../../Text'
 import { unescapeHTML } from '../../utils'
 import { useStyles } from './styles'
 
-type Props = {
+interface Props {
   token: Tokens.Link
 }
 
-const Link: React.FC<Props> = ({
+export const Link = React.memo<Props>(({
   token,
 }) => {
   const { styles } = useStyles()
@@ -27,6 +27,4 @@ const Link: React.FC<Props> = ({
       {unescapeHTML(token.text)}
     </Text>
   )
-}
-
-export default React.memo(Link)
+})

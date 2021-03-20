@@ -2,12 +2,12 @@ import { useContext } from 'react'
 import { StyleSheet, TextStyle } from 'react-native'
 import { FontWeight, TextType, ThemeContext } from '../../theme'
 
-type Props = {
+interface Props {
   type: TextType
   weight: FontWeight
 }
 
-type Styles = {
+interface Styles {
   wrapper: TextStyle
 }
 

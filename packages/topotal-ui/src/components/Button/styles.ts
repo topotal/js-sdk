@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { ThemeContext } from '../../theme'
+import { Color, Size, Variant } from './types'
 import { getDynamicGeometry, getDynamicMaterial } from './utils'
-import { Size, Color, Variant } from './types'
 
-type Props = {
+interface Props {
   size: Size
   color: Color
   variant: Variant
@@ -12,7 +12,7 @@ type Props = {
   loading: boolean
 }
 
-type Styles = {
+interface Styles {
   wrapper: ViewStyle
   title: TextStyle
 }

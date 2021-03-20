@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { ViewStyle, ImageStyle } from 'react-native'
+import { ImageStyle, ViewStyle } from 'react-native'
 import { useTheme } from '../../theme'
 import { Size } from '.'
 
@@ -26,12 +26,12 @@ const getDynamicStyle = (size: Size) => {
   }
 }
 
-type Styles = {
+interface Styles {
   wrapper: ViewStyle
   image: ImageStyle
 }
 
-type Props = {
+interface Props {
   size: Size
   loaded: boolean
 }

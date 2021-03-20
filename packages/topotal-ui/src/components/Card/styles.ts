@@ -3,14 +3,14 @@ import { ViewStyle } from 'react-native'
 import { useTheme } from '../../theme'
 import { Level } from '.'
 
-type Styles = {
+interface Styles {
   wrapper: ViewStyle
   header: ViewStyle
   body: ViewStyle
   footer: ViewStyle
 }
 
-type Props = {
+interface Props {
   level: Level
 }
 
