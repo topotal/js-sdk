@@ -1,11 +1,11 @@
 import React from 'react'
 import { isFragment } from 'react-is'
 import { StyleProp, View, ViewStyle } from 'react-native'
-import { getCellStyle } from './utils'
-import { Direction, Align, Justify } from './types'
 import { useStyles } from './styles'
+import { Align, Direction, Justify } from './types'
+import { getCellStyle } from './utils'
 
-type Props = React.ComponentProps<typeof View> & {
+interface Props extends React.ComponentProps<typeof View> {
   direction: Direction
   gap?: number
   align?: Align
@@ -33,7 +33,7 @@ const createStyleInjectedChildren = (children: React.ReactNode, direction: Direc
   })
 }
 
-const BaseStack: React.FC<Props> = ({
+export const BaseStack: React.FC<Props> = ({
   direction,
   gap = 0,
   align = 'stretch',
@@ -54,5 +54,3 @@ const BaseStack: React.FC<Props> = ({
     </View>
   )
 }
-
-export default BaseStack

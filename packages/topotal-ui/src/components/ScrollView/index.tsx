@@ -4,7 +4,7 @@ import { ScrollManipulaterContext } from '../../theme'
 
 type Props = React.ComponentProps<typeof BaseScrollView>
 
-const ScrollView: React.FC<Props> = ({
+export const ScrollView: React.FC<Props> = ({
   scrollEventThrottle = 16,
   onScroll,
   ...rest
@@ -34,5 +34,3 @@ const ScrollView: React.FC<Props> = ({
     </ScrollManipulaterContext.Provider>
   )
 }
-
-export default ScrollView

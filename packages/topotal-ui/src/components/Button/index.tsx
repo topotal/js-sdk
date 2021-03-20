@@ -1,11 +1,11 @@
 import React from 'react'
-import { TouchableOpacity, ActivityIndicator, StyleProp, ViewStyle } from 'react-native'
-import Text from '../Text'
-import HStack from '../HStack'
-import { Size, Color, Variant } from './types'
+import { ActivityIndicator, StyleProp, TouchableOpacity, ViewStyle } from 'react-native'
+import { HStack } from '../HStack'
+import { Text } from '../Text'
 import { useStyles } from './styles'
+import { Color, Size, Variant } from './types'
 
-type Props = {
+interface Props {
   title: string
   size?: Size
   color?: Color
@@ -16,7 +16,7 @@ type Props = {
   onPress?: (e: React.BaseSyntheticEvent) => void
 }
 
-const Button: React.FC<Props> = ({
+export const Button = React.memo<Props>(({
   title,
   size = 'large',
   color = 'primary',
@@ -61,6 +61,4 @@ const Button: React.FC<Props> = ({
       </HStack>
     </TouchableOpacity>
   )
-}
-
-export default Button
+})

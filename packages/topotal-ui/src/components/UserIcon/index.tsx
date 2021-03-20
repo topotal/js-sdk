@@ -1,16 +1,16 @@
 import React, { useCallback, useState } from 'react'
-import { View, Image, ViewStyle, StyleProp } from 'react-native'
+import { Image, StyleProp, View, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
 
 export type Size = 'small' | 'medium' | 'large'
 
-type Props = {
+interface Props {
   uri: string
   size?: Size
   style?: StyleProp<ViewStyle>
 }
 
-const UserIcon: React.FC<Props> = ({
+export const UserIcon = React.memo<Props>(({
   uri,
   size = 'medium',
   style,
@@ -31,6 +31,4 @@ const UserIcon: React.FC<Props> = ({
       />
     </View>
   )
-}
-
-export default React.memo(UserIcon)
+})

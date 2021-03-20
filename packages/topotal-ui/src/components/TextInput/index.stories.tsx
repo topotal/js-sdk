@@ -1,5 +1,5 @@
 import React from 'react'
-import TextInput from './'
+import { TextInput } from './'
 
 export default { title: 'components/TextInput' }
 

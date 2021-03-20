@@ -1,16 +1,16 @@
 import React from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
 import { Tokens } from 'marked'
-import VStack from '../../../VStack'
-import Text from '../../../Text'
+import { Text } from '../../../Text'
+import { VStack } from '../../../VStack'
 import { useStyles } from './styles'
 
-type Props = {
+interface Props {
   token: Tokens.Code
   style?: StyleProp<ViewStyle>
 }
 
-const Code: React.FC<Props> = ({
+export const Code = React.memo<Props>(({
   token,
   style,
 }) => {
@@ -23,6 +23,4 @@ const Code: React.FC<Props> = ({
       </Text>
     </VStack>
   )
-}
-
-export default React.memo(Code)
+})

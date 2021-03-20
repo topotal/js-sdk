@@ -1,9 +1,9 @@
 import React from 'react'
 import { TextInput as BaseInput } from 'react-native'
-import VStack from '../VStack'
-import Text from '../Text'
-import { useStyles } from './styles'
+import { Text } from '../Text'
+import { VStack } from '../VStack'
 import { useTextInput } from './hooks'
+import { useStyles } from './styles'
 
 type BaseProps = {
   innerRef?: React.Ref<BaseInput>
@@ -12,7 +12,7 @@ type BaseProps = {
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
 
-const TextInput: React.FC<Props> = ({
+export const TextInput = React.memo<Props>(({
   value = '',
   placeholder = '入力してください',
   autoCapitalize = 'none',
@@ -63,6 +63,4 @@ const TextInput: React.FC<Props> = ({
       ) : null}
     </VStack>
   )
-}
-
-export default TextInput
+})

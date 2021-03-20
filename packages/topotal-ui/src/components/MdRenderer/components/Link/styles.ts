@@ -1,7 +1,7 @@
 import { TextStyle } from 'react-native'
 import { useTheme } from '../../../../theme'
 
-type Styles = {
+interface Styles {
   wrapper: TextStyle
 }
 

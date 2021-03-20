@@ -1,19 +1,19 @@
 import React from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
-import VStack from '../VStack'
-import HStack from '../HStack'
+import { HStack } from '../HStack'
+import { VStack } from '../VStack'
 import { useStyles } from './styles'
 
 export type Level = 1 | 2
 
-type Props = {
+interface Props {
   header?: React.ReactNode
   footer?: React.ReactNode
   level?: Level
   style?: StyleProp<ViewStyle>
 }
 
-const Card: React.FC<Props> = ({
+export const Card: React.FC<Props> = ({
   header,
   footer,
   level = 1,
@@ -48,5 +48,3 @@ const Card: React.FC<Props> = ({
     </VStack>
   )
 }
-
-export default Card

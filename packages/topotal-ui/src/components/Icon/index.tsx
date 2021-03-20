@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image, ImageStyle } from 'react-native'
 import { useTheme } from '../../theme'
+import { useStyles } from './styles'
 
 export type IconName =
   'settings-black' |
@@ -13,16 +14,18 @@ export type IconName =
   'notifications_none' |
   'domain'
 
-type Props = {
+interface Props {
   name: IconName
   style?: ImageStyle
 }
 
-const Icon: React.FC<Props> = ({
+export const Icon = React.memo<Props>(({
   name,
   style,
 }) => {
+  const { styles } = useStyles()
   const { iconBasePath } = useTheme()
+
   return (
     <Image
       style={[styles.wrapper, style]}
@@ -31,17 +34,4 @@ const Icon: React.FC<Props> = ({
       }}
     />
   )
-}
-
-type Styles = {
-  wrapper: ImageStyle
-}
-
-const styles: Styles = {
-  wrapper: {
-    width: 24,
-    height: 24,
-  },
-}
-
-export default React.memo(Icon)
+})

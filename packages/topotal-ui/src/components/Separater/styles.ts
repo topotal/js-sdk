@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { ThemeContext } from '../../theme'
 
-type Styles = {
+interface Styles {
   border: ViewStyle
   text: TextStyle
 }

@@ -1,15 +1,15 @@
 import React, { useMemo } from 'react'
 import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
-import Text from '../../../Text'
+import { Text } from '../../../Text'
 import { unescapeHTML } from '../../utils'
 
-type Props = {
+interface Props {
   token: Tokens.Heading
   style?: StyleProp<TextStyle>
 }
 
-const Heading: React.FC<Props> = ({
+export const Heading = React.memo<Props>(({
   token,
   style,
 }) => {
@@ -30,6 +30,4 @@ const Heading: React.FC<Props> = ({
       {unescapeHTML(token.text)}
     </Text>
   )
-}
-
-export default React.memo(Heading)
+})

@@ -1,6 +1,6 @@
 import React from 'react'
-import Icon from '.'
-import HStack from '../HStack'
+import { HStack } from '..'
+import { Icon } from '.'
 
 export default {
   title: 'components/Icon',

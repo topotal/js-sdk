@@ -1,22 +1,22 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Modal, Pressable, StyleProp, View, ViewStyle } from 'react-native'
-import { useScrollManipulater } from '../../theme'
 import { useMeasure } from '../../hooks/useMeasure'
+import { useScrollManipulater } from '../../theme'
 import { useStyles } from './styles'
 
-export type CardPosition = {
+export interface CardPosition {
   x: number,
   y: number,
   width: number,
 }
 
-type Props = {
+interface Props {
   visible?: boolean
   style?: StyleProp<ViewStyle>
   onPressBackground?: () => void
 }
 
-const Dropdown: React.FC<Props> = ({
+export const Dropdown: React.FC<Props> = ({
   visible = false,
   style,
   children,
@@ -57,5 +57,3 @@ const Dropdown: React.FC<Props> = ({
     </View>
   )
 }
-
-export default Dropdown

@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { TextStyle, ViewStyle } from 'react-native'
 import { useTheme } from '../../../../theme'
 
-type Styles = {
+interface Styles {
   wrapper: ViewStyle
   text: TextStyle
 }

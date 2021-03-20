@@ -1,5 +1,5 @@
 import React from 'react'
-import Separater from '.'
+import { Separater } from '.'
 
 export default { title: 'components/Separater' }
 

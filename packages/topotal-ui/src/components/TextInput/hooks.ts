@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
-type Props = {
+interface Props {
   value: string
   onChangeText?: (text: string) => void
 }
