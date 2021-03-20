@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.5...@topotal/topotal-ui@0.24.0) (2021-03-20)
+
+
+### Bug Fixes
+
+* **UserIcon:** Rename Size to UserIconSize ([46e01e1](https://github.com/topotal/js-sdk/commit/46e01e19ca36ae2fd811746820c58bd66ca0bdc3))
+
+
+### Features
+
+* Add List ([a24111e](https://github.com/topotal/js-sdk/commit/a24111e8c0eec38bf84f174503fe8917c9ccfb47))
+* Add useDimentions ([09ca6b6](https://github.com/topotal/js-sdk/commit/09ca6b6ec9689c3165b6f7f7c16c5e8d2fa796b1))
+
+
+
+
+
 ## [0.23.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.4...@topotal/topotal-ui@0.23.5) (2021-03-20)
 
 **Note:** Version bump only for package @topotal/topotal-ui
