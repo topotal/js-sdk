@@ -10,6 +10,7 @@ interface Props {
   variant: Variant
   disabled: boolean
   loading: boolean
+  hovered: boolean
 }
 
 interface Styles {
@@ -23,6 +24,7 @@ export const useStyles = ({
   variant,
   disabled,
   loading,
+  hovered,
 }: Props) => {
   const theme = useContext(ThemeContext)
   const { height, sidePadding, textType } = getDynamicGeometry(size)
@@ -31,7 +33,13 @@ export const useStyles = ({
     backgroundColor,
     borderColor,
     opacity,
-  } = getDynamicMaterial(color, variant, disabled, loading)
+  } = getDynamicMaterial(
+    color,
+    variant,
+    disabled,
+    loading,
+    hovered,
+  )
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {

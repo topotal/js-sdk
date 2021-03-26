@@ -9,29 +9,6 @@ export const getTypeBySize = (size: Size): TextType => {
   }
 }
 
-export const getBaseColor = (color: Color): keyof ThemeColor => {
-  switch (color) {
-    case 'negative': return 'error'
-    case 'cancel': return 'cancel'
-    case 'primary': return 'primary'
-    case 'positive': return 'positiveDark'
-  }
-}
-
-export const getTitleColor = (
-  color: Color,
-  variant: Variant,
-): keyof ThemeColor => {
-  const isContain = variant === 'contain'
-
-  switch (color) {
-    case 'negative': return isContain ? 'primaryTextLight' : 'error'
-    case 'cancel': return isContain ? 'primaryTextLight' : 'cancel'
-    case 'primary': return isContain ? 'primaryTextLight' : 'primary'
-    case 'positive': return isContain ? 'primaryTextLight' : 'positiveDark'
-  }
-}
-
 export const getDynamicGeometry = (size: Size): DynamicGeometry => {
   const textType = getTypeBySize(size)
   switch (size) {
@@ -61,32 +38,33 @@ export const getDynamicMaterial = (
   variant: Variant,
   disabled: boolean,
   loading: boolean,
+  hovered: boolean,
 ): DynamicMaterial => {
-  const baseColor = getBaseColor(color)
   const opacity = disabled || loading ? 0.5 : 1
-  const fontColor = getTitleColor(color, variant)
+  const lightColor = `${color}Light` as keyof ThemeColor
+  const darkColor = `${color}Dark` as keyof ThemeColor
 
   switch (variant) {
     case 'outline':
       return {
         opacity,
-        backgroundColor: 'surface',
-        borderColor: baseColor,
-        fontColor,
+        backgroundColor: hovered ? lightColor : 'transparent',
+        borderColor: color,
+        fontColor: color,
       }
     case 'text':
       return {
         opacity,
-        backgroundColor: 'transparent',
+        backgroundColor: hovered ? lightColor : 'transparent',
         borderColor: 'transparent',
-        fontColor,
+        fontColor: color,
       }
     case 'contain':
       return {
         opacity,
-        backgroundColor: baseColor,
+        backgroundColor: hovered ? darkColor : color,
         borderColor: 'transparent',
-        fontColor,
+        fontColor: 'primaryTextLight',
       }
   }
 }

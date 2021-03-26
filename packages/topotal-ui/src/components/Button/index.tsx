@@ -1,5 +1,5 @@
-import React from 'react'
-import { ActivityIndicator, StyleProp, TouchableOpacity, ViewStyle } from 'react-native'
+import React, { useCallback, useState } from 'react'
+import { ActivityIndicator, Pressable, StyleProp, ViewStyle } from 'react-native'
 import { HStack } from '../HStack'
 import { Text } from '../Text'
 import { useStyles } from './styles'
@@ -23,23 +23,39 @@ export const Button = React.memo<Props>(({
   variant = 'contain',
   disabled = false,
   loading = false,
-  onPress,
   style,
+  onPress,
 }) => {
-  const { styles, indicatorColor, textType } = useStyles({
+  const [hovered, setHovered] = useState(false)
+  const {
+    styles,
+    indicatorColor,
+    textType,
+  } = useStyles({
     size,
     color,
     variant,
     disabled,
     loading,
+    hovered,
   })
 
+  const handleHoverIn = useCallback(() => {
+    setHovered(true)
+  }, [])
+
+  const handleHoverOut = useCallback(() => {
+    setHovered(false)
+  }, [])
+
   return (
-    <TouchableOpacity
+    <Pressable
       disabled={disabled || loading}
       accessibilityRole="button"
       style={style}
       onPress={onPress}
+      onHoverIn={handleHoverIn}
+      onHoverOut={handleHoverOut}
     >
       <HStack
         gap={24}
@@ -59,6 +75,6 @@ export const Button = React.memo<Props>(({
           </Text>
         )}
       </HStack>
-    </TouchableOpacity>
+    </Pressable>
   )
 })

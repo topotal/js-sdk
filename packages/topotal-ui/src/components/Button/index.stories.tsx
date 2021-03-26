@@ -13,18 +13,18 @@ export const all = () => (
     <Button title="Post" size="medium" variant="outline" />
     <Button title="Post" size="small" variant="text" />
     <Button title="Post" size="medium" variant="text" />
-    <Button title="Save" color="positive" size="small" />
-    <Button title="Save" color="positive" size="medium" />
-    <Button title="Save" color="positive" size="small" variant="outline" />
-    <Button title="Save" color="positive" size="medium" variant="outline" />
-    <Button title="Save" color="positive" size="small" variant="text" />
-    <Button title="Save" color="positive" size="medium" variant="text" />
-    <Button title="Delete" color="negative" size="small" />
-    <Button title="Delete" color="negative" size="medium" />
-    <Button title="Delete" color="negative" size="small" variant="outline" />
-    <Button title="Delete" color="negative" size="medium" variant="outline" />
-    <Button title="Delete" color="negative" size="small" variant="text" />
-    <Button title="Delete" color="negative" size="medium" variant="text" />
+    <Button title="Save" color="success" size="small" />
+    <Button title="Save" color="success" size="medium" />
+    <Button title="Save" color="success" size="small" variant="outline" />
+    <Button title="Save" color="success" size="medium" variant="outline" />
+    <Button title="Save" color="success" size="small" variant="text" />
+    <Button title="Save" color="success" size="medium" variant="text" />
+    <Button title="Delete" color="error" size="small" />
+    <Button title="Delete" color="error" size="medium" />
+    <Button title="Delete" color="error" size="small" variant="outline" />
+    <Button title="Delete" color="error" size="medium" variant="outline" />
+    <Button title="Delete" color="error" size="small" variant="text" />
+    <Button title="Delete" color="error" size="medium" variant="text" />
     <Button title="Cancel" color="cancel" size="small" />
     <Button title="Cancel" color="cancel" size="medium" />
     <Button
