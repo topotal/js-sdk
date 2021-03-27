@@ -16,18 +16,21 @@ export const getDynamicGeometry = (size: Size): DynamicGeometry => {
       return {
         height: 24,
         sidePadding: 24,
+        iconSize: 10,
         textType,
       }
     case 'medium':
       return {
         height: 32,
         sidePadding: 40,
+        iconSize: 14,
         textType,
       }
     case 'large':
       return {
         height: 40,
         sidePadding: 48,
+        iconSize: 16,
         textType,
       }
   }

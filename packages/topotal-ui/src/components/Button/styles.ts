@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { ThemeContext } from '../../theme'
 import { Color, Size, Variant } from './types'
 import { getDynamicGeometry, getDynamicMaterial } from './utils'
@@ -16,6 +16,7 @@ interface Props {
 interface Styles {
   wrapper: ViewStyle
   title: TextStyle
+  icon: ImageStyle
 }
 
 export const useStyles = ({
@@ -27,7 +28,12 @@ export const useStyles = ({
   hovered,
 }: Props) => {
   const theme = useContext(ThemeContext)
-  const { height, sidePadding, textType } = getDynamicGeometry(size)
+  const {
+    height,
+    sidePadding,
+    iconSize,
+    textType,
+  } = getDynamicGeometry(size)
   const {
     fontColor,
     backgroundColor,
@@ -55,14 +61,18 @@ export const useStyles = ({
     title: {
       textAlign: 'center',
       lineHeight: height,
-      width: '100%',
       color: theme.color[fontColor],
+    },
+    icon: {
+      width: iconSize,
+      height: iconSize,
+      tintColor: theme.color[fontColor],
     },
   })
 
   return {
     styles,
     indicatorColor: theme.color[fontColor],
-    textType: textType,
+    textType,
   }
 }

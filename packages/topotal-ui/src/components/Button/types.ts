@@ -7,6 +7,7 @@ export type Variant = 'contain' | 'outline' | 'text'
 export interface DynamicGeometry {
   height: number
   sidePadding: number
+  iconSize: number
   textType: TextType
 }
 

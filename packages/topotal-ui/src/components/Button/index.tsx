@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import { ActivityIndicator, Pressable, StyleProp, ViewStyle } from 'react-native'
-import { HStack } from '../HStack'
-import { Text } from '../Text'
+import { HStack, Icon, Text } from '..'
 import { useStyles } from './styles'
 import { Color, Size, Variant } from './types'
 
@@ -12,6 +11,8 @@ interface Props {
   variant?: Variant
   disabled?: boolean
   loading?: boolean
+  startIconName?: string
+  endIconName?: string
   style?: StyleProp<ViewStyle>
   onPress?: (e: React.BaseSyntheticEvent) => void
 }
@@ -23,6 +24,8 @@ export const Button = React.memo<Props>(({
   variant = 'contain',
   disabled = false,
   loading = false,
+  startIconName,
+  endIconName,
   style,
   onPress,
 }) => {
@@ -58,7 +61,7 @@ export const Button = React.memo<Props>(({
       onHoverOut={handleHoverOut}
     >
       <HStack
-        gap={24}
+        gap={8}
         align="center"
         justify="center"
         style={styles.wrapper}
@@ -66,13 +69,27 @@ export const Button = React.memo<Props>(({
         {loading ? (
           <ActivityIndicator color={indicatorColor} />
         ) : (
-          <Text
-            style={styles.title}
-            type={textType}
-            weight="bold"
-          >
-            {title}
-          </Text>
+          <>
+            {startIconName ? (
+              <Icon
+                style={styles.icon}
+                name={startIconName}
+              />
+            ) : null}
+            <Text
+              style={styles.title}
+              type={textType}
+              weight="bold"
+            >
+              {title}
+            </Text>
+            {endIconName ? (
+              <Icon
+                style={styles.icon}
+                name={endIconName}
+              />
+            ) : null}
+          </>
         )}
       </HStack>
     </Pressable>
