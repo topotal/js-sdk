@@ -38,6 +38,7 @@ export const TextInput = React.memo<Props>(({
       <Text style={styles.dummyText}>
         {innerValue.replace(/\n$/g, '\n ')}
       </Text>
+      <VStack style={styles.outline} />
       <BaseInput
         {...rest}
         value={innerValue}

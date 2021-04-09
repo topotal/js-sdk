@@ -5,6 +5,7 @@ import { ThemeColor, ThemeContext } from '../../theme'
 interface Styles {
   wrapper: ViewStyle
   dummyText: TextStyle
+  outline: ViewStyle
   placeholderWrapper: ViewStyle
   placeholder: TextStyle
   input: TextStyle
@@ -16,9 +17,13 @@ interface Props {
   error: boolean
 }
 
-const getBorderColor = (error: boolean): keyof ThemeColor => {
+const getBorderColor = (isFocused: boolean, error: boolean): keyof ThemeColor => {
   if (error) {
     return 'error'
+  }
+
+  if (isFocused) {
+    return 'primary'
   }
 
   return 'borderLight'
@@ -30,7 +35,7 @@ export const useStyles = ({
   error,
 }: Props) => {
   const theme = useContext(ThemeContext)
-  const borderColor = getBorderColor(error)
+  const borderColor = getBorderColor(isFocused, error)
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
@@ -38,7 +43,6 @@ export const useStyles = ({
       width: '100%',
       minHeight: multiline ? 80 : 40,
       maxHeight: multiline ? 240 : 40,
-      overflow: 'hidden',
       borderStyle: 'solid',
       borderWidth: 1,
       borderColor: theme.color[borderColor],
@@ -47,6 +51,18 @@ export const useStyles = ({
       ...(Platform.OS === 'web' ? {
         resize: multiline ? 'vertical' : 'none',
       } : {}),
+    },
+    outline: {
+      position: 'absolute',
+      top: -3,
+      left: -3,
+      right: -3,
+      bottom: -3,
+      opacity: isFocused ? 1 : 0,
+      borderRadius: theme.radius.level1 + 2,
+      borderStyle: 'solid',
+      borderWidth: 2,
+      borderColor: theme.color.primaryLight,
     },
     dummyText: {
       width: '100%',
