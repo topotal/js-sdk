@@ -23,7 +23,6 @@ export const useStyles = ({ align }: Props) => {
   const { color } = useTheme()
   const topPosition = wrapperMeasure.pageY - scrollY
   const leftPosition = wrapperMeasure.pageX
-  console.info(windowScaledSize)
   const rightPosition = windowScaledSize.width - (wrapperMeasure.pageX + wrapperMeasure.width)
 
   useEffect(() => {
