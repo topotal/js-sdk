@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.25.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.24.0...@topotal/topotal-ui@0.25.0) (2021-04-10)
+
+
+### Bug Fixes
+
+* export hooks ([d85a865](https://github.com/topotal/js-sdk/commit/d85a865bd3983e5ece69233bddcaa200aa30251f))
+* Remove IconName type ([9e6f5bd](https://github.com/topotal/js-sdk/commit/9e6f5bd5443c8714edd26c4152286319f9153802))
+
+
+### Features
+
+* **Dropdown:** Add align prop ([c37f547](https://github.com/topotal/js-sdk/commit/c37f547de2067d57f2e94033ce495aa3fbc46f85))
+* **TextInput:** Add outline ([d638f4a](https://github.com/topotal/js-sdk/commit/d638f4a872a068403aff27cc42047eb46266e33c))
+* Add startIcon and endIcon props ([3bb97e6](https://github.com/topotal/js-sdk/commit/3bb97e668ce9de353b6fcf339e23b5c42d3269eb))
+* **Button:** Add hover style ([2a5c6da](https://github.com/topotal/js-sdk/commit/2a5c6da510f0a343637bf5a483851a5a09ba2d56))
+
+
+
+
+
 # [0.24.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.23.5...@topotal/topotal-ui@0.24.0) (2021-03-20)
 
 
