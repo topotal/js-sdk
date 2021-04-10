@@ -10,10 +10,10 @@ export type TextType =
   'small_body'
 
 const textStyles: { [key in TextType]: TextStyle } = {
-  display2: { fontSize: 18, lineHeight: 26, fontFamily: 'Noto Sans JP' },
-  display1: { fontSize: 14, lineHeight: 20, fontFamily: 'Noto Sans JP' },
-  body: { fontSize: 12, lineHeight: 17, fontFamily: 'Noto Sans JP' },
-  small_body: { fontSize: 10, lineHeight: 14, fontFamily: 'Noto Sans JP' },
+  display2: { fontSize: 18, lineHeight: 36, fontFamily: 'Noto Sans JP' },
+  display1: { fontSize: 14, lineHeight: 28, fontFamily: 'Noto Sans JP' },
+  body: { fontSize: 12, lineHeight: 24, fontFamily: 'Noto Sans JP' },
+  small_body: { fontSize: 10, lineHeight: 20, fontFamily: 'Noto Sans JP' },
 }
 
 export const palette = {
