@@ -1,7 +1,9 @@
-import { useMemo } from 'react'
-import { ViewStyle } from 'react-native'
-import { useTheme } from '../../theme'
-import { CardPosition } from '.'
+import { useEffect, useMemo } from 'react'
+import { View, ViewStyle } from 'react-native'
+import { useDimensions } from '../../hooks/useDimensions'
+import { useMeasure } from '../../hooks/useMeasure'
+import { useScrollManipulater, useTheme } from '../../theme'
+import { CardPositionAlign } from '.'
 
 interface Styles {
   wrapper: ViewStyle
@@ -10,45 +12,59 @@ interface Styles {
 }
 
 interface Props {
-  cardPosition?: CardPosition
+  align: CardPositionAlign
 }
 
-export const useStyles = ({ cardPosition }: Props) => {
+export const useStyles = ({ align }: Props) => {
+  const { ref: wrapperRef, measure: wrapperMeasure, updateMeasure } = useMeasure<View>()
+  const { getScrollY } = useScrollManipulater()
+  const { windowScaledSize } = useDimensions()
+  const scrollY = getScrollY()
   const { color } = useTheme()
+  const topPosition = wrapperMeasure.pageY - scrollY
+  const leftPosition = wrapperMeasure.pageX
+  console.info(windowScaledSize)
+  const rightPosition = windowScaledSize.width - (wrapperMeasure.pageX + wrapperMeasure.width)
 
-  const styles = useMemo<Styles>(() => ({
-    wrapper: {
-      width: '100%',
-      height: 0,
-    },
-    background: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-    },
-    card: {
-      position: 'absolute',
-      top: cardPosition?.y || 0,
-      left: cardPosition?.x || 0,
-      width: cardPosition?.width || 0,
-      opacity: cardPosition ? 1 : 0,
-      borderRadius: 4,
-      borderWidth: 1,
-      borderColor: color.borderLight,
-      backgroundColor: color.surface,
-      shadowColor: '#ccc', // TODO: シャドウの色をtopotal-ui上で定義する
-      shadowOffset: {
-        width: 0,
-        height: 2,
+  useEffect(() => {
+    updateMeasure()
+  }, [updateMeasure])
+
+  const styles = useMemo<Styles>(() => {
+    return {
+      wrapper: {
+        width: '100%',
+        height: 0,
       },
-      shadowRadius: 8,
-      shadowOpacity: 0.5,
-    },
-  }), [cardPosition, color.borderLight, color.surface])
+      background: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+      },
+      card: {
+        position: 'absolute',
+        top: topPosition,
+        left: align === 'left' ? leftPosition : undefined,
+        right: align === 'right' ? rightPosition : undefined,
+        borderRadius: 4,
+        borderWidth: 1,
+        borderColor: color.borderLight,
+        backgroundColor: color.surface,
+        shadowColor: color.shadow,
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowRadius: 8,
+        shadowOpacity: 0.5,
+      },
+    }
+  }, [align, color.borderLight, color.shadow, color.surface, leftPosition, rightPosition, topPosition])
 
   return {
+    wrapperRef,
     styles,
   }
 }

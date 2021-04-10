@@ -53,6 +53,7 @@ export const defaultTheme = {
     errorLight: '#FDD6D3',
     errorDark: '#C80909',
     transparent: 'transparent',
+    shadow: '#CCCCCC',
   },
   radius: {
     level1: 4,
