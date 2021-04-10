@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.25.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.25.0...@topotal/topotal-ui@0.25.1) (2021-04-10)
+
+
+### Bug Fixes
+
+* remove console.info ([7f01a7b](https://github.com/topotal/js-sdk/commit/7f01a7b16804358726d6d1248759fbf20d2899ff))
+
+
+
+
+
 # [0.25.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.24.0...@topotal/topotal-ui@0.25.0) (2021-04-10)
 
 
