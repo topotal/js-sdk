@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.26.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.26.0...@topotal/topotal-ui@0.26.1) (2021-04-11)
+
+
+### Bug Fixes
+
+* patch color theme ([ea7dbc6](https://github.com/topotal/js-sdk/commit/ea7dbc60037189517673b7cbd81cbba3689fcc83))
+* **Text:** Change lineHeight ([622695c](https://github.com/topotal/js-sdk/commit/622695c9bb6a1fc3b77658e77bf8e5fc2c1d3ee0))
+
+
+
+
+
 # [0.26.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.25.1...@topotal/topotal-ui@0.26.0) (2021-04-10)
 
 
