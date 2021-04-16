@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.26.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.26.1...@topotal/topotal-ui@0.26.2) (2021-04-16)
+
+
+### Bug Fixes
+
+* **Icon:** Change style prop type to StyleProp<ImageStyle> ([09877b2](https://github.com/topotal/js-sdk/commit/09877b26086a8a6fea5715199c2b1f1675e197c4))
+
+
+
+
+
 ## [0.26.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.26.0...@topotal/topotal-ui@0.26.1) (2021-04-11)
 
 
