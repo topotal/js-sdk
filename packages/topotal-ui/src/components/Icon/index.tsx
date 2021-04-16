@@ -1,11 +1,11 @@
 import React from 'react'
-import { Image, ImageStyle } from 'react-native'
+import { Image, ImageStyle, StyleProp } from 'react-native'
 import { useTheme } from '../../theme'
 import { useStyles } from './styles'
 
 interface Props {
   name: string
-  style?: ImageStyle
+  style?: StyleProp<ImageStyle>
 }
 
 export const Icon = React.memo<Props>(({
