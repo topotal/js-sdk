@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.27.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.26.2...@topotal/topotal-ui@0.27.0) (2021-06-12)
+
+
+### Bug Fixes
+
+* **SyntaxHighlighter:** Fix key ([06f3eac](https://github.com/topotal/js-sdk/commit/06f3eac6483c32798237c45eb6ea266cda33a86c))
+
+
+### Features
+
+* **MdRenderer:** Use SyntaxHighlighter ([1b7cfa5](https://github.com/topotal/js-sdk/commit/1b7cfa57535b0f92ed76a384decf8a075f75b60e))
+* **topotal-ui:** Add SyntaxHighlighter ([1ee7619](https://github.com/topotal/js-sdk/commit/1ee76190fdf4a8980b8dabaff3b3f8735a1c6101))
+
+
+
+
+
 ## [0.26.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.26.1...@topotal/topotal-ui@0.26.2) (2021-04-16)
 
 
