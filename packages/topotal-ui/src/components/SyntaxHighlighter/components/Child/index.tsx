@@ -5,12 +5,16 @@ import { ElementChild } from '../ElementChild'
 
 interface Props {
   style?: StyleProp<TextStyle>
+  childLevel: number
+  childIndex: number
   childData: ChildData
   stylesheet: StyleSheetData
 }
 
 export const Child = React.memo<Props>(({
   style,
+  childLevel,
+  childIndex,
   childData,
   stylesheet,
 }) => {
@@ -25,6 +29,8 @@ export const Child = React.memo<Props>(({
       return (
         <ElementChild
           style={style}
+          childLevel={childLevel + 1}
+          childIndex={childIndex}
           childData={childData}
           stylesheet={stylesheet}
         />

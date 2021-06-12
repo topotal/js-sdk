@@ -16,7 +16,9 @@ export const Renderer: React.FC<Props> = ({
     <Text style={{ fontFamily: 'Consolas, Monaco, monospace' }}>
       {rows.map((rowData, index) => (
         <Child
-          key={index}
+          key={`syntax_highlighter_0_0_${index}`}
+          childLevel={1}
+          childIndex={index}
           childData={rowData}
           stylesheet={stylesheet}
         />

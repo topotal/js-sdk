@@ -5,12 +5,16 @@ import { Child } from '../Child'
 
 interface Props {
   style?: StyleProp<TextStyle>
+  childLevel: number
+  childIndex: number
   childData: ElementChildData
   stylesheet: StyleSheetData
 }
 
 export const ElementChild = React.memo<Props>(({
   style,
+  childLevel,
+  childIndex,
   childData,
   stylesheet,
 }) => {
@@ -24,7 +28,9 @@ export const ElementChild = React.memo<Props>(({
     <Text style={[{ color }, style]}>
       {childData.children.map((data, index) => (
         <Child
-          key={`hoge_${index}`}
+          key={`syntax_highlighter_${childLevel}_${childIndex}_${index}`}
+          childLevel={childLevel + 1}
+          childIndex={index}
           stylesheet={stylesheet}
           childData={data}
         />
