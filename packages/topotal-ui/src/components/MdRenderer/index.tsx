@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
 import { lexer } from 'marked'
+import { SyntaxHighlighter } from '../SyntaxHighlighter'
 import { VStack } from '../VStack'
-import { Code } from './components/Code'
 import { Heading } from './components/Heading'
 import { Paragraph } from './components/Paragraph'
 import { NormalizedToken } from './types'
@@ -32,7 +32,13 @@ export const MdRenderer = React.memo<Props>(({
           case 'paragraph':
             return <Paragraph key={index} token={token} />
           case 'code':
-            return <Code key={index} token={token} />
+            return (
+              <SyntaxHighlighter
+                key={index}
+                language={token.lang || ''}
+                code={token.text}
+              />
+            )
           case 'heading':
             return <Heading key={index} token={token} />
           default:
