@@ -15,8 +15,10 @@ export const Heading = React.memo<Props>(({
 }) => {
   const type = useMemo(() => {
     switch (token.depth) {
-      case 4: return 'body'
-      case 3: return 'display1'
+      case 1: return 'display4'
+      case 2: return 'display3'
+      case 3: return 'display2'
+      case 4: return 'display1'
       default: return 'body'
     }
   }, [token.depth])

@@ -4,12 +4,16 @@ import { TextStyle } from 'react-native'
 export type FontWeight = 'normal' | 'bold'
 
 export type TextType =
+  'display4' |
+  'display3' |
   'display2' |
   'display1' |
   'body' |
   'small_body'
 
-const textStyles: { [key in TextType]: TextStyle } = {
+export const textStyles: { [key in TextType]: TextStyle } = {
+  display4: { fontSize: 32, lineHeight: 64, fontFamily: 'Noto Sans JP' },
+  display3: { fontSize: 24, lineHeight: 48, fontFamily: 'Noto Sans JP' },
   display2: { fontSize: 18, lineHeight: 36, fontFamily: 'Noto Sans JP' },
   display1: { fontSize: 14, lineHeight: 28, fontFamily: 'Noto Sans JP' },
   body: { fontSize: 12, lineHeight: 24, fontFamily: 'Noto Sans JP' },
