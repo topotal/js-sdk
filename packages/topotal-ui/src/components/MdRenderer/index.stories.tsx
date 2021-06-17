@@ -7,7 +7,6 @@ export default {
 }
 
 const markdown = `
-
 # H1
 
 ## H2
@@ -36,9 +35,22 @@ long text long text long text long text long text long text
 long text long text long text long text long text long text
 long text long text long text long text long text long text
 
-### h3
+## List
 
-#### h4
+- item1
+  - item1-1
+    - item1-1-1
+      \`\`\`js
+      console.info('hoge')
+      \`\`\`
+    - item1-1-2
+  - item1-2
+  - item1-3
+- item2
+  - item2-1
+- item3
+
+## Code
 
 \`\`\`html
 <script>alert()</script>

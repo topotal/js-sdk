@@ -1,10 +1,8 @@
 import React, { useMemo } from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
 import { lexer } from 'marked'
-import { SyntaxHighlighter } from '../SyntaxHighlighter'
 import { VStack } from '../VStack'
-import { Heading } from './components/Heading'
-import { Paragraph } from './components/Paragraph'
+import { Switcher } from './components/Switcher'
 import { NormalizedToken } from './types'
 import { normalizeTokens } from './utils'
 
@@ -27,24 +25,9 @@ export const MdRenderer = React.memo<Props>(({
 
   return (
     <VStack style={style} gap={16}>
-      {tokens.map((token, index) => {
-        switch (token.type) {
-          case 'paragraph':
-            return <Paragraph key={index} token={token} />
-          case 'code':
-            return (
-              <SyntaxHighlighter
-                key={index}
-                language={token.lang || ''}
-                code={token.text}
-              />
-            )
-          case 'heading':
-            return <Heading key={index} token={token} />
-          default:
-            return null
-        }
-      })}
+      {tokens.map((token, index) => (
+        <Switcher token={token} key={index} />
+      ))}
     </VStack>
   )
 })
