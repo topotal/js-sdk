@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.28.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.27.0...@topotal/topotal-ui@0.28.0) (2021-06-17)
+
+
+### Features
+
+* Add sanitiza-html ([f577c30](https://github.com/topotal/js-sdk/commit/f577c30bc75b7ea4d0cd978f2222d407d1ac78e6))
+* **topotal-ui:** Add header level ([fc1b3f8](https://github.com/topotal/js-sdk/commit/fc1b3f8247ad2f2b5155b8e0306368c1c9466225))
+
+
+
+
+
 # [0.27.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.26.2...@topotal/topotal-ui@0.27.0) (2021-06-12)
 
 
