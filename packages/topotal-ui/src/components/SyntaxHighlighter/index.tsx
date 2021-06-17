@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView, StyleProp, View, ViewStyle } from 'react-native'
 import ReactSyntaxHighlighter from 'react-syntax-highlighter'
-import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { vs2015 } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { PreTag } from './components/PreTag'
 import { Renderer } from './components/Renderer'
 
