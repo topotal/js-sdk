@@ -39,7 +39,8 @@
   "dependencies": {
     "marked": "^1.2.6",
     "react-is": "^17.0.1",
-    "react-syntax-highlighter": "^15.4.3"
+    "react-syntax-highlighter": "^15.4.3",
+    "sanitize-html": "^2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -52,6 +53,7 @@
     "@types/react-is": "^17.0.0",
     "@types/react-native": "^0.63.37",
     "@types/react-table": "^7.0.25",
+    "@types/sanitize-html": "^2.3.1",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
     "babel-loader": "^8.2.2",

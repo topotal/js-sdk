@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import React from 'react'
 import { MdRenderer } from '.'
 
@@ -25,7 +26,9 @@ text text
 
 text in [link](https://google.com).
 
-let's
+   let's こんにちはさようなら
+
+　全角スペース　全角スペース
 
 text **Bold text** normal text
 
@@ -36,6 +39,10 @@ long text long text long text long text long text long text
 ### h3
 
 #### h4
+
+\`\`\`html
+<script>alert()</script>
+\`\`\`
 
 \`\`\`javascript
 function hoge {
