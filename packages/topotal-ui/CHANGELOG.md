@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.28.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.28.0...@topotal/topotal-ui@0.28.1) (2021-06-17)
+
+
+### Bug Fixes
+
+* Patch vs2015 path ([d0b08c5](https://github.com/topotal/js-sdk/commit/d0b08c5105d1129ae8ad153f9aae4bcdea363ba6))
+
+
+
+
+
 # [0.28.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.27.0...@topotal/topotal-ui@0.28.0) (2021-06-17)
 
 
