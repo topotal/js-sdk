@@ -7,9 +7,12 @@ import { Text } from '../Text'
 import { VStack } from '../VStack'
 import { useStyles } from './styles'
 
+export type Size = 'medium' | 'large'
+
 type BaseProps = {
   innerRef?: React.Ref<BaseInput>
   error?: boolean
+  size?: Size
 } & React.ComponentProps<typeof BaseInput>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
@@ -20,6 +23,7 @@ export const TextInput = React.memo<Props>(({
   autoCapitalize = 'none',
   multiline = false,
   error = false,
+  size = 'large',
   innerRef,
   style,
   onChangeText,
@@ -34,7 +38,12 @@ export const TextInput = React.memo<Props>(({
     handleFocus,
     handleBlur,
   } = useFocusBlur()
-  const { styles } = useStyles({ isFocused, multiline, error })
+  const { styles } = useStyles({
+    isFocused,
+    multiline,
+    error,
+    size,
+  })
   const showPlaceholder = !isFocused && !innerValue
 
   return (

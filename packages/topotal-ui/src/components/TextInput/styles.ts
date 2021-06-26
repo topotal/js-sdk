@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
-import { ThemeColor, ThemeContext } from '../../theme'
+import { ThemeContext } from '../../theme'
+import { getBorderColor, getGeometryStyles } from './utils'
+import { Size } from '.'
 
 interface Styles {
   wrapper: ViewStyle
@@ -16,31 +18,23 @@ interface Props {
   isFocused: boolean
   multiline: boolean
   error: boolean
-}
-
-const getBorderColor = (isFocused: boolean, error: boolean): keyof ThemeColor => {
-  if (error) {
-    return 'error'
-  }
-
-  if (isFocused) {
-    return 'primary'
-  }
-
-  return 'borderLight'
+  size: Size
 }
 
 export const useStyles = ({
   isFocused,
   multiline,
   error,
+  size,
 }: Props) => {
   const theme = useContext(ThemeContext)
   const borderColor = getBorderColor(isFocused, error)
-  const height = 40
-  const lineHeight = 24
-  const paddingVertical = (height - lineHeight) / 2
-  const paddingHorizontal = 16
+  const {
+    height,
+    lineHeight,
+    paddingVertical,
+    paddingHorizontal,
+  } = getGeometryStyles(size)
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
