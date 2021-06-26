@@ -1,8 +1,9 @@
 import React from 'react'
 import { TextInput as BaseInput } from 'react-native'
+import { useFocusBlur } from '../../hooks/useFocusBlur'
+import { useInputValue } from '../../hooks/useInputValue'
 import { Text } from '../Text'
 import { VStack } from '../VStack'
-import { useTextInput } from './hooks'
 import { useStyles } from './styles'
 
 type BaseProps = {
@@ -23,15 +24,17 @@ export const TextInput = React.memo<Props>(({
   onChangeText,
   ...rest
 }) => {
+  const { innerValue, handleChange } = useInputValue<string>({
+    value,
+    onChange: onChangeText,
+  })
   const {
-    innerValue,
     isFocused,
-    showPlaceholder,
-    handleBlur,
-    handleChangeText,
     handleFocus,
-  } = useTextInput({ value, onChangeText })
+    handleBlur,
+  } = useFocusBlur()
   const { styles } = useStyles({ isFocused, multiline, error })
+  const showPlaceholder = !isFocused && !innerValue
 
   return (
     <VStack style={[styles.wrapper, style]}>
@@ -44,7 +47,7 @@ export const TextInput = React.memo<Props>(({
         value={innerValue}
         autoCapitalize={autoCapitalize}
         multiline={multiline}
-        onChangeText={handleChangeText}
+        onChangeText={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
         style={styles.input}
