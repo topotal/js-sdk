@@ -2,6 +2,7 @@ import React from 'react'
 import { TextInput as BaseInput } from 'react-native'
 import { useFocusBlur } from '../../hooks/useFocusBlur'
 import { useInputValue } from '../../hooks/useInputValue'
+import { HStack } from '../HStack'
 import { Text } from '../Text'
 import { VStack } from '../VStack'
 import { useStyles } from './styles'
@@ -38,22 +39,32 @@ export const TextInput = React.memo<Props>(({
 
   return (
     <VStack style={[styles.wrapper, style]}>
-      <Text style={styles.dummyText}>
-        {innerValue.replace(/\n$/g, '\n ')}
-      </Text>
-      <VStack style={styles.outline} />
-      <BaseInput
-        {...rest}
-        value={innerValue}
-        autoCapitalize={autoCapitalize}
-        multiline={multiline}
-        onChangeText={handleChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        style={styles.input}
+      <VStack
+        style={styles.outline}
+        pointerEvents="none"
       />
+      {multiline ? (
+        <Text style={styles.dummyText}>
+          {innerValue.replace(/\n$/g, '\n ')}
+        </Text>
+      ) : null}
+      <HStack
+        align="center"
+        style={styles.inputWrapper}
+      >
+        <BaseInput
+          {...rest}
+          value={innerValue}
+          autoCapitalize={autoCapitalize}
+          multiline={multiline}
+          onChangeText={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          style={styles.input}
+        />
+      </HStack>
       {showPlaceholder ? (
-        <VStack
+        <HStack
           style={styles.placeholderWrapper}
           pointerEvents="none"
         >
@@ -63,7 +74,7 @@ export const TextInput = React.memo<Props>(({
           >
             {placeholder}
           </Text>
-        </VStack>
+        </HStack>
       ) : null}
     </VStack>
   )

@@ -8,6 +8,7 @@ interface Styles {
   outline: ViewStyle
   placeholderWrapper: ViewStyle
   placeholder: TextStyle
+  inputWrapper: ViewStyle
   input: TextStyle
 }
 
@@ -36,13 +37,17 @@ export const useStyles = ({
 }: Props) => {
   const theme = useContext(ThemeContext)
   const borderColor = getBorderColor(isFocused, error)
+  const height = 40
+  const lineHeight = 24
+  const paddingVertical = (height - lineHeight) / 2
+  const paddingHorizontal = 16
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
       position: 'relative',
       width: '100%',
-      minHeight: multiline ? 80 : 40,
-      maxHeight: multiline ? 240 : 40,
+      minHeight: multiline ? 80 : height,
+      maxHeight: multiline ? 240 : height,
       borderStyle: 'solid',
       borderWidth: 1,
       borderColor: theme.color[borderColor],
@@ -68,28 +73,37 @@ export const useStyles = ({
       width: '100%',
       height: '100%',
       opacity: 0,
-      padding: 16,
+      paddingVertical,
+      paddingHorizontal,
+      lineHeight,
     },
     placeholderWrapper: {
       position: 'absolute',
       top: 0,
-      width: '100%',
-      height: 40,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      paddingVertical,
+      paddingHorizontal,
     },
     placeholder: {
-      lineHeight: 40,
-      paddingVertical: 0,
-      paddingHorizontal: 16,
+      lineHeight,
       color: theme.color.secandaryTextDark,
     },
-    input: {
+    inputWrapper: {
       position: 'absolute',
-      top: 0,
       width: '100%',
       height: '100%',
-      padding: 16,
-      color: theme.color.primaryTextDark,
+    },
+    input: {
       ...theme.text.type.body,
+      width: '100%',
+      height: '100%',
+      paddingVertical,
+      paddingHorizontal,
+      minHeight: lineHeight,
+      lineHeight,
+      color: theme.color.primaryTextDark,
       ...(Platform.OS === 'web' ? {
         outlineWidth: 0,
       } : {}),
