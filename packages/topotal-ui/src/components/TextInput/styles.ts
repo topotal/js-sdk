@@ -69,11 +69,13 @@ export const useStyles = ({
       borderColor: theme.color.primaryLight,
     },
     iconWrapper: {
-      position: 'absolute',
       top: 0,
-      left: 16,
+      left: 0,
+      bottom: 0,
       width: height - 2,
       height: height - 2,
+      borderRightWidth: 1,
+      borderColor: theme.color.borderLight,
     },
     icon: {
       width: height / 2,

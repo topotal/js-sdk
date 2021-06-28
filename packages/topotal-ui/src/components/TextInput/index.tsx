@@ -58,6 +58,7 @@ export const TextInput = React.memo<Props>(({
       />
       {startIconName ? (
         <HStack
+          justify="center"
           align="center"
           style={styles.iconWrapper}
         >
