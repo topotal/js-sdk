@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.30.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.29.0...@topotal/topotal-ui@0.30.0) (2021-06-28)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Patch multiline TextInput style ([0d88eec](https://github.com/topotal/js-sdk/commit/0d88eec384aa468fbf85e32c2ef6d95519cf738d))
+
+
+### Features
+
+* Add startIconName props to TextInput ([25ad4c8](https://github.com/topotal/js-sdk/commit/25ad4c86be8f3c65a964947572021b4aab81aefa))
+* **topotal-ui:** Add size prop to TextInput ([d7d1f21](https://github.com/topotal/js-sdk/commit/d7d1f21b3f8e8010328aec7382b2b713fd2fd558))
+
+
+
+
+
 # [0.29.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.28.1...@topotal/topotal-ui@0.29.0) (2021-06-17)
 
 
