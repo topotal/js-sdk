@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.31.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.30.0...@topotal/topotal-ui@0.31.0) (2021-06-28)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Patch icon style in TextInput ([4701d98](https://github.com/topotal/js-sdk/commit/4701d98d48e47d6e1260ee57334dda184f1b6c4c))
+
+
+### Features
+
+* **TextInput:** Show placeholders when focus ([9ce6904](https://github.com/topotal/js-sdk/commit/9ce69044be8d9e572466c189262b18756ed11cea))
+
+
+
+
+
 # [0.30.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.29.0...@topotal/topotal-ui@0.30.0) (2021-06-28)
 
 
