@@ -15,12 +15,12 @@ export const getGeometryStyles = (size: Size, startIconName?: string) => {
     case 'medium':
       height = 32
       lineHeight = 24
-      paddingLeft = startIconName ? height + 6 : 16
+      paddingLeft = startIconName ? 8 : 16
       break
     case 'large':
       height = 40
       lineHeight = 24
-      paddingLeft = startIconName ? height + 2 : 16
+      paddingLeft = startIconName ? 8 : 16
       break
   }
 
