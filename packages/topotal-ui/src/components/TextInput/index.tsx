@@ -48,7 +48,7 @@ export const TextInput = React.memo<Props>(({
     size,
     startIconName,
   })
-  const showPlaceholder = !isFocused && !innerValue
+  const showPlaceholder = !innerValue
 
   return (
     <HStack style={[styles.wrapper, style]}>
