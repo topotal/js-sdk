@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.31.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.31.0...@topotal/topotal-ui@0.31.1) (2021-07-01)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Add target blank setting to MdRenderer link ([73ecb62](https://github.com/topotal/js-sdk/commit/73ecb62eb0dff4762a485590246a405961da7ef2))
+
+
+
+
+
 # [0.31.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.30.0...@topotal/topotal-ui@0.31.0) (2021-06-28)
 
 
