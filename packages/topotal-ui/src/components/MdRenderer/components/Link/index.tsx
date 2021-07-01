@@ -15,7 +15,10 @@ export const Link = React.memo<Props>(({
 
   const anchorAttributes = {
     href: token.href,
-    target: '_blank',
+    hrefAttrs: {
+      target: '_blank',
+      rel: 'noopener',
+    },
   }
 
   return (
