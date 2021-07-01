@@ -67,7 +67,10 @@ export const Button = React.memo<Props>(({
         style={styles.wrapper}
       >
         {loading ? (
-          <ActivityIndicator color={indicatorColor} />
+          <ActivityIndicator
+            color={indicatorColor}
+            style={styles.indicator}
+          />
         ) : (
           <>
             {startIconName ? (

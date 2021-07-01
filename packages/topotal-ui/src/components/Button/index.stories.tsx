@@ -47,6 +47,8 @@ export const all = () => (
       variant="text"
     />
     <Button title="送信" size="small" loading={true} />
+    <Button title="送信" size="medium" loading={true} />
+    <Button title="送信" size="large" loading={true} />
     <Button
       title="送信"
       startIconName="done"

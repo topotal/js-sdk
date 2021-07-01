@@ -15,6 +15,7 @@ interface Props {
 
 interface Styles {
   wrapper: ViewStyle
+  indicator: ViewStyle
   title: TextStyle
   icon: ImageStyle
 }
@@ -57,6 +58,11 @@ export const useStyles = ({
       borderColor: theme.color[borderColor],
       overflow: 'hidden',
       opacity,
+    },
+    indicator: {
+      transform: [{
+        scale: size === 'small' ? 0.7 : 1,
+      }],
     },
     title: {
       textAlign: 'center',
