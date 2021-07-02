@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.32.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.31.1...@topotal/topotal-ui@0.32.0) (2021-07-02)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Patch indicator size in Button ([0c6a0ce](https://github.com/topotal/js-sdk/commit/0c6a0ce8d8536c78dcb85c415fef34432adb3f5e))
+
+
+### Features
+
+* **topotal-ui:** Add FixedRatioView ([72faf29](https://github.com/topotal/js-sdk/commit/72faf2991bcdeadfa8961e2eba1862546faa300f))
+
+
+
+
+
 ## [0.31.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.31.0...@topotal/topotal-ui@0.31.1) (2021-07-01)
 
 
