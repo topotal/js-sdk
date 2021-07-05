@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.32.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.0...@topotal/topotal-ui@0.32.1) (2021-07-05)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Add disabledChangeBackground prop to List ([154eff7](https://github.com/topotal/js-sdk/commit/154eff76d2ba1c79966f8e148107e0010b78f4a2))
+
+
+
+
+
 # [0.32.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.31.1...@topotal/topotal-ui@0.32.0) (2021-07-02)
 
 
