@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.32.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.1...@topotal/topotal-ui@0.32.2) (2021-07-05)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Patch hoverOut event in List ([0c1285e](https://github.com/topotal/js-sdk/commit/0c1285e23c3e7269ca07bfe2f7874999e4b7f2cb))
+
+
+
+
+
 ## [0.32.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.0...@topotal/topotal-ui@0.32.1) (2021-07-05)
 
 
