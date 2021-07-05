@@ -50,5 +50,5 @@ Empty.args = {
   renderItem: (item: Item) => (
     <Text>{item.name}</Text>
   ),
-  style: { height: 200 },
+  style: { height: 40 },
 }
