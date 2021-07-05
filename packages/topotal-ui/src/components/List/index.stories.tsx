@@ -1,11 +1,11 @@
 import React from 'react'
+import { Pressable } from 'react-native'
 import { Story } from '@storybook/react'
 import { Text } from '../Text'
 import { List } from '.'
 
 export default {
   title: 'components/List',
-  argTypes: { onPressItem: { action: 'clicked' } },
 }
 
 interface Item {
@@ -19,7 +19,12 @@ const defaultProps: React.ComponentProps<typeof List> = {
     { name: 'item3' },
   ],
   renderItem: (item: Item) => (
-    <Text>{item.name}</Text>
+    <Pressable
+      style={{ width: 100, backgroundColor: 'red' }}
+      onPress={() => { console.info('hoge') }}
+    >
+      <Text>{item.name}</Text>
+    </Pressable>
   ),
 }
 
