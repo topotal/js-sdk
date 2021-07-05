@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.32.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.3...@topotal/topotal-ui@0.32.4) (2021-07-05)
+
+
+### Bug Fixes
+
+* **topotal-ui:** Patch emptyView padding ([1d77842](https://github.com/topotal/js-sdk/commit/1d77842a4815149d1753992726d1d8e116f0ee54))
+
+
+
+
+
 ## [0.32.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.2...@topotal/topotal-ui@0.32.3) (2021-07-05)
 
 
