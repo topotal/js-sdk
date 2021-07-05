@@ -20,7 +20,7 @@ const defaultProps: React.ComponentProps<typeof List> = {
   ],
   renderItem: (item: Item) => (
     <Pressable
-      style={{ width: 100, backgroundColor: 'red' }}
+      style={{ width: 100 }}
       onPress={() => { console.info('hoge') }}
     >
       <Text>{item.name}</Text>
@@ -50,4 +50,5 @@ Empty.args = {
   renderItem: (item: Item) => (
     <Text>{item.name}</Text>
   ),
+  style: { height: 200 },
 }
