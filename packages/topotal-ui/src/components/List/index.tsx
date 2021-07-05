@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { Pressable, StyleProp, ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { Text } from '../Text'
 import { VStack } from '../VStack'
 import { Row } from './components/Row'
@@ -31,16 +31,12 @@ export const List: React.FC<Props> = ({
     setHoveredIndex(targetIndex)
   }, [])
 
-  const handleHoverOutList = useCallback(() => {
+  const handleHoverOutInRow = useCallback(() => {
     setHoveredIndex(undefined)
   }, [])
 
   return (
-    <Pressable
-      style={[styles.wrapper, style]}
-      disabled={data.length ? false : true}
-      onHoverOut={handleHoverOutList}
-    >
+    <VStack style={[styles.wrapper, style]}>
       {data.length ? (
         data.map((item, index) => {
           const key = keyExtractor ? keyExtractor(item, index) : index
@@ -54,6 +50,7 @@ export const List: React.FC<Props> = ({
               renderItem={renderItem}
               onPress={onPressItem}
               onHoverIn={handleHoverInRow}
+              onHoverOut={handleHoverOutInRow}
             />
           )
         })
@@ -71,6 +68,6 @@ export const List: React.FC<Props> = ({
           </Text>
         </VStack>
       )}
-    </Pressable>
+    </VStack>
   )
 }

@@ -6,7 +6,7 @@ declare module 'react-native' {
   }
 
   interface PressableProps {
-    onHoverIn?: () => void
-    onHoverOut?: () => void
+    onHoverIn?: (event: GestureResponderEvent) => void
+    onHoverOut?: (event: GestureResponderEvent) => void
   }
 }

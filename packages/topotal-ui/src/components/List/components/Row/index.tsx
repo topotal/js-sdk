@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { Pressable, StyleProp, ViewStyle } from 'react-native'
+import { GestureResponderEvent, Pressable, StyleProp, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
 
 interface Props<T = any> {
@@ -10,6 +10,7 @@ interface Props<T = any> {
   disabledChangeBackground?: boolean,
   renderItem: (item: T, index: number) => React.ReactElement | null
   onHoverIn: (index: number) => void
+  onHoverOut: (index: number) => void
   onPress?: (item: T) => void
 }
 
@@ -22,6 +23,7 @@ export const Row = React.memo<Props>(({
   renderItem,
   onPress,
   onHoverIn,
+  onHoverOut,
 }) => {
   const { styles } = useStyles({
     firstItem: index === 0,
@@ -40,11 +42,20 @@ export const Row = React.memo<Props>(({
     onHoverIn(index)
   }, [disabledChangeBackground, index, onHoverIn])
 
+  const handleHoverOut = useCallback((event: GestureResponderEvent) => {
+    if (event.type === 'pointerleave') {
+      onHoverOut(index)
+    }
+  }, [index, onHoverOut])
+
   return (
     <Pressable
       style={[styles.wrapper, style]}
       onPress={handlePress}
       onHoverIn={handleHoverIn}
+      onHoverOut={handleHoverOut}
+      onStartShouldSetResponderCapture={() => false}
+      onMoveShouldSetResponderCapture={() => false}
     >
       {renderItem(item, index)}
     </Pressable>
