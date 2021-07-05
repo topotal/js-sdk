@@ -19,9 +19,7 @@ export const useStyles = () => {
     },
     emptyView: {
       backgroundColor: color.background,
-      minHeight: 80,
       height: '100%',
-      paddingVertical: 16,
       paddingHorizontal: 24,
     },
     emptyText: {
