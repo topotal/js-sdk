@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.32.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.2...@topotal/topotal-ui@0.32.3) (2021-07-05)
+
+
+### Bug Fixes
+
+* Patch emptyList style ([911920d](https://github.com/topotal/js-sdk/commit/911920da7ddde594155787cbb76280f6f21f0ca8))
+
+
+
+
+
 ## [0.32.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.1...@topotal/topotal-ui@0.32.2) (2021-07-05)
 
 
