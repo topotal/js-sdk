@@ -7,6 +7,7 @@ interface Props<T = any> {
   index: number
   hovered: boolean
   style?: StyleProp<ViewStyle>
+  disabledChangeBackground?: boolean,
   renderItem: (item: T, index: number) => React.ReactElement | null
   onHoverIn: (index: number) => void
   onPress?: (item: T) => void
@@ -16,6 +17,7 @@ export const Row = React.memo<Props>(({
   item,
   index,
   hovered = false,
+  disabledChangeBackground = false,
   style,
   renderItem,
   onPress,
@@ -34,8 +36,9 @@ export const Row = React.memo<Props>(({
   }, [item, onPress])
 
   const handleHoverIn = useCallback(() => {
+    if (disabledChangeBackground) return
     onHoverIn(index)
-  }, [index, onHoverIn])
+  }, [disabledChangeBackground, index, onHoverIn])
 
   return (
     <Pressable

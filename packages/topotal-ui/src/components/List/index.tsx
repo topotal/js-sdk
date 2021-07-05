@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { StyleProp, ViewStyle } from 'react-native'
+import { Pressable, StyleProp, ViewStyle } from 'react-native'
 import { Text } from '../Text'
 import { VStack } from '../VStack'
 import { Row } from './components/Row'
@@ -10,6 +10,7 @@ interface Props<T = any> {
   style?: StyleProp<ViewStyle>
   renderItem: (item: T, index: number) => React.ReactElement | null
   emptyText?: string
+  disabledChangeBackground?: boolean
   keyExtractor?: (item: T, index: number) => string
   onPressItem?: (item: T) => void
 }
@@ -18,6 +19,7 @@ export const List: React.FC<Props> = ({
   data,
   style,
   emptyText = 'No items found',
+  disabledChangeBackground = false,
   renderItem,
   keyExtractor,
   onPressItem,
@@ -29,8 +31,16 @@ export const List: React.FC<Props> = ({
     setHoveredIndex(targetIndex)
   }, [])
 
+  const handleHoverOutList = useCallback(() => {
+    setHoveredIndex(undefined)
+  }, [])
+
   return (
-    <VStack style={[styles.wrapper, style]}>
+    <Pressable
+      style={[styles.wrapper, style]}
+      disabled={data.length ? false : true}
+      onHoverOut={handleHoverOutList}
+    >
       {data.length ? (
         data.map((item, index) => {
           const key = keyExtractor ? keyExtractor(item, index) : index
@@ -40,6 +50,7 @@ export const List: React.FC<Props> = ({
               item={item}
               index={index}
               hovered={index === hoveredIndex}
+              disabledChangeBackground={disabledChangeBackground}
               renderItem={renderItem}
               onPress={onPressItem}
               onHoverIn={handleHoverInRow}
@@ -60,6 +71,6 @@ export const List: React.FC<Props> = ({
           </Text>
         </VStack>
       )}
-    </VStack>
+    </Pressable>
   )
 }
