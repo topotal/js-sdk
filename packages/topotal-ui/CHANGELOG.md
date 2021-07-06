@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.33.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.4...@topotal/topotal-ui@0.33.0) (2021-07-06)
+
+
+### Bug Fixes
+
+* Patch empty view height ([a53471b](https://github.com/topotal/js-sdk/commit/a53471b6c728b0bfb8f3bfbe8c6650f1bb5da77e))
+
+
+### Features
+
+* **topotal-ui:** Add useHover ([8a04924](https://github.com/topotal/js-sdk/commit/8a04924f7152449f037bee6742b094d256f77932))
+
+
+
+
+
 ## [0.32.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.3...@topotal/topotal-ui@0.32.4) (2021-07-05)
 
 
