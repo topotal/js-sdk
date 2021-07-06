@@ -1,4 +1,6 @@
 export * from './useDimensions'
+export * from './useFocusBlur'
+export * from './useHover'
 export * from './useMeasure'
 export * from './useOnlyOnceEffect'
 export * from './useOnlyOnceMemo'
