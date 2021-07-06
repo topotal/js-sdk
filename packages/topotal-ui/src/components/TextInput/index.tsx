@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextInput as BaseInput } from 'react-native'
-import { useFocusBlur } from '../../hooks/useFocusBlur'
+import { useFocus } from '../../hooks/useFocusBlur'
 import { useInputValue } from '../../hooks/useInputValue'
 import { HStack } from '../HStack'
 import { Icon } from '../Icon'
@@ -40,7 +40,7 @@ export const TextInput = React.memo<Props>(({
     isFocused,
     handleFocus,
     handleBlur,
-  } = useFocusBlur()
+  } = useFocus()
   const { styles } = useStyles({
     isFocused,
     multiline,

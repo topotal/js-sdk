@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 
-export const useFocusBlur = () => {
+export const useFocus = () => {
   const [isFocused, setIsFocused] = useState(false)
 
   const handleFocus = useCallback(() => {
