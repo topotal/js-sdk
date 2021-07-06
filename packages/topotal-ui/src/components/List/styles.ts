@@ -20,6 +20,7 @@ export const useStyles = () => {
     emptyView: {
       backgroundColor: color.background,
       height: '100%',
+      flex: 1,
       paddingHorizontal: 24,
     },
     emptyText: {
