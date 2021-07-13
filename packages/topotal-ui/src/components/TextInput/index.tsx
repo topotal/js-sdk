@@ -21,7 +21,7 @@ type Props = BaseProps & React.RefAttributes<BaseInput>
 
 export const TextInput = React.memo<Props>(({
   value = '',
-  placeholder = '入力してください',
+  placeholder = '',
   autoCapitalize = 'none',
   multiline = false,
   error = false,
