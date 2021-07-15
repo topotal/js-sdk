@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.33.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.33.0...@topotal/topotal-ui@0.33.1) (2021-07-15)
+
+
+### Bug Fixes
+
+* Remove default placeholder ([ff7f9c0](https://github.com/topotal/js-sdk/commit/ff7f9c0661aa97e3a9fe603d1f2b5c2d41b1fe81))
+
+
+
+
+
 # [0.33.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.32.4...@topotal/topotal-ui@0.33.0) (2021-07-06)
 
 
