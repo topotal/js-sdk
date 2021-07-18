@@ -1,6 +1,6 @@
-import React, { memo, useEffect, useRef } from 'react'
+import { memo, useEffect, useRef } from 'react'
 import { Animated, StyleProp, ViewStyle } from 'react-native'
-import { useTheme } from '@topotal/topotal-ui'
+import { useTheme } from '../../theme'
 
 interface Props {
   style?: StyleProp<ViewStyle>

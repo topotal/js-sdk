@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import { ReactElement, useCallback, useState } from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
 import { Text } from '../Text'
 import { VStack } from '../VStack'
@@ -8,14 +8,14 @@ import { useStyles } from './styles'
 interface Props<T = any> {
   data: T[]
   style?: StyleProp<ViewStyle>
-  renderItem: (item: T, index: number) => React.ReactElement | null
+  renderItem: (item: T, index: number) => ReactElement | null
   emptyText?: string
   disabledChangeBackground?: boolean
   keyExtractor?: (item: T, index: number) => string
   onPressItem?: (item: T) => void
 }
 
-export const List: React.FC<Props> = ({
+export const List = ({
   data,
   style,
   emptyText = 'No items found',
@@ -23,7 +23,7 @@ export const List: React.FC<Props> = ({
   renderItem,
   keyExtractor,
   onPressItem,
-}) => {
+}: Props): JSX.Element => {
   const [hoveredIndex, setHoveredIndex] = useState<number>()
   const { styles } = useStyles()
 

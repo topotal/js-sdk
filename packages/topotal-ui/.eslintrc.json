@@ -36,7 +36,7 @@
     "require-atomic-updates": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { 
+      {
         "argsIgnorePattern": "^_",
         "ignoreRestSiblings": true
       }
@@ -55,6 +55,8 @@
       "additionalHooks": "(useAsync|useAsyncFn)"
     }],
     "react/display-name": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": ["error", {
       "groups": [
         [
@@ -80,7 +82,7 @@
     "import/no-default-export": "error",
     "object-curly-spacing": ["error", "always"],
     "array-bracket-spacing": ["error", "never"],
-    "key-spacing": ["error", { 
+    "key-spacing": ["error", {
       "beforeColon": false,
       "afterColon": true
     }],
