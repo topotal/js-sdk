@@ -1,11 +1,3 @@
 # `@topotal/eslint-config-typescript`
 
-> TODO: description
-
-## Usage
-
-```
-const eslintConfigTypescript = require('@topotal/eslint-config-typescript');
-
-// TODO: DEMONSTRATE API
-```
+This is a common ESlint setting for TypeScript used within Topotal
