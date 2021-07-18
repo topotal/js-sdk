@@ -1,11 +1,5 @@
 
 {
-  "settings": {
-    "react": {
-      "pragma": "React",
-      "version": "detect"
-    }
-  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -17,20 +11,17 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
+    "@topotal/eslint-config-react",
     "prettier"
   ],
   "plugins": [
     "@typescript-eslint",
-    "react",
-    "react-hooks",
     "simple-import-sort",
     "import"
   ],
   "rules": {
+    "semi": ["error", "never"],
     "comma-dangle": ["error", "always-multiline"],
-    "react/prop-types": "off",
     "no-undef": "off",
     "no-unused-vars": "off",
     "require-atomic-updates": "off",
@@ -42,21 +33,10 @@
       }
     ],
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
-    "semi": ["error", "never"],
     "eol-last": ["error", "always"],
     "quotes": ["error", "single"],
     "no-trailing-spaces": "error",
     "@typescript-eslint/indent": ["error", 2, {"SwitchCase": 1}],
-    "react/self-closing-comp": ["error", {
-      "component": true,
-      "html": true
-    }],
-    "react-hooks/exhaustive-deps": ["error", {
-      "additionalHooks": "(useAsync|useAsyncFn)"
-    }],
-    "react/display-name": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": ["error", {
       "groups": [
         [
