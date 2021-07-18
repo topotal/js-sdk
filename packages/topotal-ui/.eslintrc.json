@@ -1,40 +1,24 @@
 
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "project": "./tsconfig.json",
-    "ecmaFeatures":  {
-      "jsx":  true
-    }
+  "env": {
+    "browser": true
   },
   "extends": [
     "eslint:recommended",
+    "@topotal/eslint-config-typescript",
     "@topotal/eslint-config-react",
     "prettier"
   ],
   "plugins": [
-    "@typescript-eslint",
     "simple-import-sort",
     "import"
   ],
   "rules": {
     "semi": ["error", "never"],
     "comma-dangle": ["error", "always-multiline"],
-    "no-undef": "off",
-    "no-unused-vars": "off",
-    "require-atomic-updates": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true
-      }
-    ],
-    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "eol-last": ["error", "always"],
     "quotes": ["error", "single"],
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "no-trailing-spaces": "error",
     "@typescript-eslint/indent": ["error", 2, {"SwitchCase": 1}],
     "simple-import-sort/imports": ["error", {

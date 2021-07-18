@@ -49,6 +49,7 @@
     "@storybook/addon-links": "^6.1.10",
     "@storybook/react": "^6.1.10",
     "@topotal/eslint-config-react": "^0.1.6-alpha.0",
+    "@topotal/eslint-config-typescript": "^0.0.1",
     "@types/marked": "^2.0.3",
     "@types/react": "^17.0.0",
     "@types/react-is": "^17.0.0",
