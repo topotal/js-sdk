@@ -29,7 +29,7 @@
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build",
-    "lint:ts": "eslint --ext .ts,.tsx src",
+    "lint": "eslint --ext .ts,.tsx src",
     "storybook": "start-storybook -p 6006 --no-dll -s ./assets/",
     "build-storybook": "build-storybook --no-dll -s ./assets/ -o ../../docs/topotal-ui/ "
   },
@@ -83,7 +83,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run lint:ts -- --fix"
+      "npm run lint -- --fix"
     ]
   },
   "husky": {
