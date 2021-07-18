@@ -1,6 +1,6 @@
 {
   "name": "@topotal/topotal-ui",
-  "version": "0.34.5-alpha.0",
+  "version": "0.34.6-alpha.0",
   "description": "Topotal ui components built with React.",
   "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "homepage": "https://github.com/topotal/js-sdk#readme",
@@ -48,7 +48,7 @@
     "@storybook/addon-essentials": "^6.1.10",
     "@storybook/addon-links": "^6.1.10",
     "@storybook/react": "^6.1.10",
-    "@topotal/eslint-config-react": "^0.1.5-alpha.0",
+    "@topotal/eslint-config-react": "^0.1.6-alpha.0",
     "@types/marked": "^2.0.3",
     "@types/react": "^17.0.0",
     "@types/react-is": "^17.0.0",
@@ -90,5 +90,5 @@
       "pre-commit": "lint-staged"
     }
   },
-  "gitHead": "888edd7d2aa540be9497fefa4b84fd2d2bf9806c"
+  "gitHead": "ea703866bce759a30b4546db909b111148553f8d"
 }
