@@ -1,6 +1,6 @@
 {
   "name": "@topotal/eslint-config-react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This is a common ESlint setting for React used within Topotal",
   "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "homepage": "https://github.com/topotal/js-sdk#readme",
@@ -24,5 +24,5 @@
     "eslint-plugin-react": ">= 7",
     "eslint-plugin-react-hooks": ">= 4"
   },
-  "gitHead": "55d37b0278de6a65acbb9d5b0d53be1aa4ed2f4b"
+  "gitHead": "cddc2f2f606a0f48109e2c61d0b15c5f0d58f78f"
 }
