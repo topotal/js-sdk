@@ -21,6 +21,7 @@ module.exports = {
     "react-hooks/exhaustive-deps": ["error", {
       "additionalHooks": "(useAsync|useAsyncFn)"
     }],
+    "react/jsx-key": ["error"],
     "react/prop-types": "off",
     "react/display-name": "off",
     "react/jsx-uses-react": "off",
