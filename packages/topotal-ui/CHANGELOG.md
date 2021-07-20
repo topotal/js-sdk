@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.11](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.34.10...@topotal/topotal-ui@0.34.11) (2021-07-20)
+
+
+### Bug Fixes
+
+* Make the icon a little bigger ([937829b](https://github.com/topotal/js-sdk/commit/937829b2f95e410032d082f62ed7982ab654cd0c))
+
+
+
+
+
 ## [0.34.10](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.34.9...@topotal/topotal-ui@0.34.10) (2021-07-20)
 
 
