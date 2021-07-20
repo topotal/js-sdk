@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.10](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.34.9...@topotal/topotal-ui@0.34.10) (2021-07-20)
+
+
+### Bug Fixes
+
+* **TextInput:** value update bug ([5a1ce42](https://github.com/topotal/js-sdk/commit/5a1ce42dab2d7c0ae6617d64fcdb8a37447c4bf3))
+
+
+
+
+
 ## [0.34.9](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.34.8...@topotal/topotal-ui@0.34.9) (2021-07-20)
 
 
