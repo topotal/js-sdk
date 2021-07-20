@@ -17,15 +17,9 @@
   "bugs": {
     "url": "https://github.com/topotal/js-sdk/issues"
   },
-  "devDependencies": {
-    "eslint": "^7.15.0",
+  "dependencies": {
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0"
-  },
-  "peerDependencies": {
-    "eslint": ">= 7",
-    "eslint-plugin-react": ">= 7",
-    "eslint-plugin-react-hooks": ">= 4"
   },
   "gitHead": "ea703866bce759a30b4546db909b111148553f8d"
 }
