@@ -1,6 +1,6 @@
 {
   "name": "@topotal/eslint-config-typescript",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This is a common ESlint setting for TypeScript used within Topotal",
   "author": "sawa-zen <sawadasuiren@gmail.com>",
   "homepage": "https://github.com/topotal/js-sdk#readme",
