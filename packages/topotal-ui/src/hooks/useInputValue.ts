@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 interface Props<T> {
   value: T
@@ -15,6 +15,10 @@ export const useInputValue = <T>({
     setInnerValue(newValue)
     onChange && onChange(newValue)
   }, [onChange])
+
+  useEffect(() => {
+    setInnerValue(value)
+  }, [value])
 
   return {
     innerValue,
