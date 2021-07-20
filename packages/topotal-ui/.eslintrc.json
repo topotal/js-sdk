@@ -18,9 +18,7 @@
     "comma-dangle": ["error", "always-multiline"],
     "eol-last": ["error", "always"],
     "quotes": ["error", "single"],
-    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "no-trailing-spaces": "error",
-    "@typescript-eslint/indent": ["error", 2, {"SwitchCase": 1}],
     "simple-import-sort/imports": ["error", {
       "groups": [
         [
