@@ -3,7 +3,8 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "sort-package-json": "^1.50.0"
   },
   "name": "js-sdk",
   "private": true,
