@@ -2,9 +2,17 @@
   "name": "@topotal/topotal-ui",
   "version": "0.34.11",
   "description": "Topotal ui components built with React.",
-  "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "homepage": "https://github.com/topotal/js-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/topotal/js-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/topotal/js-sdk.git",
+    "directory": "packages/topotal-ui"
+  },
   "license": "MIT",
+  "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -15,14 +23,6 @@
     "lib",
     "esm"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/topotal/js-sdk.git",
-    "directory": "packages/topotal-ui"
-  },
   "scripts": {
     "build": "yarn clean && yarn build:lib && yarn build:esm",
     "build:lib": "tsc -p tsconfig.build.json",
@@ -32,9 +32,6 @@
     "lint": "eslint --ext .ts,.tsx src",
     "storybook": "start-storybook -p 6006 --no-dll -s ./assets/",
     "build-storybook": "build-storybook --no-dll -s ./assets/ -o ../../docs/topotal-ui/ "
-  },
-  "bugs": {
-    "url": "https://github.com/topotal/js-sdk/issues"
   },
   "dependencies": {
     "marked": "^2.1.3",
@@ -75,6 +72,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-native": "*"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "ea703866bce759a30b4546db909b111148553f8d"
 }

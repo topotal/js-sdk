@@ -2,21 +2,18 @@
   "name": "@topotal/eslint-config-react",
   "version": "0.1.8",
   "description": "This is a common ESlint setting for React used within Topotal",
-  "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "homepage": "https://github.com/topotal/js-sdk#readme",
-  "license": "MIT",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
+  "bugs": {
+    "url": "https://github.com/topotal/js-sdk/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/topotal/js-sdk.git",
     "directory": "packages/eslint-config-react"
   },
-  "bugs": {
-    "url": "https://github.com/topotal/js-sdk/issues"
-  },
+  "license": "MIT",
+  "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
+  "main": "index.js",
   "devDependencies": {
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0"
@@ -24,6 +21,9 @@
   "peerDependencies": {
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "4.x"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "ea703866bce759a30b4546db909b111148553f8d"
 }
