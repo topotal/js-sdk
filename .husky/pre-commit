@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+./node_modules/lerna/cli.js run --parallel lint -- --fix
