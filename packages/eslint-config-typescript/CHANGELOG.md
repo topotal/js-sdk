@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-typescript@0.0.5...@topotal/eslint-config-typescript@0.1.0) (2021-08-02)
+
+
+### Features
+
+* Return to peerDependencies ([9f33030](https://github.com/topotal/js-sdk/commit/9f330301952ae72ced54fd2daf74b424bde27b7c))
+
+
+
+
+
 ## [0.0.5](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-typescript@0.0.4...@topotal/eslint-config-typescript@0.0.5) (2021-07-20)
 
 

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.34.11...@topotal/topotal-ui@0.35.0) (2021-08-02)
+
+
+### Bug Fixes
+
+* Remove duplication package ([a180e0a](https://github.com/topotal/js-sdk/commit/a180e0a946aa78284c25dbb0986f3eca9d37429c))
+* Remove react-table ([a9b4f4a](https://github.com/topotal/js-sdk/commit/a9b4f4a58d9e591ca5fa96346fb4c455dca04e4b))
+* Remove unused packages ([0c2272b](https://github.com/topotal/js-sdk/commit/0c2272b4d338fe4cbbd6f821282f4aa2cfbb3239))
+* Update husky ([f234bec](https://github.com/topotal/js-sdk/commit/f234bec2157005c221c92818c005d53aeb313fde))
+
+
+### Features
+
+* Add GridList ([087d6e2](https://github.com/topotal/js-sdk/commit/087d6e2021a439b85d10ba45eeaaee5d34ee95ca))
+* Return to peerDependencies ([9f33030](https://github.com/topotal/js-sdk/commit/9f330301952ae72ced54fd2daf74b424bde27b7c))
+
+
+
+
+
 ## [0.34.11](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.34.10...@topotal/topotal-ui@0.34.11) (2021-07-20)
 
 
