@@ -26,7 +26,11 @@ export const MdRenderer = React.memo<Props>(({
   return (
     <VStack style={style} gap={16}>
       {tokens.map((token, index) => (
-        <Switcher token={token} key={index} />
+        <Switcher
+          token={token}
+          key={index}
+          firstRow={index === 0}
+        />
       ))}
     </VStack>
   )

@@ -8,10 +8,11 @@ import { Paragraph } from '../Paragraph'
 
 interface Props {
   token: NormalizedToken
+  firstRow?: boolean
   style?: StyleProp<ViewStyle> | StyleProp<TextStyle>
 }
 
-export const Switcher = React.memo<Props>(({ token, style }) => {
+export const Switcher = React.memo<Props>(({ token, firstRow, style }) => {
   return (
     <VStack gap={16}>
       {(() => {
@@ -36,6 +37,7 @@ export const Switcher = React.memo<Props>(({ token, style }) => {
               <Heading
                 style={style}
                 token={token}
+                firstRow={firstRow}
               />
             )
           case 'list':
