@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.35.2...@topotal/topotal-ui@0.35.3) (2021-08-03)
+
+
+### Bug Fixes
+
+* **MdRenderer:** patch head marginTop value ([ebdf19d](https://github.com/topotal/js-sdk/commit/ebdf19df45979de199fbe6ed2b137406ffd1df68))
+
+
+
+
+
 ## [0.35.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.35.1...@topotal/topotal-ui@0.35.2) (2021-08-02)
 
 **Note:** Version bump only for package @topotal/topotal-ui
