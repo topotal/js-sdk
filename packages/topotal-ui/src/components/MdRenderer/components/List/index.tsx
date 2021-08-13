@@ -49,7 +49,7 @@ export const List = React.memo<Props>(({
               }}
               selectable={false}
             >
-              {bulletUnicode}
+              {token.ordered ? `${index + 1}.` : bulletUnicode}
             </Text>
             {tokens.map((token, index) => (
               <Switcher
