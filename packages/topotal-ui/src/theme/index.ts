@@ -58,6 +58,7 @@ export const defaultTheme = {
     errorDark: '#9C0707',
     transparent: 'transparent',
     shadow: '#CCCCCC',
+    focus: '#bcdcff',
   },
   radius: {
     level1: 4,
@@ -79,6 +80,7 @@ export const defaultTheme = {
 export type Theme = typeof defaultTheme
 export type ThemeColor = typeof defaultTheme.color
 export type PaletteColor = typeof palette
+export type BorderRadius = typeof defaultTheme.radius
 
 export const ThemeContext = React.createContext(defaultTheme)
 

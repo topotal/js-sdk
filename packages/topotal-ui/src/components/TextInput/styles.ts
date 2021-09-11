@@ -9,7 +9,6 @@ interface Styles {
   iconWrapper: ViewStyle
   icon: ImageStyle
   dummyText: TextStyle
-  outline: ViewStyle
   placeholderWrapper: ViewStyle
   placeholder: TextStyle
   inputWrapper: ViewStyle
@@ -45,33 +44,19 @@ export const useStyles = ({
     wrapper: {
       position: 'relative',
       width: '100%',
+      flexDirection: 'row',
       minHeight: multiline ? 80 : height,
       maxHeight: multiline ? 240 : height,
-      borderStyle: 'solid',
-      borderWidth: 1,
-      borderColor: theme.color[borderColor],
-      backgroundColor: isFocused ? theme.color.transparent : theme.color.background,
-      borderRadius: theme.radius.level1,
       ...(Platform.OS === 'web' ? {
         resize: multiline ? 'vertical' : 'none',
       } : {}),
     },
-    outline: {
-      position: 'absolute',
-      top: -3,
-      left: -3,
-      right: -3,
-      bottom: -3,
-      opacity: isFocused ? 1 : 0,
-      borderRadius: theme.radius.level1 + 2,
-      borderStyle: 'solid',
-      borderWidth: 2,
-      borderColor: theme.color.primaryLight,
-    },
     iconWrapper: {
-      top: 0,
-      left: 0,
-      bottom: 0,
+      position: 'absolute',
+      zIndex: 1,
+      top: 1,
+      left: 1,
+      bottom: 1,
       width: height - 2,
       height: height - 2,
       borderRightWidth: 1,
@@ -87,18 +72,18 @@ export const useStyles = ({
       height: '100%',
       opacity: 0,
       paddingVertical,
-      paddingLeft,
+      paddingLeft: startIconName ? paddingLeft + height : paddingLeft,
       paddingRight,
       lineHeight,
     },
     placeholderWrapper: {
       position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
+      top: 1,
+      left: 1,
+      right: 1,
+      bottom: 1,
       paddingVertical,
-      paddingLeft,
+      paddingLeft: startIconName ? paddingLeft + height : paddingLeft,
       paddingRight,
     },
     placeholder: {
@@ -114,8 +99,13 @@ export const useStyles = ({
       ...theme.text.type.body,
       width: '100%',
       height: '100%',
+      borderStyle: 'solid',
+      borderWidth: 1,
+      borderColor: theme.color[borderColor],
+      backgroundColor: isFocused ? theme.color.transparent : theme.color.background,
+      borderRadius: theme.radius.level1,
       paddingVertical,
-      paddingLeft,
+      paddingLeft: startIconName ? paddingLeft + height : paddingLeft,
       paddingRight,
       minHeight: lineHeight,
       lineHeight,
