@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { ImageStyle, Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { ThemeContext } from '../../theme'
 import { Color, Size, Variant } from './types'
 import { getDynamicGeometry, getDynamicMaterial } from './utils'
@@ -14,7 +14,8 @@ interface Props {
 }
 
 interface Styles {
-  wrapper: ViewStyle
+  pressable: ViewStyle
+  container: ViewStyle
   indicator: ViewStyle
   title: TextStyle
   icon: ImageStyle
@@ -49,7 +50,15 @@ export const useStyles = ({
   )
 
   const styles = StyleSheet.create<Styles>({
-    wrapper: {
+    pressable: {
+      ...(Platform.OS === 'web' ? {
+        boxShadow: '0px transparent',
+        outlineWidth: 0,
+        outlineOffset: 0,
+        outlineStyle: 'none',
+      } : {}) as ViewStyle,
+    },
+    container: {
       borderWidth: 1,
       borderRadius: theme.radius.level1,
       height,

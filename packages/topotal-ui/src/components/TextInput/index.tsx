@@ -1,17 +1,17 @@
-import React from 'react'
+import { memo, Ref } from 'react'
 import { TextInput as BaseInput } from 'react-native'
 import { useFocus } from '../../hooks/useFocusBlur'
 import { useInputValue } from '../../hooks/useInputValue'
+import { FocusOutline } from '../FocusOutline'
 import { HStack } from '../HStack'
 import { Icon } from '../Icon'
 import { Text } from '../Text'
-import { VStack } from '../VStack'
 import { useStyles } from './styles'
 
 export type Size = 'medium' | 'large'
 
 type BaseProps = {
-  innerRef?: React.Ref<BaseInput>
+  innerRef?: Ref<BaseInput>
   error?: boolean
   size?: Size
   startIconName?: string
@@ -19,7 +19,7 @@ type BaseProps = {
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
 
-export const TextInput = React.memo<Props>(({
+export const TextInput = memo<Props>(({
   value = '',
   placeholder = '',
   autoCapitalize = 'none',
@@ -51,11 +51,11 @@ export const TextInput = React.memo<Props>(({
   const showPlaceholder = !innerValue
 
   return (
-    <HStack style={[styles.wrapper, style]}>
-      <VStack
-        style={styles.outline}
-        pointerEvents="none"
-      />
+    <FocusOutline
+      focus={isFocused}
+      style={[styles.wrapper, style]}
+      borderRadiusLevel="level1"
+    >
       {startIconName ? (
         <HStack
           justify="center"
@@ -103,6 +103,6 @@ export const TextInput = React.memo<Props>(({
           </HStack>
         ) : null}
       </HStack>
-    </HStack>
+    </FocusOutline>
   )
 })
