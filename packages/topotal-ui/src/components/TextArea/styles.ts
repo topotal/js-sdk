@@ -1,13 +1,11 @@
 import { useContext } from 'react'
-import { ImageStyle, Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { ThemeContext } from '../../theme'
-import { getBorderColor, getGeometryStyles } from './utils'
-import { Size } from '.'
+import { getBorderColor } from './utils'
 
 interface Styles {
   wrapper: ViewStyle
-  iconWrapper: ViewStyle
-  icon: ImageStyle
+  dummyText: TextStyle
   placeholderWrapper: ViewStyle
   placeholder: TextStyle
   input: TextStyle
@@ -16,48 +14,28 @@ interface Styles {
 interface Props {
   isFocused: boolean
   error: boolean
-  size: Size
-  startIconName?: string
 }
 
-export const useStyles = ({
-  isFocused,
-  error,
-  size,
-  startIconName,
-}: Props) => {
+export const useStyles = ({ isFocused, error }: Props) => {
   const theme = useContext(ThemeContext)
   const borderColor = getBorderColor(isFocused, error)
-  const {
-    height,
-    lineHeight,
-    paddingVertical,
-    paddingRight,
-    paddingLeft,
-  } = getGeometryStyles(size, startIconName)
+  const lineHeight = 24
+  const paddingVertical = (40 - lineHeight) / 2
 
   const styles = StyleSheet.create<Styles>({
     wrapper: {
       position: 'relative',
       width: '100%',
-      minHeight: height,
-      maxHeight: height,
+      height: 'auto',
+      minHeight: 80,
     },
-    iconWrapper: {
-      position: 'absolute',
-      zIndex: 1,
-      top: 1,
-      left: 1,
-      bottom: 1,
-      width: height - 2,
-      height: height - 2,
-      borderRightWidth: 1,
-      borderColor: theme.color.borderLight,
-    },
-    icon: {
-      width: height / 2,
-      height: height / 2,
-      tintColor: theme.color.secandaryTextDark,
+    dummyText: {
+      width: '100%',
+      height: '100%',
+      opacity: 0,
+      paddingVertical,
+      paddingHorizontal: 16,
+      lineHeight,
     },
     placeholderWrapper: {
       position: 'absolute',
@@ -66,8 +44,7 @@ export const useStyles = ({
       right: 1,
       bottom: 1,
       paddingVertical,
-      paddingLeft: startIconName ? paddingLeft + height : paddingLeft,
-      paddingRight,
+      paddingHorizontal: 16,
     },
     placeholder: {
       lineHeight,
@@ -78,16 +55,15 @@ export const useStyles = ({
       position: 'absolute',
       width: '100%',
       height: '100%',
+      paddingVertical,
+      paddingHorizontal: 16,
+      minHeight: lineHeight,
+      lineHeight,
       borderStyle: 'solid',
       borderWidth: 1,
       borderColor: theme.color[borderColor],
       backgroundColor: isFocused ? theme.color.transparent : theme.color.background,
       borderRadius: theme.radius.level1,
-      paddingVertical,
-      paddingLeft: startIconName ? paddingLeft + height : paddingLeft,
-      paddingRight,
-      minHeight: lineHeight,
-      lineHeight,
       color: theme.color.primaryTextDark,
       ...(Platform.OS === 'web' ? {
         boxShadow: '0px transparent',
