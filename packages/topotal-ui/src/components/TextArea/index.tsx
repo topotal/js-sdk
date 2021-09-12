@@ -4,28 +4,21 @@ import { useFocus } from '../../hooks/useFocusBlur'
 import { useInputValue } from '../../hooks/useInputValue'
 import { FocusOutline } from '../FocusOutline'
 import { HStack } from '../HStack'
-import { Icon } from '../Icon'
 import { Text } from '../Text'
 import { useStyles } from './styles'
-
-export type Size = 'medium' | 'large'
 
 type BaseProps = {
   innerRef?: Ref<BaseInput>
   error?: boolean
-  size?: Size
-  startIconName?: string
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
 
-export const TextInput = memo<Props>(({
+export const TextArea = memo<Props>(({
   value = '',
   placeholder = '',
   autoCapitalize = 'none',
   error = false,
-  size = 'large',
-  startIconName,
   innerRef,
   style,
   onChangeText,
@@ -36,12 +29,7 @@ export const TextInput = memo<Props>(({
     onChange: onChangeText,
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
-  const { styles } = useStyles({
-    isFocused,
-    error,
-    size,
-    startIconName,
-  })
+  const { styles } = useStyles({ isFocused, error })
   const showPlaceholder = !innerValue
 
   return (
@@ -50,23 +38,14 @@ export const TextInput = memo<Props>(({
       style={[styles.wrapper, style]}
       borderRadiusLevel="level1"
     >
-      {startIconName ? (
-        <HStack
-          justify="center"
-          align="center"
-          style={styles.iconWrapper}
-        >
-          <Icon
-            name={startIconName}
-            style={styles.icon}
-          />
-        </HStack>
-      ) : null}
+      <Text style={styles.dummyText}>
+        {innerValue.replace(/\n$/g, '\n ')}
+      </Text>
       <BaseInput
         {...rest}
         value={innerValue}
         autoCapitalize={autoCapitalize}
-        multiline={false}
+        multiline
         onChangeText={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
