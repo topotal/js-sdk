@@ -1,7 +1,6 @@
-import { BaseSyntheticEvent, memo, useCallback, useState } from 'react'
+import { BaseSyntheticEvent, memo } from 'react'
 import { ActivityIndicator, Pressable, StyleProp, ViewStyle } from 'react-native'
-import { useFocus } from '../../hooks'
-import { FocusOutline } from '../FocusOutline'
+import { useFocus, useFocusOutlineStyle, useHover } from '../../hooks'
 import { HStack, Icon, Text } from '..'
 import { useStyles } from './styles'
 import { Color, Size, Variant } from './types'
@@ -31,81 +30,68 @@ export const Button = memo<Props>(({
   style,
   onPress,
 }) => {
-  const [hovered, setHovered] = useState(false)
+  const { hovering, handleHoverIn, handleHoverOut } = useHover()
   const { isFocused, handleBlur, handleFocus } = useFocus()
-  const {
-    styles,
-    indicatorColor,
-    textType,
-  } = useStyles({
+  const { styles: focusOutlineStyles } = useFocusOutlineStyle({ focus: isFocused })
+  const { styles, indicatorColor, textType } = useStyles({
     size,
     color,
     variant,
     disabled,
     loading,
-    hovered,
+    hovering,
   })
 
-  const handleHoverIn = useCallback(() => {
-    setHovered(true)
-  }, [])
-
-  const handleHoverOut = useCallback(() => {
-    setHovered(false)
-  }, [])
-
   return (
-    <FocusOutline
-      focus={isFocused}
-      style={style}
-      borderRadiusLevel="level1"
+    <Pressable
+      style={[
+        styles.wrapper,
+        focusOutlineStyles.wrapper,
+        style,
+      ]}
+      disabled={disabled || loading}
+      accessibilityRole="button"
+      onPress={onPress}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      onHoverIn={handleHoverIn}
+      onHoverOut={handleHoverOut}
     >
-      <Pressable
-        disabled={disabled || loading}
-        accessibilityRole="button"
-        style={styles.pressable}
-        onPress={onPress}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        onHoverIn={handleHoverIn}
-        onHoverOut={handleHoverOut}
+      <HStack
+        gap={8}
+        align="center"
+        justify="center"
+        style={styles.container}
       >
-        <HStack
-          gap={8}
-          align="center"
-          justify="center"
-          style={styles.container}
-        >
-          {loading ? (
-            <ActivityIndicator
-              color={indicatorColor}
-              style={styles.indicator}
-            />
-          ) : (
-            <>
-              {startIconName ? (
-                <Icon
-                  style={styles.icon}
-                  name={startIconName}
-                />
-              ) : null}
-              <Text
-                style={styles.title}
-                type={textType}
-                weight="bold"
-              >
-                {title}
-              </Text>
-              {endIconName ? (
-                <Icon
-                  style={styles.icon}
-                  name={endIconName}
-                />
-              ) : null}
-            </>
-          )}
-        </HStack>
-      </Pressable>
-    </FocusOutline>
+        {loading ? (
+          <ActivityIndicator
+            color={indicatorColor}
+            style={styles.indicator}
+          />
+        ) : (
+          <>
+            {startIconName ? (
+              <Icon
+                style={styles.icon}
+                name={startIconName}
+              />
+            ) : null}
+            <Text
+              style={styles.title}
+              type={textType}
+              weight="bold"
+            >
+              {title}
+            </Text>
+            {endIconName ? (
+              <Icon
+                style={styles.icon}
+                name={endIconName}
+              />
+            ) : null}
+          </>
+        )}
+      </HStack>
+    </Pressable>
   )
 })

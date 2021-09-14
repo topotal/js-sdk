@@ -10,6 +10,7 @@ interface Styles {
   icon: ImageStyle
   placeholderWrapper: ViewStyle
   placeholder: TextStyle
+  inputWrapper: ViewStyle
   input: TextStyle
 }
 
@@ -31,7 +32,6 @@ export const useStyles = ({
   const {
     height,
     lineHeight,
-    paddingVertical,
     paddingRight,
     paddingLeft,
   } = getGeometryStyles(size, startIconName)
@@ -42,13 +42,13 @@ export const useStyles = ({
       width: '100%',
       minHeight: height,
       maxHeight: height,
+      borderStyle: 'solid',
+      borderWidth: 1,
+      borderColor: theme.color[borderColor],
+      backgroundColor: isFocused ? theme.color.transparent : theme.color.background,
+      borderRadius: theme.radius.level1,
     },
     iconWrapper: {
-      position: 'absolute',
-      zIndex: 1,
-      top: 1,
-      left: 1,
-      bottom: 1,
       width: height - 2,
       height: height - 2,
       borderRightWidth: 1,
@@ -59,32 +59,16 @@ export const useStyles = ({
       height: height / 2,
       tintColor: theme.color.secandaryTextDark,
     },
-    placeholderWrapper: {
-      position: 'absolute',
-      top: 1,
-      left: 1,
-      right: 1,
-      bottom: 1,
-      paddingVertical,
-      paddingLeft: startIconName ? paddingLeft + height : paddingLeft,
-      paddingRight,
-    },
-    placeholder: {
-      lineHeight,
-      color: theme.color.secandaryTextDark,
+    inputWrapper: {
+      flex: 1,
+      height: height - 2,
+      flexDirection: 'row',
+      alignItems: 'center',
     },
     input: {
       ...theme.text.type.body,
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      borderStyle: 'solid',
-      borderWidth: 1,
-      borderColor: theme.color[borderColor],
-      backgroundColor: isFocused ? theme.color.transparent : theme.color.background,
-      borderRadius: theme.radius.level1,
-      paddingVertical,
-      paddingLeft: startIconName ? paddingLeft + height : paddingLeft,
+      flex: 1,
+      paddingLeft,
       paddingRight,
       minHeight: lineHeight,
       lineHeight,
@@ -95,6 +79,19 @@ export const useStyles = ({
         outlineOffset: 0,
         outlineStyle: 'none',
       } : {}),
+    },
+    placeholderWrapper: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      paddingLeft,
+      paddingRight,
+    },
+    placeholder: {
+      lineHeight,
+      color: theme.color.secandaryTextDark,
     },
   })
 
