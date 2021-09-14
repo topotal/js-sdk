@@ -41,7 +41,7 @@ export const getDynamicMaterial = (
   variant: Variant,
   disabled: boolean,
   loading: boolean,
-  hovered: boolean,
+  hovering: boolean,
 ): DynamicMaterial => {
   const opacity = disabled || loading ? 0.5 : 1
   const lightColor = `${color}Light` as keyof ThemeColor
@@ -51,21 +51,21 @@ export const getDynamicMaterial = (
     case 'outline':
       return {
         opacity,
-        backgroundColor: hovered ? lightColor : 'transparent',
+        backgroundColor: hovering ? lightColor : 'transparent',
         borderColor: color,
         fontColor: color,
       }
     case 'text':
       return {
         opacity,
-        backgroundColor: hovered ? lightColor : 'transparent',
+        backgroundColor: hovering ? lightColor : 'transparent',
         borderColor: 'transparent',
         fontColor: color,
       }
     case 'contain':
       return {
         opacity,
-        backgroundColor: hovered ? darkColor : color,
+        backgroundColor: hovering ? darkColor : color,
         borderColor: 'transparent',
         fontColor: 'primaryTextLight',
       }

@@ -10,11 +10,11 @@ interface Props {
   variant: Variant
   disabled: boolean
   loading: boolean
-  hovered: boolean
+  hovering: boolean
 }
 
 interface Styles {
-  pressable: ViewStyle
+  wrapper: ViewStyle
   container: ViewStyle
   indicator: ViewStyle
   title: TextStyle
@@ -27,7 +27,7 @@ export const useStyles = ({
   variant,
   disabled,
   loading,
-  hovered,
+  hovering,
 }: Props) => {
   const theme = useContext(ThemeContext)
   const {
@@ -46,11 +46,17 @@ export const useStyles = ({
     variant,
     disabled,
     loading,
-    hovered,
+    hovering,
   )
 
   const styles = StyleSheet.create<Styles>({
-    pressable: {
+    wrapper: {
+      borderWidth: 1,
+      borderRadius: theme.radius.level1,
+      backgroundColor: theme.color[backgroundColor],
+      borderColor: theme.color[borderColor],
+      overflow: 'hidden',
+      opacity,
       ...(Platform.OS === 'web' ? {
         boxShadow: '0px transparent',
         outlineWidth: 0,
@@ -59,14 +65,8 @@ export const useStyles = ({
       } : {}) as ViewStyle,
     },
     container: {
-      borderWidth: 1,
-      borderRadius: theme.radius.level1,
       height,
       paddingHorizontal: sidePadding,
-      backgroundColor: theme.color[backgroundColor],
-      borderColor: theme.color[borderColor],
-      overflow: 'hidden',
-      opacity,
     },
     indicator: {
       transform: [{

@@ -1,8 +1,6 @@
 import { memo, Ref } from 'react'
-import { TextInput as BaseInput } from 'react-native'
-import { useFocus } from '../../hooks/useFocusBlur'
-import { useInputValue } from '../../hooks/useInputValue'
-import { FocusOutline } from '../FocusOutline'
+import { TextInput as BaseInput, View } from 'react-native'
+import { useFocus, useFocusOutlineStyle, useInputValue } from '../../hooks'
 import { HStack } from '../HStack'
 import { Icon } from '../Icon'
 import { Text } from '../Text'
@@ -36,6 +34,7 @@ export const TextInput = memo<Props>(({
     onChange: onChangeText,
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
+  const { styles: focusOutlineStyles } = useFocusOutlineStyle({ focus: isFocused })
   const { styles } = useStyles({
     isFocused,
     error,
@@ -45,10 +44,12 @@ export const TextInput = memo<Props>(({
   const showPlaceholder = !innerValue
 
   return (
-    <FocusOutline
-      focus={isFocused}
-      style={[styles.wrapper, style]}
-      borderRadiusLevel="level1"
+    <HStack
+      style={[
+        styles.wrapper,
+        focusOutlineStyles.wrapper,
+        style,
+      ]}
     >
       {startIconName ? (
         <HStack
@@ -62,29 +63,32 @@ export const TextInput = memo<Props>(({
           />
         </HStack>
       ) : null}
-      <BaseInput
-        {...rest}
-        value={innerValue}
-        autoCapitalize={autoCapitalize}
-        multiline={false}
-        onChangeText={handleChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        style={styles.input}
-      />
-      {showPlaceholder ? (
-        <HStack
-          style={styles.placeholderWrapper}
-          pointerEvents="none"
-        >
-          <Text
-            type="body"
-            style={styles.placeholder}
+      <View style={styles.inputWrapper}>
+        <BaseInput
+          {...rest}
+          value={innerValue}
+          autoCapitalize={autoCapitalize}
+          multiline={false}
+          onChangeText={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          style={styles.input}
+        />
+        {showPlaceholder ? (
+          <HStack
+            style={styles.placeholderWrapper}
+            align="center"
+            pointerEvents="none"
           >
-            {placeholder}
-          </Text>
-        </HStack>
-      ) : null}
-    </FocusOutline>
+            <Text
+              type="body"
+              style={styles.placeholder}
+            >
+              {placeholder}
+            </Text>
+          </HStack>
+        ) : null}
+      </View>
+    </HStack>
   )
 })

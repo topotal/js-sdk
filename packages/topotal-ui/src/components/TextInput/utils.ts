@@ -8,27 +8,21 @@ export const getBorderColor = (isFocused: boolean, error: boolean): keyof ThemeC
 }
 
 export const getGeometryStyles = (size: Size, startIconName?: string) => {
-  let height: number
-  let lineHeight: number
-  let paddingLeft: number
   switch (size) {
     case 'medium':
-      height = 32
-      lineHeight = 24
-      paddingLeft = startIconName ? 8 : 16
-      break
+      return {
+        height: 32,
+        lineHeight: 24,
+        paddingLeft: startIconName ? 8 : 16,
+        paddingRight: 16,
+      }
     case 'large':
-      height = 40
-      lineHeight = 24
-      paddingLeft = startIconName ? 8 : 16
-      break
+      return {
+        height: 40,
+        lineHeight: 24,
+        paddingLeft: startIconName ? 8 : 16,
+        paddingRight: 16,
+      }
   }
 
-  return {
-    height,
-    lineHeight,
-    paddingVertical: (height - lineHeight) / 2,
-    paddingLeft,
-    paddingRight: 16,
-  }
 }
