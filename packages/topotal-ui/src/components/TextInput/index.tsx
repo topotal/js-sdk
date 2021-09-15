@@ -1,17 +1,15 @@
 import { memo, Ref } from 'react'
-import { TextInput as BaseInput, View } from 'react-native'
-import { useFocus, useFocusOutlineStyle, useInputValue } from '../../hooks'
-import { HStack } from '../HStack'
-import { Icon } from '../Icon'
-import { Text } from '../Text'
+import { TextInput as BaseInput } from 'react-native'
+import { useFocus, useInputValue } from '../../hooks'
+import type { InputFrameSize } from '../InputFrame'
+import { InputFrame } from '../InputFrame'
+import { Icon } from '..'
 import { useStyles } from './styles'
-
-export type Size = 'medium' | 'large'
 
 type BaseProps = {
   innerRef?: Ref<BaseInput>
   error?: boolean
-  size?: Size
+  size?: InputFrameSize
   startIconName?: string
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline'>
 
@@ -34,36 +32,23 @@ export const TextInput = memo<Props>(({
     onChange: onChangeText,
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
-  const { styles: focusOutlineStyles } = useFocusOutlineStyle({ focus: isFocused })
-  const { styles } = useStyles({
-    isFocused,
-    error,
-    size,
-    startIconName,
-  })
-  const showPlaceholder = !innerValue
+  const { styles } = useStyles()
 
   return (
-    <HStack
-      style={[
-        styles.wrapper,
-        focusOutlineStyles.wrapper,
-        style,
-      ]}
-    >
-      {startIconName ? (
-        <HStack
-          justify="center"
-          align="center"
-          style={styles.iconWrapper}
-        >
-          <Icon
-            name={startIconName}
-            style={styles.icon}
-          />
-        </HStack>
-      ) : null}
-      <View style={styles.inputWrapper}>
+    <InputFrame
+      style={style}
+      size={size}
+      error={error}
+      focus={isFocused}
+      placeholder={placeholder}
+      showPlaceholder={!innerValue}
+      renderLeftItem={startIconName ? () => (
+        <Icon
+          name={startIconName}
+          style={styles.icon}
+        />
+      ) : undefined}
+      renderInput={({ style }) => (
         <BaseInput
           {...rest}
           value={innerValue}
@@ -72,23 +57,9 @@ export const TextInput = memo<Props>(({
           onChangeText={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
-          style={styles.input}
+          style={style}
         />
-        {showPlaceholder ? (
-          <HStack
-            style={styles.placeholderWrapper}
-            align="center"
-            pointerEvents="none"
-          >
-            <Text
-              type="body"
-              style={styles.placeholder}
-            >
-              {placeholder}
-            </Text>
-          </HStack>
-        ) : null}
-      </View>
-    </HStack>
+      )}
+    />
   )
 })

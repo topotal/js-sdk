@@ -1,7 +1,7 @@
 import { memo, Ref } from 'react'
 import { TextInput as BaseInput } from 'react-native'
-import { useFocus, useFocusOutlineStyle, useInputValue } from '../../hooks'
-import { HStack } from '../HStack'
+import { useFocus, useInputValue } from '../../hooks'
+import { InputFrame } from '../InputFrame'
 import { Text } from '../Text'
 import { useStyles } from './styles'
 
@@ -27,38 +27,32 @@ export const TextArea = memo<Props>(({
     onChange: onChangeText,
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
-  const { styles: focusOutlineStyle } = useFocusOutlineStyle({ focus: isFocused })
-  const { styles } = useStyles({ isFocused, error })
-  const showPlaceholder = !innerValue
+  const { styles } = useStyles()
 
   return (
-    <HStack style={[styles.wrapper, focusOutlineStyle.wrapper, style]}>
-      <Text style={styles.dummyText}>
-        {innerValue.replace(/\n$/g, '\n ')}
-      </Text>
-      <BaseInput
-        {...rest}
-        value={innerValue}
-        autoCapitalize={autoCapitalize}
-        multiline
-        onChangeText={handleChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        style={styles.input}
-      />
-      {showPlaceholder ? (
-        <HStack
-          style={styles.placeholderWrapper}
-          pointerEvents="none"
-        >
-          <Text
-            type="body"
-            style={styles.placeholder}
-          >
-            {placeholder}
+    <InputFrame
+      style={[styles.wrapper, style]}
+      error={error}
+      placeholder={placeholder}
+      showPlaceholder={!innerValue}
+      focus={isFocused}
+      renderInput={({ style }) => (
+        <>
+          <Text style={[style, styles.dummyText]}>
+            {innerValue.replace(/\n$/g, '\n ')}
           </Text>
-        </HStack>
-      ) : null}
-    </HStack>
+          <BaseInput
+            {...rest}
+            value={innerValue}
+            autoCapitalize={autoCapitalize}
+            multiline
+            onChangeText={handleChange}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            style={[style, styles.input]}
+          />
+        </>
+      )}
+    />
   )
 })
