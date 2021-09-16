@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.37.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.37.1...@topotal/topotal-ui@0.37.2) (2021-09-16)
+
+
+### Bug Fixes
+
+* Export input outline ([1ef6820](https://github.com/topotal/js-sdk/commit/1ef68205cfc0116e73b2af5c497abc299bc59cc7))
+
+
+
+
+
 ## [0.37.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.37.0...@topotal/topotal-ui@0.37.1) (2021-09-16)
 
 **Note:** Version bump only for package @topotal/topotal-ui
