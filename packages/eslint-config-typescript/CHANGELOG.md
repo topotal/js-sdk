@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-typescript@0.1.3...@topotal/eslint-config-typescript@0.2.0) (2021-09-16)
+
+
+### Features
+
+* **eslint-typescript:** Turn off the no-empty-function rule ([1c4a925](https://github.com/topotal/js-sdk/commit/1c4a9257a367c0bf4715d258a52e37bd30a138e9))
+
+
+
+
+
 ## [0.1.3](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-typescript@0.1.2...@topotal/eslint-config-typescript@0.1.3) (2021-09-16)
 
 **Note:** Version bump only for package @topotal/eslint-config-typescript
