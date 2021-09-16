@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.37.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.36.1...@topotal/topotal-ui@0.37.0) (2021-09-16)
+
+
+### Features
+
+* Add FocusOutline ([7c820d8](https://github.com/topotal/js-sdk/commit/7c820d8486c024f85ac304d5a48aef5f113a9f5c))
+* Add InputFrame ([9481875](https://github.com/topotal/js-sdk/commit/9481875d39d0accb345a2135bfe2063d3974a6fb))
+* Add Picker component ([9b99798](https://github.com/topotal/js-sdk/commit/9b99798cfec0c443515b857260199c67119ff145))
+* Add TextArea ([3d315dc](https://github.com/topotal/js-sdk/commit/3d315dc05de3166cf816c4a08aa226b65955c80c))
+* Add useFocusOutlineStyle ([47d1a27](https://github.com/topotal/js-sdk/commit/47d1a27a75f147291fd1904eb03467af10163427))
+
+
+
+
+
 ## [0.36.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.36.0...@topotal/topotal-ui@0.36.1) (2021-08-13)
 
 
