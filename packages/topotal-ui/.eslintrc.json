@@ -48,7 +48,8 @@
       "beforeColon": false,
       "afterColon": true
     }],
-    "comma-spacing": ["error", { "before": false, "after": true }]
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "jsx-quotes": "error"
   },
   "overrides": [
     {
