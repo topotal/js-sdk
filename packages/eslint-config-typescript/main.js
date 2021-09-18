@@ -9,6 +9,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
     // Indent setting
     "indent": "off",
     "@typescript-eslint/indent": ["error", 2, {"SwitchCase": 1}],

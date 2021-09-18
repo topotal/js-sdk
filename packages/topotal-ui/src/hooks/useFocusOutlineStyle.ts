@@ -1,5 +1,9 @@
-import { Platform, StyleSheet, ViewStyle } from 'react-native'
+import { Platform, ViewStyle } from 'react-native'
 import { useTheme } from '../theme'
+
+interface Styles {
+  wrapper: ViewStyle
+}
 
 interface Props {
   focus?: boolean
@@ -10,7 +14,7 @@ export const useFocusOutlineStyle = ({
 }: Props) => {
   const { color } = useTheme()
 
-  const styles = StyleSheet.create({
+  const styles: Styles = {
     wrapper: {
       ...(Platform.OS === 'web' ? {
         boxShadow: focus ? `${color.focus} 0px 0px 0px 3px` : '',
@@ -19,7 +23,7 @@ export const useFocusOutlineStyle = ({
         outlineStyle: 'none',
       } : {}) as ViewStyle,
     },
-  })
+  }
 
   return {
     styles,
