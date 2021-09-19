@@ -1,3 +1,5 @@
 node_modules
 lerna-debug.log
 .idea
+!docs/.gitkeep
+docs/**/*
