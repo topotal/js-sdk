@@ -31,7 +31,7 @@
     "prepublishOnly": "yarn build",
     "lint": "eslint --ext .ts,.tsx src",
     "storybook": "start-storybook -p 6006 --no-dll -s ./assets/",
-    "build-storybook": "build-storybook --no-dll -s ./assets/ -o ../../docs/topotal-ui/ "
+    "build-doc": "build-storybook --no-dll -s ./assets/ -o ../../docs/topotal-ui/"
   },
   "dependencies": {
     "marked": "^2.1.3",
