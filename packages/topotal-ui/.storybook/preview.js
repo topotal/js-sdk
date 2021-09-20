@@ -7,8 +7,14 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
 }
 
+const iconBasePath = process.env.STORYBOOK_ASSETS_PATH || '/icons'
+
 addDecorator(storyFn => (
-  <ThemeContext.Provider value={defaultTheme}>
+  <ThemeContext.Provider
+    value={{
+      ...defaultTheme,
+      iconBasePath,
+    }}>
     <VStack gap={16} style={{ padding: 24 }}>
       {storyFn()}
     </VStack>
