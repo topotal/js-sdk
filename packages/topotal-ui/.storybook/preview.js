@@ -7,7 +7,7 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
 }
 
-const iconBasePath = process.env.STORYBOOK_ASSETS_PATH || '/icons'
+const iconBasePath = process.env.STORYBOOK_ASSETS_PATH ? process.env.STORYBOOK_ASSETS_PATH + '/icons' : '/icons'
 
 addDecorator(storyFn => (
   <ThemeContext.Provider
