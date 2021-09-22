@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.38.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.37.3...@topotal/topotal-ui@0.38.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* patch iconBasePath ([7589440](https://github.com/topotal/js-sdk/commit/758944043dcdaf658bcb30783cf5248bcedd839d))
+* patch path ([de7e000](https://github.com/topotal/js-sdk/commit/de7e000af323221862dc0fae835c2691236d0617))
+
+
+### Features
+
+* Deploy docs ([9af3dc0](https://github.com/topotal/js-sdk/commit/9af3dc05e12c5b8c13bf90e41876710c70c0708d))
+
+
+
+
+
 ## [0.37.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.37.2...@topotal/topotal-ui@0.37.3) (2021-09-16)
 
 **Note:** Version bump only for package @topotal/topotal-ui
