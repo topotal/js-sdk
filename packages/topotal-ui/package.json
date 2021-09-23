@@ -34,7 +34,7 @@
     "build-doc": "STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui build-storybook --no-dll -s ./assets/ -o ../../docs/topotal-ui/"
   },
   "dependencies": {
-    "marked": "^2.1.3",
+    "marked": "^3.0.4",
     "react-is": "^17.0.1",
     "react-syntax-highlighter": "^15.4.3",
     "sanitize-html": "^2.4.0"
