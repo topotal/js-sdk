@@ -9,6 +9,8 @@ interface Props {
   style?: StyleProp<ViewStyle>
   value?: string
   size?: InputFrameSize
+  placeholder?: string
+  error?: boolean
   children: ReactElement<typeof BasePicker.Item> | Array<ReactElement<typeof BasePicker.Item>>
   onChange?: (value: string) => void
 }
@@ -19,6 +21,8 @@ export const Picker = Object.assign((({
   style,
   value = '',
   size = 'large',
+  placeholder = '',
+  error = false,
   children,
   onChange,
 }: Props) => {
@@ -30,8 +34,9 @@ export const Picker = Object.assign((({
     <InputFrame
       style={style}
       focus={isFocused}
-      placeholder="Select"
+      placeholder={placeholder}
       size={size}
+      error={error}
       showPlaceholder={!innerValue}
       renderInput={({ style }) => (
         <>
