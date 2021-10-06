@@ -14,6 +14,7 @@ const rednerItems = () => (
 
 export const Default = () => (
   <Picker
+    placeholder="Select"
     onChange={(value) => { console.info(value) }}
   >
     {rednerItems()}
@@ -22,6 +23,7 @@ export const Default = () => (
 
 export const HasDefaultValue = () => (
   <Picker
+    placeholder="Select"
     value="value_1"
   >
     {rednerItems()}
@@ -30,7 +32,17 @@ export const HasDefaultValue = () => (
 
 export const Medium = () => (
   <Picker
+    placeholder="Select"
     size="medium"
+  >
+    {rednerItems()}
+  </Picker>
+)
+
+export const Error = () => (
+  <Picker
+    placeholder="Select"
+    error
   >
     {rednerItems()}
   </Picker>
