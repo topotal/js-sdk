@@ -4,6 +4,12 @@ export default { title: 'components/Button' }
 
 export const all = () => (
   <>
+    <Button title="Save" color="basic" size="small" />
+    <Button title="Save" color="basic" size="medium" />
+    <Button title="Save" color="basic" size="small" variant="outline" />
+    <Button title="Save" color="basic" size="medium" variant="outline" />
+    <Button title="Save" color="basic" size="small" variant="text" />
+    <Button title="Save" color="basic" size="medium" variant="text" />
     <Button title="Post" size="small" />
     <Button title="Post" size="small" disabled />
     <Button title="Post" size="medium" />
