@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.38.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.37.3...@topotal/topotal-ui@0.38.0) (2021-10-06)
+
+
+### Bug Fixes
+
+* Add placeholder and error prop to Picker ([da8f7aa](https://github.com/topotal/js-sdk/commit/da8f7aa22b452fa13730643e85fcb34f6de1ee3d))
+* patch iconBasePath ([7589440](https://github.com/topotal/js-sdk/commit/758944043dcdaf658bcb30783cf5248bcedd839d))
+* patch path ([de7e000](https://github.com/topotal/js-sdk/commit/de7e000af323221862dc0fae835c2691236d0617))
+* Support icon only button ([4bea16a](https://github.com/topotal/js-sdk/commit/4bea16a3b22f872a33a596453fca979afea54a47))
+
+
+### Features
+
+* Add basic color to Button ([dd22a7e](https://github.com/topotal/js-sdk/commit/dd22a7e2c203e307ffdee690b610f41994af552d))
+* Deploy docs ([9af3dc0](https://github.com/topotal/js-sdk/commit/9af3dc05e12c5b8c13bf90e41876710c70c0708d))
+
+
+
+
+
 ## [0.37.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.37.2...@topotal/topotal-ui@0.37.3) (2021-09-16)
 
 **Note:** Version bump only for package @topotal/topotal-ui
