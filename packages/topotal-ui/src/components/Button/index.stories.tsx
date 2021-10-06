@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button } from './'
 
 export default { title: 'components/Button' }
@@ -74,6 +73,11 @@ export const all = () => (
     />
     <Button
       title="送信"
+      size="small"
+      endIconName="done"
+    />
+    <Button
+      title=""
       size="small"
       endIconName="done"
     />
