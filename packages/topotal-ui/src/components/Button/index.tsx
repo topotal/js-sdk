@@ -76,13 +76,15 @@ export const Button = memo<Props>(({
                 name={startIconName}
               />
             ) : null}
-            <Text
-              style={styles.title}
-              type={textType}
-              weight="bold"
-            >
-              {title}
-            </Text>
+            {title ? (
+              <Text
+                style={styles.title}
+                type={textType}
+                weight="bold"
+              >
+                {title}
+              </Text>
+            ) : null}
             {endIconName ? (
               <Icon
                 style={styles.icon}
