@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.39.0...@topotal/topotal-ui@0.39.1) (2021-10-06)
+
+
+### Bug Fixes
+
+* Patch fontWeight when use small button ([376a162](https://github.com/topotal/js-sdk/commit/376a16224ac4afe45071ff331a9146477ca589d6))
+
+
+
+
+
 # [0.39.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.37.3...@topotal/topotal-ui@0.39.0) (2021-10-06)
 
 
