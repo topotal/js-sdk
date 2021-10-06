@@ -9,6 +9,7 @@ export interface DynamicGeometry {
   sidePadding: number
   iconSize: number
   textType: TextType
+  fontWeight: 'bold' | 'normal'
 }
 
 export interface DynamicMaterial {

@@ -35,6 +35,7 @@ export const useStyles = ({
     sidePadding,
     iconSize,
     textType,
+    fontWeight,
   } = getDynamicGeometry(size)
   const {
     fontColor,
@@ -77,6 +78,7 @@ export const useStyles = ({
       textAlign: 'center',
       lineHeight: height,
       color: theme.color[fontColor],
+      fontWeight,
     },
     icon: {
       width: iconSize,
