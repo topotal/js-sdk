@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.39.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.39.1...@topotal/topotal-ui@0.39.2) (2021-10-13)
+
+
+### Bug Fixes
+
+* button padding ([45ee260](https://github.com/topotal/js-sdk/commit/45ee26082226aebc7a4093fb24d2c938db909d46))
+
+
+
+
+
 ## [0.39.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.39.0...@topotal/topotal-ui@0.39.1) (2021-10-06)
 
 
