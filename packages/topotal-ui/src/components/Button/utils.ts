@@ -15,7 +15,7 @@ export const getDynamicGeometry = (size: Size): DynamicGeometry => {
     case 'small':
       return {
         height: 24,
-        sidePadding: 24,
+        sidePadding: 8,
         iconSize: 13,
         textType,
         fontWeight: 'normal',
@@ -23,7 +23,7 @@ export const getDynamicGeometry = (size: Size): DynamicGeometry => {
     case 'medium':
       return {
         height: 32,
-        sidePadding: 40,
+        sidePadding: 24,
         iconSize: 14,
         textType,
         fontWeight: 'bold',
@@ -31,7 +31,7 @@ export const getDynamicGeometry = (size: Size): DynamicGeometry => {
     case 'large':
       return {
         height: 40,
-        sidePadding: 48,
+        sidePadding: 40,
         iconSize: 16,
         textType,
         fontWeight: 'bold',
