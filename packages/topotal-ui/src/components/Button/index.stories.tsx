@@ -1,9 +1,10 @@
+import { VStack } from '../'
 import { Button } from './'
 
 export default { title: 'components/Button' }
 
 export const all = () => (
-  <>
+  <VStack gap={8} align="flex-start">
     <Button title="Save" color="basic" size="small" />
     <Button title="Save" color="basic" size="medium" />
     <Button title="Save" color="basic" size="small" variant="outline" />
@@ -82,10 +83,8 @@ export const all = () => (
       size="small"
       endIconName="done"
     />
-    <Button
-      title=""
-      size="small"
-      endIconName="done"
-    />
-  </>
+    <Button title="" size="small" endIconName="done" />
+    <Button title="" size="medium" endIconName="done" />
+    <Button title="" size="large" endIconName="done" />
+  </VStack>
 )
