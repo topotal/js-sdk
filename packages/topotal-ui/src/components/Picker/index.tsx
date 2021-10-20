@@ -30,8 +30,6 @@ export const Picker = Object.assign((({
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const { styles } = useStyles({ hasValue: !!innerValue })
 
-  console.log(children)
-
   return (
     <InputFrame
       style={style}
