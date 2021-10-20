@@ -30,6 +30,8 @@ export const Picker = Object.assign((({
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const { styles } = useStyles({ hasValue: !!innerValue })
 
+  console.log(children)
+
   return (
     <InputFrame
       style={style}
@@ -47,7 +49,7 @@ export const Picker = Object.assign((({
             onBlur={handleBlur}
             onValueChange={handleChange}
           >
-            <BasePicker.Item label="--" value="" />
+            {value ? null : (<BasePicker.Item label="--" value="" />) }
             {children}
           </BasePicker>
           <Image
