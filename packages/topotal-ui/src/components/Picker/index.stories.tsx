@@ -30,6 +30,15 @@ export const HasDefaultValue = () => (
   </Picker>
 )
 
+export const Small = () => (
+  <Picker
+    placeholder="Select"
+    size="small"
+  >
+    {rednerItems()}
+  </Picker>
+)
+
 export const Medium = () => (
   <Picker
     placeholder="Select"

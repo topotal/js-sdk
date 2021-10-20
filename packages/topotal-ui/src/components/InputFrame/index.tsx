@@ -4,7 +4,7 @@ import { View } from 'react-native'
 import { HStack, Text } from '..'
 import { useStyles } from './styles'
 
-export type InputFrameSize = 'medium' | 'large'
+export type InputFrameSize = 'small' | 'medium' | 'large'
 
 interface RenderInputProps {
   style?: StyleProp<ViewStyle>
