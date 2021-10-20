@@ -47,7 +47,7 @@ export const Picker = Object.assign((({
             onBlur={handleBlur}
             onValueChange={handleChange}
           >
-            <BasePicker.Item label="--" value="" />
+            {value ? null : (<BasePicker.Item label="--" value="" />) }
             {children}
           </BasePicker>
           <Image
