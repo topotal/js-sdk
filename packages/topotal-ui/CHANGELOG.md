@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.40.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.39.2...@topotal/topotal-ui@0.40.0) (2021-10-20)
+
+
+### Features
+
+* Add small size to InputFrame ([68710d5](https://github.com/topotal/js-sdk/commit/68710d5659eb160f986c85e1128826b900a31240))
+
+
+
+
+
 ## [0.39.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.39.1...@topotal/topotal-ui@0.39.2) (2021-10-13)
 
 
