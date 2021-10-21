@@ -1,4 +1,3 @@
-export * from './useDimensions'
 export * from './useFocusBlur'
 export * from './useFocusOutlineStyle'
 export * from './useHover'
