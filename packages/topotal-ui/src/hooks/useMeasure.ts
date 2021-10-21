@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from 'react'
-import { NativeMethods } from 'react-native'
+import { Dimensions, NativeMethods } from 'react-native'
 import { useOnlyOnceEffect } from './useOnlyOnceEffect'
 
 export interface Measure {
@@ -31,10 +31,14 @@ export const useMeasure = <T extends NativeMethods>() => {
     })
   }, [])
 
+  const resetMeasure = useCallback(() => {
+    setMeasure(defaultMeasure)
+  }, [])
+
   useOnlyOnceEffect(() => {
-    window.addEventListener('resize', handleResize)
+    const subscription = Dimensions.addEventListener('change', handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize)
+      subscription.remove()
     }
   })
 
@@ -47,5 +51,6 @@ export const useMeasure = <T extends NativeMethods>() => {
     measure,
     setMeasure,
     updateMeasure,
+    resetMeasure,
   }
 }
