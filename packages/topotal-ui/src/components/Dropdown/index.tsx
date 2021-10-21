@@ -1,5 +1,6 @@
-import React from 'react'
+import { ReactNode, useEffect } from 'react'
 import { Modal, Pressable, StyleProp, View, ViewStyle } from 'react-native'
+import { useMeasure } from '../../hooks'
 import { useStyles } from './styles'
 
 export type CardPositionAlign = 'left' | 'right'
@@ -8,32 +9,54 @@ interface Props {
   visible?: boolean
   style?: StyleProp<ViewStyle>
   align?: CardPositionAlign
+  children?: ReactNode
   onPressBackground?: () => void
 }
 
-export const Dropdown: React.FC<Props> = ({
+export const Dropdown = ({
   visible = false,
   style,
   align = 'left',
   children,
   onPressBackground,
-}) => {
-  const { wrapperRef, styles } = useStyles({ align })
+}: Props): JSX.Element | null => {
+  const {
+    ref: wrapperRef,
+    measure: wrapperMeasure,
+    updateMeasure,
+    setMeasure,
+    resetMeasure,
+  } = useMeasure<View>()
+  const { styles } = useStyles({ align, wrapperMeasure })
+
+  useEffect(() => {
+    if (visible) {
+      updateMeasure()
+    } else {
+      resetMeasure()
+    }
+  }, [resetMeasure, setMeasure, updateMeasure, visible])
+
+  if (!visible) {
+    return null
+  }
 
   return (
     <View
       style={[styles.wrapper, style]}
       ref={element => { wrapperRef.current = element || undefined }}
     >
-      <Modal visible={visible} transparent>
-        <Pressable
-          style={styles.background}
-          onPress={onPressBackground}
-        />
-        <View style={styles.card} >
-          {children}
-        </View>
-      </Modal>
+      {wrapperMeasure.width === 0 && wrapperMeasure.height === 0 ? null : (
+        <Modal visible transparent>
+          <Pressable
+            style={styles.background}
+            onPress={onPressBackground}
+          />
+          <View style={styles.card} >
+            {children}
+          </View>
+        </Modal>
+      )}
     </View>
   )
 }
