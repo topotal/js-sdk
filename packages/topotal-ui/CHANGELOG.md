@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.40.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.40.2...@topotal/topotal-ui@0.40.3) (2021-10-21)
+
+
+### Bug Fixes
+
+* remove event ([8b47db9](https://github.com/topotal/js-sdk/commit/8b47db9ed3857b24bb0a316101f12aea2e890993))
+
+
+
+
+
 ## [0.40.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.40.1...@topotal/topotal-ui@0.40.2) (2021-10-21)
 
 
