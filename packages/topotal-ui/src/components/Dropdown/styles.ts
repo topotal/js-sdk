@@ -1,6 +1,5 @@
 import { useEffect, useMemo } from 'react'
-import { View, ViewStyle } from 'react-native'
-import { useDimensions } from '../../hooks/useDimensions'
+import { useWindowDimensions, View, ViewStyle } from 'react-native'
 import { useMeasure } from '../../hooks/useMeasure'
 import { useScrollManipulater, useTheme } from '../../theme'
 import { CardPositionAlign } from '.'
@@ -18,12 +17,12 @@ interface Props {
 export const useStyles = ({ align }: Props) => {
   const { ref: wrapperRef, measure: wrapperMeasure, updateMeasure } = useMeasure<View>()
   const { getScrollY } = useScrollManipulater()
-  const { windowScaledSize } = useDimensions()
+  const { width: windowWidth } = useWindowDimensions()
   const scrollY = getScrollY()
   const { color } = useTheme()
   const topPosition = wrapperMeasure.pageY - scrollY
   const leftPosition = wrapperMeasure.pageX
-  const rightPosition = windowScaledSize.width - (wrapperMeasure.pageX + wrapperMeasure.width)
+  const rightPosition = windowWidth - (wrapperMeasure.pageX + wrapperMeasure.width)
 
   useEffect(() => {
     updateMeasure()
