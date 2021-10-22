@@ -6,7 +6,7 @@ import { useStyles } from './styles'
 import { Color, Size, Variant } from './types'
 
 interface Props {
-  title: string
+  label: string
   size?: Size
   color?: Color
   variant?: Variant
@@ -19,7 +19,7 @@ interface Props {
 }
 
 export const Button = memo<Props>(({
-  title,
+  label,
   size = 'large',
   color = 'primary',
   variant = 'contain',
@@ -76,13 +76,13 @@ export const Button = memo<Props>(({
                 name={startIconName}
               />
             ) : null}
-            {title ? (
+            {label ? (
               <Text
-                style={styles.title}
+                style={styles.label}
                 type={textType}
                 weight="bold"
               >
-                {title}
+                {label}
               </Text>
             ) : null}
             {endIconName ? (

@@ -17,7 +17,7 @@ interface Styles {
   wrapper: ViewStyle
   container: ViewStyle
   indicator: ViewStyle
-  title: TextStyle
+  label: TextStyle
   icon: ImageStyle
 }
 
@@ -74,7 +74,7 @@ export const useStyles = ({
         scale: size === 'small' ? 0.7 : 1,
       }],
     },
-    title: {
+    label: {
       textAlign: 'center',
       lineHeight: height,
       color: theme.color[fontColor],
