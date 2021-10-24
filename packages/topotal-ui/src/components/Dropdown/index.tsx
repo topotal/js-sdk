@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react'
+import { ReactNode, useCallback, useEffect } from 'react'
 import { Modal, Pressable, StyleProp, View, ViewStyle } from 'react-native'
 import { useMeasure } from '../../hooks'
 import { useStyles } from './styles'
@@ -10,7 +10,7 @@ interface Props {
   style?: StyleProp<ViewStyle>
   align?: CardPositionAlign
   children?: ReactNode
-  onPressBackground?: () => void
+  onPressBackground: () => void
 }
 
 export const Dropdown = ({
@@ -36,6 +36,17 @@ export const Dropdown = ({
       resetMeasure()
     }
   }, [resetMeasure, setMeasure, updateMeasure, visible])
+
+  const handleScroll = useCallback(() => {
+    onPressBackground()
+  }, [onPressBackground])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleScroll])
 
   if (!visible) {
     return null
