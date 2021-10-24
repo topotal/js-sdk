@@ -1,8 +1,9 @@
-import { ImageStyle, Platform, StyleSheet, TextStyle } from 'react-native'
+import { ImageStyle, Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 
 interface Styles {
   picker: TextStyle
   arrowIcon: ImageStyle
+  arrowIconWrapper: ViewStyle
 }
 
 interface Props {
@@ -20,9 +21,11 @@ export const useStyles = ({ hasValue }: Props) => {
         appearance: 'none',
       } : {}),
     },
-    arrowIcon: {
+    arrowIconWrapper: {
       position: 'absolute',
       right: 8,
+    },
+    arrowIcon: {
       width: 24,
       height: 24,
     },
