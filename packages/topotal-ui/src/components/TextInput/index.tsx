@@ -1,6 +1,6 @@
 import { memo, Ref } from 'react'
 import { TextInput as BaseInput } from 'react-native'
-import { useFocus, useFocusOutlineStyle, useInputValue } from '../../hooks'
+import { useFocus, useInputValue } from '../../hooks'
 import type { InputFrameSize } from '../InputFrame'
 import { InputFrame } from '../InputFrame'
 import { Icon } from '..'
@@ -35,14 +35,14 @@ export const TextInput = memo<Props>(({
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const { styles } = useStyles()
-  const { styles: focusOutlineStyles } = useFocusOutlineStyle({ focus: isFocused, disabledPointerEvents: disabled })
 
   return (
     <InputFrame
-      style={[style, focusOutlineStyles.wrapper]}
+      style={style}
       size={size}
       error={error}
       focus={isFocused}
+      disabled={disabled}
       placeholder={placeholder}
       showPlaceholder={!innerValue}
       renderLeftItem={startIconName ? () => (
