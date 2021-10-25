@@ -17,14 +17,14 @@ interface Props {
 const arrowIconBase64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAP0lEQVRYw+3U2wkAMAjAQDfP6O0K/QkUzDmA+JxJkiT/Y85D4KbArQK3UbizwB037kbhLi3uXeCeHv2fJMlGFxq+Y5MR7CqIAAAAAElFTkSuQmCC'
 
 export const Picker = Object.assign((({
-                                        style,
-                                        value = '',
-                                        size = 'large',
-                                        placeholder = '',
-                                        error = false,
-                                        children,
-                                        onChange,
-                                      }: Props) => {
+  style,
+  value = '',
+  size = 'large',
+  placeholder = '',
+  error = false,
+  children,
+  onChange,
+}: Props) => {
   const { innerValue, handleChange } = useInputValue({ value, onChange })
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const { styles } = useStyles({ hasValue: !!innerValue })
