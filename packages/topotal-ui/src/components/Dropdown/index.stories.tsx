@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ScrollView } from 'react-native'
+import { View } from 'react-native'
 import { Text } from '../Text'
 import { VStack } from '../VStack'
 import { Button } from '..'
@@ -12,7 +12,7 @@ export default {
 const Template = ({ align }: { align: CardPositionAlign }) => {
   const [visible, setVisible] = useState(false)
   return (
-    <ScrollView style={{ height: 500, borderWidth: 1, borderColor: 'red' }}>
+    <View style={{ height: 2000, borderWidth: 1, borderColor: 'red' }}>
       <VStack
         align="center"
         style={{ paddingTop: 250, height: 1000 }}
@@ -33,7 +33,7 @@ const Template = ({ align }: { align: CardPositionAlign }) => {
           </Dropdown>
         </VStack>
       </VStack>
-    </ScrollView>
+    </View>
   )
 }
 
