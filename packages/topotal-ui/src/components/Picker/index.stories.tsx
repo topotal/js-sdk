@@ -4,7 +4,7 @@ export default {
   title: 'components/Picker',
 }
 
-const rednerItems = () => (
+const renderItems = () => (
   <>
     <Picker.Item label="item1" value="value_1" />
     <Picker.Item label="item2" value="value_2" />
@@ -17,7 +17,7 @@ export const Default = () => (
     placeholder="Select"
     onChange={(value) => { console.info(value) }}
   >
-    {rednerItems()}
+    {renderItems()}
   </Picker>
 )
 
@@ -26,7 +26,7 @@ export const HasDefaultValue = () => (
     placeholder="Select"
     value="value_1"
   >
-    {rednerItems()}
+    {renderItems()}
   </Picker>
 )
 
@@ -35,7 +35,7 @@ export const Small = () => (
     placeholder="Select"
     size="small"
   >
-    {rednerItems()}
+    {renderItems()}
   </Picker>
 )
 
@@ -44,7 +44,7 @@ export const Medium = () => (
     placeholder="Select"
     size="medium"
   >
-    {rednerItems()}
+    {renderItems()}
   </Picker>
 )
 
@@ -53,6 +53,6 @@ export const Error = () => (
     placeholder="Select"
     error
   >
-    {rednerItems()}
+    {renderItems()}
   </Picker>
 )
