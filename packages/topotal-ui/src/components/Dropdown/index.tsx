@@ -38,8 +38,10 @@ export const Dropdown = ({
   }, [resetMeasure, setMeasure, updateMeasure, visible])
 
   const handleScroll = useCallback(() => {
-    onPressBackground()
-  }, [onPressBackground])
+    if (visible) {
+      onPressBackground()
+    }
+  }, [onPressBackground, visible])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
