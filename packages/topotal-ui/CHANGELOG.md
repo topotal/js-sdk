@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.40.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.40.4...@topotal/topotal-ui@0.40.5) (2021-10-25)
+
+
+### Bug Fixes
+
+* Patch Dropdown bug ([4229fa2](https://github.com/topotal/js-sdk/commit/4229fa251d6dd3aa65910c50ab2fb6f8f0ef9f5f))
+
+
+
+
+
 ## [0.40.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.40.3...@topotal/topotal-ui@0.40.4) (2021-10-25)
 
 
