@@ -10,6 +10,7 @@ interface Props {
   size?: InputFrameSize
   placeholder?: string
   error?: boolean
+  disabled?: boolean
   children: ReactElement<typeof BasePicker.Item> | Array<ReactElement<typeof BasePicker.Item>>
   onChange?: (value: string) => void
 }
@@ -22,6 +23,7 @@ export const Picker = Object.assign((({
   size = 'large',
   placeholder = '',
   error = false,
+  disabled = false,
   children,
   onChange,
 }: Props) => {
@@ -44,6 +46,7 @@ export const Picker = Object.assign((({
             selectedValue={innerValue}
             onFocus={handleFocus}
             onBlur={handleBlur}
+            enabled={!disabled}
             onValueChange={handleChange}
           >
             {value ? null : (<BasePicker.Item label="--" value="" />) }
