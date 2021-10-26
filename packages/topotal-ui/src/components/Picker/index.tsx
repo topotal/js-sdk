@@ -44,9 +44,9 @@ export const Picker = Object.assign((({
           <BasePicker
             style={[style, styles.picker]}
             selectedValue={innerValue}
+            enabled={!disabled}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            enabled={!disabled}
             onValueChange={handleChange}
           >
             {value ? null : (<BasePicker.Item label="--" value="" />) }
