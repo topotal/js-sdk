@@ -56,3 +56,12 @@ export const Error = () => (
     {renderItems()}
   </Picker>
 )
+
+export const Disabled = () => (
+  <Picker
+    placeholder="Select"
+    disabled
+  >
+    {renderItems()}
+  </Picker>
+)
