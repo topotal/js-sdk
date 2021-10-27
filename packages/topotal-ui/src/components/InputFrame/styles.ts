@@ -20,6 +20,7 @@ interface Props {
   error: boolean
   size: InputFrameSize
   hasLeftItem?: boolean
+  disabledPointerEvents?: boolean
 }
 
 export const getBorderColor = (focus: boolean, error: boolean): keyof ThemeColor => {
@@ -33,9 +34,10 @@ export const useStyles = ({
   error,
   size,
   hasLeftItem = false,
+  disabledPointerEvents = false,
 }: Props) => {
   const { color, text, radius } = useTheme()
-  const { styles: focusOutlineStyle } = useFocusOutlineStyle({ focus })
+  const { styles: focusOutlineStyle } = useFocusOutlineStyle({ focus, disabledPointerEvents })
   const borderColor = getBorderColor(focus, error)
   const {
     height,

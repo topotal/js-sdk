@@ -7,10 +7,12 @@ interface Styles {
 
 interface Props {
   focus?: boolean
+  disabledPointerEvents?: boolean
 }
 
 export const useFocusOutlineStyle = ({
   focus = false,
+  disabledPointerEvents = false,
 }: Props) => {
   const { color } = useTheme()
 
@@ -21,6 +23,7 @@ export const useFocusOutlineStyle = ({
         outlineWidth: 0,
         outlineOffset: 0,
         outlineStyle: 'none',
+        pointerEvents: disabledPointerEvents ? 'none' : 'auto',
       } : {}) as ViewStyle,
     },
   }

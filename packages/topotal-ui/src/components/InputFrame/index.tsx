@@ -17,6 +17,7 @@ interface Props {
   focus?: boolean
   error?: boolean
   size?: InputFrameSize
+  disabled?: boolean
   renderLeftItem?: () => ReactElement | null
   renderInput: (props: RenderInputProps) => ReactElement | null
 }
@@ -28,10 +29,11 @@ export const InputFrame = ({
   focus = false,
   error = false,
   size = 'large',
+  disabled = false,
   renderLeftItem,
   renderInput,
 }: Props): JSX.Element => {
-  const { styles } = useStyles({ size, focus, error, hasLeftItem: !!renderLeftItem })
+  const { styles } = useStyles({ size, focus, error, hasLeftItem: !!renderLeftItem, disabledPointerEvents: disabled })
 
   return (
     <HStack style={[styles.wrapper, style]} align="stretch">

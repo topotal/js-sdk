@@ -10,6 +10,7 @@ type BaseProps = {
   innerRef?: Ref<BaseInput>
   error?: boolean
   size?: InputFrameSize
+  disabled?: boolean
   startIconName?: string
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline'>
 
@@ -21,6 +22,7 @@ export const TextInput = memo<Props>(({
   autoCapitalize = 'none',
   error = false,
   size = 'large',
+  disabled = false,
   startIconName,
   innerRef,
   style,
@@ -40,6 +42,7 @@ export const TextInput = memo<Props>(({
       size={size}
       error={error}
       focus={isFocused}
+      disabled={disabled}
       placeholder={placeholder}
       showPlaceholder={!innerValue}
       renderLeftItem={startIconName ? () => (
@@ -51,6 +54,7 @@ export const TextInput = memo<Props>(({
       renderInput={({ style }) => (
         <BaseInput
           {...rest}
+          focusable={!disabled}
           value={innerValue}
           autoCapitalize={autoCapitalize}
           multiline={false}
