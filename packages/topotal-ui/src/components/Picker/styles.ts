@@ -1,4 +1,5 @@
 import { ImageStyle, Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { Size } from '.'
 
 interface Styles {
   picker: TextStyle
@@ -8,9 +9,20 @@ interface Styles {
 
 interface Props {
   hasValue: boolean
+  size: Size
 }
 
-export const useStyles = ({ hasValue }: Props) => {
+const getIconSize = (size: Size) => {
+  switch (size) {
+    case 'large':
+    case 'medium':
+      return 24
+    case 'small':
+      return 16
+  }
+}
+
+export const useStyles = ({ hasValue, size }: Props) => {
   const styles = StyleSheet.create<Styles>({
     picker: {
       borderWidth: 0,
@@ -26,8 +38,8 @@ export const useStyles = ({ hasValue }: Props) => {
       right: 8,
     },
     arrowIcon: {
-      width: 24,
-      height: 24,
+      width: getIconSize(size),
+      height: getIconSize(size),
     },
   })
 
