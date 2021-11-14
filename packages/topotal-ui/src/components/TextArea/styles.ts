@@ -1,4 +1,5 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { useTheme } from '../..'
 
 interface Styles {
   wrapper: ViewStyle
@@ -7,6 +8,8 @@ interface Styles {
 }
 
 export const useStyles = () => {
+  const { color } = useTheme()
+
   const styles = StyleSheet.create<Styles>({
     wrapper: {
       height: 'auto',
@@ -28,5 +31,6 @@ export const useStyles = () => {
 
   return {
     styles,
+    placeholderColor: color.secandaryTextDark,
   }
 }

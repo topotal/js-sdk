@@ -1,11 +1,6 @@
-import { ImageStyle, Platform, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
+import { useTheme } from '../..'
 import { Size } from '.'
-
-interface Styles {
-  picker: TextStyle
-  arrowIcon: ImageStyle
-  arrowIconWrapper: ViewStyle
-}
 
 interface Props {
   hasValue: boolean
@@ -23,7 +18,9 @@ const getIconSize = (size: Size) => {
 }
 
 export const useStyles = ({ hasValue, size }: Props) => {
-  const styles = StyleSheet.create<Styles>({
+  const { color } = useTheme()
+
+  const styles = StyleSheet.create({
     picker: {
       borderWidth: 0,
       backgroundColor: 'transparent',
@@ -32,6 +29,10 @@ export const useStyles = ({ hasValue, size }: Props) => {
         cursor: 'pointer',
         appearance: 'none',
       } : {}),
+    },
+    placeholder: {
+      position: 'absolute',
+      color: color.secandaryTextDark,
     },
     arrowIconWrapper: {
       position: 'absolute',

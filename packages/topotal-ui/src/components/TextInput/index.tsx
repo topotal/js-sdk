@@ -18,7 +18,6 @@ type Props = BaseProps & React.RefAttributes<BaseInput>
 
 export const TextInput = memo<Props>(({
   value = '',
-  placeholder = '',
   autoCapitalize = 'none',
   error = false,
   size = 'large',
@@ -34,7 +33,7 @@ export const TextInput = memo<Props>(({
     onChange: onChangeText,
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
-  const { styles } = useStyles()
+  const { styles, placeholderColor } = useStyles()
 
   return (
     <InputFrame
@@ -43,8 +42,6 @@ export const TextInput = memo<Props>(({
       error={error}
       focus={isFocused}
       disabled={disabled}
-      placeholder={placeholder}
-      showPlaceholder={!innerValue}
       renderLeftItem={startIconName ? () => (
         <Icon
           name={startIconName}
@@ -57,6 +54,7 @@ export const TextInput = memo<Props>(({
           focusable={!disabled}
           value={innerValue}
           autoCapitalize={autoCapitalize}
+          placeholderTextColor={placeholderColor}
           multiline={false}
           onChangeText={handleChange}
           onFocus={handleFocus}

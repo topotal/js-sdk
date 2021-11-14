@@ -14,7 +14,6 @@ type Props = BaseProps & React.RefAttributes<BaseInput>
 
 export const TextArea = memo<Props>(({
   value = '',
-  placeholder = '',
   autoCapitalize = 'none',
   error = false,
   innerRef,
@@ -27,14 +26,12 @@ export const TextArea = memo<Props>(({
     onChange: onChangeText,
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
-  const { styles } = useStyles()
+  const { styles, placeholderColor } = useStyles()
 
   return (
     <InputFrame
       style={[styles.wrapper, style]}
       error={error}
-      placeholder={placeholder}
-      showPlaceholder={!innerValue}
       focus={isFocused}
       renderInput={({ style }) => (
         <>
@@ -46,6 +43,7 @@ export const TextArea = memo<Props>(({
             value={innerValue}
             autoCapitalize={autoCapitalize}
             multiline
+            placeholderTextColor={placeholderColor}
             onChangeText={handleChange}
             onFocus={handleFocus}
             onBlur={handleBlur}

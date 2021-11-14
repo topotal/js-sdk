@@ -2,6 +2,7 @@ import { ReactElement } from 'react'
 import { Image, Picker as BasePicker, StyleProp, View, ViewStyle } from 'react-native'
 import { useFocus, useInputValue } from '../../hooks'
 import { InputFrame, InputFrameSize } from '../InputFrame'
+import { Text } from '..'
 import { useStyles } from './styles'
 
 interface Props {
@@ -37,10 +38,8 @@ export const Picker = Object.assign((({
     <InputFrame
       style={style}
       focus={isFocused}
-      placeholder={placeholder}
       size={size}
       error={error}
-      showPlaceholder={!innerValue}
       renderInput={({ style }) => (
         <>
           <BasePicker
@@ -51,9 +50,16 @@ export const Picker = Object.assign((({
             onBlur={handleBlur}
             onValueChange={handleChange}
           >
-            {value ? null : (<BasePicker.Item label="--" value="" />) }
+            {innerValue ? null : (
+              <BasePicker.Item label="--" value="" />
+            )}
             {children}
           </BasePicker>
+          {innerValue ? null : (
+            <Text style={[style, styles.placeholder]}>
+              {placeholder}
+            </Text>
+          )}
           <View pointerEvents="none" style={styles.arrowIconWrapper}>
             <Image
               style={styles.arrowIcon}
