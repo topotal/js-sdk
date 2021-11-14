@@ -5,5 +5,7 @@ export default {
 }
 
 export const Default = () => (
-  <TextArea placeholder="textarea" />
+  <TextArea
+    placeholder={'textarea\ntextarea'}
+  />
 )

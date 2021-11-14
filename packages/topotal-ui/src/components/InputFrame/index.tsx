@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import type { StyleProp, ViewStyle } from 'react-native'
 import { View } from 'react-native'
-import { HStack, Text } from '..'
+import { HStack } from '..'
 import { useStyles } from './styles'
 
 export type InputFrameSize = 'small' | 'medium' | 'large'
@@ -12,8 +12,6 @@ interface RenderInputProps {
 
 interface Props {
   style?: StyleProp<ViewStyle>
-  placeholder?: string
-  showPlaceholder?: boolean
   focus?: boolean
   error?: boolean
   size?: InputFrameSize
@@ -24,8 +22,6 @@ interface Props {
 
 export const InputFrame = ({
   style,
-  placeholder = '',
-  showPlaceholder = false,
   focus = false,
   error = false,
   size = 'large',
@@ -50,19 +46,6 @@ export const InputFrame = ({
         {renderInput({
           style: styles.input,
         })}
-        {showPlaceholder ? (
-          <HStack
-            style={styles.placeholderWrapper}
-            pointerEvents="none"
-          >
-            <Text
-              type="body"
-              style={styles.placeholder}
-            >
-              {placeholder}
-            </Text>
-          </HStack>
-        ) : null}
       </View>
     </HStack>
   )

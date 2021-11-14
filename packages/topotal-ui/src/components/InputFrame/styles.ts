@@ -9,8 +9,6 @@ import { getGeometryStyles } from './utils'
 interface Styles {
   wrapper: ViewStyle
   leftItemWrapper: ViewStyle
-  placeholderWrapper: ViewStyle
-  placeholder: TextStyle
   inputWrapper: ViewStyle
   input: TextStyle
 }
@@ -85,20 +83,6 @@ export const useStyles = ({
         outlineOffset: 0,
         outlineStyle: 'none',
       } : {}),
-    },
-    placeholderWrapper: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      paddingLeft,
-      paddingRight,
-      paddingVertical,
-    },
-    placeholder: {
-      lineHeight,
-      color: color.secandaryTextDark,
     },
   })
 
