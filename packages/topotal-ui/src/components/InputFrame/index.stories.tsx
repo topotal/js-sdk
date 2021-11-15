@@ -8,8 +8,6 @@ export default {
 export const Small = () => (
   <InputFrame
     size="small"
-    showPlaceholder
-    placeholder="Placeholder"
     renderInput={({ style }) => (
       <View style={style} />
     )}
@@ -19,8 +17,6 @@ export const Small = () => (
 export const Medium = () => (
   <InputFrame
     size="medium"
-    showPlaceholder
-    placeholder="Placeholder"
     renderInput={({ style }) => (
       <View style={style} />
     )}
@@ -30,8 +26,6 @@ export const Medium = () => (
 export const Large = () => (
   <InputFrame
     size="large"
-    showPlaceholder
-    placeholder="Placeholder"
     renderInput={({ style }) => (
       <View style={style} />
     )}
