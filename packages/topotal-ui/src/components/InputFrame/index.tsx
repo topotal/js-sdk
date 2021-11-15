@@ -29,7 +29,13 @@ export const InputFrame = ({
   renderLeftItem,
   renderInput,
 }: Props): JSX.Element => {
-  const { styles } = useStyles({ size, focus, error, hasLeftItem: !!renderLeftItem, disabledPointerEvents: disabled })
+  const { styles } = useStyles({
+    size,
+    focus,
+    error,
+    hasLeftItem: !!renderLeftItem,
+    disabledPointerEvents: disabled,
+  })
 
   return (
     <HStack style={[styles.wrapper, style]} align="stretch">
