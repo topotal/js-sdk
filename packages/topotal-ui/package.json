@@ -46,7 +46,7 @@
     "@storybook/react": "^6.1.10",
     "@topotal/eslint-config-react": "^0.2.3",
     "@topotal/eslint-config-typescript": "^0.2.0",
-    "@types/marked": "^2.0.3",
+    "@types/marked": "^4.0.1",
     "@types/react": "^17.0.0",
     "@types/react-is": "^17.0.0",
     "@types/react-native": "^0.65.0",
