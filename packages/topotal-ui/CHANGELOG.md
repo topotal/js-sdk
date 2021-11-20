@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.42.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.41.0...@topotal/topotal-ui@0.42.0) (2021-11-20)
+
+
+### Features
+
+* Add empty view prop to list ([48ee393](https://github.com/topotal/js-sdk/commit/48ee3932de5d6feedbedb2a2e086ce1bdc236c5c))
+
+
+
+
+
 # [0.41.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.40.5...@topotal/topotal-ui@0.41.0) (2021-11-15)
 
 
