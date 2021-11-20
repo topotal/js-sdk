@@ -1,29 +1,29 @@
-import { ReactElement, useCallback, useState } from 'react'
-import { StyleProp, ViewStyle } from 'react-native'
-import { Text } from '../Text'
+import { ReactElement, ReactNode, useCallback, useState } from 'react'
+import { StyleProp, View, ViewStyle } from 'react-native'
 import { VStack } from '../VStack'
+import { DefaultEmptyView } from './components/DefaultEmptyView'
 import { Row } from './components/Row'
 import { useStyles } from './styles'
 
-interface Props<T = any> {
+export interface Props<T> {
   data: T[]
   style?: StyleProp<ViewStyle>
   renderItem: (item: T, index: number) => ReactElement | null
-  emptyText?: string
+  emptyView?: ReactNode
   disabledChangeBackground?: boolean
   keyExtractor?: (item: T, index: number) => string
   onPressItem?: (item: T) => void
 }
 
-export const List = ({
+export const List = <T, >({
   data,
   style,
-  emptyText = 'No items found',
+  emptyView,
   disabledChangeBackground = false,
   renderItem,
   keyExtractor,
   onPressItem,
-}: Props): JSX.Element => {
+}: Props<T>): JSX.Element => {
   const [hoveredIndex, setHoveredIndex] = useState<number>()
   const { styles } = useStyles()
 
@@ -55,18 +55,9 @@ export const List = ({
           )
         })
       ) : (
-        <VStack
-          style={styles.emptyView}
-          align="center"
-          justify="center"
-        >
-          <Text
-            style={styles.emptyText}
-            weight="bold"
-          >
-            {emptyText}
-          </Text>
-        </VStack>
+        <View style={styles.emptyViewWrapper}>
+          {emptyView || (<DefaultEmptyView />)}
+        </View>
       )}
     </VStack>
   )

@@ -1,32 +1,20 @@
-import { TextStyle, ViewStyle } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { useTheme } from '../../theme'
-
-interface Styles {
-  wrapper: ViewStyle
-  emptyView: ViewStyle
-  emptyText: TextStyle
-}
 
 export const useStyles = () => {
   const { color } = useTheme()
 
-  const styles: Styles = {
+  const styles = StyleSheet.create({
     wrapper: {
       borderColor: color.borderLight,
       borderTopWidth: 1,
       borderBottomWidth: 1,
       overflow: 'hidden',
     },
-    emptyView: {
+    emptyViewWrapper: {
       backgroundColor: color.background,
-      height: '100%',
-      flex: 1,
-      paddingHorizontal: 24,
     },
-    emptyText: {
-      color: color.secandaryTextDark,
-    },
-  }
+  })
 
   return {
     styles,
