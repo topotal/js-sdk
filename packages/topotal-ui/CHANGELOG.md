@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.43.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.42.0...@topotal/topotal-ui@0.43.0) (2021-11-25)
+
+
+### Features
+
+* Add CodeSpan to MdRenderer ([def0f60](https://github.com/topotal/js-sdk/commit/def0f60d152cbe383185baf6fd30d8e5196b51e1))
+
+
+
+
+
 # [0.42.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.41.0...@topotal/topotal-ui@0.42.0) (2021-11-20)
 
 
