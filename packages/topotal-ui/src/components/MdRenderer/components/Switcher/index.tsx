@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleProp, TextStyle, ViewStyle } from 'react-native'
-import { SyntaxHighlighter, Text, VStack } from '../../..'
+import { SyntaxHighlighter, VStack } from '../../..'
 import { NormalizedToken } from '../../types'
 import { Heading } from '../Heading'
 import { List } from '../List'
@@ -49,9 +49,9 @@ export const Switcher = React.memo<Props>(({ token, firstRow, style }) => {
               />
             )
           case 'space':
-            return null
+          case 'html':
           default:
-            return <Text style={style}>{token?.raw}</Text>
+            return null
         }
       })()}
     </VStack>

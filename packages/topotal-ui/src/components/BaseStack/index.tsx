@@ -27,6 +27,10 @@ const createStyleInjectedChildren = (children: React.ReactNode, direction: Direc
       })
     }
 
+    if (typeof element === 'string') {
+      return element
+    }
+
     return React.cloneElement(element, {
       style: [getCellStyle(direction, gap, currentIndex), element.props.style],
     })
