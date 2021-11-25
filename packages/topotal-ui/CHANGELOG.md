@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.43.1...@topotal/topotal-ui@0.43.2) (2021-11-25)
+
+
+### Bug Fixes
+
+* Unsupport html in MdRenderer ([e7bd9a8](https://github.com/topotal/js-sdk/commit/e7bd9a872bbdaceb26cba7d1fe049fd2eb4d44f0))
+
+
+
+
+
 ## [0.43.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.43.0...@topotal/topotal-ui@0.43.1) (2021-11-25)
 
 
