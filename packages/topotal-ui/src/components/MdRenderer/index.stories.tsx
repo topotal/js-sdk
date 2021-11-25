@@ -85,7 +85,6 @@ end
 g = Greeter.new("world")
 g.salute
 \`\`\`
-
 `
 
 export const Default = () => (
