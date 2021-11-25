@@ -24,7 +24,6 @@ export const Paragraph = React.memo<Props>(({
   return (
     <Text style={style}>
       {tokens.length ? tokens.map((token, index) => {
-        console.info(token)
         switch (token.type) {
           case 'text':
             return unescapeHTML(token.text)
