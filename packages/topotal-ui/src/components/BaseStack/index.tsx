@@ -3,7 +3,7 @@ import { isFragment } from 'react-is'
 import { StyleProp, View, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
 import { Align, Direction, Justify } from './types'
-import { getCellStyle } from './utils'
+import { getCellStyle, isDOMTypeElement } from './utils'
 
 interface Props extends React.ComponentProps<typeof View> {
   direction: Direction
@@ -25,6 +25,10 @@ const createStyleInjectedChildren = (children: React.ReactNode, direction: Direc
       return React.cloneElement(element, {
         children: createStyleInjectedChildren(element.props.children, direction, gap),
       })
+    }
+
+    if (isDOMTypeElement(element)) {
+      return element
     }
 
     if (typeof element === 'string') {
