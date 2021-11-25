@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.43.2...@topotal/topotal-ui@0.43.3) (2021-11-25)
+
+
+### Bug Fixes
+
+* BaseStack ([0e3021c](https://github.com/topotal/js-sdk/commit/0e3021ce0de33552948dd652760c604058ad32a0))
+
+
+
+
+
 ## [0.43.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.43.1...@topotal/topotal-ui@0.43.2) (2021-11-25)
 
 
