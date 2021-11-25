@@ -3,6 +3,7 @@ import { StyleProp, TextStyle } from 'react-native'
 import { Tokens } from 'marked'
 import { Text } from '../../../Text'
 import { normalizeTokens, unescapeHTML } from '../../utils'
+import { CodeSpan } from '../CodeSpan'
 import { Link } from '../Link'
 import { Strong } from '../Strong'
 
@@ -23,6 +24,7 @@ export const Paragraph = React.memo<Props>(({
   return (
     <Text style={style}>
       {tokens.length ? tokens.map((token, index) => {
+        console.info(token)
         switch (token.type) {
           case 'text':
             return unescapeHTML(token.text)
@@ -30,6 +32,8 @@ export const Paragraph = React.memo<Props>(({
             return <Strong key={index} token={token} />
           case 'link':
             return <Link key={index} token={token} />
+          case 'codespan':
+            return <CodeSpan key={index} token={token} />
           default:
             return null
         }

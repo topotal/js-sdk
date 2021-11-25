@@ -59,6 +59,8 @@ long text long text long text long text long text long text
 
 ## Code
 
+これは文中に存在する \`code\` です
+
 \`\`\`html
 <script>alert()</script>
 \`\`\`
