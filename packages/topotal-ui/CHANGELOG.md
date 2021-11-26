@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.43.3...@topotal/topotal-ui@0.43.4) (2021-11-26)
+
+
+### Bug Fixes
+
+* Patch placeholder pointer event ([c64c965](https://github.com/topotal/js-sdk/commit/c64c965c282327f1ad562bf0d84dc41549592a03))
+
+
+
+
+
 ## [0.43.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.43.2...@topotal/topotal-ui@0.43.3) (2021-11-25)
 
 
