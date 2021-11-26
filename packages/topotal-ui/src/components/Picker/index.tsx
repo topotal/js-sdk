@@ -56,9 +56,11 @@ export const Picker = Object.assign((({
             {children}
           </BasePicker>
           {innerValue ? null : (
-            <Text style={[style, styles.placeholder]}>
-              {placeholder}
-            </Text>
+            <View pointerEvents="none" style={styles.placeholderWrapper}>
+              <Text style={[style, styles.placeholder]}>
+                {placeholder}
+              </Text>
+            </View>
           )}
           <View pointerEvents="none" style={styles.arrowIconWrapper}>
             <Image
