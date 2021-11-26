@@ -30,8 +30,10 @@ export const useStyles = ({ hasValue, size }: Props) => {
         appearance: 'none',
       } : {}),
     },
-    placeholder: {
+    placeholderWrapper: {
       position: 'absolute',
+    },
+    placeholder: {
       color: color.secandaryTextDark,
     },
     arrowIconWrapper: {
