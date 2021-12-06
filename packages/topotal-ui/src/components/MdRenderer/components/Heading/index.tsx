@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react'
 import { StyleProp, TextStyle } from 'react-native'
-import { Tokens } from 'marked'
+import { marked } from 'marked'
 import { useTheme } from '../../../../theme'
 import { Text } from '../../../Text'
 import { unescapeHTML } from '../../utils'
 
 interface Props {
-  token: Tokens.Heading
+  token: marked.Tokens.Heading
   firstRow?: boolean
   style?: StyleProp<TextStyle>
 }

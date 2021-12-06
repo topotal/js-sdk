@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
-import { lexer } from 'marked'
+import { Lexer } from 'marked'
 import { VStack } from '../VStack'
 import { Switcher } from './components/Switcher'
 import { NormalizedToken } from './types'
 import { normalizeTokens } from './utils'
+
+const lexer = new Lexer({ sanitize: false })
 
 interface Props {
   markdown: string
@@ -18,7 +20,7 @@ export const MdRenderer = React.memo<Props>(({
   tokenFilter = () => true,
 }) => {
   const tokens = useMemo(() => {
-    const rawToken = lexer(markdown)
+    const rawToken = lexer.lex(markdown)
     const normalizedToken = normalizeTokens(rawToken)
     return normalizedToken.filter(tokenFilter)
   }, [markdown, tokenFilter])

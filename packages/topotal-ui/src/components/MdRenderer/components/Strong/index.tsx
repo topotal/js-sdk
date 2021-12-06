@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleProp, TextStyle } from 'react-native'
-import { Tokens } from 'marked'
+import { marked } from 'marked'
 import { Text } from '../../../Text'
 import { unescapeHTML } from '../../utils'
 
 interface Props {
-  token: Tokens.Strong
+  token: marked.Tokens.Strong
   style?: StyleProp<TextStyle>
 }
 

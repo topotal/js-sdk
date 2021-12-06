@@ -1,12 +1,12 @@
 import React from 'react'
 import { AccessibilityRole, StyleProp, ViewStyle } from 'react-native'
-import { Tokens } from 'marked'
+import { marked } from 'marked'
 import { useTheme } from '../../../../theme'
 import { NormalizedToken, Text, VStack } from '../../..'
 import { Switcher } from '../Switcher'
 
 interface Props {
-  token: Tokens.List
+  token: marked.Tokens.List
   level?: number
   style?: StyleProp<ViewStyle>
 }

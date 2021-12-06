@@ -1,11 +1,11 @@
 import React from 'react'
-import { Tokens } from 'marked'
+import { marked } from 'marked'
 import { Text } from '../../../Text'
 import { unescapeHTML } from '../../utils'
 import { useStyles } from './styles'
 
 interface Props {
-  token: Tokens.Link
+  token: marked.Tokens.Link
 }
 
 export const Link = React.memo<Props>(({

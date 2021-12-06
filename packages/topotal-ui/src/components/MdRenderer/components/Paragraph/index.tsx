@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { StyleProp, TextStyle } from 'react-native'
-import { Tokens } from 'marked'
+import { marked } from 'marked'
 import { Text } from '../../../Text'
 import { normalizeTokens, unescapeHTML } from '../../utils'
 import { CodeSpan } from '../CodeSpan'
@@ -8,7 +8,7 @@ import { Link } from '../Link'
 import { Strong } from '../Strong'
 
 interface Props {
-  token: Tokens.Paragraph | Tokens.Text | Tokens.Tag
+  token: marked.Tokens.Paragraph | marked.Tokens.Text | marked.Tokens.Tag | marked.Tokens.HTML
   style?: StyleProp<TextStyle>
 }
 
@@ -26,7 +26,10 @@ export const Paragraph = React.memo<Props>(({
       {tokens.length ? tokens.map((token, index) => {
         switch (token.type) {
           case 'text':
+          case 'html':
             return unescapeHTML(token.text)
+          case 'escape':
+            return (<span key={index} dangerouslySetInnerHTML={{ __html: token.text }}/>)
           case 'strong':
             return <Strong key={index} token={token} />
           case 'link':
