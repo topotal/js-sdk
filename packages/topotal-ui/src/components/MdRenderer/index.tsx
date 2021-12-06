@@ -6,8 +6,6 @@ import { Switcher } from './components/Switcher'
 import { NormalizedToken } from './types'
 import { normalizeTokens } from './utils'
 
-const lexer = new Lexer({ sanitize: false })
-
 interface Props {
   markdown: string
   style?: StyleProp<ViewStyle>
@@ -20,6 +18,7 @@ export const MdRenderer = React.memo<Props>(({
   tokenFilter = () => true,
 }) => {
   const tokens = useMemo(() => {
+    const lexer = new Lexer({ sanitize: false })
     const rawToken = lexer.lex(markdown)
     const normalizedToken = normalizeTokens(rawToken)
     return normalizedToken.filter(tokenFilter)
