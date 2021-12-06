@@ -1,8 +1,8 @@
-import { Token } from 'marked'
+import { marked } from 'marked'
 import sanitizeHtml from 'sanitize-html'
 import { NormalizedToken } from './types'
 
-export const normalizeTokens = (tokens: Token[]): NormalizedToken[] => {
+export const normalizeTokens = (tokens: marked.Token[]): NormalizedToken[] => {
   return tokens.filter((token, index) => {
     if (!('type' in token)) {
       return false
@@ -20,5 +20,5 @@ export const normalizeTokens = (tokens: Token[]): NormalizedToken[] => {
 }
 
 export const unescapeHTML = (escapedHtml: string) => {
-  return `${sanitizeHtml(escapedHtml) || ''}`
+  return sanitizeHtml(escapedHtml) || ''
 }

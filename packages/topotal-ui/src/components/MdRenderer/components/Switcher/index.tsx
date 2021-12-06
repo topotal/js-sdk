@@ -19,6 +19,7 @@ export const Switcher = React.memo<Props>(({ token, firstRow, style }) => {
         switch (token.type) {
           case 'paragraph':
           case 'text':
+          case 'html':
             return (
               <Paragraph
                 style={style}
@@ -49,7 +50,6 @@ export const Switcher = React.memo<Props>(({ token, firstRow, style }) => {
               />
             )
           case 'space':
-          case 'html':
           default:
             return null
         }

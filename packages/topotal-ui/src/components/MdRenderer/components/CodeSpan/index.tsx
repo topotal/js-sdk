@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native'
-import { Tokens } from 'marked'
+import { marked } from 'marked'
 import { useTheme } from '../../../../'
 import { Text } from '../../..'
 
 interface Props {
-  token: Tokens.Codespan
+  token: marked.Tokens.Codespan
 }
 
 const useStyles = () => {
