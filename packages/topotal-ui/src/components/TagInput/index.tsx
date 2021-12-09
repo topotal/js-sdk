@@ -1,7 +1,7 @@
 import { memo, useCallback, useEffect, useRef, useState } from 'react'
-import { NativeSyntheticEvent, StyleProp, TextInput as BaseInput, TextInput, TextInputKeyPressEventData, ViewStyle } from 'react-native'
+import { NativeSyntheticEvent, StyleProp, TextInput as BaseInput, TextInput, TextInputKeyPressEventData, View, ViewStyle } from 'react-native'
 import { useFocus, useInputValue } from '../../hooks'
-import { HStack, InputFrame } from '..'
+import { HStack, InputFrame, Text, VStack } from '..'
 import { Tag } from './components/Tag'
 import { useStyles } from './styles'
 
@@ -68,6 +68,11 @@ export const TagInput = memo<Props>(({
     onChange?.(newValue)
   }, [innerValue, onChange])
 
+  const handleBlurInput = useCallback(() => {
+    handleTextChange('')
+    handleBlur()
+  }, [handleBlur, handleTextChange])
+
   useEffect(() => {
     const inputElement = ref.current as unknown as HTMLInputElement
     inputElement?.addEventListener('compositionstart', handleCompositionStart)
@@ -79,37 +84,45 @@ export const TagInput = memo<Props>(({
   }, [handleCompositionEnd, handleCompositionStart])
 
   return (
-    <InputFrame
-      style={style}
-      error={error}
-      focus={isFocused}
-      disabled={disabled}
-      renderInput={({ style }) => (
-        <HStack
-          style={[style, styles.inputWrapper]}
-          align="flex-start"
-        >
-          {innerValue.map(tagData => (
-            <Tag
-              key={tagData.value}
-              tagData={tagData}
-              onPressRemove={handlePressRemoveTag}
+    <VStack style={style}>
+      <InputFrame
+        error={error}
+        focus={isFocused}
+        disabled={disabled}
+        renderInput={({ style }) => (
+          <HStack
+            style={[style, styles.inputWrapper]}
+            align="flex-start"
+          >
+            {innerValue.map(tagData => (
+              <Tag
+                key={tagData.value}
+                tagData={tagData}
+                onPressRemove={handlePressRemoveTag}
+              />
+            ))}
+            <BaseInput
+              ref={element => ref.current = element}
+              style={[style, styles.textInput]}
+              focusable={!disabled}
+              value={textValue}
+              multiline={false}
+              placeholder={placeholder}
+              onKeyPress={handlePressKey}
+              onChangeText={handleTextChange}
+              onFocus={handleFocus}
+              onBlur={handleBlurInput}
             />
-          ))}
-          <BaseInput
-            ref={element => ref.current = element}
-            style={[style, styles.textInput]}
-            focusable={!disabled}
-            value={textValue}
-            multiline={false}
-            placeholder={placeholder}
-            onKeyPress={handlePressKey}
-            onChangeText={handleTextChange}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-          />
-        </HStack>
-      )}
-    />
+          </HStack>
+        )}
+      />
+      {textValue && isFocused ? (
+        <View style={styles.dropdown}>
+          <HStack style={styles.dropdownContainer}>
+            <Text>Press Enter...</Text>
+          </HStack>
+        </View>
+      ) : null}
+    </VStack>
   )
 })
