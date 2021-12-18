@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.45.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.45.1...@topotal/topotal-ui@0.45.2) (2021-12-18)
+
+
+### Bug Fixes
+
+* Patch theme type ([bd6451a](https://github.com/topotal/js-sdk/commit/bd6451a51d2f1fdec8e1271f2f0c7cd65da9cfac))
+
+
+
+
+
 ## [0.45.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.45.0...@topotal/topotal-ui@0.45.1) (2021-12-09)
 
 
