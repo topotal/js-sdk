@@ -1,6 +1,6 @@
 {
   "name": "@topotal/eslint-config-react",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "This is a common ESlint setting for React used within Topotal",
   "homepage": "https://github.com/topotal/js-sdk#readme",
   "bugs": {
