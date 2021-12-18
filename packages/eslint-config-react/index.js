@@ -14,6 +14,8 @@ module.exports = {
     "react-hooks",
   ],
   rules: {
+    "react/jsx-quotes": 0,
+    "jsx-quotes": "error",
     "react/self-closing-comp": ["error", {
       "component": true,
       "html": true
@@ -22,6 +24,7 @@ module.exports = {
       "additionalHooks": "(useAsync|useAsyncFn)"
     }],
     "react/jsx-key": ["error"],
+    "react/jsx-newline": ["error", { "prevent": true }],
     "react/prop-types": "off",
     "react/display-name": "off",
     "react/jsx-uses-react": "off",
