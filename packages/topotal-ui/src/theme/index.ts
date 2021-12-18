@@ -75,12 +75,12 @@ export const defaultTheme = {
     level4: 400,
   },
   iconBasePath: '/icons',
-} as const
+}
 
-export type Theme = typeof defaultTheme
 export type ThemeColor = typeof defaultTheme.color
 export type PaletteColor = typeof palette
 export type BorderRadius = typeof defaultTheme.radius
+export type Theme = typeof defaultTheme
 
 export const ThemeContext = React.createContext(defaultTheme)
 
