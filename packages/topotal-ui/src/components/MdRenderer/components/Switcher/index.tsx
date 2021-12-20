@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyleProp, TextStyle, ViewStyle } from 'react-native'
 import { SyntaxHighlighter, VStack } from '../../..'
 import { NormalizedToken } from '../../types'
@@ -12,7 +11,7 @@ interface Props {
   style?: StyleProp<ViewStyle> | StyleProp<TextStyle>
 }
 
-export const Switcher = React.memo<Props>(({ token, firstRow, style }) => {
+export const Switcher = ({ token, firstRow, style }: Props): JSX.Element => {
   return (
     <VStack gap={16}>
       {(() => {
@@ -56,4 +55,4 @@ export const Switcher = React.memo<Props>(({ token, firstRow, style }) => {
       })()}
     </VStack>
   )
-})
+}
