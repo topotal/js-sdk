@@ -89,6 +89,9 @@ g.salute
 ## 不等号
 
 \\>  \\<
+
+## 画像
+![サンプル画像](http://localhost:3000/images/infrastructure_as_code.svg)
 `
 
 export const Default = () => (
