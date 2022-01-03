@@ -24,15 +24,16 @@ export const useTagInput = ({ value, onChange }: Props) => {
   }, [])
 
   const handlePressKey = useCallback((event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
-    if (event.nativeEvent.key === 'Backspace') {
-      if (textValue === '' && innerValue.length) {
-        event.preventDefault()
+    if (
+      event.nativeEvent.key === 'Backspace' &&
+      textValue === ''
+    ) {
+      event.preventDefault()
 
-        const newValue = [...innerValue]
-        newValue.pop()
-        setInnerValue(newValue)
-        return
-      }
+      const newValue = [...innerValue]
+      newValue.pop()
+      setInnerValue(newValue)
+      return
     }
 
     if (event.nativeEvent.key === 'Enter') {
@@ -57,7 +58,14 @@ export const useTagInput = ({ value, onChange }: Props) => {
   const handleBlurInput = useCallback(() => {
     setTextValue('')
     handleBlur()
-  }, [handleBlur, setTextValue])
+
+    if (!textValue) return
+    if (innerValue.find(tag => tag.value === textValue)) return
+
+    const newValue = [...innerValue, { label: textValue, value: textValue }]
+    setInnerValue(newValue)
+    onChange?.(newValue)
+  }, [handleBlur, innerValue, onChange, textValue])
 
   useEffect(() => {
     const inputElement = ref.current as unknown as HTMLInputElement
