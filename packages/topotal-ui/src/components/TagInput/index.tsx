@@ -24,7 +24,7 @@ export const TagInput = memo<Props>(({
   style,
   value,
   error,
-  placeholder = 'Incert new item...',
+  placeholder = 'Insert new item...',
   disabled,
   onChange,
 }) => {
