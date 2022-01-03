@@ -1,8 +1,8 @@
-import { memo, useCallback, useEffect, useRef, useState } from 'react'
-import { NativeSyntheticEvent, StyleProp, TextInput as BaseInput, TextInput, TextInputKeyPressEventData, View, ViewStyle } from 'react-native'
-import { useFocus, useInputValue } from '../../hooks'
+import { memo } from 'react'
+import { StyleProp, TextInput as BaseInput, View, ViewStyle } from 'react-native'
 import { HStack, InputFrame, Text, VStack } from '..'
 import { Tag } from './components/Tag'
+import { useTagInput } from './hooks'
 import { useStyles } from './styles'
 
 export interface TagData {
@@ -20,68 +20,29 @@ interface Props {
   onChange?: (value: TagData[]) => void
 }
 
-const defaultValue: TagData[] = []
-
 export const TagInput = memo<Props>(({
   style,
-  value = defaultValue,
+  value,
   error,
   placeholder = 'Incert new item...',
   disabled,
   onChange,
 }) => {
-  const [innerValue, setInnerValue] = useState<TagData[]>(value)
-  const { innerValue: textValue, handleChange: handleTextChange } = useInputValue<string>({ value: '' })
-  const [compositionFnished, setCompositionFinished] = useState(true)
-  const { isFocused, handleFocus, handleBlur } = useFocus()
   const { styles } = useStyles()
-  const ref = useRef<TextInput | null>()
-
-  const handleCompositionStart = useCallback(() => {
-    setCompositionFinished(false)
-  }, [])
-
-  const handleCompositionEnd = useCallback(() => {
-    setCompositionFinished(true)
-  }, [])
-
-  const handlePressKey = useCallback((event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
-    if (event.nativeEvent.key === 'Enter') {
-      event.preventDefault()
-
-      if (!textValue || !compositionFnished) return
-
-      handleTextChange('')
-
-      if (innerValue.find(tag => tag.value === textValue)) {
-        return
-      }
-      const newValue = [...innerValue, { label: textValue, value: textValue }]
-      setInnerValue(newValue)
-      onChange?.(newValue)
-    }
-  }, [compositionFnished, handleTextChange, innerValue, onChange, textValue])
-
-  const handlePressRemoveTag = useCallback((targetTagData: TagData) => {
-    const newValue = [...innerValue].filter(tagData => tagData.value !== targetTagData.value)
-    setInnerValue(newValue)
-    onChange?.(newValue)
-  }, [innerValue, onChange])
-
-  const handleBlurInput = useCallback(() => {
-    handleTextChange('')
-    handleBlur()
-  }, [handleBlur, handleTextChange])
-
-  useEffect(() => {
-    const inputElement = ref.current as unknown as HTMLInputElement
-    inputElement?.addEventListener('compositionstart', handleCompositionStart)
-    inputElement?.addEventListener('compositionend', handleCompositionEnd)
-    return () => {
-      inputElement?.removeEventListener('compositionstart', handleCompositionStart)
-      inputElement?.removeEventListener('compositionend', handleCompositionEnd)
-    }
-  }, [handleCompositionEnd, handleCompositionStart])
+  const {
+    innerValue,
+    textValue,
+    isFocused,
+    ref,
+    handleBlurInput,
+    handleFocus,
+    handlePressKey,
+    handlePressRemoveTag,
+    handleTextChange,
+  } = useTagInput({
+    value,
+    onChange,
+  })
 
   return (
     <VStack style={style}>
