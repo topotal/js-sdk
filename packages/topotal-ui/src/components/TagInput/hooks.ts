@@ -24,6 +24,17 @@ export const useTagInput = ({ value, onChange }: Props) => {
   }, [])
 
   const handlePressKey = useCallback((event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
+    if (event.nativeEvent.key === 'Backspace') {
+      if (textValue === '' && innerValue.length) {
+        event.preventDefault()
+
+        const newValue = [...innerValue]
+        newValue.pop()
+        setInnerValue(newValue)
+        return
+      }
+    }
+
     if (event.nativeEvent.key === 'Enter') {
       event.preventDefault()
 
