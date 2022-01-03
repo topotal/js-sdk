@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { NativeSyntheticEvent, TextInput, TextInputKeyPressEventData } from 'react-native'
-import { useFocus } from '../../hooks'
+import { useFocus, useInputValue } from '../../hooks'
 import { TagData } from '.'
 
 interface Props {
@@ -8,10 +8,13 @@ interface Props {
   onChange?: (value: TagData[]) => void
 }
 
-export const useTagInput = ({ value, onChange }: Props) => {
+export const useTagInput = ({
+  value,
+  onChange,
+}: Props) => {
   const [innerValue, setInnerValue] = useState<TagData[]>(value || [])
-  const [textValue, setTextValue] = useState('')
-  const [compositionFinished, setCompositionFinished] = useState(true)
+  const { innerValue: textValue, handleChange: handleTextChange } = useInputValue<string>({ value: '' })
+  const [compositionFnished, setCompositionFinished] = useState(true)
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const ref = useRef<TextInput | null>()
 
@@ -39,15 +42,18 @@ export const useTagInput = ({ value, onChange }: Props) => {
     if (event.nativeEvent.key === 'Enter') {
       event.preventDefault()
 
-      if (!textValue || !compositionFinished) return
+      if (!textValue || !compositionFnished) return
 
-      setTextValue('')
-      if (innerValue.find(tag => tag.value === textValue)) return
+      handleTextChange('')
+
+      if (innerValue.find(tag => tag.value === textValue)) {
+        return
+      }
       const newValue = [...innerValue, { label: textValue, value: textValue }]
       setInnerValue(newValue)
       onChange?.(newValue)
     }
-  }, [compositionFinished, setTextValue, innerValue, onChange, textValue])
+  }, [compositionFnished, handleTextChange, innerValue, onChange, textValue])
 
   const handlePressRemoveTag = useCallback((targetTagData: TagData) => {
     const newValue = [...innerValue].filter(tagData => tagData.value !== targetTagData.value)
@@ -56,7 +62,7 @@ export const useTagInput = ({ value, onChange }: Props) => {
   }, [innerValue, onChange])
 
   const handleBlurInput = useCallback(() => {
-    setTextValue('')
+    handleTextChange('')
     handleBlur()
 
     if (!textValue) return
@@ -65,7 +71,7 @@ export const useTagInput = ({ value, onChange }: Props) => {
     const newValue = [...innerValue, { label: textValue, value: textValue }]
     setInnerValue(newValue)
     onChange?.(newValue)
-  }, [handleBlur, innerValue, onChange, textValue])
+  }, [handleBlur, handleTextChange, innerValue, onChange, textValue])
 
   useEffect(() => {
     const inputElement = ref.current as unknown as HTMLInputElement
@@ -86,6 +92,6 @@ export const useTagInput = ({ value, onChange }: Props) => {
     handlePressRemoveTag,
     handleFocus,
     handleBlurInput,
-    handleTextChange: setTextValue,
+    handleTextChange,
   }
 }

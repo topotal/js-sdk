@@ -1,6 +1,7 @@
 export * from './useFocusBlur'
 export * from './useFocusOutlineStyle'
 export * from './useHover'
+export * from './useInputValue'
 export * from './useMeasure'
 export * from './useOnlyOnceEffect'
 export * from './useOnlyOnceMemo'
