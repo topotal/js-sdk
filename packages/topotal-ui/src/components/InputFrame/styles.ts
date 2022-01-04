@@ -55,6 +55,7 @@ export const useStyles = ({
       backgroundColor: focus ? color.transparent : color.background,
       borderRadius: radius.level1,
       overflow: 'hidden',
+      opacity: disabledPointerEvents ? 0.4 : 1,
       ...focusOutlineStyle.wrapper,
     },
     leftItemWrapper: {
