@@ -36,6 +36,7 @@ export const useTagInput = ({
       const newValue = [...innerValue]
       newValue.pop()
       setInnerValue(newValue)
+      onChange?.(newValue)
       return
     }
 

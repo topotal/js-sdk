@@ -28,7 +28,7 @@ export const TagInput = memo<Props>(({
   disabled,
   onChange,
 }) => {
-  const { styles } = useStyles()
+  const { styles, placeholderColor } = useStyles()
   const {
     innerValue,
     textValue,
@@ -69,6 +69,7 @@ export const TagInput = memo<Props>(({
               value={textValue}
               multiline={false}
               placeholder={placeholder}
+              placeholderTextColor={placeholderColor}
               onKeyPress={handlePressKey}
               onChangeText={handleTextChange}
               onFocus={handleFocus}
