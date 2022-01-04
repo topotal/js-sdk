@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.46.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.46.2...@topotal/topotal-ui@0.46.4) (2022-01-04)
+
+
+### Bug Fixes
+
+* Add disabled prop to TextArea ([#222](https://github.com/topotal/js-sdk/issues/222)) ([f020f38](https://github.com/topotal/js-sdk/commit/f020f3804b22d97c3886ef3935846f8225ecb157))
+* Patch TagInput style ([#223](https://github.com/topotal/js-sdk/issues/223)) ([a8e0e0b](https://github.com/topotal/js-sdk/commit/a8e0e0b9b1f5a6dab94434dcd00ab3911bba9c24))
+
+
+
+
+
 ## [0.46.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.46.2...@topotal/topotal-ui@0.46.3) (2022-01-04)
 
 
