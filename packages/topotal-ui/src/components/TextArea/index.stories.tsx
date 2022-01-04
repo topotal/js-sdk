@@ -9,3 +9,10 @@ export const Default = () => (
     placeholder={'textarea\ntextarea'}
   />
 )
+
+export const Disabled = () => (
+  <TextArea
+    value={'textarea\ntextarea'}
+    disabled
+  />
+)

@@ -12,7 +12,7 @@ type BaseProps = {
   size?: InputFrameSize
   disabled?: boolean
   startIconName?: string
-} & Omit<React.ComponentProps<typeof BaseInput>, 'multiline'>
+} & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
 

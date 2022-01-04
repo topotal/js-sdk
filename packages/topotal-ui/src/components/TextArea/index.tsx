@@ -8,7 +8,8 @@ import { useStyles } from './styles'
 type BaseProps = {
   innerRef?: Ref<BaseInput>
   error?: boolean
-} & Omit<React.ComponentProps<typeof BaseInput>, 'multiline'>
+  disabled?: boolean
+} & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
 
@@ -16,6 +17,7 @@ export const TextArea = memo<Props>(({
   value = '',
   autoCapitalize = 'none',
   error = false,
+  disabled = false,
   innerRef,
   style,
   onChangeText,
@@ -33,6 +35,7 @@ export const TextArea = memo<Props>(({
       style={[styles.wrapper, style]}
       error={error}
       focus={isFocused}
+      disabled={disabled}
       renderInput={({ style }) => (
         <>
           <Text style={[style, styles.dummyText]}>
@@ -40,6 +43,7 @@ export const TextArea = memo<Props>(({
           </Text>
           <BaseInput
             {...rest}
+            focusable={!disabled}
             value={innerValue}
             autoCapitalize={autoCapitalize}
             multiline
