@@ -10,7 +10,7 @@ export const all = () => (
     <TextInput secureTextEntry placeholder="Password" />
     <TextInput error />
     <TextInput value="default value" onChangeText={value => console.info(value)}/>
-    <TextInput disabled />
+    <TextInput value="disabled" disabled />
     <TextInput size="medium" />
     <TextInput size="medium" startIconName="search" placeholder="Search" />
     <TextInput size="medium" placeholder="Sample Placeholder" />
