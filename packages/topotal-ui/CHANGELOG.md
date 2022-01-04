@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.46.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.46.1...@topotal/topotal-ui@0.46.2) (2022-01-04)
+
+
+### Bug Fixes
+
+* Patch InputFrame ([#221](https://github.com/topotal/js-sdk/issues/221)) ([d4f34b0](https://github.com/topotal/js-sdk/commit/d4f34b062bbf2ef10bc550e415c23bc2c1dda067))
+
+
+
+
+
 ## [0.46.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.46.0...@topotal/topotal-ui@0.46.1) (2022-01-03)
 
 **Note:** Version bump only for package @topotal/topotal-ui
