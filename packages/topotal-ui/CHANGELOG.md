@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.47.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.46.4...@topotal/topotal-ui@0.47.0) (2022-01-05)
+
+
+### Features
+
+* Add innerOutline prop to Button ([29ddd1e](https://github.com/topotal/js-sdk/commit/29ddd1e8fa6c36cbd354fcebdf22d8ee4ef711a0))
+
+
+
+
+
 ## [0.46.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.46.2...@topotal/topotal-ui@0.46.4) (2022-01-04)
 
 
