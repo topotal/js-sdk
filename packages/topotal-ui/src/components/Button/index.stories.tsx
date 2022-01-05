@@ -86,5 +86,6 @@ export const all = () => (
     <Button title="" size="small" endIconName="done" />
     <Button title="" size="medium" endIconName="done" />
     <Button title="" size="large" endIconName="done" />
+    <Button title="InnerOutline" innerOutline variant="outline" />
   </VStack>
 )
