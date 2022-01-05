@@ -14,6 +14,7 @@ interface Props {
   loading?: boolean
   startIconName?: string
   endIconName?: string
+  innerOutline?: boolean
   style?: StyleProp<ViewStyle>
   onPress?: (e: BaseSyntheticEvent) => void
 }
@@ -27,12 +28,13 @@ export const Button = memo<Props>(({
   loading = false,
   startIconName,
   endIconName,
+  innerOutline = false,
   style,
   onPress,
 }) => {
   const { hovering, handleHoverIn, handleHoverOut } = useHover()
   const { isFocused, handleBlur, handleFocus } = useFocus()
-  const { styles: focusOutlineStyles } = useFocusOutlineStyle({ focus: isFocused })
+  const { styles: focusOutlineStyles } = useFocusOutlineStyle({ focus: isFocused, innerOutline })
   const { styles, indicatorColor, textType } = useStyles({
     size,
     color,
