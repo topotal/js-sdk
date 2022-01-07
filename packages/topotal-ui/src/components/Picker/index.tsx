@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
-import { Image, Picker as BasePicker, StyleProp, View, ViewStyle } from 'react-native'
+import { Image, StyleProp, View, ViewStyle } from 'react-native'
+import { Picker as BasePicker } from '@react-native-picker/picker'
 import { useFocus, useInputValue } from '../../hooks'
 import { InputFrame, InputFrameSize } from '../InputFrame'
 import { Text } from '..'
