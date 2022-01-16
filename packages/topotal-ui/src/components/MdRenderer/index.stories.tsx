@@ -92,6 +92,10 @@ g.salute
 
 ## 画像
 ![サンプル画像](http://localhost:3000/images/infrastructure_as_code.svg)
+
+\`\`\`
+tail {{sample}} | grep hoge
+\`\`\`
 `
 
 export const Default = () => (

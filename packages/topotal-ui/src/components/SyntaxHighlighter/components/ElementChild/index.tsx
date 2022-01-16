@@ -21,7 +21,7 @@ export const ElementChild = React.memo<Props>(({
   const color = useMemo(() => {
     const lastItemIndex = childData.properties.className.length - 1
     const className = childData.properties.className[lastItemIndex] || 'hljs'
-    return stylesheet[className].color
+    return stylesheet[className]?.color || stylesheet['hljs']?.color || ''
   }, [childData.properties.className, stylesheet])
 
   return (
