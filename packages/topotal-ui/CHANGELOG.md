@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.48.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.48.0...@topotal/topotal-ui@0.48.1) (2022-01-16)
+
+
+### Bug Fixes
+
+* Add picker alias setting for storybook ([#227](https://github.com/topotal/js-sdk/issues/227)) ([e7499b7](https://github.com/topotal/js-sdk/commit/e7499b7c8bb15c87a43010f5233684289c049a64))
+
+
+
+
+
 # [0.48.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.46.4...@topotal/topotal-ui@0.48.0) (2022-01-07)
 
 
