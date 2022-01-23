@@ -31,6 +31,6 @@ export const useStyles = () => {
 
   return {
     styles,
-    placeholderColor: color.secandaryTextDark,
+    placeholderColor: color.secondaryTextDark,
   }
 }

@@ -13,7 +13,7 @@ export const useStyles = () => {
       paddingLeft: 8,
       paddingRight: 4,
       borderRadius: 16,
-      backgroundColor: color.secandaryTextDark,
+      backgroundColor: color.secondaryTextDark,
     },
     label: {
       color: color.primaryTextLight,

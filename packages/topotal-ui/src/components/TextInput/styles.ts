@@ -12,12 +12,12 @@ export const useStyles = () => {
     icon: {
       width: '50%',
       height: '50%',
-      tintColor: color.secandaryTextDark,
+      tintColor: color.secondaryTextDark,
     },
   }
 
   return {
     styles,
-    placeholderColor: color.secandaryTextDark,
+    placeholderColor: color.secondaryTextDark,
   }
 }

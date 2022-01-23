@@ -10,7 +10,7 @@ export const useStyles = () => {
       paddingHorizontal: 16,
     },
     text: {
-      color: color.secandaryTextDark,
+      color: color.secondaryTextDark,
     },
   })
 

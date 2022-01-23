@@ -87,21 +87,21 @@ const getBasicColorMaterial = (
     case 'outline':
       return {
         opacity,
-        backgroundColor: hovering ? 'secandaryTextLight' : 'transparent',
+        backgroundColor: hovering ? 'secondaryTextLight' : 'transparent',
         borderColor: 'borderLight',
         fontColor: 'primaryTextDark',
       }
     case 'text':
       return {
         opacity,
-        backgroundColor: hovering ? 'secandaryTextLight' : 'transparent',
+        backgroundColor: hovering ? 'secondaryTextLight' : 'transparent',
         borderColor: 'transparent',
         fontColor: 'primaryTextDark',
       }
     case 'contain':
       return {
         opacity,
-        backgroundColor: hovering ? 'secandaryTextDark' : 'cancelLight',
+        backgroundColor: hovering ? 'secondaryTextDark' : 'cancelLight',
         borderColor: 'transparent',
         fontColor: 'primaryTextDark',
       }
