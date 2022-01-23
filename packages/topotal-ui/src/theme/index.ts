@@ -88,14 +88,14 @@ export const useTheme = () => {
   return useContext(ThemeContext)
 }
 
-export interface ScrollManipulater {
+export interface ScrollManipulator {
   getScrollY: () => number
 }
-const defaultScrollManipulater: ScrollManipulater = {
+const defaultScrollManipulator: ScrollManipulator = {
   getScrollY: () => { return 0 },
 }
-export const ScrollManipulaterContext = React.createContext(defaultScrollManipulater)
+export const ScrollManipulatorContext = React.createContext(defaultScrollManipulator)
 
-export const useScrollManipulater = () => {
-  return useContext(ScrollManipulaterContext)
+export const useScrollManipulator = () => {
+  return useContext(ScrollManipulatorContext)
 }
