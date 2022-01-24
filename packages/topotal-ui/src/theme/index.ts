@@ -41,9 +41,9 @@ export const defaultTheme = {
     cancelLight: '#E5E5E5',
     cancelDark: '#4F4F4F',
     primaryTextDark: palette.sumi,
-    secandaryTextDark: palette.katana,
+    secondaryTextDark: palette.katana,
     primaryTextLight: palette.yuki,
-    secandaryTextLight: palette.kasumi,
+    secondaryTextLight: palette.kasumi,
     primary: '#1765C1',
     primaryLight: '#D7E9FF',
     primaryDark: '#124F97',
@@ -88,14 +88,14 @@ export const useTheme = () => {
   return useContext(ThemeContext)
 }
 
-export interface ScrollManipulater {
+export interface ScrollManipulator {
   getScrollY: () => number
 }
-const defaultScrollManipulater: ScrollManipulater = {
+const defaultScrollManipulator: ScrollManipulator = {
   getScrollY: () => { return 0 },
 }
-export const ScrollManipulaterContext = React.createContext(defaultScrollManipulater)
+export const ScrollManipulatorContext = React.createContext(defaultScrollManipulator)
 
-export const useScrollManipulater = () => {
-  return useContext(ScrollManipulaterContext)
+export const useScrollManipulator = () => {
+  return useContext(ScrollManipulatorContext)
 }

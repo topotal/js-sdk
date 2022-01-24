@@ -33,7 +33,7 @@ export const Skelton = memo<Props>(({ style }) => {
       style={[{
         width: 100,
         height: 100,
-        backgroundColor: color.secandaryTextDark,
+        backgroundColor: color.secondaryTextDark,
         opacity: fadeAnim,
       }, style]}
     />

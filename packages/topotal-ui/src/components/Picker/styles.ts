@@ -34,7 +34,7 @@ export const useStyles = ({ hasValue, size }: Props) => {
       position: 'absolute',
     },
     placeholder: {
-      color: color.secandaryTextDark,
+      color: color.secondaryTextDark,
     },
     arrowIconWrapper: {
       position: 'absolute',
