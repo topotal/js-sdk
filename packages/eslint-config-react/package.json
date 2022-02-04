@@ -15,8 +15,8 @@
   "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "main": "index.js",
   "devDependencies": {
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
   },
   "peerDependencies": {
     "eslint-plugin-react": "7.x",
