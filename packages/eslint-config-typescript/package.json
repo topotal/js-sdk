@@ -14,8 +14,8 @@
   "author": "sawa-zen <sawadasuiren@gmail.com>",
   "main": "main.js",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "@typescript-eslint/parser": "^4.28.3"
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "4.x",
