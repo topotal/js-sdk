@@ -18,6 +18,7 @@ interface Props {
   placeholder?: string
   disabled?: boolean
   onChange?: (value: TagData[]) => void
+  testId?: string
 }
 
 export const TagInput = memo<Props>(({

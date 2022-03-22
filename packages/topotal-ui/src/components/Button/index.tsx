@@ -17,6 +17,7 @@ interface Props {
   innerOutline?: boolean
   style?: StyleProp<ViewStyle>
   onPress?: (e: BaseSyntheticEvent) => void
+  testId?: string
 }
 
 export const Button = memo<Props>(({

@@ -9,6 +9,7 @@ type BaseProps = {
   innerRef?: Ref<BaseInput>
   error?: boolean
   disabled?: boolean
+  testId?: string
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>

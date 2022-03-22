@@ -8,6 +8,7 @@ interface Props {
   uri: string
   size?: UserIconSize
   style?: StyleProp<ViewStyle>
+  testId?: string
 }
 
 export const UserIcon = React.memo<Props>(({

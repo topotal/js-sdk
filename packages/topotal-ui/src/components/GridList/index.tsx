@@ -12,6 +12,7 @@ interface Props<T = any> {
   style?: StyleProp<ViewStyle>
   renderItem: (item: T) => ReactElement | null
   endItem?: () => ReactElement | null
+  testId?: string
 }
 
 export const GridList = memo<Props>(({

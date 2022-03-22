@@ -9,6 +9,7 @@ type Props = BaseTextProps & {
   type?: TextType
   weight?: FontWeight
   style?: StyleProp<TextStyle>
+  testId?: string
 }
 
 export const Text: React.FC<Props> = ({

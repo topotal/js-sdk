@@ -11,6 +11,7 @@ interface Props extends React.ComponentProps<typeof View> {
   align?: Align
   justify?: Justify
   style?: StyleProp<ViewStyle>
+  testId?: string
 }
 
 const createStyleInjectedChildren = (children: React.ReactNode, direction: Direction, gap: number): React.ReactNode => {

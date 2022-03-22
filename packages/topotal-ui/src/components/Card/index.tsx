@@ -11,6 +11,7 @@ interface Props {
   footer?: React.ReactNode
   level?: Level
   style?: StyleProp<ViewStyle>
+  testId?: string
 }
 
 export const Card: React.FC<Props> = ({

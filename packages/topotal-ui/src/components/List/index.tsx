@@ -13,6 +13,7 @@ export interface Props<T> {
   disabledChangeBackground?: boolean
   keyExtractor?: (item: T, index: number) => string
   onPressItem?: (item: T) => void
+  testId?: string
 }
 
 export const List = <T, >({

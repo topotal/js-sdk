@@ -6,6 +6,7 @@ import { useStyles } from './styles'
 interface Props {
   name: string
   style?: StyleProp<ImageStyle>
+  testId?: string
 }
 
 export const Icon = React.memo<Props>(({

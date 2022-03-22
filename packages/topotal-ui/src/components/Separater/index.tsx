@@ -7,6 +7,7 @@ import { useStyles } from './styles'
 interface Props {
   text: string
   style?: StyleProp<ViewStyle>
+  testId?: string
 }
 
 export const Separater = React.memo<Props>(({ text, style }) => {

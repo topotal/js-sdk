@@ -15,6 +15,7 @@ interface Props {
   disabled?: boolean
   children: ReactElement<typeof BasePicker.Item> | Array<ReactElement<typeof BasePicker.Item>>
   onChange?: (value: string) => void
+  testId?: string
 }
 
 export type Size = InputFrameSize

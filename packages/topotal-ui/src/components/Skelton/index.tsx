@@ -4,6 +4,7 @@ import { useTheme } from '../../theme'
 
 interface Props {
   style?: StyleProp<ViewStyle>
+  testId?: string
 }
 
 export const Skelton = memo<Props>(({ style }) => {

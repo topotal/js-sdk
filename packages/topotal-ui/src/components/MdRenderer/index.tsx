@@ -10,6 +10,7 @@ interface Props {
   markdown: string
   style?: StyleProp<ViewStyle>
   tokenFilter?: (token: NormalizedToken) => boolean
+  testId?: string
 }
 
 export const MdRenderer = React.memo<Props>(({

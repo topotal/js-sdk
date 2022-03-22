@@ -11,6 +11,7 @@ interface Props {
   align?: CardPositionAlign
   children?: ReactNode
   onPressBackground: () => void
+  testId?: string
 }
 
 export const Dropdown = ({

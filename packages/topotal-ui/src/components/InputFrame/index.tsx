@@ -8,6 +8,7 @@ export type InputFrameSize = 'small' | 'medium' | 'large'
 
 interface RenderInputProps {
   style?: StyleProp<ViewStyle>
+  testId?: string
 }
 
 interface Props {

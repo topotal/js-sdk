@@ -9,6 +9,7 @@ interface Props {
   code: string
   language: string
   style?: StyleProp<ViewStyle>
+  testId?: string
 }
 
 export const SyntaxHighlighter = React.memo<Props>(({
