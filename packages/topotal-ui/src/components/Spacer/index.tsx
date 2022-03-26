@@ -3,11 +3,11 @@ import { StyleProp, View, ViewStyle } from 'react-native'
 
 interface Props {
   style?: StyleProp<ViewStyle>
-  testId?: string
+  testID?: string
 }
 
-export const Spacer = React.memo<Props>(({ style }) => {
+export const Spacer = React.memo<Props>(({ style, testID }) => {
   return (
-    <View style={[{ flex: 1 }, style]} />
+    <View style={[{ flex: 1 }, style]} testID={testID} />
   )
 })

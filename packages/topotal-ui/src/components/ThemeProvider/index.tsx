@@ -3,7 +3,6 @@ import { defaultTheme, Theme, ThemeContext } from '../../theme'
 
 interface Props {
   theme?: Theme
-  testId?: string
 }
 
 export const ThemeProvider: React.FC<Props> = ({

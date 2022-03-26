@@ -9,7 +9,7 @@ type Props = BaseTextProps & {
   type?: TextType
   weight?: FontWeight
   style?: StyleProp<TextStyle>
-  testId?: string
+  testID?: string
 }
 
 export const Text: React.FC<Props> = ({
@@ -17,6 +17,7 @@ export const Text: React.FC<Props> = ({
   weight = 'normal',
   style,
   children,
+  testID,
   ...rest
 }) => {
   const { styles } = useStyles({ type, weight })
@@ -24,6 +25,7 @@ export const Text: React.FC<Props> = ({
     <BaseText
       {...rest}
       style={[styles.wrapper, style]}
+      testID={testID}
     >
       {children}
     </BaseText>

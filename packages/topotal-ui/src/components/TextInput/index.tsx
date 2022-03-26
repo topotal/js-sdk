@@ -12,7 +12,7 @@ type BaseProps = {
   size?: InputFrameSize
   disabled?: boolean
   startIconName?: string
-  testId?: string
+  testID?: string
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
@@ -26,6 +26,7 @@ export const TextInput = memo<Props>(({
   startIconName,
   innerRef,
   style,
+  testID,
   onChangeText,
   ...rest
 }) => {
@@ -61,6 +62,7 @@ export const TextInput = memo<Props>(({
           onFocus={handleFocus}
           onBlur={handleBlur}
           style={style}
+          testID={testID}
         />
       )}
     />

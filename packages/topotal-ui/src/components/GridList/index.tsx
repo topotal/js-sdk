@@ -12,7 +12,7 @@ interface Props<T = any> {
   style?: StyleProp<ViewStyle>
   renderItem: (item: T) => ReactElement | null
   endItem?: () => ReactElement | null
-  testId?: string
+  testID?: string
 }
 
 export const GridList = memo<Props>(({
@@ -22,6 +22,7 @@ export const GridList = memo<Props>(({
   style,
   renderItem,
   endItem,
+  testID,
 }) => {
   const innerItems = useMemo(() => {
     const tmpItems = [...items]
@@ -52,6 +53,7 @@ export const GridList = memo<Props>(({
         opacity: measure.width ? 1 : 0,
       }, style]}
       ref={element => { ref.current = element || undefined }}
+      testID={testID}
     >
       <VStack
         style={styles.container}

@@ -9,13 +9,14 @@ interface Props {
   code: string
   language: string
   style?: StyleProp<ViewStyle>
-  testId?: string
+  testID?: string
 }
 
 export const SyntaxHighlighter = React.memo<Props>(({
   code,
   language,
   style,
+  testID,
 }) => {
   return (
     <View
@@ -31,6 +32,7 @@ export const SyntaxHighlighter = React.memo<Props>(({
         style={vs2015}
         PreTag={PreTag}
         CodeTag={ScrollView}
+        testID={testID}
       >
         {code}
       </ReactSyntaxHighlighter>

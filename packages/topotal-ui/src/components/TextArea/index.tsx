@@ -9,7 +9,7 @@ type BaseProps = {
   innerRef?: Ref<BaseInput>
   error?: boolean
   disabled?: boolean
-  testId?: string
+  testID?: string
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
@@ -22,6 +22,7 @@ export const TextArea = memo<Props>(({
   innerRef,
   style,
   onChangeText,
+  testID,
   ...rest
 }) => {
   const { innerValue, handleChange } = useInputValue<string>({
@@ -53,6 +54,7 @@ export const TextArea = memo<Props>(({
             onFocus={handleFocus}
             onBlur={handleBlur}
             style={[style, styles.input]}
+            testID={testID}
           />
         </>
       )}

@@ -5,13 +5,14 @@ import { VStack } from '..'
 interface Props {
   style?: StyleProp<ViewStyle>
   ratio: [number, number]
-  testId?: string
+  testID?: string
 }
 
 export const FixedRatioView: React.FC<Props> = ({
   style,
   ratio,
   children,
+  testID,
 }) => {
   const [xRatio, yRatio] = ratio
 
@@ -21,6 +22,7 @@ export const FixedRatioView: React.FC<Props> = ({
         width: '100%',
         position: 'relative',
       }, style]}
+      testID={testID}
     >
       <View
         style={{

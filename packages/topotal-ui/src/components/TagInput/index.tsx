@@ -18,7 +18,7 @@ interface Props {
   placeholder?: string
   disabled?: boolean
   onChange?: (value: TagData[]) => void
-  testId?: string
+  testID?: string
 }
 
 export const TagInput = memo<Props>(({
@@ -28,6 +28,7 @@ export const TagInput = memo<Props>(({
   placeholder = 'Insert new item...',
   disabled,
   onChange,
+  testID,
 }) => {
   const { styles, placeholderColor } = useStyles()
   const {
@@ -75,6 +76,7 @@ export const TagInput = memo<Props>(({
               onChangeText={handleTextChange}
               onFocus={handleFocus}
               onBlur={handleBlurInput}
+              testID={testID}
             />
           </HStack>
         )}

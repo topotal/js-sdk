@@ -8,13 +8,14 @@ interface Props {
   uri: string
   size?: UserIconSize
   style?: StyleProp<ViewStyle>
-  testId?: string
+  testID?: string
 }
 
 export const UserIcon = React.memo<Props>(({
   uri,
   size = 'medium',
   style,
+  testID,
 }) => {
   const [loaded, setLoaded] = useState(false)
   const { styles } = useStyles({ size, loaded })
@@ -26,6 +27,7 @@ export const UserIcon = React.memo<Props>(({
   return (
     <View style={[styles.wrapper, style]}>
       <Image
+        testID={testID}
         source={{ uri }}
         style={styles.image}
         onLoad={handleLoad}

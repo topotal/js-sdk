@@ -11,7 +11,7 @@ interface Props {
   align?: CardPositionAlign
   children?: ReactNode
   onPressBackground: () => void
-  testId?: string
+  testID?: string
 }
 
 export const Dropdown = ({
@@ -20,6 +20,7 @@ export const Dropdown = ({
   align = 'left',
   children,
   onPressBackground,
+  testID,
 }: Props): JSX.Element | null => {
   const {
     ref: wrapperRef,
@@ -63,6 +64,7 @@ export const Dropdown = ({
       {wrapperMeasure.width === 0 && wrapperMeasure.height === 0 ? null : (
         <Modal visible transparent>
           <Pressable
+            testID={testID}
             style={styles.background}
             onPress={onPressBackground}
           />

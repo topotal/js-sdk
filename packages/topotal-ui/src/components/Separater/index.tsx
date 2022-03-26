@@ -7,10 +7,10 @@ import { useStyles } from './styles'
 interface Props {
   text: string
   style?: StyleProp<ViewStyle>
-  testId?: string
+  testID?: string
 }
 
-export const Separater = React.memo<Props>(({ text, style }) => {
+export const Separater = React.memo<Props>(({ text, style, testID }) => {
   const { styles } = useStyles()
 
   return (
@@ -25,6 +25,7 @@ export const Separater = React.memo<Props>(({ text, style }) => {
         type="small_body"
         weight="bold"
         style={styles.text}
+        testID={testID}
       >
         {text}
       </Text>

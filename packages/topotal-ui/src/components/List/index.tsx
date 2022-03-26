@@ -13,7 +13,7 @@ export interface Props<T> {
   disabledChangeBackground?: boolean
   keyExtractor?: (item: T, index: number) => string
   onPressItem?: (item: T) => void
-  testId?: string
+  testID?: string
 }
 
 export const List = <T, >({
@@ -24,6 +24,7 @@ export const List = <T, >({
   renderItem,
   keyExtractor,
   onPressItem,
+  testID,
 }: Props<T>): JSX.Element => {
   const [hoveredIndex, setHoveredIndex] = useState<number>()
   const { styles } = useStyles()
@@ -37,7 +38,7 @@ export const List = <T, >({
   }, [])
 
   return (
-    <VStack style={[styles.wrapper, style]}>
+    <VStack style={[styles.wrapper, style]} testID={testID}>
       {data.length ? (
         data.map((item, index) => {
           const key = keyExtractor ? keyExtractor(item, index) : index
