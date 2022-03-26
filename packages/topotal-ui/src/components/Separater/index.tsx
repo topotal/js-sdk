@@ -25,7 +25,7 @@ export const Separater = React.memo<Props>(({ text, style, testID }) => {
         type="small_body"
         weight="bold"
         style={styles.text}
-        testID={testID}
+        testID={`${testID}_text`}
       >
         {text}
       </Text>

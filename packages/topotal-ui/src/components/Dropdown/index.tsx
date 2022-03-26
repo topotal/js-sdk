@@ -64,7 +64,7 @@ export const Dropdown = ({
       {wrapperMeasure.width === 0 && wrapperMeasure.height === 0 ? null : (
         <Modal visible transparent>
           <Pressable
-            testID={testID}
+            testID={`${testID}_background`}
             style={styles.background}
             onPress={onPressBackground}
           />

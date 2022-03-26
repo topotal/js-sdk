@@ -76,7 +76,7 @@ export const TagInput = memo<Props>(({
               onChangeText={handleTextChange}
               onFocus={handleFocus}
               onBlur={handleBlurInput}
-              testID={testID}
+              testID={`${testID}_input`}
             />
           </HStack>
         )}

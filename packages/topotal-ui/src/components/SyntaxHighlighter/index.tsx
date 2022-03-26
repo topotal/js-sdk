@@ -32,7 +32,7 @@ export const SyntaxHighlighter = React.memo<Props>(({
         style={vs2015}
         PreTag={PreTag}
         CodeTag={ScrollView}
-        testID={testID}
+        testID={`${testID}_syntax_highlighter`}
       >
         {code}
       </ReactSyntaxHighlighter>
