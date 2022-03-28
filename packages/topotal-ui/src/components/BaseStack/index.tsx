@@ -11,6 +11,7 @@ interface Props extends React.ComponentProps<typeof View> {
   align?: Align
   justify?: Justify
   style?: StyleProp<ViewStyle>
+  testID?: string
 }
 
 const createStyleInjectedChildren = (children: React.ReactNode, direction: Direction, gap: number): React.ReactNode => {
@@ -48,6 +49,7 @@ export const BaseStack: React.FC<Props> = ({
   justify = 'flex-start',
   style,
   children,
+  testID,
   ...rest
 }) => {
   const styles = useStyles({
@@ -57,7 +59,7 @@ export const BaseStack: React.FC<Props> = ({
   })
 
   return (
-    <View style={[styles.wrapper, style]} {...rest}>
+    <View style={[styles.wrapper, style]} testID={testID} {...rest}>
       {createStyleInjectedChildren(children, direction, gap)}
     </View>
   )

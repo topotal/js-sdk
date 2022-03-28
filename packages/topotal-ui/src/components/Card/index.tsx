@@ -11,6 +11,7 @@ interface Props {
   footer?: React.ReactNode
   level?: Level
   style?: StyleProp<ViewStyle>
+  testID?: string
 }
 
 export const Card: React.FC<Props> = ({
@@ -19,11 +20,12 @@ export const Card: React.FC<Props> = ({
   level = 1,
   style,
   children,
+  testID,
 }) => {
   const { styles } = useStyles({ level })
 
   return (
-    <VStack style={[styles.wrapper, style]}>
+    <VStack style={[styles.wrapper, style]} testID={testID}>
       {header ? (
         <HStack
           style={styles.header}

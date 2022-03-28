@@ -17,6 +17,7 @@ interface Props {
   innerOutline?: boolean
   style?: StyleProp<ViewStyle>
   onPress?: (e: BaseSyntheticEvent) => void
+  testID?: string
 }
 
 export const Button = memo<Props>(({
@@ -31,6 +32,7 @@ export const Button = memo<Props>(({
   innerOutline = false,
   style,
   onPress,
+  testID,
 }) => {
   const { hovering, handleHoverIn, handleHoverOut } = useHover()
   const { isFocused, handleBlur, handleFocus } = useFocus()
@@ -58,6 +60,7 @@ export const Button = memo<Props>(({
       onBlur={handleBlur}
       onHoverIn={handleHoverIn}
       onHoverOut={handleHoverOut}
+      testID={testID}
     >
       <HStack
         gap={8}

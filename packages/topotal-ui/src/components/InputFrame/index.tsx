@@ -18,6 +18,7 @@ interface Props {
   disabled?: boolean
   renderLeftItem?: () => ReactElement | null
   renderInput: (props: RenderInputProps) => ReactElement | null
+  testID?: string
 }
 
 export const InputFrame = ({
@@ -28,6 +29,7 @@ export const InputFrame = ({
   disabled = false,
   renderLeftItem,
   renderInput,
+  testID,
 }: Props): JSX.Element => {
   const { styles } = useStyles({
     size,
@@ -38,7 +40,7 @@ export const InputFrame = ({
   })
 
   return (
-    <HStack style={[styles.wrapper, style]} align="stretch">
+    <HStack style={[styles.wrapper, style]} align="stretch" testID={testID}>
       {renderLeftItem ? (
         <HStack
           justify="center"

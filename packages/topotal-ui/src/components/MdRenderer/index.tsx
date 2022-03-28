@@ -10,12 +10,14 @@ interface Props {
   markdown: string
   style?: StyleProp<ViewStyle>
   tokenFilter?: (token: NormalizedToken) => boolean
+  testID?: string
 }
 
 export const MdRenderer = React.memo<Props>(({
   markdown,
   style,
   tokenFilter = () => true,
+  testID,
 }) => {
   const tokens = useMemo(() => {
     const lexer = new Lexer({ sanitize: false })
@@ -25,7 +27,7 @@ export const MdRenderer = React.memo<Props>(({
   }, [markdown, tokenFilter])
 
   return (
-    <VStack style={style} gap={16}>
+    <VStack style={style} gap={16} testID={testID}>
       {tokens.map((token, index) => (
         <Switcher
           token={token}

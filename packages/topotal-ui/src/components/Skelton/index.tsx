@@ -4,9 +4,10 @@ import { useTheme } from '../../theme'
 
 interface Props {
   style?: StyleProp<ViewStyle>
+  testID?: string
 }
 
-export const Skelton = memo<Props>(({ style }) => {
+export const Skelton = memo<Props>(({ style, testID }) => {
   const fadeAnim = useRef(new Animated.Value(0.2)).current
   const { color } = useTheme()
 
@@ -36,6 +37,7 @@ export const Skelton = memo<Props>(({ style }) => {
         backgroundColor: color.secondaryTextDark,
         opacity: fadeAnim,
       }, style]}
+      testID={testID}
     />
   )
 })
