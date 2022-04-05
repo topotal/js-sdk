@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.48.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.48.2...@topotal/topotal-ui@0.48.3) (2022-04-05)
+
+
+### Bug Fixes
+
+* useFocusOutlineStyle ([#276](https://github.com/topotal/js-sdk/issues/276)) ([38dedae](https://github.com/topotal/js-sdk/commit/38dedae80be0bffd2a4ff24fe0665aafdd53458e))
+
+
+
+
+
 ## [0.48.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.48.1...@topotal/topotal-ui@0.48.2) (2022-01-24)
 
 **Note:** Version bump only for package @topotal/topotal-ui
