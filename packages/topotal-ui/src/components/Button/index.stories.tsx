@@ -52,6 +52,12 @@ export const all = () => (
       size="medium"
       variant="text"
     />
+    <Button title="Warning" color="warning" size="small" />
+    <Button title="Warning" color="warning" size="medium" />
+    <Button title="Warning" color="warning" size="small" variant="outline" />
+    <Button title="Warning" color="warning" size="medium" variant="outline" />
+    <Button title="Warning" color="warning" size="small" variant="text" />
+    <Button title="Warning" color="warning" size="medium" variant="text" />
     <Button title="送信" size="small" loading={true} />
     <Button title="送信" size="medium" loading={true} />
     <Button title="送信" size="large" loading={true} />
