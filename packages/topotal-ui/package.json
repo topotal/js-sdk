@@ -30,6 +30,7 @@
     "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build",
     "lint": "eslint --ext .ts,.tsx src",
+    "lint:fix": "eslint --ext .ts,.tsx src --fix",
     "storybook": "start-storybook -p 6006 --no-dll -s ./assets/",
     "build-doc": "STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui build-storybook --no-dll -s ./assets/ -o ../../docs/topotal-ui/"
   },

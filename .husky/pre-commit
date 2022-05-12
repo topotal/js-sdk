@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lerna run --parallel lint -- --fix
+yarn lerna run --parallel lint:fix
 yarn sort-package-json "./packages/*/package.json"
