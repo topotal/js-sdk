@@ -12,16 +12,17 @@ interface Props {
   level?: Level
   style?: StyleProp<ViewStyle>
   testID?: string
+  children?: React.ReactNode
 }
 
-export const Card: React.FC<Props> = ({
+export const Card = ({
   header,
   footer,
   level = 1,
   style,
   children,
   testID,
-}) => {
+}: Props): JSX.Element => {
   const { styles } = useStyles({ level })
 
   return (

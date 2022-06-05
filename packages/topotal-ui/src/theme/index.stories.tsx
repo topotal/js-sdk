@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, View } from 'react-native'
 import { storiesOf } from '@storybook/react'
 import { defaultTheme, ThemeColor } from '.'
@@ -8,10 +7,10 @@ interface Props {
   color: string
 }
 
-const ColorRow: React.FC<Props> = ({
+const ColorRow = ({
   name,
   color,
-}) => {
+}: Props): JSX.Element => {
   return (
     <View
       style={{

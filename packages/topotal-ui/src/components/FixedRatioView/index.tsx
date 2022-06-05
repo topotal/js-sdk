@@ -6,14 +6,15 @@ interface Props {
   style?: StyleProp<ViewStyle>
   ratio: [number, number]
   testID?: string
+  children?: React.ReactNode
 }
 
-export const FixedRatioView: React.FC<Props> = ({
+export const FixedRatioView = ({
   style,
   ratio,
   children,
   testID,
-}) => {
+}: Props): JSX.Element => {
   const [xRatio, yRatio] = ratio
 
   return (
