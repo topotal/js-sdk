@@ -1,7 +1,9 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
 
-export const PreTag: React.FC = (props) => {
+type Props = React.ComponentProps<typeof ScrollView>
+
+export const PreTag= (props: Props): JSX.Element => {
   return (
     <ScrollView
       {...props}

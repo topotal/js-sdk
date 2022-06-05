@@ -8,10 +8,10 @@ interface Props {
   stylesheet: StyleSheetData
 }
 
-export const Renderer: React.FC<Props> = ({
+export const Renderer = ({
   rows,
   stylesheet,
-}) => {
+}: Props): JSX.Element => {
   return (
     <Text style={{ fontFamily: 'Consolas, Monaco, monospace' }}>
       {rows.map((rowData, index) => (

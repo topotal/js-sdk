@@ -42,7 +42,7 @@ const createStyleInjectedChildren = (children: React.ReactNode, direction: Direc
   })
 }
 
-export const BaseStack: React.FC<Props> = ({
+export const BaseStack = ({
   direction,
   gap = 0,
   align = 'stretch',
@@ -51,7 +51,7 @@ export const BaseStack: React.FC<Props> = ({
   children,
   testID,
   ...rest
-}) => {
+}: Props): JSX.Element => {
   const styles = useStyles({
     direction,
     align,

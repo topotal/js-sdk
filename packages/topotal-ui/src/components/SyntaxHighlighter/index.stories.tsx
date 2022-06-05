@@ -8,7 +8,7 @@ export default {
 const sampleCode = `import React from 'react';
 import { ScrollView } from 'react-native';
 
-export const PreTag: React.FC = (props) => {
+export const PreTag = (props): JSX.Element => {
   return (
     <ScrollView
       style={{
