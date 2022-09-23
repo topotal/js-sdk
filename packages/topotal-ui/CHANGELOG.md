@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.49.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.48.5...@topotal/topotal-ui@0.49.0) (2022-09-23)
+
+
+### Features
+
+* Add InputField ([5a014af](https://github.com/topotal/js-sdk/commit/5a014afc2fddd1eaa72e8f4d6de183486e76149b))
+
+
+
+
+
 ## [0.48.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.48.4...@topotal/topotal-ui@0.48.5) (2022-09-23)
 
 
