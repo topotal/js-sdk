@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.48.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.48.4...@topotal/topotal-ui@0.48.5) (2022-09-23)
+
+
+### Bug Fixes
+
+* Use React.FC instead of JSX.Element ([#295](https://github.com/topotal/js-sdk/issues/295)) ([72d4396](https://github.com/topotal/js-sdk/commit/72d4396357990464d8bf4f1b6eb4465a324358b2))
+
+
+
+
+
 ## [0.48.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.48.3...@topotal/topotal-ui@0.48.4) (2022-04-21)
 
 **Note:** Version bump only for package @topotal/topotal-ui
