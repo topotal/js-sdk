@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleProp, ViewStyle } from 'react-native'
-import { HStack, Text, useTheme, VStack } from '@topotal/topotal-ui'
+import { useTheme } from '../../theme'
+import { HStack, Text, VStack } from '../'
 
 interface Props {
   style?: StyleProp<ViewStyle>
