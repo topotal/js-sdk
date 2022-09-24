@@ -8,11 +8,13 @@ interface Props {
   onChange?: (value: TagData[]) => void
 }
 
+const defaultValue: TagData[] = []
+
 export const useTagInput = ({
   value,
   onChange,
 }: Props) => {
-  const [innerValue, setInnerValue] = useState<TagData[]>(value || [])
+  const [innerValue, setInnerValue] = useState<TagData[]>(value || defaultValue)
   const { innerValue: textValue, handleChange: handleTextChange } = useInputValue<string>({ value: '' })
   const [compositionFnished, setCompositionFinished] = useState(true)
   const { isFocused, handleFocus, handleBlur } = useFocus()
@@ -73,6 +75,10 @@ export const useTagInput = ({
     setInnerValue(newValue)
     onChange?.(newValue)
   }, [handleBlur, handleTextChange, innerValue, onChange, textValue])
+
+  useEffect(() => {
+    setInnerValue(value || defaultValue)
+  }, [value])
 
   useEffect(() => {
     const inputElement = ref.current as unknown as HTMLInputElement
