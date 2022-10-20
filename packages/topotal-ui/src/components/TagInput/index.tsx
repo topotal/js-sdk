@@ -1,14 +1,9 @@
 import { memo } from 'react'
 import { StyleProp, TextInput as BaseInput, View, ViewStyle } from 'react-native'
+import { Tag, TagData } from '../Tag'
 import { HStack, InputFrame, Text, VStack } from '..'
-import { Tag } from './components/Tag'
 import { useTagInput } from './hooks'
 import { useStyles } from './styles'
-
-export interface TagData {
-  label: string
-  value: string
-}
 
 interface Props {
   style?: StyleProp<ViewStyle>

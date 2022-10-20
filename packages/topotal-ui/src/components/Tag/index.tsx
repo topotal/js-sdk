@@ -1,8 +1,12 @@
 import { memo, useCallback } from 'react'
 import { Image, Pressable, StyleProp, ViewStyle } from 'react-native'
-import { HStack, Text } from '../../..'
-import { TagData } from '../..'
+import { HStack, Text } from '..'
 import { useStyles } from './styles'
+
+export interface TagData {
+  label: string
+  value: string
+}
 
 interface Props {
   style?: StyleProp<ViewStyle>

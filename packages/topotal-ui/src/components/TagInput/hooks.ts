@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { NativeSyntheticEvent, TextInput, TextInputKeyPressEventData } from 'react-native'
 import { useFocus, useInputValue } from '../../hooks'
-import { TagData } from '.'
+import { TagData } from '../Tag'
 
 interface Props {
   value?: TagData[]

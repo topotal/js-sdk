@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { useTheme } from '../../../..'
+import { useTheme } from '../..'
 
 export const useStyles = () => {
   const { color } = useTheme()
