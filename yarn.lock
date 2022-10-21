@@ -12060,9 +12060,9 @@ sane@^4.0.3:
     walker "~1.0.5"
 
 sanitize-html@^2.4.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/sanitize-html/-/sanitize-html-2.7.0.tgz#e106205b468aca932e2f9baf241f24660d34e279"
-  integrity sha512-jfQelabOn5voO7FAfnQF7v+jsA6z9zC/O4ec0z3E35XPEtHYJT/OdUziVWlKW4irCr2kXaQAyXTXDHWAibg1tA==
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/sanitize-html/-/sanitize-html-2.7.2.tgz#54c5189af75e3237d996e4b9a5e3eaad12c7f7fc"
+  integrity sha512-DggSTe7MviO+K4YTCwprG6W1vsG+IIX67yp/QY55yQqKCJYSWzCA1rZbaXzkjoKeL9+jqwm56wD6srYLtUNivg==
   dependencies:
     deepmerge "^4.2.2"
     escape-string-regexp "^4.0.0"
