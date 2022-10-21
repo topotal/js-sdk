@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.50.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.49.2...@topotal/topotal-ui@0.50.0) (2022-10-21)
+
+
+### Features
+
+* Add SelectTagInput ([#307](https://github.com/topotal/js-sdk/issues/307)) ([1883aed](https://github.com/topotal/js-sdk/commit/1883aed838029308f5163044319b4f60ba2f39ba))
+* Add Tag ([#305](https://github.com/topotal/js-sdk/issues/305)) ([a021669](https://github.com/topotal/js-sdk/commit/a02166938cb78619cb546605b58442016229bd3b))
+
+
+
+
+
 ## [0.49.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.49.1...@topotal/topotal-ui@0.49.2) (2022-09-24)
 
 
