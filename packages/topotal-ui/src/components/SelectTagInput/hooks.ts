@@ -30,8 +30,13 @@ export const useSelectTagInput = <T>({
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const filteredItems = useMemo(() => {
+    const innerValueTagData = innerValue.map(tagDataGenarator)
     // 選択済みのものを除外
-    const newItems = items.filter(item => !innerValue.includes(item))
+    const newItems = items.filter(item => {
+      return !innerValueTagData.find(tagData => {
+        return tagData.value === tagDataGenarator(item).value
+      })
+    })
     // 未入力であれば全て返す
     if (!textValue) return newItems
     // 入力値にマッチするものを返す
@@ -99,6 +104,8 @@ export const useSelectTagInput = <T>({
   const handlePressRemoveTag = useCallback((target: TagData) => {
     const newValue = [...innerValue].filter(item => tagDataGenarator(item).value !== target.value)
     updateInnerValue(newValue)
+    // Click により Input からフォーカスが外れるため Input にフォーカスを戻す
+    textInputRef.current?.focus()
   }, [innerValue, tagDataGenarator, updateInnerValue])
 
   const handlePressItem = useCallback((item: T) => {
