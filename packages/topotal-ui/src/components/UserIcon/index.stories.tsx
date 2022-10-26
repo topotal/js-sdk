@@ -7,7 +7,7 @@ type Props = React.ComponentProps<typeof UserIcon>
 
 const defaultProps: Props = {
   size: 'medium',
-  uri: 'https://pbs.twimg.com/profile_images/984048384343330816/tIAct4a9_400x400.jpg',
+  uri: 'https://randomuser.me/api/portraits/men/1.jpg',
 }
 
 export const Small = () => (
