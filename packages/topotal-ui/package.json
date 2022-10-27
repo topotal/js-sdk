@@ -48,7 +48,7 @@
     "@topotal/eslint-config-react": "^0.3.1",
     "@topotal/eslint-config-typescript": "^0.2.1",
     "@types/marked": "^4.0.1",
-    "@types/react": "^17.0.0",
+    "@types/react": "^18.0.23",
     "@types/react-is": "^17.0.0",
     "@types/react-native": "^0.67.8",
     "@types/sanitize-html": "^2.3.1",
@@ -62,7 +62,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^8.0.1",
     "prettier": "^2.2.1",
-    "react": "^17.0.1",
+    "react": "^18.2.0",
     "react-dom": "^17.0.1",
     "react-native-web": "^0.17.1",
     "rimraf": "^3.0.2",
@@ -70,7 +70,7 @@
   },
   "peerDependencies": {
     "expo": "*",
-    "react": "^17.0.1",
+    "react": "^18.2.0",
     "react-dom": "^17.0.1",
     "react-native": "*"
   },
