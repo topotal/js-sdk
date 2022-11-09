@@ -30,6 +30,15 @@ export const HasDefaultValue = () => (
   </Picker>
 )
 
+export const HasIcon = () => (
+  <Picker
+    placeholder="Select"
+    startIconName="search"
+  >
+    {renderItems()}
+  </Picker>
+)
+
 export const Small = () => (
   <Picker
     placeholder="Select"
