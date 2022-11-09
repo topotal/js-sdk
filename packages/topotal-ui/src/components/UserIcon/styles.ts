@@ -55,7 +55,7 @@ export const useStyles = ({ size, loaded }: Props) => {
       },
       image: {
         width: width - (borderWidth * 2),
-        height: width - (borderWidth * 2),
+        height: height - (borderWidth * 2),
         padding: 1,
       },
     }
