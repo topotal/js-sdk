@@ -41,6 +41,7 @@ export const useStyles = ({ size, loaded }: Props) => {
 
   const styles: Styles = useMemo(() => {
     const { width, height, borderRadius } = getDynamicStyle(size)
+    const borderWidth = 1
 
     return {
       wrapper: {
@@ -49,12 +50,12 @@ export const useStyles = ({ size, loaded }: Props) => {
         borderRadius,
         backgroundColor: loaded ? color.surface : color.borderLight,
         borderColor: color.surface,
-        borderWidth: 1,
+        borderWidth,
         overflow: 'hidden',
       },
       image: {
-        width: width - 1,
-        height: height - 1,
+        width: width - (borderWidth * 2),
+        height: height - (borderWidth * 2),
         padding: 1,
       },
     }
