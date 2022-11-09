@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.51.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.50.1...@topotal/topotal-ui@0.51.0) (2022-11-09)
+
+
+### Features
+
+* Add startIconName prop to Picker ([#321](https://github.com/topotal/js-sdk/issues/321)) ([8156589](https://github.com/topotal/js-sdk/commit/81565894b59c09d5f180050c0fa2a5f672f116ce))
+
+
+
+
+
 ## [0.50.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.50.0...@topotal/topotal-ui@0.50.1) (2022-10-22)
 
 
