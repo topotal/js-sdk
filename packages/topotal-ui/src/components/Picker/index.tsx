@@ -3,7 +3,7 @@ import { Image, StyleProp, View, ViewStyle } from 'react-native'
 import { Picker as BasePicker } from '@react-native-picker/picker'
 import { useFocus, useInputValue } from '../../hooks'
 import { InputFrame, InputFrameSize } from '../InputFrame'
-import { Text } from '..'
+import { Icon, Text } from '..'
 import { useStyles } from './styles'
 
 interface Props {
@@ -13,9 +13,10 @@ interface Props {
   placeholder?: string
   error?: boolean
   disabled?: boolean
+  startIconName?: string
   children: ReactElement<typeof BasePicker.Item> | Array<ReactElement<typeof BasePicker.Item>>
-  onChange?: (value: string) => void
   testID?: string
+  onChange?: (value: string) => void
 }
 
 export type Size = InputFrameSize
@@ -29,9 +30,10 @@ export const Picker = Object.assign((({
   placeholder = '',
   error = false,
   disabled = false,
+  startIconName,
   children,
-  onChange,
   testID,
+  onChange,
 }: Props) => {
   const { innerValue, handleChange } = useInputValue({ value, onChange })
   const { isFocused, handleFocus, handleBlur } = useFocus()
@@ -43,6 +45,12 @@ export const Picker = Object.assign((({
       focus={isFocused}
       size={size}
       error={error}
+      renderLeftItem={startIconName ? () => (
+        <Icon
+          name={startIconName}
+          style={styles.icon}
+        />
+      ) : undefined}
       renderInput={({ style }) => (
         <>
           <BasePicker

@@ -30,6 +30,11 @@ export const useStyles = ({ hasValue, size }: Props) => {
         appearance: 'none',
       } : {}),
     },
+    icon: {
+      width: '50%',
+      height: '50%',
+      tintColor: color.secondaryTextDark,
+    },
     placeholderWrapper: {
       position: 'absolute',
     },
