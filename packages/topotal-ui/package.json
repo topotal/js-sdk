@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "marked": "^4.0.6",
-    "react-is": "^17.0.1",
+    "react-is": "^18.2.0",
     "react-syntax-highlighter": "^15.4.3",
     "sanitize-html": "^2.4.0"
   },
