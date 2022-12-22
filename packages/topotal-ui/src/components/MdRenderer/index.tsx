@@ -20,7 +20,7 @@ export const MdRenderer = React.memo<Props>(({
   testID,
 }) => {
   const tokens = useMemo(() => {
-    const lexer = new Lexer({ sanitize: false })
+    const lexer = new Lexer()
     const rawToken = lexer.lex(markdown)
     const normalizedToken = normalizeTokens(rawToken)
     return normalizedToken.filter(tokenFilter)

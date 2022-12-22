@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { StyleProp, TextStyle } from 'react-native'
 import { marked } from 'marked'
 import { Text } from '../../../Text'
-import { normalizeTokens, unescapeHTML } from '../../utils'
+import { normalizeTokens } from '../../utils'
 import { CodeSpan } from '../CodeSpan'
 import { Image } from '../Image'
 import { Link } from '../Link'
@@ -27,8 +27,9 @@ export const Paragraph = ({
       {tokens.length ? tokens.map((token, index) => {
         switch (token.type) {
           case 'text':
+            return token.raw
           case 'html':
-            return unescapeHTML(token.text)
+            return token.text
           case 'escape':
             return (<span key={index} dangerouslySetInnerHTML={{ __html: token.text }}/>)
           case 'strong':
@@ -42,7 +43,7 @@ export const Paragraph = ({
           default:
             return null
         }
-      }) : unescapeHTML(token.text)}
+      }) : null}
     </Text>
   )
 }
