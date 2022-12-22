@@ -36,8 +36,7 @@
   "dependencies": {
     "marked": "^4.0.6",
     "react-is": "^18.2.0",
-    "react-syntax-highlighter": "^15.4.3",
-    "sanitize-html": "^2.4.0"
+    "react-syntax-highlighter": "^15.4.3"
   },
   "devDependencies": {
     "@react-native-picker/picker": "^2.2.1",
@@ -51,7 +50,6 @@
     "@types/react": "^18.0.23",
     "@types/react-is": "^17.0.0",
     "@types/react-native": "^0.67.8",
-    "@types/sanitize-html": "^2.3.1",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^8.8.0",

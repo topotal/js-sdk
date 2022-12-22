@@ -1,7 +1,6 @@
 import React from 'react'
 import { marked } from 'marked'
 import { Text } from '../../../Text'
-import { unescapeHTML } from '../../utils'
 import { useStyles } from './styles'
 
 interface Props {
@@ -27,7 +26,7 @@ export const Link = React.memo<Props>(({
       accessibilityRole="link"
       {...anchorAttributes}
     >
-      {unescapeHTML(token.text)}
+      {token.text}
     </Text>
   )
 })

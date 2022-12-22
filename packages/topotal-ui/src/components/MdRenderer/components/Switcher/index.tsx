@@ -1,6 +1,7 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native'
-import { SyntaxHighlighter, VStack } from '../../..'
+import { SyntaxHighlighter, Text, VStack } from '../../..'
 import { NormalizedToken } from '../../types'
+import { Blockquote } from '../Blockquote'
 import { Heading } from '../Heading'
 import { List } from '../List'
 import { Paragraph } from '../Paragraph'
@@ -18,7 +19,6 @@ export const Switcher = ({ token, firstRow, style }: Props): JSX.Element => {
         switch (token.type) {
           case 'paragraph':
           case 'text':
-          case 'html':
             return (
               <Paragraph
                 style={style}
@@ -47,6 +47,19 @@ export const Switcher = ({ token, firstRow, style }: Props): JSX.Element => {
                 style={style}
                 token={token}
               />
+            )
+          case 'blockquote':
+            return (
+              <Blockquote
+                style={style}
+                token={token}
+              />
+            )
+          case 'html':
+            return (
+              <Text style={style}>
+                {token.text}
+              </Text>
             )
           case 'space':
           default:

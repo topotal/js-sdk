@@ -3,7 +3,6 @@ import { StyleProp, TextStyle } from 'react-native'
 import { marked } from 'marked'
 import { useTheme } from '../../../../theme'
 import { Text } from '../../../Text'
-import { unescapeHTML } from '../../utils'
 
 interface Props {
   token: marked.Tokens.Heading
@@ -36,7 +35,7 @@ export const Heading = React.memo<Props>(({
       type={type}
       weight="bold"
     >
-      {unescapeHTML(token.text)}
+      {token.text}
     </Text>
   )
 })
