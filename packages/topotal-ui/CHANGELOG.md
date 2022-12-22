@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.52.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.51.0...@topotal/topotal-ui@0.52.0) (2022-12-22)
+
+
+### Bug Fixes
+
+* storybook settings ([#340](https://github.com/topotal/js-sdk/issues/340)) ([a4a9cdb](https://github.com/topotal/js-sdk/commit/a4a9cdb0b801519a1d49a2c87d75bf8bb7e53d31))
+
+
+### Features
+
+* Add href to Text component props ([#339](https://github.com/topotal/js-sdk/issues/339)) ([e15a571](https://github.com/topotal/js-sdk/commit/e15a571706e25c0b46aaed3596e338f3d81d717c))
+
+
+
+
+
 # [0.51.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.50.1...@topotal/topotal-ui@0.51.0) (2022-11-09)
 
 
