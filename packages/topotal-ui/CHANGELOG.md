@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.53.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.52.0...@topotal/topotal-ui@0.53.0) (2022-12-22)
+
+
+### Features
+
+* Add Blockquote ([#341](https://github.com/topotal/js-sdk/issues/341)) ([10df223](https://github.com/topotal/js-sdk/commit/10df2235b8650df4855b09d755d9ce0048657ae9))
+
+
+
+
+
 # [0.52.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.51.0...@topotal/topotal-ui@0.52.0) (2022-12-22)
 
 
