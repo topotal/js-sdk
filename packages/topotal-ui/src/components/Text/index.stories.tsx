@@ -10,12 +10,13 @@ export const all = () => (
     {Object.entries(textStyles).map(([key, value]) => (
       <VStack key={key} gap={16}>
         <Text type={(key as TextType)}>
-            Sample Text サンプルテキスト: {key} {value.fontSize}px LineHeight {value.lineHeight}px
+          Sample Text サンプルテキスト: {key} {value.fontSize}px LineHeight {value.lineHeight}px
         </Text>
         <Text type={(key as TextType)} weight="bold">
-            Sample Text サンプルテキスト: {key} {value.fontSize}px LineHeight {value.lineHeight}px bold
+          Sample Text サンプルテキスト: {key} {value.fontSize}px LineHeight {value.lineHeight}px bold
         </Text>
       </VStack>
     ))}
+    <Text href="https://topotal.com">href 有りのテキスト</Text>
   </VStack>
 )

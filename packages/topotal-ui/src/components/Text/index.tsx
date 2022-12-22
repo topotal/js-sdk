@@ -1,9 +1,10 @@
 import React from 'react'
 import { StyleProp, Text as BaseText, TextStyle } from 'react-native'
 import { FontWeight, TextType } from '../../theme'
+import { HrefProps } from '../../types'
 import { useStyles } from './styles'
 
-interface Props extends React.ComponentProps<typeof BaseText> {
+interface Props extends React.ComponentProps<typeof BaseText>, HrefProps {
   type?: TextType
   weight?: FontWeight
   style?: StyleProp<TextStyle>
