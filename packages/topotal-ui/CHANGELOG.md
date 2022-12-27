@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.54.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.53.0...@topotal/topotal-ui@0.54.0) (2022-12-27)
+
+
+### Features
+
+* Add ToggleSwitch ([#345](https://github.com/topotal/js-sdk/issues/345)) ([34b4c5a](https://github.com/topotal/js-sdk/commit/34b4c5ae3e9fb76b14672d6e10397829a49db69b))
+
+
+
+
+
 # [0.53.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.52.0...@topotal/topotal-ui@0.53.0) (2022-12-22)
 
 
