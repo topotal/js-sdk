@@ -1,7 +1,11 @@
 import { StyleSheet } from 'react-native'
 import { useTheme } from '../..'
 
-export const useStyles = () => {
+interface Props {
+  withRemoveButton: boolean
+}
+
+export const useStyles = ({ withRemoveButton }: Props) => {
   const { color } = useTheme()
 
   const styles = StyleSheet.create({
@@ -11,7 +15,7 @@ export const useStyles = () => {
     },
     container: {
       paddingLeft: 8,
-      paddingRight: 4,
+      paddingRight: withRemoveButton ? 4 : 8,
       borderRadius: 16,
       backgroundColor: color.secondaryTextDark,
     },
