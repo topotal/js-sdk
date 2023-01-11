@@ -11,7 +11,7 @@ export interface TagData {
 interface Props {
   style?: StyleProp<ViewStyle>
   tagData: TagData
-  onPressRemove: (tagData: TagData) => void
+  onPressRemove?: (tagData: TagData) => void
 }
 
 const removeIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMiAyQzYuNDcgMiAyIDYuNDcgMiAxMnM0LjQ3IDEwIDEwIDEwIDEwLTQuNDcgMTAtMTBTMTcuNTMgMiAxMiAyem01IDEzLjU5TDE1LjU5IDE3IDEyIDEzLjQxIDguNDEgMTcgNyAxNS41OSAxMC41OSAxMiA3IDguNDEgOC40MSA3IDEyIDEwLjU5IDE1LjU5IDcgMTcgOC40MSAxMy40MSAxMiAxNyAxNS41OXoiLz48L3N2Zz4='
@@ -21,10 +21,10 @@ export const Tag = memo<Props>(({
   tagData,
   onPressRemove,
 }) => {
-  const { styles } = useStyles()
+  const { styles } = useStyles({ withRemoveButton: !!onPressRemove })
 
   const handlePressRemove = useCallback(() => {
-    onPressRemove(tagData)
+    onPressRemove?.(tagData)
   }, [onPressRemove, tagData])
 
   return (
@@ -40,12 +40,14 @@ export const Tag = memo<Props>(({
         <Text style={styles.label}>
           {tagData.label}
         </Text>
-        <Pressable onPress={handlePressRemove}>
-          <Image
-            style={styles.removeIcon}
-            source={{ uri: removeIcon }}
-          />
-        </Pressable>
+        {onPressRemove ? (
+          <Pressable onPress={handlePressRemove}>
+            <Image
+              style={styles.removeIcon}
+              source={{ uri: removeIcon }}
+            />
+          </Pressable>
+        ) : null}
       </HStack>
     </HStack>
   )
