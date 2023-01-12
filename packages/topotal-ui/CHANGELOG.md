@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.54.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.54.0...@topotal/topotal-ui@0.54.1) (2023-01-12)
+
+
+### Bug Fixes
+
+* Change onPressRemove to optional in tag props ([#347](https://github.com/topotal/js-sdk/issues/347)) ([61751b6](https://github.com/topotal/js-sdk/commit/61751b6adc6f2ca9fcbdca4a3712e5e1c784e903))
+
+
+
+
+
 # [0.54.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.53.0...@topotal/topotal-ui@0.54.0) (2022-12-27)
 
 
