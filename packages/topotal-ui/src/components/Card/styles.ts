@@ -47,17 +47,20 @@ export const useStyles = ({
         borderWidth: 1,
         borderColor: color.borderLight,
         backgroundColor: color.surface,
-        overflow: 'hidden',
       },
       header: {
         height: dynamicStyle.headerHeight,
         paddingHorizontal: dynamicStyle.padding,
         borderBottomWidth: 1,
         borderColor: color.borderLight,
+        borderTopLeftRadius: dynamicStyle.borderRadius,
+        borderTopRightRadius: dynamicStyle.borderRadius,
+        overflow: 'hidden',
         backgroundColor: color.background,
       },
       body: {
         padding: dynamicStyle.padding,
+        zIndex: 1,
       },
       footer: {
         height: dynamicStyle.footerHeight,

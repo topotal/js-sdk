@@ -1,4 +1,5 @@
 import React from 'react'
+import { View } from 'react-native'
 import { defaultTheme } from '../../theme'
 import { Spacer } from '../Spacer'
 import { Text } from '../Text'
@@ -40,6 +41,14 @@ export const List = () => (
       )}
     >
       <Text>test</Text>
+      <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: 'red',
+          position: 'absolute',
+        }}
+      />
     </Card>
   </VStack>
 )
