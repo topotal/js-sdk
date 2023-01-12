@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.54.2](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.54.1...@topotal/topotal-ui@0.54.2) (2023-01-12)
+
+
+### Bug Fixes
+
+* Card style ([#348](https://github.com/topotal/js-sdk/issues/348)) ([040d96d](https://github.com/topotal/js-sdk/commit/040d96dd726b311f6df32bd6fef96ba29d851aad))
+
+
+
+
+
 ## [0.54.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.54.0...@topotal/topotal-ui@0.54.1) (2023-01-12)
 
 
