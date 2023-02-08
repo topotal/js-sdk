@@ -9,6 +9,7 @@ export default {
 export const Default = () => (
   <InputField
     title="Title"
+    description="これは説明です。"
     errorMessage="Error Message"
   >
     <View style={{ borderWidth: 1, width: 300 }}>

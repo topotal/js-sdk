@@ -41,7 +41,7 @@ export const InputField = ({
           ) : null}
         </HStack>
         {description ? (
-          <Text type="small_body">
+          <Text>
             {description}
           </Text>
         ) : null}
