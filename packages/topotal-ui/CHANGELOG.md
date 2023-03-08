@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.55.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.54.3...@topotal/topotal-ui@0.55.0) (2023-03-08)
+
+
+### Features
+
+* Add right-bottom align to Dropdown ([#353](https://github.com/topotal/js-sdk/issues/353)) ([8250b7b](https://github.com/topotal/js-sdk/commit/8250b7b710f7b1fae25ac10e2776d8db3aa0b908))
+
+
+
+
+
 ## [0.54.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.54.2...@topotal/topotal-ui@0.54.3) (2023-02-08)
 
 
