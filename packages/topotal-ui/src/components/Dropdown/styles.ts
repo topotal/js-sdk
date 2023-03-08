@@ -8,12 +8,31 @@ interface Props {
   wrapperMeasure: Measure
 }
 
+const getPostion = (align: CardPositionAlign, windowWidth: number, windowHeight: number, wrapperMeasure: Measure) => {
+  console.info(wrapperMeasure)
+  switch (align) {
+    case 'left':
+      return {
+        top: wrapperMeasure.pageY,
+        left: wrapperMeasure.pageX,
+      }
+    case 'right':
+      return {
+        top: wrapperMeasure.pageY,
+        right: windowWidth - (wrapperMeasure.pageX + wrapperMeasure.width),
+      }
+    case 'right-bottom':
+      return {
+        left: windowWidth - (wrapperMeasure.pageX),
+        bottom: windowHeight - wrapperMeasure.pageY,
+      }
+  }
+}
+
 export const useStyles = ({ align, wrapperMeasure }: Props) => {
-  const { width: windowWidth } = useWindowDimensions()
+  const { width: windowWidth, height: windowHeight } = useWindowDimensions()
   const { color } = useTheme()
-  const topPosition = wrapperMeasure.pageY
-  const leftPosition = wrapperMeasure.pageX
-  const rightPosition = windowWidth - (wrapperMeasure.pageX + wrapperMeasure.width)
+  const position = getPostion(align, windowWidth, windowHeight, wrapperMeasure)
 
   const styles = StyleSheet.create({
     wrapper: {
@@ -29,9 +48,7 @@ export const useStyles = ({ align, wrapperMeasure }: Props) => {
     },
     card: {
       position: 'absolute',
-      top: topPosition,
-      left: align === 'left' ? leftPosition : undefined,
-      right: align === 'right' ? rightPosition : undefined,
+      ...position,
       borderRadius: 4,
       borderWidth: 1,
       borderColor: color.borderLight,
