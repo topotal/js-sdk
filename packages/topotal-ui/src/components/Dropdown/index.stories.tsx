@@ -44,3 +44,7 @@ export const AlignLeft = () => (
 export const AlignRight = () => (
   <Template align="right" />
 )
+
+export const AlignRightBottom = () => (
+  <Template align="right-bottom" />
+)

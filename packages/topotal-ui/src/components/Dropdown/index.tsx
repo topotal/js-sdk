@@ -3,7 +3,7 @@ import { Modal, Pressable, StyleProp, View, ViewStyle } from 'react-native'
 import { useMeasure } from '../../hooks'
 import { useStyles } from './styles'
 
-export type CardPositionAlign = 'left' | 'right'
+export type CardPositionAlign = 'left' | 'right' | 'right-bottom'
 
 interface Props {
   visible?: boolean
@@ -68,7 +68,7 @@ export const Dropdown = ({
             style={styles.background}
             onPress={onPressBackground}
           />
-          <View style={styles.card} >
+          <View style={styles.card}>
             {children}
           </View>
         </Modal>
