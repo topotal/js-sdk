@@ -9,7 +9,6 @@ interface Props {
 }
 
 const getPostion = (align: CardPositionAlign, windowWidth: number, windowHeight: number, wrapperMeasure: Measure) => {
-  console.info(wrapperMeasure)
   switch (align) {
     case 'left':
       return {
@@ -23,7 +22,7 @@ const getPostion = (align: CardPositionAlign, windowWidth: number, windowHeight:
       }
     case 'right-bottom':
       return {
-        left: windowWidth - (wrapperMeasure.pageX),
+        left: wrapperMeasure.pageX + wrapperMeasure.width,
         bottom: windowHeight - wrapperMeasure.pageY,
       }
   }
