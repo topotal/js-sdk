@@ -54,7 +54,6 @@ export const useStyles = ({
       borderColor: color[borderColor],
       backgroundColor: focus ? color.transparent : color.background,
       borderRadius: radius.level1,
-      overflow: 'hidden',
       opacity: disabledPointerEvents ? 0.4 : 1,
       ...focusOutlineStyle.wrapper,
     },
@@ -62,6 +61,8 @@ export const useStyles = ({
       width: height - 2,
       borderRightWidth: 1,
       borderColor: color.borderLight,
+      borderTopLeftRadius: 3,
+      borderBottomLeftRadius: 3,
       backgroundColor: color.background,
     },
     inputWrapper: {
