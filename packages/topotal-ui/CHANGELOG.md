@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.56.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.55.1...@topotal/topotal-ui@0.56.0) (2023-04-16)
+
+
+### Bug Fixes
+
+* InputFrame overflow ([#363](https://github.com/topotal/js-sdk/issues/363)) ([ade0f2c](https://github.com/topotal/js-sdk/commit/ade0f2c0cf52b214c64f639d343ca8d8a8b3e160))
+
+
+### Features
+
+* TextArea completion ([#364](https://github.com/topotal/js-sdk/issues/364)) ([47633dc](https://github.com/topotal/js-sdk/commit/47633dca14af26f16c49a977197d5f83fe028b83))
+
+
+
+
+
 ## [0.55.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.55.0...@topotal/topotal-ui@0.55.1) (2023-03-09)
 
 
