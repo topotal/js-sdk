@@ -70,6 +70,7 @@ export const TextArea = forwardRef(({
           <BaseInput
             ref={ref}
             {...rest}
+            value={value}
             focusable={!disabled}
             autoCapitalize={autoCapitalize}
             multiline
