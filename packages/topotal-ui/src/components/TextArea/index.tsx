@@ -1,5 +1,5 @@
-import { memo, Ref, useCallback, useEffect, useState } from 'react'
-import { NativeSyntheticEvent, TextInput as BaseInput, TextInputSelectionChangeEventData, View } from 'react-native'
+import { ForwardedRef, forwardRef, useCallback, useEffect, useState } from 'react'
+import { NativeSyntheticEvent, TextInput as BaseInput, TextInput, TextInputSelectionChangeEventData, View } from 'react-native'
 import { useFocus, useMeasure } from '../../hooks'
 import { InputFrame } from '../InputFrame'
 import { Text } from '../Text'
@@ -11,7 +11,6 @@ export interface TextAreaCompletionItem {
 }
 
 type BaseProps = {
-  innerRef?: Ref<BaseInput>
   error?: boolean
   disabled?: boolean
   testID?: string
@@ -20,20 +19,19 @@ type BaseProps = {
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
 
-export const TextArea = memo<Props>(({
-  value = '',
+export const TextArea = forwardRef(({
+  value,
   autoCapitalize = 'none',
   error = false,
   disabled = false,
-  innerRef,
   completionView,
   style,
   testID,
   onChangeText,
   onSelectionChange,
   ...rest
-}) => {
-  const [innerValue, setInnerValue] = useState<string>(value)
+}: Props, ref: ForwardedRef<TextInput>) => {
+  const [innerValue, setInnerValue] = useState<string>(value || '')
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const [selectionStart, setSelectionStart] = useState(0)
   const inputText = innerValue.replace(/\n$/g, '\n ')
@@ -52,7 +50,7 @@ export const TextArea = memo<Props>(({
   }, [onChangeText])
 
   useEffect(() => {
-    setInnerValue(value)
+    setInnerValue(value || '')
   }, [value])
 
   return (
@@ -70,9 +68,9 @@ export const TextArea = memo<Props>(({
             {inputText.slice(selectionStart)}
           </Text>
           <BaseInput
+            ref={ref}
             {...rest}
             focusable={!disabled}
-            value={innerValue}
             autoCapitalize={autoCapitalize}
             multiline
             placeholderTextColor={placeholderColor}
