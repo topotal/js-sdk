@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.56.1](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.56.0...@topotal/topotal-ui@0.56.1) (2023-04-17)
+
+
+### Bug Fixes
+
+* Add forwardRef to textarea ([#365](https://github.com/topotal/js-sdk/issues/365)) ([1701afb](https://github.com/topotal/js-sdk/commit/1701afb38e337e1e62755ae8834ead5e81bce04a))
+
+
+
+
+
 # [0.56.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.55.1...@topotal/topotal-ui@0.56.0) (2023-04-16)
 
 
