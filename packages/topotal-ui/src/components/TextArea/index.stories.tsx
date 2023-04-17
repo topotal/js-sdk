@@ -33,10 +33,12 @@ const completionItems: TextAreaCompletionItem[] = [
 export const Completion = () => {
   const [showCompletion, setShowCompletion] = useState(false)
   const ref = useRef<TextInput | null>(null)
+  const [value, setValue] = useState('')
 
   return (
     <TextArea
       ref={ref}
+      value={value}
       completionView={showCompletion ? (
         <View>
           {completionItems.map((item) => (
@@ -55,11 +57,15 @@ export const Completion = () => {
         } else {
           setShowCompletion(false)
         }
+        setValue(text)
       }}
       onKeyPress={(event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
         if (event.nativeEvent.key === 'Enter') {
           event.preventDefault()
-          console.info((event.target as any).setRangeText('test', 2, 3))
+          setValue(value + 'hoge')
+          setTimeout(() => {
+            console.info((event.target as unknown as HTMLInputElement).setSelectionRange(0, 0))
+          }, 0)
         }
       }}
     />
