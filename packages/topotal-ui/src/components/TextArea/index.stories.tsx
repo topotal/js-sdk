@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Text, View } from 'react-native'
+import { useRef, useState } from 'react'
+import { NativeSyntheticEvent, Text, TextInput, TextInputKeyPressEventData, View } from 'react-native'
 import { TextArea, TextAreaCompletionItem } from '.'
 
 export default {
@@ -32,9 +32,11 @@ const completionItems: TextAreaCompletionItem[] = [
 
 export const Completion = () => {
   const [showCompletion, setShowCompletion] = useState(false)
+  const ref = useRef<TextInput | null>(null)
 
   return (
     <TextArea
+      ref={ref}
       completionView={showCompletion ? (
         <View>
           {completionItems.map((item) => (
@@ -52,6 +54,12 @@ export const Completion = () => {
           setShowCompletion(true)
         } else {
           setShowCompletion(false)
+        }
+      }}
+      onKeyPress={(event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
+        if (event.nativeEvent.key === 'Enter') {
+          event.preventDefault()
+          console.info((event.target as any).setRangeText('test', 2, 3))
         }
       }}
     />
