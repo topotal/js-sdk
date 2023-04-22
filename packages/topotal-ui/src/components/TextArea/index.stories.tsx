@@ -71,3 +71,10 @@ export const Completion = () => {
     />
   )
 }
+
+export const OnCmdEnterPress = () => (
+  <TextArea
+    onCmdEnterPress={() => console.log('command and enter pressed')}
+  />
+)
+

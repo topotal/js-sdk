@@ -17,5 +17,6 @@ export const all = () => (
     <TextInput size="medium" secureTextEntry placeholder="Password"/>
     <TextInput size="medium" error />
     <TextInput size="medium" value="default value" onChangeText={value => console.info(value)}/>
+    <TextInput size="medium" onCmdEnterPress={() => console.log('command and enter pressed')}/>
   </>
 )

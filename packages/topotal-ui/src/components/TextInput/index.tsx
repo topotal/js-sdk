@@ -1,5 +1,5 @@
-import { memo, Ref } from 'react'
-import { TextInput as BaseInput } from 'react-native'
+import { memo, Ref, useCallback } from 'react'
+import { NativeSyntheticEvent, TextInput as BaseInput, TextInputKeyPressEventData } from 'react-native'
 import { useFocus, useInputValue } from '../../hooks'
 import type { InputFrameSize } from '../InputFrame'
 import { InputFrame } from '../InputFrame'
@@ -13,6 +13,7 @@ type BaseProps = {
   disabled?: boolean
   startIconName?: string
   testID?: string
+  onCmdEnterPress?: VoidFunction
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
@@ -28,6 +29,7 @@ export const TextInput = memo<Props>(({
   style,
   testID,
   onChangeText,
+  onCmdEnterPress,
   ...rest
 }) => {
   const { innerValue, handleChange } = useInputValue<string>({
@@ -36,6 +38,14 @@ export const TextInput = memo<Props>(({
   })
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const { styles, placeholderColor } = useStyles()
+  const handleKeyPress = useCallback((event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
+    const { key } = event.nativeEvent
+    const keyEvents = event.nativeEvent as any
+
+    if((event.nativeEvent.key === 'Enter' && keyEvents.metaKey) || (key === 'Enter' && keyEvents.ctrlKey)) {
+      onCmdEnterPress?.()
+    }
+  }, [onCmdEnterPress])
 
   return (
     <InputFrame
@@ -61,6 +71,7 @@ export const TextInput = memo<Props>(({
           onChangeText={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          onKeyPress={handleKeyPress}
           style={style}
           testID={testID}
         />
