@@ -30,6 +30,7 @@ export const TextArea = forwardRef(({
   testID,
   onChangeText,
   onSelectionChange,
+  onKeyPress,
   onCmdEnterPress,
   ...rest
 }: Props, ref: ForwardedRef<TextInput>) => {
@@ -57,8 +58,11 @@ export const TextArea = forwardRef(({
 
     if((event.nativeEvent.key === 'Enter' && keyEvents.metaKey) || (key === 'Enter' && keyEvents.ctrlKey)) {
       onCmdEnterPress?.()
+      return
     }
-  }, [onCmdEnterPress])
+
+    onKeyPress?.(event)
+  }, [onCmdEnterPress, onKeyPress])
 
   useEffect(() => {
     setInnerValue(value || '')

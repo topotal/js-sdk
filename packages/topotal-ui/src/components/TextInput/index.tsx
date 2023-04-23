@@ -28,6 +28,7 @@ export const TextInput = memo<Props>(({
   innerRef,
   style,
   testID,
+  onKeyPress,
   onChangeText,
   onCmdEnterPress,
   ...rest
@@ -44,8 +45,11 @@ export const TextInput = memo<Props>(({
 
     if((event.nativeEvent.key === 'Enter' && keyEvents.metaKey) || (key === 'Enter' && keyEvents.ctrlKey)) {
       onCmdEnterPress?.()
+      return
     }
-  }, [onCmdEnterPress])
+
+    onKeyPress?.(event)
+  }, [onCmdEnterPress, onKeyPress])
 
   return (
     <InputFrame
