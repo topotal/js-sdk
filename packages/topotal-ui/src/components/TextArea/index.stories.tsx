@@ -71,3 +71,26 @@ export const Completion = () => {
     />
   )
 }
+
+export const OnKeyPress= () => (
+  <TextArea
+    value="press some kind of key"
+    onKeyPress={(event) => console.log(event.nativeEvent.key)}
+  />
+)
+
+export const OnCmdEnterPress = () => (
+  <TextArea
+    value="press command + enter"
+    onCmdEnterPress={() => console.log('command and enter pressed')}
+  />
+)
+
+export const OnKeyPressAndCmdEnterPress = () => (
+  <TextArea
+    value="press some kind of key or command + enter"
+    onKeyPress={(event) => console.log(event.nativeEvent.key)}
+    onCmdEnterPress={() => console.log('command and enter pressed')}
+  />
+)
+

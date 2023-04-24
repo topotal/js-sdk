@@ -1,5 +1,5 @@
 import { ForwardedRef, forwardRef, useCallback, useEffect, useState } from 'react'
-import { NativeSyntheticEvent, TextInput as BaseInput, TextInput, TextInputSelectionChangeEventData, View } from 'react-native'
+import { NativeSyntheticEvent, TextInput as BaseInput, TextInput, TextInputKeyPressEventData, TextInputSelectionChangeEventData, View } from 'react-native'
 import { useFocus, useMeasure } from '../../hooks'
 import { InputFrame } from '../InputFrame'
 import { Text } from '../Text'
@@ -15,6 +15,7 @@ type BaseProps = {
   disabled?: boolean
   testID?: string
   completionView?: React.ReactNode
+  onCmdEnterPress?: VoidFunction
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
@@ -29,6 +30,8 @@ export const TextArea = forwardRef(({
   testID,
   onChangeText,
   onSelectionChange,
+  onKeyPress,
+  onCmdEnterPress,
   ...rest
 }: Props, ref: ForwardedRef<TextInput>) => {
   const [innerValue, setInnerValue] = useState<string>(value || '')
@@ -48,6 +51,18 @@ export const TextArea = forwardRef(({
     setInnerValue(text)
     onChangeText?.(text)
   }, [onChangeText])
+
+  const handleKeyPress = useCallback((event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
+    const { key } = event.nativeEvent
+    const keyEvents = event.nativeEvent as any
+
+    if((event.nativeEvent.key === 'Enter' && keyEvents.metaKey) || (key === 'Enter' && keyEvents.ctrlKey)) {
+      onCmdEnterPress?.()
+      return
+    }
+
+    onKeyPress?.(event)
+  }, [onCmdEnterPress, onKeyPress])
 
   useEffect(() => {
     setInnerValue(value || '')
@@ -79,6 +94,7 @@ export const TextArea = forwardRef(({
             onSelectionChange={handleSelectionChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
+            onKeyPress={handleKeyPress}
             style={[style, styles.input]}
             testID={testID}
           />

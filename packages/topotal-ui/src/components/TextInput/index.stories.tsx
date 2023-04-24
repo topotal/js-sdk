@@ -17,5 +17,8 @@ export const all = () => (
     <TextInput size="medium" secureTextEntry placeholder="Password"/>
     <TextInput size="medium" error />
     <TextInput size="medium" value="default value" onChangeText={value => console.info(value)}/>
+    <TextInput size="medium" value="press some kind of key" onKeyPress={event => console.info(event.nativeEvent.key)}/>
+    <TextInput size="medium" value="press command + enter" onCmdEnterPress={() => console.log('command and enter pressed')}/>
+    <TextInput size="medium" value="press some kind of key or command + enter" onKeyPress={event => console.info(event.nativeEvent.key)} onCmdEnterPress={() => console.log('command and enter pressed')}/>
   </>
 )
