@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ForwardedRef, forwardRef } from 'react'
 import { isFragment } from 'react-is'
 import { StyleProp, View, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
@@ -42,7 +42,7 @@ const createStyleInjectedChildren = (children: React.ReactNode, direction: Direc
   })
 }
 
-export const BaseStack = ({
+export const BaseStack = forwardRef(({
   direction,
   gap = 0,
   align = 'stretch',
@@ -51,7 +51,7 @@ export const BaseStack = ({
   children,
   testID,
   ...rest
-}: Props): JSX.Element => {
+}: Props, ref: ForwardedRef<View>): JSX.Element => {
   const styles = useStyles({
     direction,
     align,
@@ -59,8 +59,8 @@ export const BaseStack = ({
   })
 
   return (
-    <View style={[styles.wrapper, style]} testID={testID} {...rest}>
+    <View style={[styles.wrapper, style]} ref={ref} testID={testID} {...rest}>
       {createStyleInjectedChildren(children, direction, gap)}
     </View>
   )
-}
+})

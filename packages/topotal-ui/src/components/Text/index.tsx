@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ForwardedRef, forwardRef } from 'react'
 import { StyleProp, Text as BaseText, TextStyle } from 'react-native'
 import { FontWeight, TextType } from '../../theme'
 import { HrefProps } from '../../types'
@@ -11,22 +11,23 @@ interface Props extends React.ComponentProps<typeof BaseText>, HrefProps {
   testID?: string
 }
 
-export const Text = ({
+export const Text = forwardRef(({
   type = 'body',
   weight = 'normal',
   style,
   children,
   testID,
   ...rest
-}: Props): JSX.Element => {
+}: Props, ref: ForwardedRef<BaseText>): JSX.Element => {
   const { styles } = useStyles({ type, weight })
   return (
     <BaseText
       {...rest}
       style={[styles.wrapper, style]}
       testID={testID}
+      ref={ref}
     >
       {children}
     </BaseText>
   )
-}
+})
