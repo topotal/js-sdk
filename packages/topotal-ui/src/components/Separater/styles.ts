@@ -17,7 +17,7 @@ export const useStyles = () => {
       backgroundColor: theme.color.borderLight,
     },
     text: {
-      color: theme.color.borderLight,
+      color: theme.color.cancel,
     },
   })
 
