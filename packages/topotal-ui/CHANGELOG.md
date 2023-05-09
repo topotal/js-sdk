@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.56.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.56.3...@topotal/topotal-ui@0.56.4) (2023-05-08)
+## [0.56.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.56.4...@topotal/topotal-ui@0.56.5) (2023-05-09)
 
 **Note:** Version bump only for package @topotal/topotal-ui
 
+## [0.56.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.56.3...@topotal/topotal-ui@0.56.4) (2023-05-08)
 
-
-
+**Note:** Version bump only for package @topotal/topotal-ui
 
 ## [0.56.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.56.2...@topotal/topotal-ui@0.56.3) (2023-04-24)
 
