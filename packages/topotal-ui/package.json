@@ -30,7 +30,7 @@
     "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build",
     "lint": "eslint --ext .ts,.tsx src",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "build-doc": "STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui build-storybook -o ../../docs/topotal-ui/"
   },
   "dependencies": {
