@@ -39,7 +39,7 @@ export const defaultTheme = {
     borderDark: palette.sumi,
     cancel: '#666666',
     cancelLight: '#E5E5E5',
-    cancelDark: '#4F4F4F',
+    cancelDark: '#5E5E5E',
     primaryTextDark: palette.sumi,
     secondaryTextDark: palette.katana,
     primaryTextLight: palette.yuki,
