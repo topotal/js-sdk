@@ -4,6 +4,8 @@ export default {
   title: 'components/Tag',
 }
 
+const iconUrl = 'https://randomuser.me/api/portraits/men/1.jpg'
+
 export const Default = () => (
   <Tag
     tagData={{
@@ -22,3 +24,26 @@ export const WithRemoveButton = () => (
     onPressRemove={() => { console.log('onPressRemove') }}
   />
 )
+
+export const WithIcon = () => (
+  <Tag
+    tagData={{
+      label: 'leonard wagner',
+      value: 'test',
+      iconUrl,
+    }}
+  />
+)
+
+
+export const WithIconAndRemoveButton = () => (
+  <Tag
+    tagData={{
+      label: 'leonard wagner',
+      value: 'test',
+      iconUrl,
+    }}
+    onPressRemove={() => { console.log('onPressRemove') }}
+  />
+)
+

@@ -1,11 +1,12 @@
 import { memo, useCallback } from 'react'
 import { Image, Pressable, StyleProp, ViewStyle } from 'react-native'
-import { HStack, Text } from '..'
+import { HStack, Text, UserIcon } from '..'
 import { useStyles } from './styles'
 
 export interface TagData {
   label: string
   value: string
+  iconUrl?: string
 }
 
 interface Props {
@@ -37,6 +38,9 @@ export const Tag = memo<Props>(({
         align="center"
         style={styles.container}
       >
+        {tagData.iconUrl && (
+          <UserIcon size={'extraSmall'} uri={tagData.iconUrl} />
+        )}
         <Text style={styles.label}>
           {tagData.label}
         </Text>

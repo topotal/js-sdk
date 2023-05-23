@@ -10,6 +10,10 @@ const defaultProps: Props = {
   uri: 'https://randomuser.me/api/portraits/men/1.jpg',
 }
 
+export const ExtraSmall = () => (
+  <UserIcon {...defaultProps} size="extraSmall" />
+)
+
 export const Small = () => (
   <UserIcon {...defaultProps} size="small" />
 )
