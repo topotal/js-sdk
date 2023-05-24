@@ -23,6 +23,12 @@ const getDynamicStyle = (size: UserIconSize) => {
         height: 24,
         borderRadius: 12,
       }
+    case 'extraSmall':
+      return {
+        width: 18,
+        height: 18,
+        borderRadius: 10,
+      }
   }
 }
 

@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 import { Image, StyleProp, View, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
 
-export type UserIconSize = 'small' | 'medium' | 'large'
+export type UserIconSize = 'extraSmall' | 'small' | 'medium' | 'large'
 
 interface Props {
   uri: string
