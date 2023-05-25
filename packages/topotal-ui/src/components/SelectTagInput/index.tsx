@@ -14,6 +14,7 @@ interface Props<T> {
   placeholder?: string
   disabled?: boolean
   loading?: boolean
+  autoFocus?: boolean
   testID?: string
   renderItem: (item: T, active: boolean) => JSX.Element
   tagDataGenarator: (item: T) => TagData
@@ -30,6 +31,7 @@ export const SelectTagInput = <T, >({
   error,
   placeholder = 'Insert new item...',
   disabled,
+  autoFocus,
   loading = false,
   testID,
   tagDataGenarator,
@@ -95,6 +97,7 @@ export const SelectTagInput = <T, >({
               multiline={false}
               placeholder={placeholder}
               placeholderTextColor={placeholderColor}
+              autoFocus={autoFocus}
               onKeyPress={handlePressKey}
               onChangeText={updateTextValue}
               onFocus={handleFocus}
