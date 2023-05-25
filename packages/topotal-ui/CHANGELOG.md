@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.57.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.56.5...@topotal/topotal-ui@0.57.0) (2023-05-25)
+
+
+### Bug Fixes
+
+* Add autoFocus prop  to SelectTagInput ([#378](https://github.com/topotal/js-sdk/issues/378)) ([32b6f52](https://github.com/topotal/js-sdk/commit/32b6f522240adc03ef46d01a7392eee24bb8a1e6))
+
+
+### Features
+
+* Add pressableChecker to SelectTagInput ([#379](https://github.com/topotal/js-sdk/issues/379)) ([c6186e1](https://github.com/topotal/js-sdk/commit/c6186e1be987dbe61ac76d12de1511ddf0e68ddf))
+
+
+
+
+
 ## [0.56.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.56.4...@topotal/topotal-ui@0.56.5) (2023-05-09)
 
 **Note:** Version bump only for package @topotal/topotal-ui
