@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react'
 import { HStack } from '../HStack'
+import { TagData } from '../Tag'
 import { Text } from '../Text'
 import { SelectTagInput } from '.'
 
@@ -7,21 +8,16 @@ export default {
   title: 'components/SelectTagInput',
 }
 
-interface Item {
-  value: string
-  label: string
-}
+const tagDataGenarator = (item: TagData) => item
 
-const tagDataGenarator = (item: Item) => item
-
-const fetchedItems: Item[] = [
-  { value: 'hoge', label: 'hoge' },
-  { value: 'fuga', label: 'fuga' },
+const fetchedItems: TagData[] = [
+  { value: 'hoge', label: 'hoge', iconUrl: 'https://randomuser.me/api/portraits/women/57.jpg' },
+  { value: 'noPress', label: 'noPress' },
   { value: 'piyo', label: 'piyo' },
 ]
 
 export const Default = () => {
-  const [items, setItems] = useState<Item[]>([])
+  const [items, setItems] = useState<TagData[]>([])
 
   const handleFocus = useCallback(() => {
     setTimeout(() => {
@@ -34,12 +30,18 @@ export const Default = () => {
       items={items}
       tagDataGenarator={tagDataGenarator}
       loading={items.length === 0}
-      renderItem={(item: Item, active: boolean) => (
+      renderItem={(item: TagData, active: boolean, pressable: boolean) => (
         <HStack style={{ paddingHorizontal: 16, height: 40, alignItems: 'center' }}>
-          <Text weight={active ? 'bold' : 'normal'}>{item.label}</Text>
+          <Text
+            style={{ color: pressable ? 'black' : 'gray' }}
+            weight={active ? 'bold' : 'normal'}
+          >
+            {item.label}
+          </Text>
         </HStack>
       )}
-      onChange={(value: Item[]) => { console.info(value) }}
+      pressableChecker={(item: TagData) => item.value !== 'noPress'}
+      onChange={(value: TagData[]) => { console.info(value) }}
       onFocus={handleFocus}
     />
   )
