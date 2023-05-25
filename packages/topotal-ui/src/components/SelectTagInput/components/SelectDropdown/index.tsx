@@ -7,8 +7,9 @@ interface Props<T> {
   items: T[]
   currentIndex: number
   loading: boolean
-  renderItem: (item: T, active: boolean) => JSX.Element
+  renderItem: (item: T, active: boolean, pressable: boolean) => JSX.Element
   tagDataGenarator: (item: T, index: number) => TagData
+  pressableChecker?: (item: T) => boolean
   onPressItem: (item: T) => void
   onHoverIn: () => void
   onHoverOut: (event: GestureResponderEvent) => void
@@ -22,6 +23,7 @@ export const SelectDropdown = <T, >({
   loading,
   renderItem,
   tagDataGenarator,
+  pressableChecker,
   onPressItem,
   onHoverIn,
   onHoverOut,
@@ -56,6 +58,7 @@ export const SelectDropdown = <T, >({
                 item={item}
                 active={index === currentIndex}
                 renderItem={renderItem}
+                pressable={pressableChecker ? pressableChecker(item) : true}
                 onPress={onPressItem}
                 onHover={onHoverItem}
                 onFocus={onFocusItem}

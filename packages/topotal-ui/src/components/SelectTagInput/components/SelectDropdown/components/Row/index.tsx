@@ -6,7 +6,8 @@ interface Props<T> {
   index: number
   item: T
   active: boolean
-  renderItem: (item: T, active: boolean) => JSX.Element
+  pressable: boolean
+  renderItem: (item: T, active: boolean, pressable: boolean) => JSX.Element
   onPress: (item: T) => void
   onHover: (index: number) => void
   onFocus: (index: number) => void
@@ -16,6 +17,7 @@ export const Row = <T, >({
   index,
   item,
   active,
+  pressable,
   renderItem,
   onPress,
   onHover,
@@ -45,11 +47,12 @@ export const Row = <T, >({
         borderTopWidth: index !== 0 ? 1 : 0,
         backgroundColor: active ? color.background : color.surface,
       }}
+      pointerEvents={pressable ? 'auto' : 'none'}
       onPress={handlePress}
       onHoverIn={handleHover}
       onFocus={handleFocus}
     >
-      {renderItem(item, active)}
+      {renderItem(item, active, pressable)}
     </Pressable>
   )
 }

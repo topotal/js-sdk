@@ -16,8 +16,9 @@ interface Props<T> {
   loading?: boolean
   autoFocus?: boolean
   testID?: string
-  renderItem: (item: T, active: boolean) => JSX.Element
+  renderItem: (item: T, active: boolean, pressable: boolean) => JSX.Element
   tagDataGenarator: (item: T) => TagData
+  pressableChecker?: (item: T) => boolean
   onFocus?: () => void
   onBlur?: () => void
   onChange?: (value: T[]) => void
@@ -35,6 +36,7 @@ export const SelectTagInput = <T, >({
   loading = false,
   testID,
   tagDataGenarator,
+  pressableChecker,
   renderItem,
   onFocus,
   onBlur,
@@ -114,6 +116,7 @@ export const SelectTagInput = <T, >({
           loading={loading}
           renderItem={renderItem}
           tagDataGenarator={tagDataGenarator}
+          pressableChecker={pressableChecker}
           onPressItem={handlePressItem}
           onHoverIn={handleHoverInDropdown}
           onHoverOut={handleHoverOutDropdown}
