@@ -33,7 +33,7 @@ jobs:
       - name: Get commit message
         id: commit_message
         run: |
-          commit_message=$(git log --format=%B -n 1 ${{ github.sha }})
+          commit_message=$(git log --format=%B -n 1 ${{ github.sha }} | tr -d '\n')
           echo "commit_message=$commit_message" >> $GITHUB_OUTPUT
       - name: Get repository name
         id: extracted_name
@@ -46,7 +46,7 @@ jobs:
           curl --location --request POST 'https://api.staging.waroom.com/v1/organizations/topotal/services/waroom-frontend-prod/deployments' \
             --header 'Content-Type: application/json' \
             --header 'Accept: application/json' \
-            --header 'Authorization: Bearer AtVvle8ZOTwVDNw1BsKY_R2QB3K_VPNE5E1tAcTKpJ4' \
+            --header 'Authorization: Bearer ${{ secrets.WAROOM_DEPLOYMENT_TRACKING_INTEGRATION_KEY }}' \
             --data-raw '{
               "ref": "${{ github.sha }}",
               "environment": "Production",
