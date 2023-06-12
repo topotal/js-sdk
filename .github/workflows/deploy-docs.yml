@@ -30,3 +30,27 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
+      - name: Get commit message
+        run: |
+          commit_message=$(git log --format=%B -n 1 ${{ github.sha }})
+          echo "Commit Message: $commit_message"
+      - name: Get repository name
+        run: |
+          repository_name=${{ github.repository }}
+          extracted_name=$(echo $repository_name | cut -d '/' -f 2)
+          echo "Extracted name: $extracted_name"
+      - name: Send deployment information to Waroom
+        run: |
+          curl --location --request POST 'https://api.staging.waroom.com/v1/organizations/topotal/services/
+          waroom-frontend-prod/deployments' \
+          --header 'Content-Type: application/json' \
+          --header 'Accept: application/json' \
+          --header 'Authorization: Bearer AtVvle8ZOTwVDNw1BsKY_R2QB3K_VPNE5E1tAcTKpJ4' \
+          --data-raw '{
+            "ref": ${{ github.sha }},
+            "environment": "Production",
+            "platform": "github",
+            "description": ${{ commit_message }},
+            "repository_owner": ${{ github.repository_owner }},
+            "repository_name": ${{ extracted_name }}
+          }'
