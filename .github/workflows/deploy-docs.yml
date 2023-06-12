@@ -43,16 +43,15 @@ jobs:
           echo "extracted_name=$extracted_name" >> $GITHUB_OUTPUT
       - name: Send deployment information to Waroom
         run: |
-          curl --location --request POST 'https://api.staging.waroom.com/v1/organizations/topotal/services/
-          waroom-frontend-prod/deployments' \
-          --header 'Content-Type: application/json' \
-          --header 'Accept: application/json' \
-          --header 'Authorization: Bearer AtVvle8ZOTwVDNw1BsKY_R2QB3K_VPNE5E1tAcTKpJ4' \
-          --data-raw '{
-            "ref": ${{ github.sha }},
-            "environment": "Production",
-            "platform": "github",
-            "description": ${{ steps.commit_message.outputs.commit_message }},
-            "repository_owner": ${{ github.repository_owner }},
-            "repository_name": ${{ steps.extracted_name.outputs.extracted_name }}
-          }'
+          curl --location --request POST 'https://api.staging.waroom.com/v1/organizations/topotal/services/waroom-frontend-prod/deployments' \
+            --header 'Content-Type: application/json' \
+            --header 'Accept: application/json' \
+            --header 'Authorization: Bearer AtVvle8ZOTwVDNw1BsKY_R2QB3K_VPNE5E1tAcTKpJ4' \
+            --data-raw '{
+              "ref": ${{ github.sha }},
+              "environment": "Production",
+              "platform": "github",
+              "description": ${{ steps.commit_message.outputs.commit_message }},
+              "repository_owner": ${{ github.repository_owner }},
+              "repository_name": ${{ steps.extracted_name.outputs.extracted_name }}
+            }'
