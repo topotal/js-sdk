@@ -48,10 +48,10 @@ jobs:
             --header 'Accept: application/json' \
             --header 'Authorization: Bearer AtVvle8ZOTwVDNw1BsKY_R2QB3K_VPNE5E1tAcTKpJ4' \
             --data-raw '{
-              "ref": ${{ github.sha }},
+              "ref": "${{ github.sha }}",
               "environment": "Production",
               "platform": "github",
-              "description": ${{ steps.commit_message.outputs.commit_message }},
-              "repository_owner": ${{ github.repository_owner }},
-              "repository_name": ${{ steps.extracted_name.outputs.extracted_name }}
+              "description": "${{ steps.commit_message.outputs.commit_message }}",
+              "repository_owner": "${{ github.repository_owner }}",
+              "repository_name": "${{ steps.extracted_name.outputs.extracted_name }}"
             }'
