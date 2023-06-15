@@ -35,12 +35,6 @@ jobs:
         run: |
           commit_message=$(git log --format=%B -n 1 ${{ github.sha }} | tr -d '\n')
           echo "commit_message=$commit_message" >> $GITHUB_OUTPUT
-      - name: Get repository name
-        id: extracted_name
-        run: |
-          repository_name=${{ github.repository }}
-          extracted_name=$(echo $repository_name | cut -d '/' -f 2)
-          echo "extracted_name=$extracted_name" >> $GITHUB_OUTPUT
       - name: Send deployment information to Waroom
         run: |
           curl --location --request POST 'https://api.staging.waroom.com/v1/organizations/topotal/services/waroom-frontend-prod/deployments' \
@@ -53,5 +47,5 @@ jobs:
               "platform": "github",
               "description": "${{ steps.commit_message.outputs.commit_message }}",
               "repository_owner": "${{ github.repository_owner }}",
-              "repository_name": "${{ steps.extracted_name.outputs.extracted_name }}"
+              "repository_name": "${{ github.event.repository.name }}"
             }'
