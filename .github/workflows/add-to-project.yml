@@ -1,0 +1,24 @@
+name: Add issues to Waroom Project
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mercari/github-app-token-generator@v1
+        id: get-token
+        with:
+          app-private-key: ${{ secrets.TOPOTAL_GITHUB_PROJECT_MANAGER_PRIVATE_KEY }}
+          app-id: ${{ vars.TOPOTAL_GITHUB_PROJECT_MANAGER_APP_ID }}
+          app-installation-id: ${{ vars.TOPOTAL_GITHUB_PROJECT_MANAGER_APP_INSTALLATION_ID}}
+      - uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/orgs/topotal/projects/7
+          github-token: ${{ steps.get-token.outputs.token }}
+          labeled: bug, 技術的負債
+          label-operator: OR
