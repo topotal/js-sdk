@@ -14,9 +14,6 @@ interface Props {
 }
 
 
-const ON_POSITION = 24
-const OFF_POSITION = 0
-
 export const ToggleSwitch = ({
   style,
   value = false,
@@ -44,12 +41,12 @@ export const ToggleSwitch = ({
     Animated.timing(
       fadeAnim,
       {
-        toValue: innerValue ? ON_POSITION : OFF_POSITION,
+        toValue: innerValue ? toggleStyles.onPosition : toggleStyles.offPosition,
         duration: 200,
         useNativeDriver: true,
       }
     ).start()
-  }, [fadeAnim, innerValue])
+  }, [fadeAnim, innerValue, toggleStyles])
 
   return (
     <View style={[{
@@ -61,7 +58,7 @@ export const ToggleSwitch = ({
           style={{
             width: toggleStyles.width,
             height: toggleStyles.height,
-            padding: 3,
+            padding: toggleStyles.paddingInner,
             borderRadius: 16,
             backgroundColor: innerValue ? color.success : color.borderLight,
             ...focusStyles.wrapper,
