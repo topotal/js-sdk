@@ -2,24 +2,31 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Animated, StyleProp, View, ViewStyle } from 'react-native'
 import { useFocus, useFocusOutlineStyle } from '../../hooks'
 import { useTheme } from '../../theme'
+import { getStylefromSize } from './utils'
 
+
+export type ToggleSwitchSize = 'large' | 'medium' | 'small'
 interface Props {
   style?: StyleProp<ViewStyle>
   value?: boolean
+  size?: ToggleSwitchSize
   onChange?: (value: boolean) => void
 }
 
-const ON_POSITION = 32
+
+const ON_POSITION = 24
 const OFF_POSITION = 0
 
 export const ToggleSwitch = ({
   style,
   value = false,
+  size = 'large',
   onChange,
 }: Props) => {
   const [innerValue, setValue] = useState(value)
+  const toggleStyles = getStylefromSize(size)
   const { color } = useTheme()
-  const fadeAnim = useRef(new Animated.Value(innerValue ? ON_POSITION : OFF_POSITION)).current
+  const fadeAnim = useRef(new Animated.Value(innerValue ? toggleStyles.onPosition : toggleStyles.offPosition)).current
   const { isFocused, handleFocus, handleBlur } = useFocus()
   const { styles: focusStyles } = useFocusOutlineStyle({ focus: isFocused })
 
@@ -46,14 +53,14 @@ export const ToggleSwitch = ({
 
   return (
     <View style={[{
-      width: 64,
-      height: 32,
+      width: toggleStyles.width,
+      height: toggleStyles.height,
     }, style]}>
       <label>
         <View
           style={{
-            width: 64,
-            height: 32,
+            width: toggleStyles.width,
+            height: toggleStyles.height,
             padding: 3,
             borderRadius: 16,
             backgroundColor: innerValue ? color.success : color.borderLight,
@@ -62,8 +69,8 @@ export const ToggleSwitch = ({
         >
           <Animated.View
             style={{
-              width: 26,
-              height: 26,
+              width: toggleStyles.animatedWidth,
+              height: toggleStyles.animatedHeight,
               borderRadius: 13,
               backgroundColor: '#fff',
               transform: [
