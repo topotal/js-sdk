@@ -45,17 +45,5 @@ export const getStylefromSize = (size: ToggleSwitchSize): ToggleSwitchStyle => {
         animatedWidth: 18,
         paddingInner: 0,
       }
-
-    default:
-      // 呼ばれることはないがデフォはlargeを返す
-      return {
-        onPosition: 32,
-        offPosition: 0,
-        height: 32,
-        width: 64,
-        animatedHeight: 26,
-        animatedWidth: 26,
-        paddingInner: 3,
-      }
   }
 }
