@@ -13,3 +13,11 @@ const defaultProps: Props = {
 export const Default = () => (
   <ToggleSwitch {...defaultProps} />
 )
+
+export const Medium = () => (
+  <ToggleSwitch {...{ ...defaultProps, size: 'medium' }} />
+)
+
+export const Small = () => (
+  <ToggleSwitch {...{ ...defaultProps, size: 'small' }} />
+)
