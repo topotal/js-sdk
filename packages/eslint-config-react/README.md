@@ -23,7 +23,7 @@ Add `@topotal/eslunt-config-react` to `eslintrc` extends.
 ```json
 {
   "extends": [
-    "@topotal/exlint-config-react"
+    "@topotal/eslint-config-react"
   ]
 }
 ```
