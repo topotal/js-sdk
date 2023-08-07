@@ -23,7 +23,7 @@ Add `@topotal/eslunt-config-typescript` to `eslintrc` extends.
 ```json
 {
   "extends": [
-    "@topotal/exlint-config-typescript"
+    "@topotal/eslint-config-typescript"
   ]
 }
 ```
