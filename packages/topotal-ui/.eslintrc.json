@@ -51,7 +51,6 @@
     "comma-spacing": ["error", { "before": false, "after": true }],
     "jsx-quotes": "error"
   },
-  // comment
   "overrides": [
     {
       "files": [
