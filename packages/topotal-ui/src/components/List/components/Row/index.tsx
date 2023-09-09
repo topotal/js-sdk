@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { Pressable, StyleProp, ViewStyle } from 'react-native'
+import { MouseEvent, Pressable, StyleProp, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
 
 interface Props<T = any> {
