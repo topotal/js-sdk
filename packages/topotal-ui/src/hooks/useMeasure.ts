@@ -36,9 +36,9 @@ export const useMeasure = <T extends NativeMethods>() => {
   }, [])
 
   useOnlyOnceEffect(() => {
-    Dimensions.addEventListener('change', handleResize)
+    const subscription = Dimensions.addEventListener('change', handleResize)
     return () => {
-      Dimensions.removeEventListener('change', handleResize)
+      subscription?.remove()
     }
   })
 

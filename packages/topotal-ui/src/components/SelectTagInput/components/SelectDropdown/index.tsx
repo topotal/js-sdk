@@ -1,4 +1,4 @@
-import { GestureResponderEvent, Pressable, View } from 'react-native'
+import { MouseEvent, Pressable, View } from 'react-native'
 import { HStack, TagData, Text } from '../../..'
 import { Row } from './components/Row'
 import { useStyles } from './styles'
@@ -12,7 +12,7 @@ interface Props<T> {
   pressableChecker?: (item: T) => boolean
   onPressItem: (item: T) => void
   onHoverIn: () => void
-  onHoverOut: (event: GestureResponderEvent) => void
+  onHoverOut: (event: MouseEvent) => void
   onHoverItem: (index: number) => void
   onFocusItem: (index: number) => void
 }

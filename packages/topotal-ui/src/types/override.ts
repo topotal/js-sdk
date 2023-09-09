@@ -1,4 +1,4 @@
-import 'react-native'
+import { MouseEvent } from 'react-native'
 
 declare module 'react-native' {
   interface PressableStateCallbackType {
@@ -6,8 +6,8 @@ declare module 'react-native' {
   }
 
   interface PressableProps {
-    onHoverIn?: (event: GestureResponderEvent) => void
-    onHoverOut?: (event: GestureResponderEvent) => void
+    onHoverIn?: null | ((event: MouseEvent) => void) | undefined;
+    onHoverOut?: null | ((event: MouseEvent) => void) | undefined;
   }
 
   interface PickerProps {
