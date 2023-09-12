@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import { GestureResponderEvent } from 'react-native'
+import { MouseEvent } from 'react-native'
 
 export const useHover = () => {
   const [hovering, setHovering] = useState(false)
@@ -8,7 +8,7 @@ export const useHover = () => {
     setHovering(true)
   }, [])
 
-  const handleHoverOut = useCallback((event: GestureResponderEvent) => {
+  const handleHoverOut = useCallback((event: MouseEvent) => {
     if (event.type === 'pointerleave') {
       setHovering(false)
     }

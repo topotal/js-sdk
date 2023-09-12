@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { GestureResponderEvent, Pressable, StyleProp, ViewStyle } from 'react-native'
+import { MouseEvent, Pressable, StyleProp, ViewStyle } from 'react-native'
 import { useStyles } from './styles'
 
 interface Props<T = any> {
@@ -42,7 +42,7 @@ export const Row = React.memo<Props>(({
     onHoverIn(index)
   }, [disabledChangeBackground, index, onHoverIn])
 
-  const handleHoverOut = useCallback((event: GestureResponderEvent) => {
+  const handleHoverOut = useCallback((event: MouseEvent) => {
     if (event.type === 'pointerleave') {
       onHoverOut(index)
     }

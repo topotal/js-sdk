@@ -5,11 +5,6 @@ declare module 'react-native' {
     hovered?: boolean
   }
 
-  interface PressableProps {
-    onHoverIn?: (event: GestureResponderEvent) => void
-    onHoverOut?: (event: GestureResponderEvent) => void
-  }
-
   interface PickerProps {
     onFocus?: () => void
     onBlur?: () => void
