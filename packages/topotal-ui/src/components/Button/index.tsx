@@ -55,7 +55,7 @@ export const Button = memo<Props>(({
       ]}
       disabled={disabled || loading}
       accessibilityRole="button"
-      onPress={onPress}
+      onPressOut={onPress}
       onFocus={handleFocus}
       onBlur={handleBlur}
       onHoverIn={handleHoverIn}

@@ -1,9 +1,27 @@
+import { useAsyncFn } from 'react-use'
 import { VStack } from '../'
 import { Button } from './'
 
 export default { title: 'components/Button' }
 
-export const all = () => (
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
+export const Test = () => {
+  const [{ loading }, submit] = useAsyncFn(async () => {
+    console.info('hoge')
+    await sleep(1000)
+  }, [])
+
+  return (
+    <Button
+      title="テスト"
+      loading={loading}
+      onPress={submit}
+    />
+  )
+}
+
+export const All = () => (
   <VStack gap={8} align="flex-start">
     <Button title="Save" color="basic" size="small" />
     <Button title="Save" color="basic" size="medium" />
