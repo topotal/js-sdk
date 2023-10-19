@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.57.5](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.57.4...@topotal/topotal-ui@0.57.5) (2023-10-19)
+
+### Bug Fixes
+
+- Button onPress bug[ ([ad2f5ac](https://github.com/topotal/js-sdk/commit/ad2f5acc3480990d8dd78afa4495ed04f4bdac3d))
+
 ## [0.57.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.57.3...@topotal/topotal-ui@0.57.4) (2023-09-12)
 
 **Note:** Version bump only for package @topotal/topotal-ui
