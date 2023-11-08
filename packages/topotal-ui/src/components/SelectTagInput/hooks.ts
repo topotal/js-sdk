@@ -6,6 +6,7 @@ import { TagData } from '../Tag'
 interface Props<T> {
   value?: T[]
   items: T[],
+  maxDropdownItems?: number
   tagDataGenarator: (item: T) => TagData
   onFocus?: () => void
   onBlur?: () => void
@@ -18,6 +19,7 @@ const emptyValue: never[] = []
 export const useSelectTagInput = <T>({
   value = emptyValue,
   items,
+  maxDropdownItems,
   tagDataGenarator,
   onFocus,
   onBlur,
@@ -37,11 +39,12 @@ export const useSelectTagInput = <T>({
         return tagData.value === tagDataGenarator(item).value
       })
     })
-    // 未入力であれば全て返す
-    if (!textValue) return newItems
+    // 未入力であれば最大数まで全て返す
+    if (!textValue) return newItems.slice(0, maxDropdownItems)
     // 入力値にマッチするものを返す
     return newItems.filter(item => tagDataGenarator(item).label.includes(textValue))
-  }, [items, innerValue, textValue, tagDataGenarator])
+      .slice(0, maxDropdownItems) // 最大表示数で絞る
+  }, [innerValue, tagDataGenarator, items, textValue, maxDropdownItems])
 
   const updateTextValue = useCallback((newValue: string) => {
     setTextValue(newValue)
