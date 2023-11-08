@@ -11,9 +11,10 @@ export default {
 const tagDataGenarator = (item: TagData) => item
 
 const fetchedItems: TagData[] = [
-  { value: 'hoge', label: 'hoge', iconUrl: 'https://randomuser.me/api/portraits/women/57.jpg' },
+  { value: 'poge', label: 'poge', iconUrl: 'https://randomuser.me/api/portraits/women/57.jpg' },
   { value: 'noPress', label: 'noPress' },
   { value: 'piyo', label: 'piyo' },
+  { value: 'puyo', label: 'puyo' },
 ]
 
 export const Default = () => {
@@ -41,6 +42,7 @@ export const Default = () => {
         </HStack>
       )}
       pressableChecker={(item: TagData) => item.value !== 'noPress'}
+      maxDropdownItems={2}
       onChange={(value: TagData[]) => { console.info(value) }}
       onFocus={handleFocus}
     />
