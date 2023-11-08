@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.2.2](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-typescript@0.2.1...@topotal/eslint-config-typescript@0.2.2) (2023-09-12)
+## [0.2.2](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-typescript@0.2.1...@topotal/eslint-config-typescript@0.2.2) (2023-11-08)
 
 **Note:** Version bump only for package @topotal/eslint-config-typescript
 
