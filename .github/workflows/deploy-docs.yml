@@ -35,17 +35,11 @@ jobs:
         run: |
           commit_message=$(git log --format=%B -n 1 ${{ github.sha }} | tr -d '\n')
           echo "commit_message=$commit_message" >> $GITHUB_OUTPUT
-      - name: Send deployment information to Waroom
-        run: |
-          curl --location --request POST 'https://api.staging.waroom.com/v1/organizations/topotal/services/waroom-frontend-prod/deployments' \
-            --header 'Content-Type: application/json' \
-            --header 'Accept: application/json' \
-            --header 'Authorization: Bearer ${{ secrets.WAROOM_DEPLOYMENT_TRACKING_INTEGRATION_KEY }}' \
-            --data-raw '{
-              "ref": "${{ github.sha }}",
-              "environment": "Production",
-              "platform": "github",
-              "description": "${{ steps.commit_message.outputs.commit_message }}",
-              "repository_owner": "${{ github.repository_owner }}",
-              "repository_name": "${{ github.event.repository.name }}"
-            }'
+      - name: Waroom Deployment Tracking
+        uses: topotal/waroom-deployment-tracking-action@v1
+        with:
+          organization: 'topotal'
+          service: 'Waroom'
+          key: ${{ secrets.WAROOM_DEPLOYMENT_TRACKING_INTEGRATION_KEY }}
+          description: ${{ steps.commit_message.outputs.commit_message }}
+          environment: 'production'
