@@ -15,6 +15,7 @@ interface Props<T> {
   disabled?: boolean
   loading?: boolean
   autoFocus?: boolean
+  maxDropdownItems?: number
   testID?: string
   renderItem: (item: T, active: boolean, pressable: boolean) => JSX.Element
   tagDataGenarator: (item: T) => TagData
@@ -34,6 +35,7 @@ export const SelectTagInput = <T, >({
   disabled,
   autoFocus,
   loading = false,
+  maxDropdownItems,
   testID,
   tagDataGenarator,
   pressableChecker,
@@ -63,6 +65,7 @@ export const SelectTagInput = <T, >({
   } = useSelectTagInput<T>({
     value,
     items,
+    maxDropdownItems,
     tagDataGenarator,
     onFocus,
     onBlur,
