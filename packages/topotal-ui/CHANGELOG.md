@@ -3,7 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.58.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.57.4...@topotal/topotal-ui@0.58.0) (2023-11-08)
+# [0.58.0](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.57.6...@topotal/topotal-ui@0.58.0) (2023-11-08)
+
+### Features
+
+- Add maxDropdownItems prop to SelectTagInput ([#397](https://github.com/topotal/js-sdk/issues/397)) ([f74775c](https://github.com/topotal/js-sdk/commit/f74775c10ead81b9077f8d8c293fe65715de691b))
 
 ## [0.57.6](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.57.3...@topotal/topotal-ui@0.57.6) (2023-10-19)
 
