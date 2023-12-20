@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.58.4](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.58.3...@topotal/topotal-ui@0.58.4) (2023-12-20)
+
+
+### Bug Fixes
+
+* SelectTagInput ([#400](https://github.com/topotal/js-sdk/issues/400)) ([34228df](https://github.com/topotal/js-sdk/commit/34228df32bcca182200e01a2e9c8794c68817413))
+
+
+
+
+
 ## [0.58.3](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.58.2...@topotal/topotal-ui@0.58.3) (2023-11-08)
 
 **Note:** Version bump only for package @topotal/topotal-ui
