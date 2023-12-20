@@ -1,13 +1,13 @@
 import React from 'react'
 import { StyleProp, Text, TextStyle } from 'react-native'
-import { ChildData, StyleSheetData } from '../../types'
+import { StyleSheetData } from '../../types'
 import { ElementChild } from '../ElementChild'
 
 interface Props {
   style?: StyleProp<TextStyle>
   childLevel: number
   childIndex: number
-  childData: ChildData
+  childData: rendererNode
   stylesheet: StyleSheetData
 }
 
