@@ -17,7 +17,5 @@ export interface ElementChildData {
 export type ChildData = TextChildData | ElementChildData
 
 export interface StyleSheetData {
-  [key: string]: {
-    color: string
-  }
+  [key: string]: React.CSSProperties
 }

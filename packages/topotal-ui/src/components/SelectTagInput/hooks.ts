@@ -78,8 +78,7 @@ export const useSelectTagInput = <T>({
   const handleBlur = useCallback(() => {
     handleBlurInput()
     onBlur?.()
-    updateTextValue('')
-  }, [handleBlurInput, onBlur, updateTextValue])
+  }, [handleBlurInput, onBlur])
 
   const handlePressKey = useCallback((event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
     switch (event.nativeEvent.key) {
@@ -113,9 +112,10 @@ export const useSelectTagInput = <T>({
 
   const handlePressItem = useCallback((item: T) => {
     updateInnerValue([...innerValue, item])
+    updateTextValue('')
     // Click により Input からフォーカスが外れるため Input にフォーカスを戻す
     textInputRef.current?.focus()
-  }, [innerValue, updateInnerValue])
+  }, [innerValue, updateInnerValue, updateTextValue])
 
   return {
     textInputRef,
