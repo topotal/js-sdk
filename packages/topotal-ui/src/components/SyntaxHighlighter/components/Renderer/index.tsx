@@ -1,11 +1,11 @@
-import React from 'react'
 import { Text } from 'react-native'
-import { ChildData, StyleSheetData } from '../../types'
+import { StyleSheetData } from '../../types'
 import { Child } from '../Child'
 
 interface Props {
-  rows: ChildData[]
+  rows: rendererNode[]
   stylesheet: StyleSheetData
+  useInlineStyles: boolean
 }
 
 export const Renderer = ({
