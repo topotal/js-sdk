@@ -15,6 +15,8 @@ const fetchedItems: TagData[] = [
   { value: 'noPress', label: 'noPress' },
   { value: 'piyo', label: 'piyo' },
   { value: 'puyo', label: 'puyo' },
+  { value: 'puku', label: 'puku' },
+  { value: 'puke', label: 'puke' },
 ]
 
 export const Default = () => {
@@ -42,7 +44,7 @@ export const Default = () => {
         </HStack>
       )}
       pressableChecker={(item: TagData) => item.value !== 'noPress'}
-      maxDropdownItems={2}
+      maxDropdownItems={10}
       onChange={(value: TagData[]) => { console.info(value) }}
       onFocus={handleFocus}
     />
