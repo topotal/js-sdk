@@ -24,7 +24,7 @@
     "esm"
   ],
   "scripts": {
-    "build": "yarn clean && yarn build:lib && yarn build:esm",
+    "build": "tsc && vite build",
     "build:lib": "tsc -p tsconfig.build.json",
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "clean": "rimraf lib esm",
@@ -53,6 +53,7 @@
     "@types/react-syntax-highlighter": "^15.4.3",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
@@ -66,7 +67,8 @@
     "react-native-web": "^0.19.6",
     "react-use": "^17.4.0",
     "rimraf": "^3.0.2",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "vite": "^5.0.12"
   },
   "peerDependencies": {
     "expo": "*",
