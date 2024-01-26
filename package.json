@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "prepare": "husky install",
-    "g:storybook": "cd $INIT_CWD && storybook dev -p 6006"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "lerna": "^6.0.1",
