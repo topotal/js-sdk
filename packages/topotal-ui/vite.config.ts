@@ -5,4 +5,10 @@ import { defineConfig } from 'vite'
 // eslint-disable-next-line
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@react-native-picker/picker': 'react-native-web',
+      'react-native': 'react-native-web',
+    },
+  },
 })

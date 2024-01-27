@@ -1,5 +1,4 @@
 import { Text, View } from 'react-native'
-import { storiesOf } from '@storybook/react'
 import { defaultTheme, ThemeColor } from '.'
 
 interface Props {
@@ -33,8 +32,12 @@ const ColorRow = ({
   )
 }
 
-storiesOf('theme/color', module)
-  .add('color', () => (
+export default {
+  title: 'theme',
+  component: ColorRow,
+}
+
+export const Color = () => (
     <View style={{ padding: 24 }}>
       {(Object.keys(defaultTheme.color) as (keyof ThemeColor)[]).map(key => (
         <ColorRow
@@ -44,4 +47,4 @@ storiesOf('theme/color', module)
         />
       ))}
     </View>
-  ), { info: { disable: true } })
+)
