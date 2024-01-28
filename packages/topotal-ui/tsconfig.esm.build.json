@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "outDir": "./esm",
-    "module": "esnext"
+    "module": "esnext",
+    "declarationDir": "./dist/esm/types",
   }
 }

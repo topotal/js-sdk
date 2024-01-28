@@ -2,18 +2,14 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
-// eslint-disable-next-line
-export default defineConfig({
+export const buildSettings = {
   plugins: [react()],
   build: {
     emptyOutDir: false,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'), // ライブラリのエントリーポイント
       name: 'topotalUI',
-      formats: ['umd', 'es', 'cjs'],
     },
-    outDir: 'dist/esm', // ビルドしたファイルの出力先ディレクトリ
     assetsDir: 'assets',
     sourcemap: true,
     rollupOptions: {
@@ -31,4 +27,12 @@ export default defineConfig({
       'react-native': 'react-native-web',
     },
   },
+}
+
+
+// https://vitejs.dev/config/
+// eslint-disable-next-line
+export default defineConfig({
+  plugins: buildSettings.plugins,
+  resolve: buildSettings.resolve,
 })

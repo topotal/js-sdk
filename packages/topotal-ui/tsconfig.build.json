@@ -1,11 +1,16 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "declarationDir": "./dist/lib/types",
+  },
   "exclude": [
     "node_modules",
     "esm",
     "lib",
-    "src/**/*.test.ts", 
-    "src/**/*.test.tsx", 
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
     "src/**/*.stories.tsx"
   ]
 }

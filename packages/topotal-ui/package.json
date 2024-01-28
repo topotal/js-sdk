@@ -13,21 +13,21 @@
   },
   "license": "MIT",
   "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
-  "main": "lib/index.js",
-  "module": "esm/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/lib/topotal-ui.umd.js",
+  "module": "dist/esm/topotal-ui.js",
+  "types": "dist/lib/types/index.d.ts",
   "directories": {
-    "lib": "lib"
+    "lib": "dist/lib"
   },
   "files": [
-    "lib",
-    "esm"
+    "dist/lib",
+    "dist/esm"
   ],
   "scripts": {
     "build": "yarn clean && yarn build:lib && yarn build:esm",
-    "build:lib": "tsc -p tsconfig.build.json && ",
-    "build:esm": "tsc -p tsconfig.esm.build.json",
-    "clean": "rimraf lib esm",
+    "build:lib": "tsc -p tsconfig.build.json && vite build --config vite.config.build.ts",
+    "build:esm": "tsc -p tsconfig.esm.build.json && vite build --config vite.config.esm.ts",
+    "clean": "rimraf lib esm dist",
     "prepublishOnly": "yarn build",
     "lint": "eslint --ext .ts,.tsx src",
     "storybook": "sb dev -p 6006",
