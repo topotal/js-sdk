@@ -17,7 +17,7 @@ const preview: Preview = {
           ...defaultTheme,
           iconBasePath,
         }}>
-        <VStack gap={16} style={{ padding: 24 }}>
+        <VStack style={{ padding: 24, gap: 16 }}>
           <Story />
         </VStack>
       </ThemeContext.Provider>
