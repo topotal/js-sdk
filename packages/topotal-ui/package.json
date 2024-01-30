@@ -30,8 +30,8 @@
     "clean": "rimraf lib esm",
     "prepublishOnly": "yarn build",
     "lint": "eslint --ext .ts,.tsx src",
-    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-    "build-doc": "NODE_OPTIONS=--openssl-legacy-provider STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui build-storybook -o ../../docs/topotal-ui/"
+    "storybook": "sb dev -p 6006",
+    "build-doc": "STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui sb build -o ../../docs/topotal-ui/"
   },
   "dependencies": {
     "marked": "^4.0.6",
@@ -40,10 +40,13 @@
   },
   "devDependencies": {
     "@react-native-picker/picker": "^2.2.1",
-    "@storybook/addon-actions": "^6.4.18",
-    "@storybook/addon-essentials": "^6.4.18",
-    "@storybook/addon-links": "^6.4.18",
-    "@storybook/react": "^6.4.18",
+    "@storybook/addon-actions": "^7.6.10",
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/cli": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-vite": "^7.6.10",
     "@topotal/eslint-config-react": "^0.3.5",
     "@topotal/eslint-config-typescript": "^0.2.5",
     "@types/marked": "^4.0.1",
@@ -53,6 +56,7 @@
     "@types/react-syntax-highlighter": "^15.4.3",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
@@ -66,7 +70,8 @@
     "react-native-web": "^0.19.6",
     "react-use": "^17.4.0",
     "rimraf": "^3.0.2",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "vite": "^5.0.12"
   },
   "peerDependencies": {
     "expo": "*",
