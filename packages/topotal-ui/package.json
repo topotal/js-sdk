@@ -31,6 +31,7 @@
     "prepublishOnly": "yarn build",
     "lint": "eslint --ext .ts,.tsx src",
     "storybook": "sb dev -p 6006",
+    "test:story": "test-storybook -c .storybook  --url http://127.0.0.1:6006",
     "build-doc": "STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui sb build -o ../../docs/topotal-ui/"
   },
   "dependencies": {
@@ -48,6 +49,7 @@
     "@storybook/jest": "^0.2.3",
     "@storybook/react": "^7.6.10",
     "@storybook/react-vite": "^7.6.10",
+    "@storybook/test-runner": "^0.16.0",
     "@storybook/testing-library": "^0.2.2",
     "@topotal/eslint-config-react": "^0.3.5",
     "@topotal/eslint-config-typescript": "^0.2.5",
