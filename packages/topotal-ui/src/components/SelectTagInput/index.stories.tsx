@@ -1,12 +1,11 @@
 import { useCallback, useState } from 'react'
+import { expect } from '@storybook/jest'
+import { StoryObj } from '@storybook/react'
+import { userEvent, within } from '@storybook/testing-library'
 import { HStack } from '../HStack'
 import { TagData } from '../Tag'
 import { Text } from '../Text'
 import { SelectTagInput } from '.'
-
-export default {
-  title: 'components/SelectTagInput',
-}
 
 const tagDataGenarator = (item: TagData) => item
 
@@ -19,7 +18,7 @@ const fetchedItems: TagData[] = [
   { value: 'puke', label: 'puke' },
 ]
 
-export const Default = () => {
+const Component = () => {
   const [items, setItems] = useState<TagData[]>([])
 
   const handleFocus = useCallback(() => {
@@ -49,4 +48,40 @@ export const Default = () => {
       onFocus={handleFocus}
     />
   )
+}
+
+export default {
+  title: 'components/SelectTagInput',
+  component: Component,
+}
+
+type Story = StoryObj<typeof Component>
+
+export const Default: Story = {}
+
+const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms))
+
+export const SelectTag: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    await expect(
+      canvas.getByPlaceholderText('Insert new item...')
+    ).toBeInTheDocument()
+
+    await userEvent.tab()
+    await userEvent.keyboard('piyo')
+
+    await sleep(1200)
+    await expect(
+      canvas.getByTestId(
+        'selectDropdown0'
+      )
+    ).toBeInTheDocument()
+
+    await userEvent.keyboard('{Enter}')
+
+    await expect(
+      canvas.getByText('piyo')
+    ).toBeInTheDocument()
+  },
 }

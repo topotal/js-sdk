@@ -7,6 +7,7 @@ interface Props<T> {
   item: T
   active: boolean
   pressable: boolean
+  testID?: string
   renderItem: (item: T, active: boolean, pressable: boolean) => JSX.Element
   onPress: (item: T) => void
   onHover: (index: number) => void
@@ -18,6 +19,7 @@ export const Row = <T, >({
   item,
   active,
   pressable,
+  testID,
   renderItem,
   onPress,
   onHover,
@@ -51,6 +53,7 @@ export const Row = <T, >({
       onPress={handlePress}
       onHoverIn={handleHover}
       onFocus={handleFocus}
+      testID={testID}
     >
       {renderItem(item, active, pressable)}
     </Pressable>
