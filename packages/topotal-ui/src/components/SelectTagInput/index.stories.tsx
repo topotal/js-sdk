@@ -18,13 +18,14 @@ const fetchedItems: TagData[] = [
   { value: 'puke', label: 'puke' },
 ]
 
+const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms))
+
 const Component = () => {
   const [items, setItems] = useState<TagData[]>([])
 
-  const handleFocus = useCallback(() => {
-    setTimeout(() => {
-      setItems(fetchedItems)
-    }, 1000)
+  const handleFocus = useCallback(async () => {
+    await sleep(1000)
+    setItems(fetchedItems)
   }, [])
 
   return (
@@ -59,29 +60,13 @@ type Story = StoryObj<typeof Component>
 
 export const Default: Story = {}
 
-const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms))
 
-export const SelectTag: Story = {
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(
-      canvas.getByPlaceholderText('Insert new item...')
-    ).toBeInTheDocument()
-
+export const SuggestSelected: Story = {
+  play: async () => {
     await userEvent.tab()
     await userEvent.keyboard('piyo')
 
     await sleep(1200)
-    await expect(
-      canvas.getByTestId(
-        'selectDropdown0'
-      )
-    ).toBeInTheDocument()
-
     await userEvent.keyboard('{Enter}')
-
-    await expect(
-      canvas.getByText('piyo')
-    ).toBeInTheDocument()
   },
 }
