@@ -31,7 +31,8 @@
     "prepublishOnly": "yarn build",
     "lint": "eslint --ext .ts,.tsx src",
     "storybook": "sb dev -p 6006",
-    "build-doc": "STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui sb build -o ../../docs/topotal-ui/"
+    "build-doc": "STORYBOOK_ASSETS_PATH=/js-sdk/topotal-ui sb build -o ../../docs/topotal-ui/",
+    "test": "vitest --config vitest.config.ts"
   },
   "dependencies": {
     "marked": "^4.0.6",
@@ -49,6 +50,8 @@
     "@storybook/react": "^7.6.10",
     "@storybook/react-vite": "^7.6.10",
     "@storybook/testing-library": "^0.2.2",
+    "@storybook/testing-react": "^2.0.1",
+    "@testing-library/react": "^14.2.1",
     "@topotal/eslint-config-react": "^0.3.5",
     "@topotal/eslint-config-typescript": "^0.2.5",
     "@types/marked": "^4.0.1",
@@ -65,7 +68,9 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
+    "happy-dom": "^13.3.8",
     "husky": "^8.0.1",
+    "jsdom": "^24.0.0",
     "prettier": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -73,7 +78,9 @@
     "react-use": "^17.4.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.1.2",
-    "vite": "^5.0.12"
+    "vite": "^5.0.12",
+    "vitest": "^1.2.2",
+    "vitest-react-native": "^0.1.5"
   },
   "peerDependencies": {
     "expo": "*",

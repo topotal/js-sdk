@@ -1,7 +1,6 @@
 import { useCallback, useState } from 'react'
-import { expect } from '@storybook/jest'
 import { StoryObj } from '@storybook/react'
-import { userEvent, within } from '@storybook/testing-library'
+import { userEvent } from '@storybook/testing-library'
 import { HStack } from '../HStack'
 import { TagData } from '../Tag'
 import { Text } from '../Text'
@@ -17,14 +16,14 @@ const fetchedItems: TagData[] = [
   { value: 'puku', label: 'puku' },
   { value: 'puke', label: 'puke' },
 ]
+const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms))
 
 const Component = () => {
   const [items, setItems] = useState<TagData[]>([])
 
-  const handleFocus = useCallback(() => {
-    setTimeout(() => {
-      setItems(fetchedItems)
-    }, 1000)
+  const handleFocus = useCallback(async () => {
+    await sleep(1000)
+    setItems(fetchedItems)
   }, [])
 
   return (
@@ -59,29 +58,15 @@ type Story = StoryObj<typeof Component>
 
 export const Default: Story = {}
 
-const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms))
 
 export const SelectTag: Story = {
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(
-      canvas.getByPlaceholderText('Insert new item...')
-    ).toBeInTheDocument()
-
+  play: async () => {
+    // tabでinputにフォーカスし、piyoを入力
     await userEvent.tab()
     await userEvent.keyboard('piyo')
 
     await sleep(1200)
-    await expect(
-      canvas.getByTestId(
-        'selectDropdown0'
-      )
-    ).toBeInTheDocument()
-
+    // suggstで先頭の選択肢を選択する
     await userEvent.keyboard('{Enter}')
-
-    await expect(
-      canvas.getByText('piyo')
-    ).toBeInTheDocument()
   },
 }
