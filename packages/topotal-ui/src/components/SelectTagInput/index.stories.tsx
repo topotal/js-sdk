@@ -1,7 +1,6 @@
 import { useCallback, useState } from 'react'
-import { expect } from '@storybook/jest'
 import { StoryObj } from '@storybook/react'
-import { userEvent, within } from '@storybook/testing-library'
+import { userEvent } from '@storybook/testing-library'
 import { HStack } from '../HStack'
 import { TagData } from '../Tag'
 import { Text } from '../Text'

@@ -1,5 +1,6 @@
 import { composeStories } from '@storybook/react'
 import { getByPlaceholderText, getByText, render } from '@testing-library/react'
+import '@testing-library/jest-dom'
 import * as stories from '../index.stories'
 
 describe('SelectTagInput', () => {
