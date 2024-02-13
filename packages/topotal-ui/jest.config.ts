@@ -2,16 +2,16 @@ import type { Config } from 'jest'
 
 const config: Config = {
   preset: 'ts-jest',
-  moduleDirectories: ['node_modules', '../../node_modules'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
     '^~/(.+)': '<rootDir>/src/$1',
-    '^@testing-library/jest-dom/extend-expect$': '<rootDir>/../../node_modules/@testing-library/jest-dom/extend-expect.js',
+    'react-native$': 'react-native-web',
   },
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
   resolver: undefined,
   globals: {
     tsconfig: './tsconfig.jest.json',
+    __DEV__: true,
   },
 }
 
