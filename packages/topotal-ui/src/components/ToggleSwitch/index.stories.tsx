@@ -21,3 +21,7 @@ export const Medium = () => (
 export const Small = () => (
   <ToggleSwitch {...{ ...defaultProps, size: 'small' }} />
 )
+
+export const Disabeld = () => (
+  <ToggleSwitch {...{ ...defaultProps, disabled: true }} />
+)
