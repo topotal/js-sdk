@@ -10,6 +10,7 @@ interface Props {
   style?: StyleProp<ViewStyle>
   value?: boolean
   size?: ToggleSwitchSize
+  disabled?: boolean
   onChange?: (value: boolean) => void
 }
 
@@ -18,6 +19,7 @@ export const ToggleSwitch = ({
   style,
   value = false,
   size = 'large',
+  disabled = false,
   onChange,
 }: Props) => {
   const [innerValue, setValue] = useState(value)
@@ -25,7 +27,7 @@ export const ToggleSwitch = ({
   const { color } = useTheme()
   const fadeAnim = useRef(new Animated.Value(innerValue ? toggleStyles.onPosition : toggleStyles.offPosition)).current
   const { isFocused, handleFocus, handleBlur } = useFocus()
-  const { styles: focusStyles } = useFocusOutlineStyle({ focus: isFocused })
+  const { styles: focusStyles } = useFocusOutlineStyle({ focus: isFocused, disabledPointerEvents: disabled })
 
   const handleChange = useCallback(() => {
     const newValue = !innerValue
@@ -52,6 +54,7 @@ export const ToggleSwitch = ({
     <View style={[{
       width: toggleStyles.width,
       height: toggleStyles.height,
+      opacity: disabled ? 0.5 : 1,
     }, style]}>
       <label>
         <View
@@ -88,6 +91,7 @@ export const ToggleSwitch = ({
               cursor: 'pointer',
             }}
             type="checkbox"
+            disabled={disabled}
             onChange={handleChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
