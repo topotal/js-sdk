@@ -1,3 +1,5 @@
+import { Picker as BasePicker } from '@react-native-picker/picker'
+import { VStack } from '../VStack'
 import { Picker } from '.'
 
 export default {
@@ -13,12 +15,14 @@ const renderItems = () => (
 )
 
 export const Default = () => (
-  <Picker
-    placeholder="Select"
-    onChange={(value) => { console.info(value) }}
-  >
-    {renderItems()}
-  </Picker>
+  <VStack style={{ width: 100 }}>
+    <Picker
+      placeholder="Select"
+      onChange={(value) => { console.info(value) }}
+    >
+      {renderItems()}
+    </Picker>
+  </VStack>
 )
 
 export const HasDefaultValue = () => (
@@ -74,3 +78,12 @@ export const Disabled = () => (
     {renderItems()}
   </Picker>
 )
+
+export const BasePickerComponent = () => {
+  <BasePicker
+    placeholder="Select"
+    style={{ borderWidth: 1 }}
+  >
+    {renderItems()}
+  </BasePicker>
+}
