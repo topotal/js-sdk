@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react'
 import { StoryObj } from '@storybook/react'
 import { userEvent } from '@storybook/testing-library'
+import { act } from '@testing-library/react'
 import { HStack } from '../HStack'
 import { TagData } from '../Tag'
 import { Text } from '../Text'
@@ -24,7 +25,9 @@ const Component = () => {
 
   const handleFocus = useCallback(async () => {
     await sleep(1000)
-    setItems(fetchedItems)
+    await act(() => {
+      setItems(fetchedItems)
+    })
   }, [])
 
   return (
