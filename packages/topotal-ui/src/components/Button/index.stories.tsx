@@ -111,5 +111,10 @@ export const All = () => (
     <Button title="" size="medium" endIconName="done" />
     <Button title="" size="large" endIconName="done" />
     <Button title="InnerOutline" innerOutline variant="outline" />
+    <VStack gap={8} style={{ width: 120 }} >
+      <Button title="InnerOutline" size="medium" innerOutline variant="outline" />
+      <Button startIconName="done" title="InnerOutline" size="medium" innerOutline variant="outline" />
+      <Button endIconName="done" title="InnerOutline" size="medium" innerOutline variant="outline" />
+    </VStack>
   </VStack>
 )
