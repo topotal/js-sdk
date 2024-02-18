@@ -57,7 +57,6 @@ export const SelectDropdown = <T, >({
                 index={index}
                 item={item}
                 active={index === currentIndex}
-                testID={`selectDropdown${index}`}
                 renderItem={renderItem}
                 pressable={pressableChecker ? pressableChecker(item) : true}
                 onPress={onPressItem}
