@@ -86,6 +86,7 @@ export const Button = memo<Props>(({
                 style={styles.title}
                 type={textType}
                 weight="bold"
+                numberOfLines={1}
               >
                 {title}
               </Text>
