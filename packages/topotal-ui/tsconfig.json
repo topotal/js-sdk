@@ -27,6 +27,5 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "jest.config.ts"
   ]
 }
