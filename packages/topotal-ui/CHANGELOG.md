@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.58.7](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.58.6...@topotal/topotal-ui@0.58.7) (2024-02-19)
+
+### Bug Fixes
+
+- jest.config.js ([48dbac1](https://github.com/topotal/js-sdk/commit/48dbac1045d1012aaa52b9b90028bad4d4805849))
+
 ## [0.58.6](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.58.5...@topotal/topotal-ui@0.58.6) (2024-02-13)
 
 ### Features
