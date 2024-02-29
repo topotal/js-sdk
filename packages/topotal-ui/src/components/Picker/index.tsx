@@ -53,20 +53,22 @@ export const Picker = Object.assign((({
       ) : undefined}
       renderInput={({ style }) => (
         <>
-          <BasePicker
-            style={[style, styles.picker]}
-            selectedValue={innerValue}
-            enabled={!disabled}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            onValueChange={handleChange}
-            testID={testID}
-          >
-            {innerValue ? null : (
-              <BasePicker.Item label="--" value="" />
-            )}
-            {children}
-          </BasePicker>
+          <View style={{ width: '100%', overflow: 'hidden' }}>
+            <BasePicker
+              style={[style, styles.picker]}
+              selectedValue={innerValue}
+              enabled={!disabled}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              onValueChange={handleChange}
+              testID={testID}
+            >
+              {innerValue ? null : (
+                <BasePicker.Item label="--" value="" />
+              )}
+              {children}
+            </BasePicker>
+          </View>
           {innerValue ? null : (
             <View pointerEvents="none" style={styles.placeholderWrapper}>
               <Text style={[style, styles.placeholder]}>

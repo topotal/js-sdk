@@ -22,6 +22,7 @@ export const useStyles = ({ hasValue, size }: Props) => {
 
   const styles = StyleSheet.create({
     picker: {
+      paddingRight: 32,
       borderWidth: 0,
       backgroundColor: 'transparent',
       opacity: hasValue ? 1 : 0,
