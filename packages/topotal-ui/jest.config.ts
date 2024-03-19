@@ -7,7 +7,7 @@ const config: Config = {
     '^~/(.+)': '<rootDir>/src/$1',
     'react-native$': 'react-native-web',
   },
-  setupFilesAfterEnv: ['@testing-library/jest-dom', '@testing-library/react-native/extend-expect'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
   resolver: undefined,
   globals: {
     tsconfig: './tsconfig.jest.json',

@@ -20,6 +20,15 @@ describe('Button', () => {
     await fireEvent.click(screen.getByRole('button'))
     expect(mockOnPress).toHaveBeenCalledTimes(1)
   })
+  it('pressable mouse down/up', async () => {
+    const mockOnPress = jest.fn()
+    render(<Pressable role={'button'} onPressOut={mockOnPress}>hoge</Pressable>)
+
+    const button = screen.getByText('hoge')
+    await fireEvent.mouseDown(button)
+    await fireEvent.mouseUp(button)
+    expect(mockOnPress).toHaveBeenCalledTimes(1)
+  })
   it('pressable', async () => {
     const mockOnPress = jest.fn()
     render(<Pressable role={'button'} onPressOut={mockOnPress}>hoge</Pressable>)
