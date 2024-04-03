@@ -86,7 +86,7 @@ export const TextArea = forwardRef(({
             ref={ref}
             {...rest}
             value={value}
-            focusable={!disabled}
+            accessible={!disabled}
             autoCapitalize={autoCapitalize}
             multiline
             placeholderTextColor={placeholderColor}

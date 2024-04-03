@@ -97,7 +97,7 @@ export const SelectTagInput = <T, >({
             <BaseInput
               ref={element => textInputRef.current = element}
               style={[style, styles.textInput]}
-              focusable={!disabled}
+              accessible={!disabled}
               value={textValue}
               multiline={false}
               placeholder={placeholder}
