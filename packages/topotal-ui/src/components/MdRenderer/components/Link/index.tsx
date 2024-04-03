@@ -23,7 +23,7 @@ export const Link = React.memo<Props>(({
   return (
     <Text
       style={styles.wrapper}
-      accessibilityRole="link"
+      role="link"
       {...anchorAttributes}
     >
       {token.text}

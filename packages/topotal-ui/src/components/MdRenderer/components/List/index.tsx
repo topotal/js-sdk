@@ -1,5 +1,5 @@
 import React from 'react'
-import { AccessibilityRole, StyleProp, ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
 import { marked } from 'marked'
 import { useTheme } from '../../../../theme'
 import { NormalizedToken, Text, VStack } from '../../..'
@@ -28,7 +28,7 @@ export const List = React.memo<Props>(({
   return (
     <VStack
       style={[style]}
-      accessibilityRole={'list' as AccessibilityRole}
+      role={'list'}
     >
       {token.items.map((item, index) => {
         const tokens = (item as any).tokens as NormalizedToken[]
@@ -38,7 +38,7 @@ export const List = React.memo<Props>(({
             style={{
               paddingLeft: text.type.body.lineHeight,
             }}
-            accessibilityRole={'listitem' as AccessibilityRole}
+            role={'listitem'}
           >
             <Text
               style={{
