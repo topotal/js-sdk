@@ -68,6 +68,7 @@ export const TextInput = memo<Props>(({
         <BaseInput
           {...rest}
           accessible={!disabled}
+          aria-disabled={disabled}
           value={innerValue}
           autoCapitalize={autoCapitalize}
           placeholderTextColor={placeholderColor}

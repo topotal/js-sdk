@@ -63,6 +63,7 @@ export const TagInput = memo<Props>(({
               ref={element => ref.current = element}
               style={[style, styles.textInput]}
               accessible={!disabled}
+              aria-disabled={disabled}
               value={textValue}
               multiline={false}
               placeholder={placeholder}
