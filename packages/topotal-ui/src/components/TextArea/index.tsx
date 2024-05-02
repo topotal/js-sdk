@@ -10,12 +10,16 @@ export interface TextAreaCompletionItem {
   value: string
 }
 
+export interface TextAreaCmdEnterPressEvent {
+  value: string
+}
+
 type BaseProps = {
   error?: boolean
   disabled?: boolean
   testID?: string
   completionView?: React.ReactNode
-  onCmdEnterPress?: VoidFunction
+  onCmdEnterPress?: (event: TextAreaCmdEnterPressEvent) => void
 } & Omit<React.ComponentProps<typeof BaseInput>, 'multiline' | 'editable'>
 
 type Props = BaseProps & React.RefAttributes<BaseInput>
@@ -57,12 +61,12 @@ export const TextArea = forwardRef(({
     const keyEvents = event.nativeEvent as any
 
     if((event.nativeEvent.key === 'Enter' && keyEvents.metaKey) || (key === 'Enter' && keyEvents.ctrlKey)) {
-      onCmdEnterPress?.()
+      onCmdEnterPress?.({ value: innerValue })
       return
     }
 
     onKeyPress?.(event)
-  }, [onCmdEnterPress, onKeyPress])
+  }, [innerValue, onCmdEnterPress, onKeyPress])
 
   useEffect(() => {
     setInnerValue(value || '')

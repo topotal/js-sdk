@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { NativeSyntheticEvent, Text, TextInput, TextInputKeyPressEventData, View } from 'react-native'
-import { TextArea, TextAreaCompletionItem } from '.'
+import { TextArea, TextAreaCmdEnterPressEvent, TextAreaCompletionItem } from '.'
 
 export default {
   title: 'components/TextArea',
@@ -82,7 +82,9 @@ export const OnKeyPress= () => (
 export const OnCmdEnterPress = () => (
   <TextArea
     value="press command + enter"
-    onCmdEnterPress={() => console.log('command and enter pressed')}
+    onCmdEnterPress={(event: TextAreaCmdEnterPressEvent) => {
+      console.info(event)
+    }}
   />
 )
 
@@ -93,4 +95,3 @@ export const OnKeyPressAndCmdEnterPress = () => (
     onCmdEnterPress={() => console.log('command and enter pressed')}
   />
 )
-
