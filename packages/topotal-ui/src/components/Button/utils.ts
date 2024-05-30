@@ -40,7 +40,7 @@ export const getDynamicGeometry = (size: Size): DynamicGeometry => {
 }
 
 export const getHasColorMaterial = (
-  color: Exclude<Color, 'basic'>,
+  color: Exclude<Color, 'basic' | 'ai'>,
   variant: Variant,
   disabled: boolean,
   loading: boolean,
@@ -69,6 +69,38 @@ export const getHasColorMaterial = (
       return {
         opacity,
         backgroundColor: hovering ? darkColor : color,
+        borderColor: 'transparent',
+        fontColor: 'primaryTextLight',
+      }
+  }
+}
+
+export const getAiColorMaterial = (
+  variant: Variant,
+  disabled: boolean,
+  loading: boolean,
+): DynamicMaterial => {
+  const opacity = disabled || loading ? 0.5 : 1
+
+  switch (variant) {
+    case 'outline':
+      return {
+        opacity,
+        backgroundColor: 'transparent',
+        borderColor: '#BF2FE3' as keyof ThemeColor,
+        fontColor: '#BF2FE3' as keyof ThemeColor,
+      }
+    case 'text':
+      return {
+        opacity,
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        fontColor: '#BF2FE3' as keyof ThemeColor,
+      }
+    case 'contain':
+      return {
+        opacity,
+        backgroundColor: '#BF2FE3'  as keyof ThemeColor,
         borderColor: 'transparent',
         fontColor: 'primaryTextLight',
       }
@@ -122,6 +154,12 @@ export const getDynamicMaterial = (
         disabled,
         loading,
         hovering
+      )
+    case 'ai':
+      return getAiColorMaterial(
+        variant,
+        disabled,
+        loading,
       )
     default:
       return getHasColorMaterial(

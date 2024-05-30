@@ -54,8 +54,8 @@ export const useStyles = ({
     wrapper: {
       borderWidth: 1,
       borderRadius: theme.radius.level1,
-      backgroundColor: theme.color[backgroundColor],
-      borderColor: theme.color[borderColor],
+      backgroundColor: Object.keys(theme.color).includes(backgroundColor) ? theme.color[backgroundColor] : backgroundColor,
+      borderColor: Object.keys(theme.color).includes(borderColor) ? theme.color[borderColor] : borderColor,
       overflow: 'hidden',
       opacity,
       ...(Platform.OS === 'web' ? {
@@ -77,13 +77,13 @@ export const useStyles = ({
     title: {
       textAlign: 'center',
       lineHeight: height,
-      color: theme.color[fontColor],
+      color: Object.keys(theme.color).includes(fontColor) ? theme.color[fontColor] : '#BF2FE3',
       fontWeight,
     },
     icon: {
       width: iconSize,
       height: iconSize,
-      tintColor: theme.color[fontColor],
+      tintColor: Object.keys(theme.color).includes(fontColor) ? theme.color[fontColor] : '#BF2FE3',
     },
   })
 

@@ -116,5 +116,6 @@ export const All = () => (
       <Button startIconName="done" title="InnerOutline" size="medium" innerOutline variant="outline" />
       <Button endIconName="done" title="InnerOutline" size="medium" innerOutline variant="outline" />
     </VStack>
+    <Button title="ポストモーテムを生成" size="medium" color="ai" variant="outline" />
   </VStack>
 )
