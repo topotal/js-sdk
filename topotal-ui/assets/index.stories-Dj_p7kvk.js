@@ -1,4 +1,4 @@
-import{j as i}from"./index-DkX0KZZ1.js";import{M as a}from"./index-vd08hAXG.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-Cd7EPIxX.js";import"./index-Hz3wnOD_.js";import"./index-otYDMBZo.js";import"./index-Di6PWu_6.js";import"./index-Bb8NEZ8B.js";import"./index-BGJ581YQ.js";import"./index-DzdqIAEB.js";import"./index-BtM5VmRH.js";import"./index-CGqIvZ_c.js";import"./index-DAJJdmbi.js";const k={title:"components/MdRenderer"},m=`
+import{j as i}from"./index-DkX0KZZ1.js";import{M as a}from"./index-Cxh190yD.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-Cd7EPIxX.js";import"./index-Hz3wnOD_.js";import"./index-otYDMBZo.js";import"./index-Di6PWu_6.js";import"./index-Bb8NEZ8B.js";import"./index-BGJ581YQ.js";import"./index-DzdqIAEB.js";import"./index-BtM5VmRH.js";import"./index-CGqIvZ_c.js";import"./index-DAJJdmbi.js";const k={title:"components/MdRenderer"},m=`
 # H1
 
 ## H2
