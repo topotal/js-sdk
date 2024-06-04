@@ -116,5 +116,8 @@ export const All = () => (
       <Button startIconName="done" title="InnerOutline" size="medium" innerOutline variant="outline" />
       <Button endIconName="done" title="InnerOutline" size="medium" innerOutline variant="outline" />
     </VStack>
-  </VStack>
-)
+    <Button title="AI" color="ai" size="small" endIconName="done" />
+    <Button title="AI Medium" color="ai" size="medium" endIconName="done" />
+    <Button title="AI Large" color="ai" size="large" endIconName="done" />
+    <Button title="AI Outline" color="ai" variant="outline" />
+  </VStack>)
