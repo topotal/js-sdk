@@ -1,6 +1,6 @@
 {
   "name": "@topotal/topotal-ui",
-  "version": "0.58.11",
+  "version": "0.58.12",
   "description": "Topotal ui components built with React.",
   "homepage": "https://github.com/topotal/js-sdk#readme",
   "bugs": {

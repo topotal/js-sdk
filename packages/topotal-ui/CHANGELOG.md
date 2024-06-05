@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.58.12](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.58.10...@topotal/topotal-ui@0.58.12) (2024-06-05)
+
+### Bug Fixes
+
+- TextArea onCmdEnterPress ([#436](https://github.com/topotal/js-sdk/issues/436)) ([75ebd1f](https://github.com/topotal/js-sdk/commit/75ebd1fdbf2523bd4ed2da8224fa0965851efb8d))
+
 ## [0.58.11](https://github.com/topotal/js-sdk/compare/@topotal/topotal-ui@0.58.10...@topotal/topotal-ui@0.58.11) (2024-06-05)
 
 ### Bug Fixes
