@@ -13,6 +13,7 @@ export interface Props<T> {
   disabledChangeBackground?: boolean
   keyExtractor?: (item: T, index: number) => string
   onPressItem?: (item: T) => void
+  itemDisabled?: (item: T) => boolean
   testID?: string
 }
 
@@ -22,6 +23,7 @@ export const List = <T, >({
   emptyView,
   disabledChangeBackground = false,
   renderItem,
+  itemDisabled,
   keyExtractor,
   onPressItem,
   testID,
@@ -49,6 +51,7 @@ export const List = <T, >({
               index={index}
               hovered={index === hoveredIndex}
               disabledChangeBackground={disabledChangeBackground}
+              itemDisabled={itemDisabled}
               renderItem={renderItem}
               onPress={onPressItem}
               onHoverIn={handleHoverInRow}

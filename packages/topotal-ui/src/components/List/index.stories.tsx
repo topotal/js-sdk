@@ -42,6 +42,12 @@ DisabledChangeBackground.args = {
   disabledChangeBackground: true,
 }
 
+export const ItemDisabled: Story<ListProps<Item>> = Template.bind({})
+ItemDisabled.args = {
+  ...defaultProps,
+  itemDisabled: (item) => item.name === 'item2',
+}
+
 export const DefaultEmptyView: Story<ListProps<Item>> = Template.bind({})
 DefaultEmptyView.args = {
   ...defaultProps,
