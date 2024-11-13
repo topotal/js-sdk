@@ -30,6 +30,7 @@ export const useStyles = ({
       opacity: disabled ? 0.5 : 1,
       backgroundColor: hovered ? color.background : color.surface,
       cursor: pressable ? 'pointer' : 'default',
+      pointerEvents: disabled ? 'none' : 'auto',
     },
   }), [
     color.background,
