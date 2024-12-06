@@ -12,6 +12,7 @@ interface Props<T = any> {
   onHoverIn: (index: number) => void
   onHoverOut: (index: number) => void
   onPress?: (item: T) => void
+  itemDisabled?: (item: T) => boolean
 }
 
 export const Row = React.memo<Props>(({
@@ -21,14 +22,17 @@ export const Row = React.memo<Props>(({
   disabledChangeBackground = false,
   style,
   renderItem,
+  itemDisabled,
   onPress,
   onHoverIn,
   onHoverOut,
 }) => {
+  const disabled = itemDisabled?.(item) ?? false
   const { styles } = useStyles({
     firstItem: index === 0,
     hovered,
     pressable: !!onPress,
+    disabled,
   })
 
   const handlePress = useCallback(() => {
@@ -51,6 +55,7 @@ export const Row = React.memo<Props>(({
   return (
     <Pressable
       style={[styles.wrapper, style]}
+      disabled={disabled}
       onPress={handlePress}
       onHoverIn={handleHoverIn}
       onHoverOut={handleHoverOut}
