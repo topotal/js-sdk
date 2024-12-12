@@ -1,4 +1,4 @@
-import{j as i}from"./index-BC0nXnaC.js";import{M as a}from"./index-DnhtAiAr.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-CgYaVfUA.js";import"./index-BNZ4CFqE.js";import"./extends-CCbyfPlC.js";import"./index-BQ1Xo2by.js";import"./index-Dw-bkfFf.js";import"./index-CgdANHCz.js";import"./index-fVnO6Xu2.js";import"./index-D5S00zfD.js";import"./index-BtM5VmRH.js";import"./index-N3ghgXzs.js";import"./index-B_CD9V4r.js";const H={title:"components/MdRenderer"},m=`
+import{j as i}from"./index-BC0nXnaC.js";import{M as a}from"./index-Ch5Q1X7T.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-CgYaVfUA.js";import"./index-BNZ4CFqE.js";import"./extends-CCbyfPlC.js";import"./index-BQ1Xo2by.js";import"./index-Dw-bkfFf.js";import"./index-CgdANHCz.js";import"./index-fVnO6Xu2.js";import"./index-D5S00zfD.js";import"./index-BtM5VmRH.js";import"./index-N3ghgXzs.js";import"./index-B_CD9V4r.js";const H={title:"components/MdRenderer"},m=`
 # H1
 
 ## H2
