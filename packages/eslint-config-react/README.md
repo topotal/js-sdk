@@ -18,7 +18,9 @@ yarn add -D eslint-plugin-react eslint-plugin-react-hooks
 
 ## Usage
 
-Add `@topotal/eslunt-config-react` to `eslintrc` extends.
+### Legacy ESLint Configuration (ESLint v8 and below)
+
+Add `@topotal/eslint-config-react` to `eslintrc` extends.
 
 ```json
 {
@@ -26,4 +28,17 @@ Add `@topotal/eslunt-config-react` to `eslintrc` extends.
     "@topotal/eslint-config-react"
   ]
 }
+```
+
+### Flat ESLint Configuration (ESLint v9 and above)
+
+In your `eslint.config.js`:
+
+```js
+const topotalReactConfig = require('@topotal/eslint-config-react/flat');
+
+module.exports = [
+  topotalReactConfig,
+  // other configs...
+];
 ```

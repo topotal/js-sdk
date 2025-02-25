@@ -18,7 +18,9 @@ yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
 ## Usage
 
-Add `@topotal/eslunt-config-typescript` to `eslintrc` extends.
+### Legacy ESLint Configuration (ESLint v8 and below)
+
+Add `@topotal/eslint-config-typescript` to `eslintrc` extends.
 
 ```json
 {
@@ -26,4 +28,17 @@ Add `@topotal/eslunt-config-typescript` to `eslintrc` extends.
     "@topotal/eslint-config-typescript"
   ]
 }
+```
+
+### Flat ESLint Configuration (ESLint v9 and above)
+
+In your `eslint.config.js`:
+
+```js
+const topotalTypescriptConfig = require('@topotal/eslint-config-typescript/flat');
+
+module.exports = [
+  topotalTypescriptConfig,
+  // other configs...
+];
 ```
