@@ -37,6 +37,9 @@ In your `eslint.config.js`:
 ```js
 const topotalTypescriptConfig = require('@topotal/eslint-config-typescript/flat');
 
+// Or using the conditional exports (recommended)
+// const { flat: topotalTypescriptConfig } = require('@topotal/eslint-config-typescript');
+
 module.exports = [
   topotalTypescriptConfig,
   // other configs...

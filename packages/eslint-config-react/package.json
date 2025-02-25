@@ -18,11 +18,19 @@
     "index.js",
     "flat.js"
   ],
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js"
+    },
+    "./flat": "./flat.js"
+  },
   "devDependencies": {
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0"
   },
   "peerDependencies": {
+    "eslint": ">=6.0.0",
     "eslint-plugin-react": ">=7.0.0",
     "eslint-plugin-react-hooks": ">=4.0.0"
   },

@@ -37,6 +37,9 @@ In your `eslint.config.js`:
 ```js
 const topotalReactConfig = require('@topotal/eslint-config-react/flat');
 
+// Or using the conditional exports (recommended)
+// const { flat: topotalReactConfig } = require('@topotal/eslint-config-react');
+
 module.exports = [
   topotalReactConfig,
   // other configs...
