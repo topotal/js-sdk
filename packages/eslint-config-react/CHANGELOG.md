@@ -3,21 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-react@0.3.5...@topotal/eslint-config-react@0.4.1) (2025-02-26)
+
+**Note:** Version bump only for package @topotal/eslint-config-react
+
 ## [0.3.5](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-react@0.3.2...@topotal/eslint-config-react@0.3.5) (2024-01-09)
 
 **Note:** Version bump only for package @topotal/eslint-config-react
 
-
-
-
-
 ## [0.3.4](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-react@0.3.3...@topotal/eslint-config-react@0.3.4) (2023-12-20)
 
 **Note:** Version bump only for package @topotal/eslint-config-react
-
-
-
-
 
 ## [0.3.3](https://github.com/topotal/js-sdk/compare/@topotal/eslint-config-react@0.3.1...@topotal/eslint-config-react@0.3.3) (2023-11-08)
 
