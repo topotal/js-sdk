@@ -1,6 +1,6 @@
 {
   "name": "@topotal/eslint-config-react",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "description": "This is a common ESlint setting for React used within Topotal",
   "homepage": "https://github.com/topotal/js-sdk#readme",
   "bugs": {
@@ -14,13 +14,25 @@
   "license": "MIT",
   "author": "SAWADA Takayoshi <sawadasuiren@gmail.com>",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "flat.js"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js"
+    },
+    "./flat": "./flat.js"
+  },
   "devDependencies": {
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0"
   },
   "peerDependencies": {
-    "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "4.x"
+    "eslint": ">=6.0.0",
+    "eslint-plugin-react": ">=7.0.0",
+    "eslint-plugin-react-hooks": ">=4.0.0"
   },
   "publishConfig": {
     "access": "public"
