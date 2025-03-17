@@ -4437,6 +4437,16 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
+"@topotal/eslint-config-react@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@topotal/eslint-config-react/-/eslint-config-react-0.3.5.tgz#b6dce18735e8b6a9c3a728931389a1b16619d1d3"
+  integrity sha512-iSTZEqvvczLTkZVnrrfxXe1xlvYDsIH/Lc6RjmTuJj8PZPVrDZplh7BneEZGgFQ6tySsIpu3E4cr81IhbFto5g==
+
+"@topotal/eslint-config-typescript@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@topotal/eslint-config-typescript/-/eslint-config-typescript-0.2.5.tgz#290fe2d5b25d42eb9afaa7517dbcd0eddf5bc5d1"
+  integrity sha512-cOgojp4XuQbf3FB2euq7ynWWDepJG0WCfgX8Utk3NgfBsEclllxsOUdHzk2ud6aHgK6/FHYmillW2fRhNBDrjQ==
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"
@@ -5420,9 +5430,9 @@ available-typed-arrays@^1.0.6:
   integrity sha512-j1QzY8iPNPG4o4xmO3ptzpRxTciqD3MgEHtifP/YnJpIo58Xu+ne4BejlbkuaLfXn/nz6HFiw29bLpj2PNMdGg==
 
 axios@^1.0.0:
-  version "1.7.7"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
-  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.8.3.tgz#9ebccd71c98651d547162a018a1a95a4b4ed4de8"
+  integrity sha512-iP4DebzoNlP/YN2dpwCgb8zoCmhtkajzS48JvwmkSkXvPI3DHc7m+XYL5tGnSlJtR6nImXZmdCuN5aP8dh1d8A==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
