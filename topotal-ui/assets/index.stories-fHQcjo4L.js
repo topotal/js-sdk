@@ -1,0 +1,5 @@
+import{j as e,V as t}from"./index-CsMwEyaY.js";import{d as a}from"./index-DVaO3OZA.js";import{T as l}from"./index-DzwhhsDO.js";import"./index-BS1Ahyye.js";import"./_commonjsHelpers-BosuxZz1.js";const d=({name:o,color:s})=>e.jsxs(t,{style:{padding:8,flexDirection:"row",alignItems:"center"},children:[e.jsx(t,{style:{width:40,height:40,borderColor:"#000",backgroundColor:s}}),e.jsx(l,{style:{marginLeft:8,width:120,fontWeight:"bold"},children:o}),e.jsx(l,{style:{marginLeft:8},children:s})]}),y={title:"theme",component:d},r=()=>e.jsx(t,{style:{padding:24},children:Object.keys(a.color).map(o=>e.jsx(d,{name:o,color:a.color[o]},o))});var n,i,m;r.parameters={...r.parameters,docs:{...(n=r.parameters)==null?void 0:n.docs,source:{originalSource:`() => <View style={{
+  padding: 24
+}}>
+      {(Object.keys(defaultTheme.color) as (keyof ThemeColor)[]).map(key => <ColorRow key={key} name={key} color={defaultTheme.color[key]} />)}
+    </View>`,...(m=(i=r.parameters)==null?void 0:i.docs)==null?void 0:m.source}}};const g=["Color"];export{r as Color,g as __namedExportsOrder,y as default};
