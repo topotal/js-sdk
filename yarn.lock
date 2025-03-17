@@ -1185,9 +1185,9 @@
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
 "@babel/runtime@^7.1.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.6", "@babel/runtime@^7.3.1", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.23.9"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.9.tgz#47791a15e4603bb5f905bc0753801cf21d6345f7"
-  integrity sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==
+  version "7.26.10"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.26.10.tgz#a07b4d8fa27af131a633d7b3524db803eb4764c2"
+  integrity sha512-2WJMeRQPHKSPemqk/awGrAiuFfzBmOIPXKizAsVhWH9YJqLZ0H+HS4c8loHGgW6utJ3E/ejXQUsiGaQy2NZ9Fw==
   dependencies:
     regenerator-runtime "^0.14.0"
 
@@ -4436,6 +4436,16 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
+
+"@topotal/eslint-config-react@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@topotal/eslint-config-react/-/eslint-config-react-0.3.5.tgz#b6dce18735e8b6a9c3a728931389a1b16619d1d3"
+  integrity sha512-iSTZEqvvczLTkZVnrrfxXe1xlvYDsIH/Lc6RjmTuJj8PZPVrDZplh7BneEZGgFQ6tySsIpu3E4cr81IhbFto5g==
+
+"@topotal/eslint-config-typescript@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@topotal/eslint-config-typescript/-/eslint-config-typescript-0.2.5.tgz#290fe2d5b25d42eb9afaa7517dbcd0eddf5bc5d1"
+  integrity sha512-cOgojp4XuQbf3FB2euq7ynWWDepJG0WCfgX8Utk3NgfBsEclllxsOUdHzk2ud6aHgK6/FHYmillW2fRhNBDrjQ==
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
