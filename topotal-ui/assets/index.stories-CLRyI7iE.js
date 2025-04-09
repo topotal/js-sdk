@@ -1,4 +1,4 @@
-import{j as a}from"./index-CsMwEyaY.js";import{S as s}from"./index-CmD9pS_U.js";import"./index-BS1Ahyye.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-CotB3pBB.js";import"./extends-CF3RwP-h.js";import"./index-DsB9b_Jd.js";import"./index-DzwhhsDO.js";const x={title:"components/SyntaxHilighter"},i=`import React from 'react';
+import{j as a}from"./index-CsMwEyaY.js";import{S as s}from"./index-dgPElgDs.js";import"./index-BS1Ahyye.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-CotB3pBB.js";import"./extends-CF3RwP-h.js";import"./index-DsB9b_Jd.js";import"./index-DzwhhsDO.js";const x={title:"components/SyntaxHilighter"},i=`import React from 'react';
 import { ScrollView } from 'react-native';
 
 export const PreTag = (props): JSX.Element => {
